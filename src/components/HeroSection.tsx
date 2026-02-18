@@ -1,0 +1,60 @@
+import { motion } from "framer-motion";
+import heroImage from "@/assets/hero-barcelona.jpg";
+
+const HeroSection = () => {
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section id="home" className="relative h-screen w-full overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+      <div className="absolute inset-0 bg-hero-overlay" />
+
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="max-w-3xl"
+        >
+          <div className="mx-auto gold-line-wide mb-8" />
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-primary-foreground leading-tight mb-6">
+            Live Barcelona
+            <span className="block text-gold-gradient italic font-light">Effortlessly</span>
+          </h1>
+          <p className="font-body text-sm md:text-base font-light text-primary-foreground/80 tracking-wide max-w-xl mx-auto mb-10 leading-relaxed">
+            Your personal concierge for the finest dining, nightlife, tours, and exclusive experiences across Barcelona.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => scrollTo("services")}
+              className="border border-primary-foreground/30 px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
+            >
+              Discover More
+            </button>
+            <button
+              onClick={() => scrollTo("contact")}
+              className="bg-gold px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-gold-dark transition-all duration-300"
+            >
+              Request Concierge
+            </button>
+          </div>
+        </motion.div>
+      </div>
+
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+      >
+        <div className="w-px h-12 bg-gradient-to-b from-gold to-transparent" />
+      </motion.div>
+    </section>
+  );
+};
+
+export default HeroSection;
