@@ -29,6 +29,7 @@ export const translations = {
       experiences: "Experiences",
       contact: "Contact",
       bookNow: "Book Now",
+      workWithUs: "Work With Us",
     },
     hero: {
       title: "Night",
@@ -140,6 +141,17 @@ export const translations = {
       partner4: "Wellness, sports & exclusive activity providers",
       partnerCta: "Partner With Us",
     },
+    testimonials: {
+      label: "Client Feedback",
+      titleLine1: "What They Say",
+      titleLine2: "About Us",
+      quote1: "NightDreams made our Barcelona trip unforgettable. VIP tables, yacht at sunset — pure perfection.",
+      quote2: "Exceptional service from start to finish. Every detail was handled with elegance and precision.",
+      quote3: "The best concierge experience I've ever had. They truly understand luxury hospitality.",
+      quote4: "From the private chef dinner to the club experience — everything exceeded our expectations.",
+      quote5: "Professional, discreet, and incredibly well-connected. NightDreams is the only call you need in Barcelona.",
+      quote6: "An extraordinary team that turned our weekend into a once-in-a-lifetime experience.",
+    },
     floatingCta: {
       label: "Request VIP Service",
     },
@@ -178,6 +190,7 @@ export const translations = {
       experiences: "Experiencias",
       contact: "Contacto",
       bookNow: "Reservar",
+      workWithUs: "Trabaja con Nosotros",
     },
     hero: {
       title: "Night",
@@ -289,6 +302,17 @@ export const translations = {
       partner4: "Proveedores de bienestar, deporte y actividades exclusivas",
       partnerCta: "Asóciate Con Nosotros",
     },
+    testimonials: {
+      label: "Opiniones",
+      titleLine1: "Lo Que Dicen",
+      titleLine2: "De Nosotros",
+      quote1: "NightDreams hizo nuestro viaje a Barcelona inolvidable. Mesas VIP, yate al atardecer — pura perfección.",
+      quote2: "Servicio excepcional de principio a fin. Cada detalle fue manejado con elegancia y precisión.",
+      quote3: "La mejor experiencia de concierge que he tenido. Realmente entienden la hospitalidad de lujo.",
+      quote4: "Desde la cena con chef privado hasta la experiencia en el club — todo superó nuestras expectativas.",
+      quote5: "Profesionales, discretos e increíblemente bien conectados. NightDreams es la única llamada que necesitas en Barcelona.",
+      quote6: "Un equipo extraordinario que convirtió nuestro fin de semana en una experiencia única en la vida.",
+    },
     floatingCta: {
       label: "Solicitar Servicio VIP",
     },
@@ -327,6 +351,7 @@ export const translations = {
       experiences: "Expériences",
       contact: "Contact",
       bookNow: "Réserver",
+      workWithUs: "Travailler avec Nous",
     },
     hero: {
       title: "Night",
@@ -438,6 +463,17 @@ export const translations = {
       partner4: "Prestataires bien-être, sport et activités exclusives",
       partnerCta: "Devenez Partenaire",
     },
+    testimonials: {
+      label: "Avis Clients",
+      titleLine1: "Ce Qu'ils Disent",
+      titleLine2: "De Nous",
+      quote1: "NightDreams a rendu notre voyage à Barcelone inoubliable. Tables VIP, yacht au coucher du soleil — pure perfection.",
+      quote2: "Service exceptionnel du début à la fin. Chaque détail a été géré avec élégance et précision.",
+      quote3: "La meilleure expérience de conciergerie que j'ai jamais eue. Ils comprennent vraiment l'hospitalité de luxe.",
+      quote4: "Du dîner avec chef privé à l'expérience en club — tout a dépassé nos attentes.",
+      quote5: "Professionnels, discrets et incroyablement bien connectés. NightDreams est le seul appel dont vous avez besoin à Barcelone.",
+      quote6: "Une équipe extraordinaire qui a transformé notre week-end en une expérience unique.",
+    },
     floatingCta: {
       label: "Demander un Service VIP",
     },
@@ -476,6 +512,7 @@ export const translations = {
       experiences: "Esperienze",
       contact: "Contatti",
       bookNow: "Prenota",
+      workWithUs: "Lavora con Noi",
     },
     hero: {
       title: "Night",
@@ -586,6 +623,17 @@ export const translations = {
       partner3: "Ristoranti stellati Michelin e chef privati",
       partner4: "Fornitori di benessere, sport e attività esclusive",
       partnerCta: "Diventa Partner",
+    },
+    testimonials: {
+      label: "Cosa Dicono di Noi",
+      titleLine1: "Cosa Dicono",
+      titleLine2: "Di Noi",
+      quote1: "NightDreams ha reso il nostro viaggio a Barcellona indimenticabile. Tavoli VIP, yacht al tramonto — pura perfezione.",
+      quote2: "Servizio eccezionale dall'inizio alla fine. Ogni dettaglio è stato gestito con eleganza e precisione.",
+      quote3: "La migliore esperienza di concierge che abbia mai avuto. Capiscono davvero l'ospitalità di lusso.",
+      quote4: "Dalla cena con chef privato all'esperienza in club — tutto ha superato le nostre aspettative.",
+      quote5: "Professionali, discreti e incredibilmente ben connessi. NightDreams è l'unica chiamata di cui hai bisogno a Barcellona.",
+      quote6: "Un team straordinario che ha trasformato il nostro weekend in un'esperienza unica nella vita.",
     },
     floatingCta: {
       label: "Richiedi Servizio VIP",

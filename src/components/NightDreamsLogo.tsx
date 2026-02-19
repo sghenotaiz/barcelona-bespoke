@@ -6,10 +6,10 @@ interface NightDreamsLogoProps {
 }
 
 const sizeClasses = {
-  sm: "text-2xl",
-  md: "text-3xl",
-  lg: "text-5xl",
-  hero: "text-7xl md:text-9xl lg:text-[10rem]"
+  sm: "text-xl",
+  md: "text-2xl",
+  lg: "text-4xl",
+  hero: "text-6xl md:text-8xl lg:text-[8rem]"
 };
 
 const iconSizes = {
@@ -36,10 +36,7 @@ const NightDreamsLogo = ({ size = "md", showIcon = true }: NightDreamsLogoProps)
           paintOrder: "stroke fill"
         }}>
 
-        <span className="text-primary" style={{ WebkitTextFillColor: "#000000", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.9)" }}>N</span>
-        <span className="text-primary-foreground" style={{ WebkitTextFillColor: "#FFFFFF" }}>ight</span>
-        <span className="text-primary" style={{ WebkitTextFillColor: "#000000", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.9)" }}>D</span>
-        <span className="text-primary-foreground" style={{ WebkitTextFillColor: "#FFFFFF" }}>reams</span>
+        <span style={{ WebkitTextFillColor: "#FFFFFF", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.8)" }}>NightDreams</span>
       </span>
     </div>);
 
