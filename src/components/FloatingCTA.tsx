@@ -6,7 +6,7 @@ const FloatingCTA = () => {
   const { t } = useLanguage();
 
   const handleClick = () => {
-    const el = document.getElementById("contact");
+    const el = document.getElementById("booking");
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
