@@ -3,28 +3,18 @@ import { useRef } from "react";
 import yachtImage from "@/assets/yacht.jpg";
 import diningImage from "@/assets/dining.jpg";
 import nightlifeImage from "@/assets/nightlife.jpg";
-
-const experiences = [
-  {
-    title: "Sunset Yacht & Champagne Cruise",
-    category: "Sea & Luxury",
-    image: yachtImage,
-  },
-  {
-    title: "VIP Night Out — Bottle Service & Club Access",
-    category: "Nightlife & Entertainment",
-    image: nightlifeImage,
-  },
-  {
-    title: "Private Chef's Table with Wine Pairing",
-    category: "Fine Dining",
-    image: diningImage,
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const ExperiencesSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
+
+  const experiences = [
+    { image: yachtImage, ...t.experiences.yacht },
+    { image: nightlifeImage, ...t.experiences.nightlife },
+    { image: diningImage, ...t.experiences.dining },
+  ];
 
   return (
     <section id="experiences" className="py-24 md:py-32 bg-section-gradient">
@@ -36,10 +26,10 @@ const ExperiencesSection = () => {
           className="text-center mb-20"
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-            Signature Experiences
+            {t.experiences.label}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
-            Moments Crafted <span className="italic text-gold-gradient">Just for You</span>
+            {t.experiences.titleLine1} <span className="italic text-gold-gradient">{t.experiences.titleLine2}</span>
           </h2>
           <div className="mx-auto gold-line mt-8" />
         </motion.div>

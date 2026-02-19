@@ -1,7 +1,19 @@
+import { useLanguage } from "@/i18n/LanguageContext";
+
 const Footer = () => {
+  const { t } = useLanguage();
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const navItems = [
+    { key: "home", label: t.nav.home },
+    { key: "about", label: t.nav.about },
+    { key: "services", label: t.nav.services },
+    { key: "experiences", label: t.nav.experiences },
+    { key: "contact", label: t.nav.contact },
+  ];
 
   return (
     <footer className="bg-navy border-t border-primary-foreground/10 py-12">
@@ -13,19 +25,19 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-8">
-            {["Home", "About", "Services", "Experiences", "Contact"].map((item) => (
+            {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => scrollTo(item.toLowerCase())}
+                key={item.key}
+                onClick={() => scrollTo(item.key)}
                 className="font-body text-[10px] tracking-[0.15em] uppercase text-primary-foreground/50 hover:text-gold transition-colors"
               >
-                {item}
+                {item.label}
               </button>
             ))}
           </div>
 
           <span className="font-body text-[10px] text-primary-foreground/30">
-            © 2025 Concierging Barcelona
+            {t.footer.copyright}
           </span>
         </div>
       </div>

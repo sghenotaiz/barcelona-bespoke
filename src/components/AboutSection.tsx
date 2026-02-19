@@ -1,11 +1,18 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import skylineImage from "@/assets/barcelona-skyline.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const AboutSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
+
+  const stats = [
+    { num: t.about.stat1Num, label: t.about.stat1Label },
+    { num: t.about.stat2Num, label: t.about.stat2Label },
+    { num: t.about.stat3Num, label: t.about.stat3Label },
+  ];
 
   return (
     <section id="about" className="py-24 md:py-32 bg-section-gradient">
@@ -17,25 +24,21 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-              About Us
+              {t.about.label}
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-2 leading-tight">
-              Your Gateway to
-              <span className="block italic text-gold-gradient">Barcelona's Finest</span>
+              {t.about.titleLine1}
+              <span className="block italic text-gold-gradient">{t.about.titleLine2}</span>
             </h2>
             <div className="gold-line my-8" />
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
-              Concierging Barcelona is a premier VIP lifestyle service for elite travelers and high-profile guests. From luxury yacht charters and private chefs to VIP nightlife access and Michelin-starred dining — we curate every detail of your Barcelona experience.
+              {t.about.paragraph1}
             </p>
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8">
-              Our network of exclusive partners and local insiders ensures discretion, personalized attention, and access to experiences unavailable to the public. Your stay, elevated.
+              {t.about.paragraph2}
             </p>
             <div className="grid grid-cols-3 gap-6">
-              {[
-                { num: "500+", label: "Exclusive Partners" },
-                { num: "12+", label: "Years of Excellence" },
-                { num: "24/7", label: "Personal Support" },
-              ].map((stat) => (
+              {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <span className="font-display text-3xl text-gold">{stat.num}</span>
                   <span className="block font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground mt-1">

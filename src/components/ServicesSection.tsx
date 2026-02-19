@@ -6,48 +6,20 @@ import diningImage from "@/assets/dining.jpg";
 import nightlifeImage from "@/assets/nightlife.jpg";
 import restaurantImage from "@/assets/restaurant.jpg";
 import sportsImage from "@/assets/sports.jpg";
-
-const services = [
-  {
-    icon: Anchor,
-    title: "Yacht & Boat Charters",
-    description: "Luxury yacht rentals and private boat experiences along the Mediterranean coast — sunset cruises, party boats, and exclusive day trips.",
-    image: yachtImage,
-    span: "md:col-span-2",
-  },
-  {
-    icon: ChefHat,
-    title: "Private Chefs",
-    description: "World-class private chefs for intimate dinners, villa events, and bespoke culinary experiences tailored to your palate.",
-    image: diningImage,
-    span: "",
-  },
-  {
-    icon: Music,
-    title: "VIP Nightlife",
-    description: "Reserved VIP tables, bottle service, and priority access to Barcelona's most exclusive clubs and private parties.",
-    image: nightlifeImage,
-    span: "",
-  },
-  {
-    icon: UtensilsCrossed,
-    title: "Fine Dining",
-    description: "Priority reservations at Michelin-starred restaurants and hidden gastronomic gems across the city.",
-    image: restaurantImage,
-    span: "",
-  },
-  {
-    icon: Dumbbell,
-    title: "Sports & Wellness",
-    description: "Premium golf, padel, fitness sessions, spa retreats, and curated wellness experiences for mind and body.",
-    image: sportsImage,
-    span: "",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const ServicesSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
+
+  const services = [
+    { icon: Anchor, image: yachtImage, span: "md:col-span-2", ...t.services.yacht },
+    { icon: ChefHat, image: diningImage, span: "", ...t.services.chef },
+    { icon: Music, image: nightlifeImage, span: "", ...t.services.nightlife },
+    { icon: UtensilsCrossed, image: restaurantImage, span: "", ...t.services.dining },
+    { icon: Dumbbell, image: sportsImage, span: "", ...t.services.sports },
+  ];
 
   return (
     <section id="services" className="py-24 md:py-32 bg-background">
@@ -59,10 +31,10 @@ const ServicesSection = () => {
           className="text-center mb-20"
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-            Our Services
+            {t.services.label}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
-            Tailored for the <span className="italic text-gold-gradient">Elite</span>
+            {t.services.titleLine1} <span className="italic text-gold-gradient">{t.services.titleLine2}</span>
           </h2>
           <div className="mx-auto gold-line mt-8" />
         </motion.div>
