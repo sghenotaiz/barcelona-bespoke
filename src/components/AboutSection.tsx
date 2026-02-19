@@ -23,14 +23,14 @@ const AboutSection = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
+            <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
               {t.about.label}
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-2 leading-tight">
               {t.about.titleLine1}
-              <span className="block italic text-gold-gradient">{t.about.titleLine2}</span>
+              <span className="block italic text-silver-gradient">{t.about.titleLine2}</span>
             </h2>
-            <div className="gold-line my-8" />
+            <div className="silver-line my-8" />
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
               {t.about.paragraph1}
             </p>
@@ -40,7 +40,7 @@ const AboutSection = () => {
             <div className="grid grid-cols-3 gap-6">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <span className="font-display text-3xl text-gold">{stat.num}</span>
+                  <span className="font-display text-3xl text-silver">{stat.num}</span>
                   <span className="block font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground mt-1">
                     {stat.label}
                   </span>
@@ -61,10 +61,10 @@ const AboutSection = () => {
                 alt="Barcelona skyline at golden hour from Park Güell"
                 className="w-full h-[500px] object-cover"
               />
-              <div className="absolute inset-0 border border-gold/20" />
+              <div className="absolute inset-0 border border-silver/20" />
             </div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 border border-gold/30" />
-            <div className="absolute -top-4 -right-4 w-24 h-24 border border-gold/30" />
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 border border-silver/30" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 border border-silver/30" />
           </motion.div>
         </div>
       </div>

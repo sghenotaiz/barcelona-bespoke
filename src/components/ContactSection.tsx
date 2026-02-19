@@ -23,7 +23,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-navy">
+    <section id="contact" className="py-24 md:py-32 bg-section-gradient">
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,13 +31,13 @@ const ContactSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
+          <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {t.contact.label}
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-primary-foreground">
-            {t.contact.titleLine1} <span className="italic text-gold-gradient">{t.contact.titleLine2}</span>
+          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
+            {t.contact.titleLine1} <span className="italic text-silver-gradient">{t.contact.titleLine2}</span>
           </h2>
-          <div className="mx-auto gold-line mt-8" />
+          <div className="mx-auto silver-line mt-8" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
@@ -46,7 +46,7 @@ const ContactSection = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="font-body text-sm text-primary-foreground/70 leading-relaxed mb-10">
+            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-10">
               {t.contact.description}
             </p>
 
@@ -57,8 +57,8 @@ const ContactSection = () => {
                 { icon: Mail, text: t.contact.email },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-4">
-                  <Icon className="w-4 h-4 text-gold" strokeWidth={1.5} />
-                  <span className="font-body text-sm text-primary-foreground/70">{text}</span>
+                  <Icon className="w-4 h-4 text-silver" strokeWidth={1.5} />
+                  <span className="font-body text-sm text-muted-foreground">{text}</span>
                 </div>
               ))}
             </div>
@@ -83,7 +83,7 @@ const ContactSection = () => {
                 required
                 value={formData[field.name]}
                 onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
-                className="w-full bg-transparent border-b border-primary-foreground/20 py-3 px-0 font-body text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-gold transition-colors"
+                className="w-full bg-transparent border-b border-border py-3 px-0 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-silver transition-colors"
               />
             ))}
             <textarea
@@ -92,11 +92,11 @@ const ContactSection = () => {
               required
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full bg-transparent border-b border-primary-foreground/20 py-3 px-0 font-body text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-gold transition-colors resize-none"
+              className="w-full bg-transparent border-b border-border py-3 px-0 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-silver transition-colors resize-none"
             />
             <button
               type="submit"
-              className="mt-4 flex items-center gap-3 bg-gold px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-gold-dark transition-all duration-300"
+              className="mt-4 flex items-center gap-3 bg-silver px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-background hover:bg-silver-dark transition-all duration-300"
             >
               <Send size={14} />
               {t.contact.sendWhatsapp}
