@@ -15,7 +15,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-section-gradient">
+    <section id="about" className="py-24 md:py-32 bg-[hsl(0,0%,10%)]">
       <div className="container mx-auto px-6" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div

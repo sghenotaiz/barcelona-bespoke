@@ -17,7 +17,7 @@ const ExperiencesSection = () => {
   ];
 
   return (
-    <section id="experiences" className="py-24 md:py-32 bg-section-gradient">
+    <section id="experiences" className="py-24 md:py-32 bg-[hsl(0,0%,7%)]">
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
