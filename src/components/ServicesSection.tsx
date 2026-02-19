@@ -22,7 +22,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-background">
+    <section id="services" className="py-24 md:py-32 bg-[hsl(220,40%,8%)]">
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
