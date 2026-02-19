@@ -3,6 +3,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { languageLabels, languageNames, type Language } from "@/i18n/translations";
+import NightDreamsLogo from "@/components/NightDreamsLogo";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,13 +39,8 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6">
-        <button onClick={() => scrollTo("home")} className="flex flex-col items-start">
-          <span className="font-display text-2xl font-semibold tracking-wider text-primary-foreground">
-            CONCIERGING
-          </span>
-          <span className="text-[10px] font-body tracking-[0.4em] uppercase text-gold-light">
-            Barcelona
-          </span>
+        <button onClick={() => scrollTo("home")} className="flex items-center">
+          <NightDreamsLogo size="sm" showIcon={true} />
         </button>
 
         <nav className="hidden lg:flex items-center gap-10">

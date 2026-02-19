@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-barcelona.jpg";
+import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
@@ -23,11 +24,21 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="max-w-3xl"
         >
+          <img
+            src={nightdreamsLogo}
+            alt="NightDreams"
+            className="w-28 h-28 md:w-40 md:h-40 object-contain mx-auto mb-6"
+          />
           <div className="mx-auto gold-line-wide mb-8" />
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-primary-foreground leading-tight mb-6">
-            {t.hero.title}
-            <span className="block text-gold-gradient italic font-light">{t.hero.subtitle}</span>
+          <h1 className="font-logo text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight mb-2"
+            style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.5)", paintOrder: "stroke fill" }}
+          >
+            <span className="text-gold-gradient" style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.3)" }}>N</span>ight
+            <span className="text-gold-gradient" style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.3)" }}>D</span>reams
           </h1>
+          <p className="font-body text-xs md:text-sm tracking-[0.3em] uppercase text-gold-light mb-6">
+            {t.hero.subtitle}
+          </p>
           <p className="font-body text-sm md:text-base font-light text-primary-foreground/80 tracking-wide max-w-xl mx-auto mb-10 leading-relaxed">
             {t.hero.description}
           </p>
