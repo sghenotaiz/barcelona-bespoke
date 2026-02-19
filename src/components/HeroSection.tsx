@@ -30,10 +30,10 @@ const HeroSection = () => {
             <NightDreamsLogo size="hero" showIcon={false} />
           </div>
 
-          <p className="font-body text-xs md:text-sm tracking-[0.3em] uppercase text-silver-light mb-6">
+          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-6 md:text-lg font-mono text-center">
             {t.hero.subtitle}
           </p>
-          <p className="font-body text-sm md:text-base font-light text-primary-foreground/80 tracking-wide max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="font-body text-sm tracking-wide max-w-xl mx-auto mb-10 leading-relaxed text-center font-normal md:text-sm text-secondary-foreground">
             {t.hero.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -57,8 +57,8 @@ const HeroSection = () => {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
         <div className="w-px h-12 bg-gradient-to-b from-silver to-transparent" />
       </motion.div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
