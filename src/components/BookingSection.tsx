@@ -81,7 +81,7 @@ const BookingSection = () => {
   }
 
   return (
-    <section id="booking" className="py-24 bg-[hsl(0,0%,0%)] border border-gold-dark md:py-[50px]">
+    <section id="booking" className="py-24 md:py-32 bg-[hsl(0,0%,0%)]">
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -273,7 +273,7 @@ const BookingSection = () => {
           <div className="text-center pt-4">
             <button
               type="submit"
-              className="inline-flex items-center gap-3 bg-silver px-12 py-4 font-body text-xs tracking-[0.2em] uppercase text-background hover:bg-silver-dark transition-all duration-300">
+              className="inline-flex items-center gap-3 font-body text-xs tracking-[0.2em] uppercase text-background transition-all duration-300 bg-muted-foreground text-left font-medium px-[40px] py-[15px]">
 
               <Send size={14} />
               {t.booking.submit}
