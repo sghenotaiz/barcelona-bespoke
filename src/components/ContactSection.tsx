@@ -1,10 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,10 +32,10 @@ const ContactSection = () => {
           className="text-center mb-20"
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-            Get in Touch
+            {t.contact.label}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-primary-foreground">
-            Request Your <span className="italic text-gold-gradient">VIP Experience</span>
+            {t.contact.titleLine1} <span className="italic text-gold-gradient">{t.contact.titleLine2}</span>
           </h2>
           <div className="mx-auto gold-line mt-8" />
         </motion.div>
@@ -45,14 +47,14 @@ const ContactSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="font-body text-sm text-primary-foreground/70 leading-relaxed mb-10">
-              Whether you're planning a weekend escape or an extended stay, our concierge team is ready to craft your perfect Barcelona experience. Share your vision and we'll handle every detail.
+              {t.contact.description}
             </p>
 
             <div className="space-y-6">
               {[
-                { icon: MapPin, text: "Passeig de Gràcia, Barcelona" },
-                { icon: Phone, text: "+34 600 000 000" },
-                { icon: Mail, text: "hello@conciergingbarcelona.com" },
+                { icon: MapPin, text: t.contact.address },
+                { icon: Phone, text: t.contact.phone },
+                { icon: Mail, text: t.contact.email },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-4">
                   <Icon className="w-4 h-4 text-gold" strokeWidth={1.5} />
@@ -70,9 +72,9 @@ const ContactSection = () => {
             className="space-y-5"
           >
             {[
-              { name: "name" as const, placeholder: "Your Name", type: "text" },
-              { name: "email" as const, placeholder: "Email Address", type: "email" },
-              { name: "phone" as const, placeholder: "Phone Number", type: "tel" },
+              { name: "name" as const, placeholder: t.contact.namePlaceholder, type: "text" },
+              { name: "email" as const, placeholder: t.contact.emailPlaceholder, type: "email" },
+              { name: "phone" as const, placeholder: t.contact.phonePlaceholder, type: "tel" },
             ].map((field) => (
               <input
                 key={field.name}
@@ -85,7 +87,7 @@ const ContactSection = () => {
               />
             ))}
             <textarea
-              placeholder="Tell us about your ideal Barcelona experience..."
+              placeholder={t.contact.messagePlaceholder}
               rows={4}
               required
               value={formData.message}
@@ -97,7 +99,7 @@ const ContactSection = () => {
               className="mt-4 flex items-center gap-3 bg-gold px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-gold-dark transition-all duration-300"
             >
               <Send size={14} />
-              Send via WhatsApp
+              {t.contact.sendWhatsapp}
             </button>
           </motion.form>
         </div>
