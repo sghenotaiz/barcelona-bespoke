@@ -81,7 +81,7 @@ const BookingSection = () => {
   }
 
   return (
-    <section id="booking" className="py-24 md:py-32 bg-[hsl(0,0%,0%)]">
+    <section id="booking" className="py-24 bg-[hsl(0,0%,0%)] md:py-[50px] border border-gold-dark">
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
