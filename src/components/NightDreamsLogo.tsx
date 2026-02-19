@@ -36,9 +36,9 @@ const NightDreamsLogo = ({ size = "md", showIcon = true }: NightDreamsLogoProps)
           paintOrder: "stroke fill"
         }}>
 
-        <span className="text-primary" style={{ WebkitTextFillColor: "#000000", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.9)" }}>N</span>
+        <span className="text-primary-foreground" style={{ WebkitTextFillColor: "#000000", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.9)" }}>N</span>
         <span className="text-primary-foreground" style={{ WebkitTextFillColor: "#FFFFFF" }}>ight</span>
-        <span className="text-primary" style={{ WebkitTextFillColor: "#000000", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.9)" }}>D</span>
+        <span className="text-primary-foreground" style={{ WebkitTextFillColor: "#000000", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.9)" }}>D</span>
         <span className="text-primary-foreground" style={{ WebkitTextFillColor: "#FFFFFF" }}>reams</span>
       </span>
     </div>);
