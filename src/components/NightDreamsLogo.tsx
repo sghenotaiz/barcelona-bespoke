@@ -36,7 +36,7 @@ const NightDreamsLogo = ({ size = "md", showIcon = true }: NightDreamsLogoProps)
           paintOrder: "stroke fill"
         }}>
 
-        <span style={{ WebkitTextFillColor: "#FFFFFF", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.8)" }}>NightDreams</span>
+        <span style={{ WebkitTextFillColor: "#FFFFFF", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.8)" }} className="px-0 pr-[40px]">NightDreams</span>
       </span>
     </div>);
 
