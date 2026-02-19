@@ -14,22 +14,22 @@ const ServicesSection = () => {
   const { t } = useLanguage();
 
   const services = [
-    { icon: Anchor, image: yachtImage, span: "md:col-span-2", ...t.services.yacht },
-    { icon: ChefHat, image: diningImage, span: "", ...t.services.chef },
-    { icon: Music, image: nightlifeImage, span: "", ...t.services.nightlife },
-    { icon: UtensilsCrossed, image: restaurantImage, span: "", ...t.services.dining },
-    { icon: Dumbbell, image: sportsImage, span: "", ...t.services.sports },
-  ];
+  { icon: Anchor, image: yachtImage, span: "md:col-span-2", ...t.services.yacht },
+  { icon: ChefHat, image: diningImage, span: "", ...t.services.chef },
+  { icon: Music, image: nightlifeImage, span: "", ...t.services.nightlife },
+  { icon: UtensilsCrossed, image: restaurantImage, span: "", ...t.services.dining },
+  { icon: Dumbbell, image: sportsImage, span: "", ...t.services.sports }];
+
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-[hsl(220,40%,8%)]">
+    <section id="services" className="py-24 bg-[hsl(220,40%,8%)] border border-gold-dark md:py-[50px]">
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
+          className="text-center mb-20">
+
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {t.services.label}
           </span>
@@ -40,20 +40,20 @@ const ServicesSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`group relative overflow-hidden bg-card cursor-pointer ${service.span}`}
-            >
+          {services.map((service, i) =>
+          <motion.div
+            key={service.title}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+            className={`group relative overflow-hidden bg-card cursor-pointer ${service.span}`}>
+
               <div className="relative h-72 overflow-hidden">
                 <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+
                 <div className="absolute inset-0 bg-background/50 group-hover:bg-background/65 transition-colors duration-500" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <service.icon className="w-7 h-7 text-silver mb-3" strokeWidth={1} />
@@ -64,11 +64,11 @@ const ServicesSection = () => {
                 </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ServicesSection;
