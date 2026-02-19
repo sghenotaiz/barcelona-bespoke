@@ -1,35 +1,47 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { UtensilsCrossed, Music, Map, Anchor } from "lucide-react";
+import { Anchor, ChefHat, Music, UtensilsCrossed, Dumbbell } from "lucide-react";
+import yachtImage from "@/assets/yacht.jpg";
 import diningImage from "@/assets/dining.jpg";
 import nightlifeImage from "@/assets/nightlife.jpg";
-import toursImage from "@/assets/tours.jpg";
-import yachtImage from "@/assets/yacht.jpg";
+import restaurantImage from "@/assets/restaurant.jpg";
+import sportsImage from "@/assets/sports.jpg";
 
 const services = [
   {
-    icon: UtensilsCrossed,
-    title: "Fine Dining",
-    description: "Access to Barcelona's most exclusive restaurants and Michelin-starred tables, with priority reservations arranged by our team.",
+    icon: Anchor,
+    title: "Yacht & Boat Charters",
+    description: "Luxury yacht rentals and private boat experiences along the Mediterranean coast — sunset cruises, party boats, and exclusive day trips.",
+    image: yachtImage,
+    span: "md:col-span-2",
+  },
+  {
+    icon: ChefHat,
+    title: "Private Chefs",
+    description: "World-class private chefs for intimate dinners, villa events, and bespoke culinary experiences tailored to your palate.",
     image: diningImage,
+    span: "",
   },
   {
     icon: Music,
-    title: "Nightlife & Clubs",
-    description: "VIP entry, bottle service, and reserved tables at the city's most sought-after venues and private events.",
+    title: "VIP Nightlife",
+    description: "Reserved VIP tables, bottle service, and priority access to Barcelona's most exclusive clubs and private parties.",
     image: nightlifeImage,
+    span: "",
   },
   {
-    icon: Map,
-    title: "Private Tours",
-    description: "Bespoke guided experiences through Barcelona's architectural wonders, hidden neighborhoods, and cultural treasures.",
-    image: toursImage,
+    icon: UtensilsCrossed,
+    title: "Fine Dining",
+    description: "Priority reservations at Michelin-starred restaurants and hidden gastronomic gems across the city.",
+    image: restaurantImage,
+    span: "",
   },
   {
-    icon: Anchor,
-    title: "Day Activities",
-    description: "Yacht charters, wellness retreats, wine tours, and curated day experiences along the Mediterranean coast.",
-    image: yachtImage,
+    icon: Dumbbell,
+    title: "Sports & Wellness",
+    description: "Premium golf, padel, fitness sessions, spa retreats, and curated wellness experiences for mind and body.",
+    image: sportsImage,
+    span: "",
   },
 ];
 
@@ -50,19 +62,19 @@ const ServicesSection = () => {
             Our Services
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
-            Curated for the <span className="italic text-gold-gradient">Extraordinary</span>
+            Tailored for the <span className="italic text-gold-gradient">Elite</span>
           </h2>
           <div className="mx-auto gold-line mt-8" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="group relative overflow-hidden bg-card cursor-pointer"
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className={`group relative overflow-hidden bg-card cursor-pointer ${service.span}`}
             >
               <div className="relative h-72 overflow-hidden">
                 <img
@@ -70,9 +82,9 @@ const ServicesSection = () => {
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/50 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/55 transition-colors duration-500" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <service.icon className="w-8 h-8 text-gold mb-3" strokeWidth={1} />
+                  <service.icon className="w-7 h-7 text-gold mb-3" strokeWidth={1} />
                   <h3 className="font-display text-2xl text-primary-foreground mb-2">{service.title}</h3>
                   <p className="font-body text-xs text-primary-foreground/70 leading-relaxed">
                     {service.description}

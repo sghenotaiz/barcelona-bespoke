@@ -1,22 +1,22 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import wellnessImage from "@/assets/wellness.jpg";
-import diningImage from "@/assets/dining.jpg";
 import yachtImage from "@/assets/yacht.jpg";
+import diningImage from "@/assets/dining.jpg";
+import nightlifeImage from "@/assets/nightlife.jpg";
 
 const experiences = [
   {
-    title: "Sunset Yacht & Wine Tasting",
-    category: "Sea & Gastronomy",
+    title: "Sunset Yacht & Champagne Cruise",
+    category: "Sea & Luxury",
     image: yachtImage,
   },
   {
-    title: "Rooftop Wellness Retreat",
-    category: "Wellness & Relaxation",
-    image: wellnessImage,
+    title: "VIP Night Out — Bottle Service & Club Access",
+    category: "Nightlife & Entertainment",
+    image: nightlifeImage,
   },
   {
-    title: "Michelin Chef's Table Experience",
+    title: "Private Chef's Table with Wine Pairing",
     category: "Fine Dining",
     image: diningImage,
   },

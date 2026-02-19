@@ -23,24 +23,24 @@ const HeroSection = () => {
         >
           <div className="mx-auto gold-line-wide mb-8" />
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-primary-foreground leading-tight mb-6">
-            Live Barcelona
-            <span className="block text-gold-gradient italic font-light">Effortlessly</span>
+            Barcelona
+            <span className="block text-gold-gradient italic font-light">VIP Concierge</span>
           </h1>
           <p className="font-body text-sm md:text-base font-light text-primary-foreground/80 tracking-wide max-w-xl mx-auto mb-10 leading-relaxed">
-            Your personal concierge for the finest dining, nightlife, tours, and exclusive experiences across Barcelona.
+            Luxury yachts, private chefs, VIP nightlife, and bespoke experiences — crafted for elite travelers seeking the extraordinary.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => scrollTo("services")}
               className="border border-primary-foreground/30 px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
             >
-              Discover More
+              Explore Services
             </button>
             <button
               onClick={() => scrollTo("contact")}
               className="bg-gold px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-gold-dark transition-all duration-300"
             >
-              Request Concierge
+              Request VIP Service
             </button>
           </div>
         </motion.div>

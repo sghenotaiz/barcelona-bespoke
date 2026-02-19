@@ -25,10 +25,10 @@ const AboutSection = () => {
             </h2>
             <div className="gold-line my-8" />
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
-              Concierging Barcelona is a premium lifestyle management service dedicated to curating extraordinary experiences for discerning travelers. From Michelin-starred dining to exclusive nightlife, private yacht excursions to bespoke cultural tours — we transform your visit into an unforgettable journey.
+              Concierging Barcelona is a premier VIP lifestyle service for elite travelers and high-profile guests. From luxury yacht charters and private chefs to VIP nightlife access and Michelin-starred dining — we curate every detail of your Barcelona experience.
             </p>
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8">
-              Our team of local experts and industry insiders ensure every detail is thoughtfully arranged, allowing you to experience the city's hidden gems and iconic landmarks with effortless sophistication.
+              Our network of exclusive partners and local insiders ensures discretion, personalized attention, and access to experiences unavailable to the public. Your stay, elevated.
             </p>
             <div className="grid grid-cols-3 gap-6">
               {[

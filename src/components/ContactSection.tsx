@@ -33,7 +33,7 @@ const ContactSection = () => {
             Get in Touch
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-primary-foreground">
-            Begin Your <span className="italic text-gold-gradient">Barcelona Story</span>
+            Request Your <span className="italic text-gold-gradient">VIP Experience</span>
           </h2>
           <div className="mx-auto gold-line mt-8" />
         </motion.div>
