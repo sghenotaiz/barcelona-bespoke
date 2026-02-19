@@ -86,7 +86,7 @@ const TestimonialsSection = () => {
 
   return (
     <section id="testimonials" className="py-[50px] border border-gold-dark bg-[#180606]">
-      <div className="container mx-auto px-6" ref={ref}>
+      <div className="container mx-auto px-[24px]" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -146,7 +146,7 @@ const TestimonialsSection = () => {
                   loading="lazy" />
 
                   {/* Dark overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent rounded-none my-0 border border-black" />
                   {/* Text content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="flex gap-0.5 mb-3">
