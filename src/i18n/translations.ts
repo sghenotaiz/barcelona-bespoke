@@ -123,7 +123,7 @@ export const translations = {
       label: "Request VIP Service",
     },
     booking: {
-      label: "Plan Your Experience",
+      label: "Let's get in touch!",
       titleLine1: "Plan Your",
       titleLine2: "VIP Experience",
       description: "Select your dates, group size, and desired activities — we'll craft a tailored VIP proposal and contact you by email.",
@@ -251,7 +251,7 @@ export const translations = {
       label: "Solicitar Servicio VIP",
     },
     booking: {
-      label: "Planifica Tu Experiencia",
+      label: "¡Contactemos!",
       titleLine1: "Planifica Tu",
       titleLine2: "Experiencia VIP",
       description: "Selecciona tus fechas, tamaño del grupo y actividades deseadas — te enviaremos una propuesta VIP personalizada por email.",
@@ -379,7 +379,7 @@ export const translations = {
       label: "Demander un Service VIP",
     },
     booking: {
-      label: "Planifiez Votre Expérience",
+      label: "Contactez-nous !",
       titleLine1: "Planifiez Votre",
       titleLine2: "Expérience VIP",
       description: "Sélectionnez vos dates, la taille de votre groupe et les activités souhaitées — nous vous enverrons une proposition VIP sur mesure par email.",
@@ -507,7 +507,7 @@ export const translations = {
       label: "Richiedi Servizio VIP",
     },
     booking: {
-      label: "Pianifica la Tua Esperienza",
+      label: "Mettiamoci in contatto!",
       titleLine1: "Pianifica la Tua",
       titleLine2: "Esperienza VIP",
       description: "Seleziona le tue date, la dimensione del gruppo e le attività desiderate — ti invieremo una proposta VIP personalizzata via email.",
