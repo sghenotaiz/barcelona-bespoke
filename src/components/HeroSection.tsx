@@ -30,7 +30,7 @@ const HeroSection = () => {
             <NightDreamsLogo size="hero" showIcon={false} />
           </div>
 
-          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-6 md:text-lg font-mono text-center">
+          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-6 font-mono text-center md:text-2xl">
             {t.hero.subtitle}
           </p>
           <p className="font-body text-sm tracking-wide max-w-xl mx-auto mb-10 leading-relaxed text-center font-normal md:text-sm text-secondary-foreground">
