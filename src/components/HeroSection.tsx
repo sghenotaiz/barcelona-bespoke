@@ -13,8 +13,8 @@ const HeroSection = () => {
     <section id="home" className="relative h-screen w-full overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+        style={{ backgroundImage: `url(${heroImage})` }} />
+
       <div className="absolute inset-0 bg-hero-overlay" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
@@ -22,17 +22,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="max-w-3xl"
-        >
-          <img
-            src={nightdreamsLogo}
-            alt="NightDreams"
-            className="w-28 h-28 md:w-40 md:h-40 object-contain mx-auto mb-6"
-          />
+          className="max-w-3xl">
+
+          
+
+
+
+
           <div className="mx-auto gold-line-wide mb-8" />
           <h1 className="font-logo text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight mb-2"
-            style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.5)", paintOrder: "stroke fill" }}
-          >
+          style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.5)", paintOrder: "stroke fill" }}>
+
             <span className="text-gold-gradient" style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.3)" }}>N</span>ight
             <span className="text-gold-gradient" style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.3)" }}>D</span>reams
           </h1>
@@ -45,14 +45,14 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => scrollTo("services")}
-              className="border border-primary-foreground/30 px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
-            >
+              className="border border-primary-foreground/30 px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300">
+
               {t.hero.exploreServices}
             </button>
             <button
               onClick={() => scrollTo("contact")}
-              className="bg-gold px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-gold-dark transition-all duration-300"
-            >
+              className="bg-gold px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-gold-dark transition-all duration-300">
+
               {t.hero.requestVip}
             </button>
           </div>
@@ -62,12 +62,12 @@ const HeroSection = () => {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
-      >
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+
         <div className="w-px h-12 bg-gradient-to-b from-gold to-transparent" />
       </motion.div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
