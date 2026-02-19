@@ -30,13 +30,13 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
+          <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {t.services.label}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
-            {t.services.titleLine1} <span className="italic text-gold-gradient">{t.services.titleLine2}</span>
+            {t.services.titleLine1} <span className="italic text-silver-gradient">{t.services.titleLine2}</span>
           </h2>
-          <div className="mx-auto gold-line mt-8" />
+          <div className="mx-auto silver-line mt-8" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -54,9 +54,9 @@ const ServicesSection = () => {
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/55 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-background/50 group-hover:bg-background/65 transition-colors duration-500" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <service.icon className="w-7 h-7 text-gold mb-3" strokeWidth={1} />
+                  <service.icon className="w-7 h-7 text-silver mb-3" strokeWidth={1} />
                   <h3 className="font-display text-2xl text-primary-foreground mb-2">{service.title}</h3>
                   <p className="font-body text-xs text-primary-foreground/70 leading-relaxed">
                     {service.description}

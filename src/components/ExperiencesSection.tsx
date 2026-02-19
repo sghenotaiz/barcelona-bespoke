@@ -25,13 +25,13 @@ const ExperiencesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
+          <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {t.experiences.label}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
-            {t.experiences.titleLine1} <span className="italic text-gold-gradient">{t.experiences.titleLine2}</span>
+            {t.experiences.titleLine1} <span className="italic text-silver-gradient">{t.experiences.titleLine2}</span>
           </h2>
-          <div className="mx-auto gold-line mt-8" />
+          <div className="mx-auto silver-line mt-8" />
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -48,15 +48,15 @@ const ExperiencesSection = () => {
                 alt={exp.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-gold block mb-2">
+                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-silver block mb-2">
                   {exp.category}
                 </span>
                 <h3 className="font-display text-xl md:text-2xl text-primary-foreground leading-snug">
                   {exp.title}
                 </h3>
-                <div className="gold-line mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="silver-line mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             </motion.div>
           ))}

@@ -22,10 +22,10 @@ export default {
   				'Montserrat',
   				'sans-serif'
   			],
-  			logo: [
-  				'Playfair Display',
-  				'serif'
-  			],
+		logo: [
+				'Great Vibes',
+				'cursive'
+			],
   			sans: [
   				'Inter',
   				'ui-sans-serif',
@@ -94,17 +94,18 @@ export default {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
-  			gold: {
-  				DEFAULT: 'hsl(var(--gold))',
-  				light: 'hsl(var(--gold-light))',
-  				dark: 'hsl(var(--gold-dark))'
-  			},
-  			turquoise: {
-  				DEFAULT: 'hsl(var(--turquoise))',
-  				light: 'hsl(var(--turquoise-light))'
-  			},
-  			navy: 'hsl(var(--navy))',
-  			cream: 'hsl(var(--cream))',
+		silver: {
+				DEFAULT: 'hsl(var(--silver))',
+				light: 'hsl(var(--silver-light))',
+				dark: 'hsl(var(--silver-dark))'
+			},
+			gold: {
+				DEFAULT: 'hsl(var(--silver))',
+				light: 'hsl(var(--silver-light))',
+				dark: 'hsl(var(--silver-dark))'
+			},
+			navy: 'hsl(var(--navy))',
+			cream: 'hsl(var(--cream))',
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
