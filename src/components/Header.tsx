@@ -15,8 +15,8 @@ const Header = () => {
   { key: "home", label: t.nav.home },
   { key: "about", label: t.nav.about },
   { key: "services", label: t.nav.services },
-  { key: "work-with-us", label: t.nav.workWithUs },
-  { key: "experiences", label: t.nav.experiences }];
+  { key: "experiences", label: t.nav.experiences },
+  { key: "work-with-us", label: t.nav.workWithUs }];
 
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-barcelona.jpg";
+import heroImage from "@/assets/barcelona-night.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import NightDreamsLogo from "@/components/NightDreamsLogo";
 
