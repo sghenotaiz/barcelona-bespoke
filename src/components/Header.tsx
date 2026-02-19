@@ -58,7 +58,7 @@ const Header = () => {
             </button>
           ))}
           <button
-            onClick={() => scrollTo("contact")}
+            onClick={() => scrollTo("booking")}
             className="ml-4 border border-gold/60 px-6 py-2.5 font-body text-xs tracking-[0.15em] uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300"
           >
             {t.nav.bookNow}
@@ -131,7 +131,7 @@ const Header = () => {
                 </button>
               ))}
               <button
-                onClick={() => scrollTo("contact")}
+                onClick={() => scrollTo("booking")}
                 className="mt-2 border border-gold/60 px-8 py-3 font-body text-xs tracking-[0.15em] uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300"
               >
                 {t.nav.bookNow}
