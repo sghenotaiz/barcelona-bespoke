@@ -1,3 +1,4 @@
+// WorkWithUsSection - careers and partnerships
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Handshake, ArrowRight } from "lucide-react";
