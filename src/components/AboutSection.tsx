@@ -15,7 +15,7 @@ const AboutSection = () => {
 
 
   return (
-    <section id="about" className="py-24 bg-[hsl(0,0%,10%)] border border-gold-dark md:py-[50px]">
+    <section id="about" className="py-24 border border-gold-dark md:py-[50px] bg-sidebar">
       <div className="container mx-auto px-6" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
