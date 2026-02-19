@@ -36,7 +36,7 @@ export const translations = {
       titleAccent: "Dreams",
       subtitle: "Barcelona VIP Concierge",
       description:
-        "Luxury yachts, private chefs, VIP nightlife, and bespoke experiences — crafted for elite travelers seeking the extraordinary.",
+        "Live your best experience in one of the most beautiful cities of the world. We will take care of you!",
       exploreServices: "Explore Services",
       requestVip: "Request VIP Service",
     },
@@ -197,7 +197,7 @@ export const translations = {
       titleAccent: "Dreams",
       subtitle: "Barcelona Concierge VIP",
       description:
-        "Yates de lujo, chefs privados, vida nocturna VIP y experiencias a medida — diseñadas para viajeros de élite que buscan lo extraordinario.",
+        "Vive tu mejor experiencia en una de las ciudades más bellas del mundo. ¡Nos encargaremos de ti!",
       exploreServices: "Explorar Servicios",
       requestVip: "Solicitar Servicio VIP",
     },
@@ -358,7 +358,7 @@ export const translations = {
       titleAccent: "Dreams",
       subtitle: "Barcelona Concierge VIP",
       description:
-        "Yachts de luxe, chefs privés, vie nocturne VIP et expériences sur mesure — conçues pour les voyageurs d'élite en quête d'extraordinaire.",
+        "Vivez votre meilleure expérience dans l'une des plus belles villes du monde. Nous prendrons soin de vous !",
       exploreServices: "Découvrir les Services",
       requestVip: "Demander un Service VIP",
     },
@@ -519,7 +519,7 @@ export const translations = {
       titleAccent: "Dreams",
       subtitle: "Barcelona Concierge VIP",
       description:
-        "Yacht di lusso, chef privati, vita notturna VIP ed esperienze su misura — create per viaggiatori d'élite alla ricerca dell'eccezionale.",
+        "Vivi la tua migliore esperienza in una delle città più belle del mondo. Ci prenderemo cura di te!",
       exploreServices: "Scopri i Servizi",
       requestVip: "Richiedi Servizio VIP",
     },
