@@ -31,8 +31,9 @@ export const translations = {
       bookNow: "Book Now",
     },
     hero: {
-      title: "Barcelona",
-      subtitle: "VIP Concierge",
+      title: "Night",
+      titleAccent: "Dreams",
+      subtitle: "Barcelona VIP Concierge",
       description:
         "Luxury yachts, private chefs, VIP nightlife, and bespoke experiences — crafted for elite travelers seeking the extraordinary.",
       exploreServices: "Explore Services",
@@ -43,7 +44,7 @@ export const translations = {
       titleLine1: "Your Gateway to",
       titleLine2: "Barcelona's Finest",
       paragraph1:
-        "Concierging Barcelona is a premier VIP lifestyle service for elite travelers and high-profile guests. From luxury yacht charters and private chefs to VIP nightlife access and Michelin-starred dining — we curate every detail of your Barcelona experience.",
+        "NightDreams is a premier VIP lifestyle service for elite travelers and high-profile guests in Barcelona. From luxury yacht charters and private chefs to VIP nightlife access and Michelin-starred dining — we curate every detail of your Barcelona experience.",
       paragraph2:
         "Our network of exclusive partners and local insiders ensures discretion, personalized attention, and access to experiences unavailable to the public. Your stay, elevated.",
       stat1Num: "500+",
@@ -116,7 +117,7 @@ export const translations = {
       sendWhatsapp: "Send via WhatsApp",
     },
     footer: {
-      copyright: "© 2025 Concierging Barcelona",
+      copyright: "© 2025 NightDreams Barcelona",
     },
     floatingCta: {
       label: "Request VIP Service",
@@ -158,8 +159,9 @@ export const translations = {
       bookNow: "Reservar",
     },
     hero: {
-      title: "Barcelona",
-      subtitle: "Concierge VIP",
+      title: "Night",
+      titleAccent: "Dreams",
+      subtitle: "Barcelona Concierge VIP",
       description:
         "Yates de lujo, chefs privados, vida nocturna VIP y experiencias a medida — diseñadas para viajeros de élite que buscan lo extraordinario.",
       exploreServices: "Explorar Servicios",
@@ -170,7 +172,7 @@ export const translations = {
       titleLine1: "Tu Puerta a lo",
       titleLine2: "Mejor de Barcelona",
       paragraph1:
-        "Concierging Barcelona es un servicio de estilo de vida VIP de primera clase para viajeros de élite e invitados de alto perfil. Desde alquiler de yates de lujo y chefs privados hasta acceso VIP a la vida nocturna y restaurantes con estrellas Michelin — cuidamos cada detalle de tu experiencia en Barcelona.",
+        "NightDreams es un servicio de estilo de vida VIP de primera clase para viajeros de élite e invitados de alto perfil. Desde alquiler de yates de lujo y chefs privados hasta acceso VIP a la vida nocturna y restaurantes con estrellas Michelin — cuidamos cada detalle de tu experiencia en Barcelona.",
       paragraph2:
         "Nuestra red de socios exclusivos y expertos locales garantiza discreción, atención personalizada y acceso a experiencias no disponibles para el público. Tu estancia, elevada.",
       stat1Num: "500+",
@@ -243,7 +245,7 @@ export const translations = {
       sendWhatsapp: "Enviar por WhatsApp",
     },
     footer: {
-      copyright: "© 2025 Concierging Barcelona",
+      copyright: "© 2025 NightDreams Barcelona",
     },
     floatingCta: {
       label: "Solicitar Servicio VIP",
@@ -285,8 +287,9 @@ export const translations = {
       bookNow: "Réserver",
     },
     hero: {
-      title: "Barcelona",
-      subtitle: "Concierge VIP",
+      title: "Night",
+      titleAccent: "Dreams",
+      subtitle: "Barcelona Concierge VIP",
       description:
         "Yachts de luxe, chefs privés, vie nocturne VIP et expériences sur mesure — conçues pour les voyageurs d'élite en quête d'extraordinaire.",
       exploreServices: "Découvrir les Services",
@@ -297,7 +300,7 @@ export const translations = {
       titleLine1: "Votre Accès au",
       titleLine2: "Meilleur de Barcelone",
       paragraph1:
-        "Concierging Barcelona est un service lifestyle VIP de premier plan pour les voyageurs d'élite et les invités de prestige. Des locations de yachts de luxe et chefs privés à l'accès VIP en vie nocturne et restaurants étoilés Michelin — nous orchestrons chaque détail de votre expérience barcelonaise.",
+        "NightDreams est un service lifestyle VIP de premier plan pour les voyageurs d'élite et les invités de prestige. Des locations de yachts de luxe et chefs privés à l'accès VIP en vie nocturne et restaurants étoilés Michelin — nous orchestrons chaque détail de votre expérience barcelonaise.",
       paragraph2:
         "Notre réseau de partenaires exclusifs et d'initiés locaux garantit discrétion, attention personnalisée et accès à des expériences inaccessibles au public. Votre séjour, sublimé.",
       stat1Num: "500+",
@@ -370,7 +373,7 @@ export const translations = {
       sendWhatsapp: "Envoyer via WhatsApp",
     },
     footer: {
-      copyright: "© 2025 Concierging Barcelona",
+      copyright: "© 2025 NightDreams Barcelona",
     },
     floatingCta: {
       label: "Demander un Service VIP",
@@ -412,8 +415,9 @@ export const translations = {
       bookNow: "Prenota",
     },
     hero: {
-      title: "Barcelona",
-      subtitle: "Concierge VIP",
+      title: "Night",
+      titleAccent: "Dreams",
+      subtitle: "Barcelona Concierge VIP",
       description:
         "Yacht di lusso, chef privati, vita notturna VIP ed esperienze su misura — create per viaggiatori d'élite alla ricerca dell'eccezionale.",
       exploreServices: "Scopri i Servizi",
@@ -424,7 +428,7 @@ export const translations = {
       titleLine1: "La Tua Porta verso il",
       titleLine2: "Meglio di Barcellona",
       paragraph1:
-        "Concierging Barcelona è un servizio lifestyle VIP di prima classe per viaggiatori d'élite e ospiti di alto profilo. Dal noleggio di yacht di lusso e chef privati all'accesso VIP alla vita notturna e ristoranti stellati Michelin — curiamo ogni dettaglio della tua esperienza a Barcellona.",
+        "NightDreams è un servizio lifestyle VIP di prima classe per viaggiatori d'élite e ospiti di alto profilo. Dal noleggio di yacht di lusso e chef privati all'accesso VIP alla vita notturna e ristoranti stellati Michelin — curiamo ogni dettaglio della tua esperienza a Barcellona.",
       paragraph2:
         "La nostra rete di partner esclusivi e insider locali garantisce discrezione, attenzione personalizzata e accesso a esperienze non disponibili al pubblico. Il tuo soggiorno, elevato.",
       stat1Num: "500+",
@@ -497,7 +501,7 @@ export const translations = {
       sendWhatsapp: "Invia via WhatsApp",
     },
     footer: {
-      copyright: "© 2025 Concierging Barcelona",
+      copyright: "© 2025 NightDreams Barcelona",
     },
     floatingCta: {
       label: "Richiedi Servizio VIP",

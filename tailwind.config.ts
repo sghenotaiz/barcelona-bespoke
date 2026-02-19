@@ -22,6 +22,10 @@ export default {
   				'Montserrat',
   				'sans-serif'
   			],
+  			logo: [
+  				'Playfair Display',
+  				'serif'
+  			],
   			sans: [
   				'Inter',
   				'ui-sans-serif',

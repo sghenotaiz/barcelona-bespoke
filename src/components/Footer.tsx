@@ -1,5 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
-
+import NightDreamsLogo from "@/components/NightDreamsLogo";
 const Footer = () => {
   const { t } = useLanguage();
 
@@ -20,8 +20,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="font-display text-lg tracking-wider text-primary-foreground">CONCIERGING</span>
-            <span className="text-[9px] font-body tracking-[0.4em] uppercase text-gold-light ml-2">Barcelona</span>
+            <NightDreamsLogo size="sm" showIcon={false} />
           </div>
 
           <div className="flex gap-8">
