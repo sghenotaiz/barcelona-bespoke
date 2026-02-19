@@ -33,8 +33,8 @@ const HeroSection = () => {
           <h1 className="font-logo text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight mb-2"
           style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.5)", paintOrder: "stroke fill" }}>
 
-            <span className="text-gold-gradient" style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.3)" }}>N</span>ight
-            <span className="text-gold-gradient" style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.3)" }}>D</span>reams
+            <span className="text-gold-gradient text-black bg-black" style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.3)" }}>N</span>ight
+            <span className="text-gold-gradient text-black bg-black" style={{ WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.3)" }}>D</span>reams
           </h1>
           <p className="font-body text-xs md:text-sm tracking-[0.3em] uppercase text-gold-light mb-6">
             {t.hero.subtitle}
