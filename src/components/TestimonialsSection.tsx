@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="bg-slate-950 py-[50px] border border-gold-dark">
+    <section id="testimonials" className="py-[50px] border border-gold-dark bg-[#180606]">
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
