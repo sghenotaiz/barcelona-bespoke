@@ -153,7 +153,7 @@ export const translations = {
       quote6: "An extraordinary team that turned our weekend into a once-in-a-lifetime experience.",
     },
     floatingCta: {
-      label: "Request VIP Service",
+      label: "Contact Us!",
     },
     booking: {
       label: "Let's get in touch!",
@@ -314,7 +314,7 @@ export const translations = {
       quote6: "Un equipo extraordinario que convirtió nuestro fin de semana en una experiencia única en la vida.",
     },
     floatingCta: {
-      label: "Solicitar Servicio VIP",
+      label: "Contact Us!",
     },
     booking: {
       label: "¡Contactemos!",
@@ -475,7 +475,7 @@ export const translations = {
       quote6: "Une équipe extraordinaire qui a transformé notre week-end en une expérience unique.",
     },
     floatingCta: {
-      label: "Demander un Service VIP",
+      label: "Contact Us!",
     },
     booking: {
       label: "Contactez-nous !",
@@ -636,7 +636,7 @@ export const translations = {
       quote6: "Un team straordinario che ha trasformato il nostro weekend in un'esperienza unica nella vita.",
     },
     floatingCta: {
-      label: "Richiedi Servizio VIP",
+      label: "Contact Us!",
     },
     booking: {
       label: "Mettiamoci in contatto!",
