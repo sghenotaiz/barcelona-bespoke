@@ -10,52 +10,87 @@ import apartmentsImg from "@/assets/services/apartments.jpg";
 import limousineImg from "@/assets/services/limousine.jpg";
 import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
 import corporatePartyImg from "@/assets/services/corporate-party.jpg";
+import jetSkiImg from "@/assets/services/jet-ski.jpg";
+import altroImg from "@/assets/services/altro.jpg";
 
 const services = [
   {
     image: vipTablesImg,
     title: "VIP Tables",
     description: "Magnum bottles, sparklers & exclusive VIP booths in Barcelona's top clubs. The real experience starts here.",
+    badge: "Prezzi imbattibili",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
   },
   {
     image: vipEntryImg,
     title: "VIP Entries + Skip-the-Line",
     description: "Walk straight past the queue into the city's most exclusive venues. No waiting. Pure VIP.",
+    badge: "VIP prezzi accessibili",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
   },
   {
     image: multiEntryImg,
     title: "Multi-Entry Packs",
     description: "Access multiple clubs in one night — dance floors, DJ sets & full freedom to move between the best spots.",
+    badge: "Weekly Pack < Expected Price!",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
   },
   {
     image: poolPartyImg,
     title: "Pool Parties",
     description: "Luxury Barcelona beach club parties, poolside vibes under the Mediterranean sun. Daytime magic.",
+    badge: "VIP prezzi accessibili",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
   },
   {
     image: restaurantImg,
     title: "Restaurant Discounts",
     description: "Exclusive deals at Barcelona's finest restaurants — gourmet paella, premium steak, and Michelin-level cuisine.",
+    badge: "Sconti 10-20% ristoranti",
+    badgeColor: "bg-card border-silver/40 text-silver",
   },
   {
     image: apartmentsImg,
     title: "Apartments & Hotels",
     description: "Hand-picked luxury apartments and 5-star hotel suites with stunning Barcelona skyline views.",
+    badge: "Prezzi imbattibili",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
   },
   {
     image: limousineImg,
     title: "Limousine & Chauffeur",
     description: "Arrive in style. Black luxury limousines with professional chauffeurs — from hotel to club door.",
+    badge: "VIP prezzi accessibili",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
+  },
+  {
+    image: jetSkiImg,
+    title: "Jet Ski",
+    description: "Ride the waves off Barcelona's coast on premium jet skis. Adrenaline, sun & Mediterranean views combined.",
+    badge: "Weekly Pack < Expected Price!",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
   },
   {
     image: bachelorPartyImg,
     title: "Bachelor Parties",
     description: "Unforgettable stag celebrations — VIP tables, premium drinks, sparklers & experiences they'll never forget.",
+    badge: "Pacchetti esclusivi",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
   },
   {
     image: corporatePartyImg,
     title: "Corporate Themed Parties",
     description: "Bespoke company events with custom themed decorations, premium venues and full event management.",
+    badge: "Su misura",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
+  },
+  {
+    image: altroImg,
+    title: "Altro — Qualsiasi Cosa",
+    description: "Tickets, reservations, private transfers, shopping assistance, luxury bags, exclusive events... ANYTHING you need — just ask our team!",
+    badge: "ANYTHING you need!",
+    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    highlight: true,
   },
 ];
 
@@ -72,7 +107,7 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {t.services.label}
@@ -82,6 +117,32 @@ const ServicesSection = () => {
             <span className="italic text-silver-gradient">{t.services.titleLine2}</span>
           </h2>
           <div className="mx-auto silver-line mt-8" />
+        </motion.div>
+
+        {/* KEY MESSAGE BANNER */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="max-w-3xl mx-auto text-center mb-8 border border-silver/30 bg-gradient-to-r from-card/60 via-card/80 to-card/60 px-8 py-7 relative overflow-hidden"
+        >
+          {/* Decorative shimmer */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-silver/5 to-transparent pointer-events-none" />
+          <p className="font-display text-lg md:text-2xl text-foreground leading-relaxed relative z-10">
+            🏆{" "}
+            <span className="font-semibold tracking-wide">VIP EXPERIENCE</span>{" "}
+            a{" "}
+            <span className="text-silver-gradient font-bold">PREZZI SUPER ACCESSIBILI!</span>
+          </p>
+          <p className="font-body text-sm text-silver mt-3 leading-relaxed relative z-10">
+            I pacchetti settimanali costano{" "}
+            <span className="font-semibold text-foreground uppercase tracking-wide">MENO di quanto pensi.</span>{" "}
+            Sconti{" "}
+            <span className="font-bold text-silver-gradient">10-20%</span>{" "}
+            nei ristoranti. Ti procuriamo{" "}
+            <span className="italic text-silver-gradient">QUALSIASI COSA</span>{" "}
+            tu abbia bisogno!
+          </p>
         </motion.div>
 
         {/* About Us Text */}
@@ -102,32 +163,46 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        {/* Services Grid */}
+        {/* Services Grid — 3 cols, with the last card spanning if odd */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group flex flex-col bg-card border border-border overflow-hidden hover:border-silver/40 transition-colors duration-500"
+              transition={{ duration: 0.6, delay: i * 0.07 }}
+              className={`group flex flex-col bg-card border overflow-hidden hover:border-silver/40 transition-colors duration-500 ${
+                service.highlight ? "border-silver/30" : "border-border"
+              }`}
             >
-              {/* Image — 60% of card height */}
+              {/* Image */}
               <div className="relative overflow-hidden" style={{ height: "260px" }}>
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                  className="w-full h-full object-cover transition-transform duration-700"
                   style={{ transform: "scale(1)", transition: "transform 0.7s ease" }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.08)")}
-                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.08)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
+                {/* Badge */}
+                <div className="absolute top-3 left-3">
+                  <span
+                    className={`font-body text-[10px] tracking-[0.15em] uppercase border px-3 py-1 ${service.badgeColor}`}
+                  >
+                    {service.badge}
+                  </span>
+                </div>
               </div>
 
               {/* Content */}
               <div className="flex flex-col flex-1 p-6 gap-3">
-                <h3 className="font-display text-xl text-foreground leading-snug">
+                <h3
+                  className={`font-display text-xl leading-snug ${
+                    service.highlight ? "text-silver-gradient" : "text-foreground"
+                  }`}
+                >
                   {service.title}
                 </h3>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
