@@ -13,83 +13,80 @@ import corporatePartyImg from "@/assets/services/corporate-party.jpg";
 import jetSkiImg from "@/assets/services/jet-ski.jpg";
 import altroImg from "@/assets/services/altro.jpg";
 
-const services = [
+type ServiceDef = {
+  image: string;
+  title: string;
+  description: string;
+  badgeKey: string;
+  highlight?: boolean;
+};
+
+const servicesDefs: ServiceDef[] = [
   {
     image: vipTablesImg,
     title: "VIP Tables",
     description: "Magnum bottles, sparklers & exclusive VIP booths in Barcelona's top clubs. The real experience starts here.",
-    badge: "Prezzi imbattibili",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeUnbeatable",
   },
   {
     image: vipEntryImg,
     title: "VIP Entries + Skip-the-Line",
     description: "Walk straight past the queue into the city's most exclusive venues. No waiting. Pure VIP.",
-    badge: "VIP prezzi accessibili",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeAffordable",
   },
   {
     image: multiEntryImg,
     title: "Multi-Entry Packs",
     description: "Access multiple clubs in one night — dance floors, DJ sets & full freedom to move between the best spots.",
-    badge: "Weekly Pack < Expected Price!",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeWeekly",
   },
   {
     image: poolPartyImg,
     title: "Pool Parties",
     description: "Luxury Barcelona beach club parties, poolside vibes under the Mediterranean sun. Daytime magic.",
-    badge: "VIP prezzi accessibili",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeAffordable",
   },
   {
     image: restaurantImg,
     title: "Restaurant Discounts",
     description: "Exclusive deals at Barcelona's finest restaurants — gourmet paella, premium steak, and Michelin-level cuisine.",
-    badge: "Sconti 10-20% ristoranti",
-    badgeColor: "bg-card border-silver/40 text-silver",
+    badgeKey: "badgeDiscount",
   },
   {
     image: apartmentsImg,
     title: "Apartments & Hotels",
     description: "Hand-picked luxury apartments and 5-star hotel suites with stunning Barcelona skyline views.",
-    badge: "Prezzi imbattibili",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeUnbeatable",
   },
   {
     image: limousineImg,
     title: "Limousine & Chauffeur",
     description: "Arrive in style. Black luxury limousines with professional chauffeurs — from hotel to club door.",
-    badge: "VIP prezzi accessibili",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeAffordable",
   },
   {
     image: jetSkiImg,
     title: "Jet Ski",
     description: "Ride the waves off Barcelona's coast on premium jet skis. Adrenaline, sun & Mediterranean views combined.",
-    badge: "Weekly Pack < Expected Price!",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeWeekly",
   },
   {
     image: bachelorPartyImg,
     title: "Bachelor Parties",
     description: "Unforgettable stag celebrations — VIP tables, premium drinks, sparklers & experiences they'll never forget.",
-    badge: "Pacchetti esclusivi",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeExclusive",
   },
   {
     image: corporatePartyImg,
     title: "Corporate Themed Parties",
     description: "Bespoke company events with custom themed decorations, premium venues and full event management.",
-    badge: "Su misura",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeCustom",
   },
   {
     image: altroImg,
     title: "Altro — Qualsiasi Cosa",
     description: "Tickets, reservations, private transfers, shopping assistance, luxury bags, exclusive events... ANYTHING you need — just ask our team!",
-    badge: "ANYTHING you need!",
-    badgeColor: "bg-silver/20 text-silver border-silver/40",
+    badgeKey: "badgeAnything",
     highlight: true,
   },
 ];
@@ -98,6 +95,10 @@ const ServicesSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const { t } = useLanguage();
+
+  const getBadge = (key: string): string => {
+    return (t.services as Record<string, unknown>)[key] as string || key;
+  };
 
   return (
     <section id="services" className="py-24 md:py-20 bg-[#0c121d]">
@@ -126,22 +127,18 @@ const ServicesSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="max-w-3xl mx-auto text-center mb-8 border border-silver/30 bg-gradient-to-r from-card/60 via-card/80 to-card/60 px-8 py-7 relative overflow-hidden"
         >
-          {/* Decorative shimmer */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-silver/5 to-transparent pointer-events-none" />
           <p className="font-display text-lg md:text-2xl text-foreground leading-relaxed relative z-10">
             🏆{" "}
-            <span className="font-semibold tracking-wide">VIP EXPERIENCE</span>{" "}
-            a{" "}
-            <span className="text-silver-gradient font-bold">PREZZI SUPER ACCESSIBILI!</span>
+            <span className="font-semibold tracking-wide">{t.services.vipBannerTitle}</span>{" "}
+            <span className="text-silver-gradient font-bold">{t.services.vipBannerSubtitle}</span>
           </p>
           <p className="font-body text-sm text-silver mt-3 leading-relaxed relative z-10">
-            I pacchetti settimanali costano{" "}
-            <span className="font-semibold text-foreground uppercase tracking-wide">MENO di quanto pensi.</span>{" "}
-            Sconti{" "}
-            <span className="font-bold text-silver-gradient">10-20%</span>{" "}
-            nei ristoranti. Ti procuriamo{" "}
-            <span className="italic text-silver-gradient">QUALSIASI COSA</span>{" "}
-            tu abbia bisogno!
+            {t.services.vipBannerDesc}{" "}
+            <span className="font-bold text-silver-gradient">{t.services.vipBannerDiscount}</span>{" "}
+            {t.services.vipBannerDiscountLabel}{" "}
+            <span className="italic text-silver-gradient">{t.services.vipBannerAnything}</span>{" "}
+            {t.services.vipBannerAnythingLabel}
           </p>
         </motion.div>
 
@@ -153,19 +150,18 @@ const ServicesSection = () => {
           className="max-w-2xl mx-auto text-center mb-16 border border-silver/20 bg-card/40 px-8 py-6"
         >
           <p className="font-body text-sm text-silver leading-relaxed">
-            <span className="font-semibold text-foreground">Since 2020:</span> Inside/outside Barcelona's best clubs.
-            Our strength:{" "}
+            <span className="font-semibold text-foreground">{t.services.aboutText}</span>{" "}
             <span className="font-semibold text-foreground uppercase tracking-wide">
-              CONSTANT PRESENCE
+              {t.services.aboutStrength}
             </span>{" "}
-            all year round. Always available online + physically.{" "}
-            <span className="italic text-silver-gradient">Not seasonal.</span>
+            {t.services.aboutYear}{" "}
+            <span className="italic text-silver-gradient">{t.services.aboutSeasonal}</span>
           </p>
         </motion.div>
 
-        {/* Services Grid — 3 cols, with the last card spanning if odd */}
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {services.map((service, i) => (
+          {servicesDefs.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
@@ -175,7 +171,6 @@ const ServicesSection = () => {
                 service.highlight ? "border-silver/30" : "border-border"
               }`}
             >
-              {/* Image */}
               <div className="relative overflow-hidden" style={{ height: "260px" }}>
                 <img
                   src={service.image}
@@ -186,23 +181,15 @@ const ServicesSection = () => {
                   onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
-                {/* Badge */}
                 <div className="absolute top-3 left-3">
-                  <span
-                    className={`font-body text-[10px] tracking-[0.15em] uppercase border px-3 py-1 ${service.badgeColor}`}
-                  >
-                    {service.badge}
+                  <span className="font-body text-[10px] tracking-[0.15em] uppercase border px-3 py-1 bg-silver/20 text-silver border-silver/40">
+                    {getBadge(service.badgeKey)}
                   </span>
                 </div>
               </div>
 
-              {/* Content */}
               <div className="flex flex-col flex-1 p-6 gap-3">
-                <h3
-                  className={`font-display text-xl leading-snug ${
-                    service.highlight ? "text-silver-gradient" : "text-foreground"
-                  }`}
-                >
+                <h3 className={`font-display text-xl leading-snug ${service.highlight ? "text-silver-gradient" : "text-foreground"}`}>
                   {service.title}
                 </h3>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
@@ -213,7 +200,7 @@ const ServicesSection = () => {
                   href="#booking"
                   className="inline-block mt-1 font-body text-xs tracking-[0.2em] uppercase text-center border border-silver/40 text-silver hover:bg-silver hover:text-background transition-all duration-300 px-5 py-3"
                 >
-                  Prenota Ora
+                  {t.services.bookNow}
                 </a>
               </div>
             </motion.div>
