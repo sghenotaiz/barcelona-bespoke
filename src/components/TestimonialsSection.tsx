@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { z } from "zod";
 
+// keep existing code (initialTestimonials array)
 const initialTestimonials = [
   {
     name: "Marco B.",
@@ -147,12 +148,7 @@ const TestimonialsSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const result = reviewSchema.safeParse({
-      name: form.name,
-      email: form.email,
-      rating: form.rating,
-      comment: form.comment,
-    });
+    const result = reviewSchema.safeParse({ name: form.name, email: form.email, rating: form.rating, comment: form.comment });
 
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
@@ -177,8 +173,6 @@ const TestimonialsSection = () => {
     setErrors({});
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
-
-    // Scroll carousel to end after render
     setTimeout(() => {
       if (scrollRef.current) {
         scrollRef.current.scrollTo({ left: scrollRef.current.scrollWidth, behavior: "smooth" });
@@ -190,7 +184,7 @@ const TestimonialsSection = () => {
     "w-full bg-background border border-border text-foreground font-body text-sm px-4 py-3 placeholder:text-muted-foreground focus:outline-none focus:border-silver transition-colors duration-200";
 
   return (
-    <section id="testimonials" className="py-[50px] border border-gold-dark bg-[#061808]">
+    <section id="testimonials" className="py-[50px] border-b border-border bg-[#061808]">
       <div className="container mx-auto px-[24px]" ref={ref}>
         {/* Heading */}
         <motion.div
@@ -292,9 +286,7 @@ const TestimonialsSection = () => {
                         <Star key={si} size={12} className="fill-silver text-silver" />
                       ))}
                     </div>
-                    <p className="font-body text-xs text-foreground/90 leading-relaxed mb-3 italic">
-                      "{item.quote}"
-                    </p>
+                    <p className="font-body text-xs text-foreground/90 leading-relaxed mb-3 italic">"{item.quote}"</p>
                     <div>
                       <span className="font-display text-base text-foreground">{item.name}</span>
                       <span className="font-body text-xs text-muted-foreground ml-2">{item.location}</span>
@@ -315,35 +307,29 @@ const TestimonialsSection = () => {
         >
           <div className="text-center mb-10">
             <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
-              Share Your Experience
+              {t.testimonials.formLabel}
             </span>
             <h3 className="font-display text-3xl md:text-4xl font-light text-foreground">
-              Leave a <span className="italic text-silver-gradient">Review</span>
+              {t.testimonials.formTitle} <span className="italic text-silver-gradient">{t.testimonials.formTitleAccent}</span>
             </h3>
             <div className="mx-auto silver-line mt-6" />
           </div>
 
           {submitted && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mb-8 border border-silver/30 bg-silver/5 px-6 py-4 text-center font-body text-sm text-silver tracking-widest uppercase"
-            >
-              Thank you — your review has been added!
+            <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border border-silver/30 bg-silver/5 px-6 py-4 text-center font-body text-sm text-silver tracking-widest uppercase">
+              {t.testimonials.formSuccess}
             </motion.div>
           )}
 
           <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name */}
             <div className="flex flex-col gap-1.5">
-              <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                Name
-              </label>
+              <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">{t.testimonials.formName}</label>
               <input
                 type="text"
                 value={form.name}
                 onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-                placeholder="Your name"
+                placeholder={t.testimonials.formNamePlaceholder}
                 maxLength={80}
                 className={inputClass}
               />
@@ -355,13 +341,13 @@ const TestimonialsSection = () => {
             {/* Email */}
             <div className="flex flex-col gap-1.5">
               <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                Email
+                {t.testimonials.formEmail}
               </label>
               <input
                 type="email"
                 value={form.email}
                 onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-                placeholder="your@email.com"
+                placeholder={t.testimonials.formEmailPlaceholder}
                 maxLength={255}
                 className={inputClass}
               />
@@ -373,7 +359,7 @@ const TestimonialsSection = () => {
             {/* Rating */}
             <div className="flex flex-col gap-1.5">
               <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                Rating
+                {t.testimonials.formRating}
               </label>
               <StarRatingInput
                 value={form.rating}
@@ -387,12 +373,12 @@ const TestimonialsSection = () => {
             {/* Comment – spans full width */}
             <div className="flex flex-col gap-1.5 md:col-span-2">
               <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                Comment
+                {t.testimonials.formComment}
               </label>
               <textarea
                 value={form.comment}
                 onChange={(e) => setForm((p) => ({ ...p, comment: e.target.value }))}
-                placeholder="Tell us about your experience…"
+                placeholder={t.testimonials.formCommentPlaceholder}
                 rows={4}
                 maxLength={1000}
                 className={`${inputClass} resize-none`}
@@ -408,7 +394,7 @@ const TestimonialsSection = () => {
                 type="submit"
                 className="font-body text-xs tracking-[0.2em] uppercase bg-silver text-background px-10 py-3.5 hover:bg-silver-dark transition-colors duration-300"
               >
-                Submit Review
+                {t.testimonials.formSubmit}
               </button>
             </div>
           </form>

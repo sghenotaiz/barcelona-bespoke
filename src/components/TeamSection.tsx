@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const teamMembers = [
   {
@@ -51,6 +52,7 @@ const TeamSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [teamIndex, setTeamIndex] = useState(0);
   const [partnerIndex, setPartnerIndex] = useState(0);
+  const { t } = useLanguage();
 
   const visibleTeam = 1;
   const visiblePartners = 4;
@@ -71,11 +73,11 @@ const TeamSection = () => {
           className="text-center mb-16"
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
-            La Nostra Squadra
+            {t.team.label}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
-            IL NOSTRO{" "}
-            <span className="italic text-silver-gradient">TEAM</span>
+            {t.team.title}{" "}
+            <span className="italic text-silver-gradient">{t.team.titleAccent}</span>
           </h2>
           <div className="mx-auto silver-line mt-8" />
         </motion.div>
@@ -89,7 +91,7 @@ const TeamSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="font-display text-xl font-light text-foreground mb-6 tracking-wider uppercase">
-              I Nostri <span className="italic text-silver-gradient">Promoter</span>
+              {t.team.promotersTitle} <span className="italic text-silver-gradient">{t.team.promotersAccent}</span>
             </h3>
 
             <div className="relative overflow-hidden">
@@ -98,7 +100,7 @@ const TeamSection = () => {
                 animate={{ x: `-${teamIndex * 100}%` }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               >
-                {teamMembers.map((member, i) => (
+                {teamMembers.map((member) => (
                   <div key={member.name} className="flex-shrink-0 w-full">
                     <div className="group relative overflow-hidden border border-border hover:border-silver/40 transition-all duration-500" style={{ height: "380px" }}>
                       <img
@@ -122,27 +124,15 @@ const TeamSection = () => {
 
             {/* Team Nav */}
             <div className="flex items-center gap-4 mt-4">
-              <button
-                onClick={prevTeam}
-                disabled={teamIndex === 0}
-                className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30"
-              >
+              <button onClick={prevTeam} disabled={teamIndex === 0} className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30">
                 <ChevronLeft size={18} />
               </button>
               <div className="flex gap-1.5 flex-1">
                 {teamMembers.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setTeamIndex(i)}
-                    className={`h-0.5 flex-1 transition-all duration-300 ${i === teamIndex ? "bg-silver" : "bg-border"}`}
-                  />
+                  <button key={i} onClick={() => setTeamIndex(i)} className={`h-0.5 flex-1 transition-all duration-300 ${i === teamIndex ? "bg-silver" : "bg-border"}`} />
                 ))}
               </div>
-              <button
-                onClick={nextTeam}
-                disabled={teamIndex === teamMembers.length - visibleTeam}
-                className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30"
-              >
+              <button onClick={nextTeam} disabled={teamIndex === teamMembers.length - visibleTeam} className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30">
                 <ChevronRight size={18} />
               </button>
             </div>
@@ -155,15 +145,11 @@ const TeamSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <h3 className="font-display text-xl font-light text-foreground mb-6 tracking-wider uppercase">
-              I Nostri <span className="italic text-silver-gradient">Partner</span>
+              {t.team.partnersTitle} <span className="italic text-silver-gradient">{t.team.partnersAccent}</span>
             </h3>
 
             <div className="overflow-hidden">
-              <motion.div
-                className="grid grid-cols-2 gap-4"
-                animate={{ y: 0 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              >
+              <motion.div className="grid grid-cols-2 gap-4" animate={{ y: 0 }} transition={{ type: "spring", stiffness: 300, damping: 30 }}>
                 {partners.slice(partnerIndex, partnerIndex + visiblePartners).map((partner, i) => (
                   <motion.div
                     key={partner.name}
@@ -173,14 +159,10 @@ const TeamSection = () => {
                     className="group border border-border hover:border-silver/40 transition-all duration-500 p-6 flex flex-col items-center justify-center text-center aspect-square bg-card/30"
                   >
                     <div className="w-12 h-12 mb-4 border border-silver/30 flex items-center justify-center rounded-full">
-                      <span className="font-display text-lg text-silver-gradient">
-                        {partner.name.charAt(0)}
-                      </span>
+                      <span className="font-display text-lg text-silver-gradient">{partner.name.charAt(0)}</span>
                     </div>
                     <p className="font-display text-sm text-foreground tracking-wide">{partner.name}</p>
-                    <p className="font-body text-[10px] tracking-[0.2em] uppercase text-muted-foreground mt-1">
-                      {partner.category}
-                    </p>
+                    <p className="font-body text-[10px] tracking-[0.2em] uppercase text-muted-foreground mt-1">{partner.category}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -188,29 +170,15 @@ const TeamSection = () => {
 
             {/* Partner Nav */}
             <div className="flex items-center gap-4 mt-4">
-              <button
-                onClick={prevPartner}
-                disabled={partnerIndex === 0}
-                className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30"
-              >
+              <button onClick={prevPartner} disabled={partnerIndex === 0} className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30">
                 <ChevronLeft size={18} />
               </button>
               <div className="flex gap-1.5 flex-1">
                 {Array.from({ length: Math.ceil(partners.length / visiblePartners) }).map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setPartnerIndex(i * visiblePartners)}
-                    className={`h-0.5 flex-1 transition-all duration-300 ${
-                      Math.floor(partnerIndex / visiblePartners) === i ? "bg-silver" : "bg-border"
-                    }`}
-                  />
+                  <button key={i} onClick={() => setPartnerIndex(i * visiblePartners)} className={`h-0.5 flex-1 transition-all duration-300 ${Math.floor(partnerIndex / visiblePartners) === i ? "bg-silver" : "bg-border"}`} />
                 ))}
               </div>
-              <button
-                onClick={nextPartner}
-                disabled={partnerIndex >= partners.length - visiblePartners}
-                className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30"
-              >
+              <button onClick={nextPartner} disabled={partnerIndex >= partners.length - visiblePartners} className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30">
                 <ChevronRight size={18} />
               </button>
             </div>
@@ -218,9 +186,8 @@ const TeamSection = () => {
             {/* Decorative Note */}
             <div className="mt-8 border border-silver/20 bg-card/20 px-6 py-5">
               <p className="font-body text-xs text-silver leading-relaxed text-center">
-                Collaboriamo con i <span className="text-foreground font-semibold">migliori venue di Barcellona</span> —
-                clubs esclusivi, hotel di lusso, ristoranti gourmet e molto altro.{" "}
-                <span className="italic text-silver-gradient">Sempre presenti, sempre disponibili.</span>
+                {t.team.partnersNote.split(t.team.partnersNoteHighlight)[0]}
+                <span className="italic text-silver-gradient">{t.team.partnersNoteHighlight}</span>
               </p>
             </div>
           </motion.div>
