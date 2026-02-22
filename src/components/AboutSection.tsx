@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import skylineImage from "@/assets/barcelona-skyline.jpg";
+import sagradaFamiliaImage from "@/assets/sagrada-familia-night.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const AboutSection = () => {
@@ -31,11 +31,14 @@ const AboutSection = () => {
               <span className="block italic text-silver-gradient">{t.about.titleLine2}</span>
             </h2>
             <div className="silver-line my-8" />
-            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
+            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
               {t.about.paragraph1}
             </p>
-            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8">
+            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
               {t.about.paragraph2}
+            </p>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8">
+              {t.about.paragraph3}
             </p>
             <div className="grid grid-cols-3 gap-6">
               {stats.map((stat) =>
@@ -57,8 +60,8 @@ const AboutSection = () => {
 
             <div className="relative overflow-hidden">
               <img
-                src={skylineImage}
-                alt="Barcelona skyline at golden hour from Park Güell"
+                src={sagradaFamiliaImage}
+                alt="Sagrada Família at night, Barcelona"
                 className="w-full h-[500px] object-cover" />
 
               <div className="absolute inset-0 border border-silver/20" />

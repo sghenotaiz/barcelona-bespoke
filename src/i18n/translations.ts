@@ -45,15 +45,17 @@ export const translations = {
       titleLine1: "Your Gateway to",
       titleLine2: "Barcelona's Finest",
       paragraph1:
-        "NightDreams is a premier VIP lifestyle service for elite travelers and high-profile guests in Barcelona. From luxury yacht charters and private chefs to VIP nightlife access and Michelin-starred dining — we curate every detail of your Barcelona experience.",
+        "Ready to experience the best of Barcelona while feeling like a VIP but at convenient prices? We are here for you: NightDreams Barcelona, one of the most important and established promotion agencies in the city. Born from the union of previous agencies in 2020, over the years we have continued to improve and provide our clients with the best services at the most competitive prices possible. From nightclubs, with an excellent VIP TABLES service and GUARANTEED SKIP-THE-LINE access every night and in any period of the year, to restaurant discounts, pool parties, jet skis and much more!",
       paragraph2:
-        "Our network of exclusive partners and local insiders ensures discretion, personalized attention, and access to experiences unavailable to the public. Your stay, elevated.",
+        "Our real strength? Honesty with our clients: we only suggest what we would personally choose, based on the music and the client's preferences, and above all our presence in Barcelona 365 days a year. This guarantees constant support for any problem, and most importantly, it creates long-term bonds between promoters and clients, who become real friends and part of our NightDreams family.",
+      paragraph3:
+        "What else can we say? We are waiting for you in this wonderful city! Contact us now for a personalized quote, or come meet us every day from 11:30 PM in Barceloneta, right outside the clubs. See you soon!",
       stat1Num: "500+",
       stat1Label: "Exclusive Partners",
-      stat2Num: "12+",
+      stat2Num: "5+",
       stat2Label: "Years of Excellence",
-      stat3Num: "24/7",
-      stat3Label: "Personal Support",
+      stat3Num: "365",
+      stat3Label: "Days a Year",
     },
     services: {
       label: "Our Services",
@@ -255,15 +257,17 @@ export const translations = {
       titleLine1: "Tu Puerta a lo",
       titleLine2: "Mejor de Barcelona",
       paragraph1:
-        "NightDreams es un servicio de estilo de vida VIP de primera clase para viajeros de élite e invitados de alto perfil. Desde alquiler de yates de lujo y chefs privados hasta acceso VIP a la vida nocturna y restaurantes con estrellas Michelin — cuidamos cada detalle de tu experiencia en Barcelona.",
+        "¿Listo para vivir lo mejor de Barcelona sintiéndote VIP pero a precios convenientes? Estamos aquí para ti: NightDreams Barcelona, una de las agencias de promoción más importantes y consolidadas de la ciudad. Nacida de la unión de agencias anteriores en 2020, a lo largo de los años hemos seguido mejorando y ofreciendo a nuestros clientes los mejores servicios a los precios más competitivos posibles. Desde discotecas, con un excelente servicio de MESAS VIP y acceso SKIP-THE-LINE GARANTIZADO todas las noches y en cualquier época del año, hasta descuentos en restaurantes, pool parties, motos de agua ¡y mucho más!",
       paragraph2:
-        "Nuestra red de socios exclusivos y expertos locales garantiza discreción, atención personalizada y acceso a experiencias no disponibles para el público. Tu estancia, elevada.",
+        "¿Nuestra verdadera fortaleza? La honestidad con nuestros clientes: solo sugerimos lo que nosotros mismos elegiríamos, según la música y las preferencias del cliente, y sobre todo nuestra presencia en Barcelona los 365 días del año. Esto garantiza un apoyo constante ante cualquier problema, y lo más importante, crea vínculos a largo plazo entre promotores y clientes, que se convierten en verdaderos amigos y parte de nuestra familia NightDreams.",
+      paragraph3:
+        "¿Qué más podemos decir? ¡Te esperamos en esta maravillosa ciudad! Contáctanos ahora para un presupuesto personalizado, o ven a conocernos todos los días desde las 23:30 en la Barceloneta, justo fuera de los clubs. ¡Hasta pronto!",
       stat1Num: "500+",
       stat1Label: "Socios Exclusivos",
-      stat2Num: "12+",
+      stat2Num: "5+",
       stat2Label: "Años de Excelencia",
-      stat3Num: "24/7",
-      stat3Label: "Soporte Personal",
+      stat3Num: "365",
+      stat3Label: "Días al Año",
     },
     services: {
       label: "Nuestros Servicios",
@@ -465,15 +469,17 @@ export const translations = {
       titleLine1: "Votre Accès au",
       titleLine2: "Meilleur de Barcelone",
       paragraph1:
-        "NightDreams est un service lifestyle VIP de premier plan pour les voyageurs d'élite et les invités de prestige. Des locations de yachts de luxe et chefs privés à l'accès VIP en vie nocturne et restaurants étoilés Michelin — nous orchestrons chaque détail de votre expérience barcelonaise.",
+        "Prêt à vivre le meilleur de Barcelone en vous sentant VIP mais à des prix avantageux ? Nous sommes là pour vous : NightDreams Barcelona, l'une des agences de promotion les plus importantes et établies de la ville. Née de l'union d'agences précédentes en 2020, au fil des années nous avons continué à nous améliorer et à offrir à nos clients les meilleurs services aux prix les plus compétitifs possibles. Des boîtes de nuit, avec un excellent service de TABLES VIP et un accès SKIP-THE-LINE GARANTI chaque nuit et à toute période de l'année, aux réductions dans les restaurants, pool parties, jet skis et bien plus encore !",
       paragraph2:
-        "Notre réseau de partenaires exclusifs et d'initiés locaux garantit discrétion, attention personnalisée et accès à des expériences inaccessibles au public. Votre séjour, sublimé.",
+        "Notre vraie force ? L'honnêteté avec nos clients : nous ne suggérons que ce que nous choisirions personnellement, en fonction de la musique et des préférences du client, et surtout notre présence à Barcelone 365 jours par an. Cela garantit un soutien constant pour tout problème, et surtout, cela crée des liens durables entre promoteurs et clients, qui deviennent de vrais amis et font partie de notre famille NightDreams.",
+      paragraph3:
+        "Que dire de plus ? Nous vous attendons dans cette merveilleuse ville ! Contactez-nous maintenant pour un devis personnalisé, ou venez nous rencontrer tous les jours dès 23h30 à la Barceloneta, juste devant les clubs. À bientôt !",
       stat1Num: "500+",
       stat1Label: "Partenaires Exclusifs",
-      stat2Num: "12+",
+      stat2Num: "5+",
       stat2Label: "Ans d'Excellence",
-      stat3Num: "24/7",
-      stat3Label: "Support Personnel",
+      stat3Num: "365",
+      stat3Label: "Jours par An",
     },
     services: {
       label: "Nos Services",
@@ -675,15 +681,17 @@ export const translations = {
       titleLine1: "La Tua Porta verso il",
       titleLine2: "Meglio di Barcellona",
       paragraph1:
-        "NightDreams è un servizio lifestyle VIP di prima classe per viaggiatori d'élite e ospiti di alto profilo. Dal noleggio di yacht di lusso e chef privati all'accesso VIP alla vita notturna e ristoranti stellati Michelin — curiamo ogni dettaglio della tua esperienza a Barcellona.",
+        "Pronto a vivere il meglio di Barcellona sentendoti VIP ma a prezzi convenienti? Siamo qui per te: NightDreams Barcelona, una delle agenzie di promozione più importanti e consolidate della città. Nata dall'unione di agenzie precedenti nel 2020, nel corso degli anni abbiamo continuato a migliorare e a offrire ai nostri clienti i migliori servizi ai prezzi più competitivi possibili. Dalle discoteche, con un eccellente servizio TAVOLI VIP e accesso SKIP-THE-LINE GARANTITO ogni notte e in qualsiasi periodo dell'anno, agli sconti nei ristoranti, pool party, moto d'acqua e molto altro!",
       paragraph2:
-        "La nostra rete di partner esclusivi e insider locali garantisce discrezione, attenzione personalizzata e accesso a esperienze non disponibili al pubblico. Il tuo soggiorno, elevato.",
+        "La nostra vera forza? L'onestà con i nostri clienti: suggeriamo solo ciò che sceglieremmo personalmente, in base alla musica e alle preferenze del cliente, e soprattutto la nostra presenza a Barcellona 365 giorni all'anno. Questo garantisce un supporto costante per qualsiasi problema, e soprattutto, crea legami duraturi tra promoter e clienti, che diventano veri amici e parte della nostra famiglia NightDreams.",
+      paragraph3:
+        "Che altro dire? Ti aspettiamo in questa meravigliosa città! Contattaci ora per un preventivo personalizzato, oppure vieni a trovarci ogni giorno dalle 23:30 alla Barceloneta, proprio fuori dai club. A presto!",
       stat1Num: "500+",
       stat1Label: "Partner Esclusivi",
-      stat2Num: "12+",
+      stat2Num: "5+",
       stat2Label: "Anni di Eccellenza",
-      stat3Num: "24/7",
-      stat3Label: "Supporto Personale",
+      stat3Num: "365",
+      stat3Label: "Giorni all'Anno",
     },
     services: {
       label: "I Nostri Servizi",
