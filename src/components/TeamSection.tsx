@@ -102,7 +102,7 @@ const TeamSection = () => {
 
                 {teamMembers.map((member) =>
                 <div key={member.name} className="flex-shrink-0 w-full">
-                    <div className="group relative overflow-hidden border border-border hover:border-silver/40 transition-all duration-500" style={{ height: "380px" }}>
+                    <div className="group relative overflow-hidden border border-border hover:border-silver/40 transition-all duration-500" style={{ height: "304px" }}>
                       <img
                       src={member.image}
                       alt={member.name}
@@ -156,7 +156,7 @@ const TeamSection = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="group border border-border hover:border-silver/40 transition-all duration-500 p-6 flex flex-col items-center justify-center text-center aspect-square bg-card/30">
+                  className="group border border-border hover:border-silver/40 transition-all duration-500 p-5 flex flex-col items-center justify-center text-center aspect-[5/4] bg-card/30">
 
                     <div className="w-12 h-12 mb-4 border border-silver/30 flex items-center justify-center rounded-full">
                       <span className="font-display text-lg text-silver-gradient">{partner.name.charAt(0)}</span>

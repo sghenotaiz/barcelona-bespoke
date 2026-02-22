@@ -165,7 +165,7 @@ const ServicesSection = () => {
             service.highlight ? "border-silver/30" : "border-border"}`
             }>
 
-              <div className="relative overflow-hidden" style={{ height: "260px" }}>
+              <div className="relative overflow-hidden" style={{ height: "208px" }}>
                 <img
                 src={service.image}
                 alt={service.title}
