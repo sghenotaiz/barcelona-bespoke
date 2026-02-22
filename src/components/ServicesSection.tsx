@@ -3,13 +3,13 @@ import { useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import vipTablesImg from "@/assets/services/vip-tables.jpg";
 import vipEntryImg from "@/assets/services/vip-entry.jpg";
-import multiEntryImg from "@/assets/services/multi-entry.jpg";
+import weeklyPackImg from "@/assets/services/multi-entry.jpg";
 import poolPartyImg from "@/assets/services/pool-party.jpg";
 import restaurantImg from "@/assets/services/restaurant.jpg";
 import apartmentsImg from "@/assets/services/apartments.jpg";
 import limousineImg from "@/assets/services/limousine.jpg";
 import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
-import corporatePartyImg from "@/assets/services/corporate-party.jpg";
+
 import jetSkiImg from "@/assets/services/jet-ski.jpg";
 import altroImg from "@/assets/services/altro.jpg";
 
@@ -35,9 +35,9 @@ const servicesDefs: ServiceDef[] = [
     badgeKey: "badgeAffordable",
   },
   {
-    image: multiEntryImg,
-    title: "Multi-Entry Packs",
-    description: "Access multiple clubs in one night — dance floors, DJ sets & full freedom to move between the best spots.",
+    image: weeklyPackImg,
+    title: "More Days Packs / Weekly Pack",
+    description: "Save more by booking events over several days instead of single nights. Our multi-day and weekly packs give you access to multiple parties at a much better price than booking each night separately.",
     badgeKey: "badgeWeekly",
   },
   {
@@ -72,15 +72,9 @@ const servicesDefs: ServiceDef[] = [
   },
   {
     image: bachelorPartyImg,
-    title: "Bachelor Parties",
-    description: "Unforgettable stag celebrations — VIP tables, premium drinks, sparklers & experiences they'll never forget.",
+    title: "Private & Themed Events",
+    description: "We organize tailor-made private events for bachelor groups and companies: themed parties, VIP areas, and custom experiences designed for your group.",
     badgeKey: "badgeExclusive",
-  },
-  {
-    image: corporatePartyImg,
-    title: "Corporate Themed Parties",
-    description: "Bespoke company events with custom themed decorations, premium venues and full event management.",
-    badgeKey: "badgeCustom",
   },
   {
     image: altroImg,
