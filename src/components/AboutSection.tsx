@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import sagradaFamiliaImage from "@/assets/sagrada-familia-night.jpg";
+import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const AboutSection = () => {
@@ -58,16 +58,13 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative">
 
-            <div className="relative overflow-hidden">
+            <div className="relative flex items-center justify-center h-[500px]">
               <img
-                src={sagradaFamiliaImage}
-                alt="Sagrada Família at night, Barcelona"
-                className="w-full h-[500px] object-cover" />
-
+                src={nightdreamsLogo}
+                alt="NightDreams Barcelona Logo"
+                className="max-w-[320px] w-full h-auto object-contain drop-shadow-2xl" />
               <div className="absolute inset-0 border border-silver/20" />
             </div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 border border-silver/30" />
-            <div className="absolute -top-4 -right-4 w-24 h-24 border border-silver/30" />
           </motion.div>
         </div>
       </div>
