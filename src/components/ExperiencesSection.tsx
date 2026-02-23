@@ -114,7 +114,7 @@ const ExperiencesSection = () => {
   };
 
   return (
-    <section id="experiences" className="py-24 border-b border border-gold-dark md:py-[50px] bg-[#170202]">
+    <section id="experiences" className="py-24 border-b border border-gold-dark bg-[#170202] md:py-[50px]">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
