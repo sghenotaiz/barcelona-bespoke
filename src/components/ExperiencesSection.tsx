@@ -140,7 +140,7 @@ const ExperiencesSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mb-6">
 
-          <h3 className="font-display text-xl font-light text-foreground mb-6 tracking-wider uppercase text-center">
+          <h3 className="font-display text-foreground mb-6 tracking-wider uppercase text-center text-lg font-bold">
             🎬 {t.experiences.videoLabel}
           </h3>
         </motion.div>
