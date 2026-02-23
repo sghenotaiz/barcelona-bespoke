@@ -34,7 +34,7 @@ export const translations = {
     hero: {
       title: "Night",
       titleAccent: "Dreams",
-      subtitle: "Barcelona VIP Concierge",
+      subtitle: "Barcelona",
       description:
         "Live your best experience in one of the most beautiful cities of the world. We will take care of you!",
       exploreServices: "Explore Services",
@@ -246,7 +246,7 @@ export const translations = {
     hero: {
       title: "Night",
       titleAccent: "Dreams",
-      subtitle: "Barcelona Concierge VIP",
+      subtitle: "Barcelona",
       description:
         "Vive tu mejor experiencia en una de las ciudades más bellas del mundo. ¡Nos encargaremos de ti!",
       exploreServices: "Explorar Servicios",
@@ -458,7 +458,7 @@ export const translations = {
     hero: {
       title: "Night",
       titleAccent: "Dreams",
-      subtitle: "Barcelona Concierge VIP",
+      subtitle: "Barcelona",
       description:
         "Vivez votre meilleure expérience dans l'une des plus belles villes du monde. Nous prendrons soin de vous !",
       exploreServices: "Découvrir les Services",
@@ -670,7 +670,7 @@ export const translations = {
     hero: {
       title: "Night",
       titleAccent: "Dreams",
-      subtitle: "Barcelona Concierge VIP",
+      subtitle: "Barcelona",
       description:
         "Vivi la tua migliore esperienza in una delle città più belle del mondo. Ci prenderemo cura di te!",
       exploreServices: "Scopri i Servizi",
