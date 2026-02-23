@@ -63,7 +63,7 @@ const TeamSection = () => {
   const nextPartner = () => setPartnerIndex((i) => Math.min(partners.length - visiblePartners, i + 1));
 
   return (
-    <section id="team" className="py-24 md:py-20 bg-background border-b border border-gold-dark">
+    <section id="team" className="py-24 bg-background border-b border border-gold-dark md:py-[50px]">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
@@ -80,9 +80,6 @@ const TeamSection = () => {
             <span className="italic text-silver-gradient">{t.team.titleAccent}</span>
           </h2>
           <div className="mx-auto silver-line mt-8" />
-          <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
-            {t.team.description}
-          </p>
         </motion.div>
 
         {/* 2-Column Layout */}
