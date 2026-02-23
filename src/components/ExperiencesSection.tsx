@@ -114,7 +114,7 @@ const ExperiencesSection = () => {
   };
 
   return (
-    <section id="experiences" className="py-24 bg-slate-950 border-b border border-gold-dark md:py-[50px]">
+    <section id="experiences" className="py-24 md:py-20 bg-slate-950 border-b border border-gold-dark">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
@@ -131,6 +131,9 @@ const ExperiencesSection = () => {
             <span className="italic text-silver-gradient">{t.experiences.titleLine2}</span>
           </h2>
           <div className="mx-auto silver-line mt-8" />
+          <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
+            {t.experiences.description}
+          </p>
         </motion.div>
 
         {/* Video Carousel */}
