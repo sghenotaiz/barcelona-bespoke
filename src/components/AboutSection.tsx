@@ -4,11 +4,11 @@ import { Instagram } from "lucide-react";
 import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const TikTokIcon = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+const TikTokIcon = ({ size = 24, className = "" }: {size?: number;className?: string;}) =>
+<svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.7a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z" />
-  </svg>
-);
+  </svg>;
+
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -65,7 +65,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative">
 
-            <div className="relative flex flex-col items-center justify-center h-[500px]">
+            <div className="relative flex flex-col items-center justify-center h-[500px] bg-black border border-gold-dark">
               <img
                 src={nightdreamsLogo}
                 alt="NightDreams Barcelona Logo"
@@ -79,16 +79,16 @@ const AboutSection = () => {
                     href="https://www.instagram.com/nightdreamsbarcelona"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-silver hover:drop-shadow-[0_0_8px_hsl(0,0%,75%)] transition-all duration-300"
-                  >
+                    className="text-muted-foreground hover:text-silver hover:drop-shadow-[0_0_8px_hsl(0,0%,75%)] transition-all duration-300">
+
                     <Instagram size={24} />
                   </a>
                   <a
                     href="https://www.tiktok.com/@nightdreamsbarcelona"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-silver hover:drop-shadow-[0_0_8px_hsl(0,0%,75%)] transition-all duration-300"
-                  >
+                    className="text-muted-foreground hover:text-silver hover:drop-shadow-[0_0_8px_hsl(0,0%,75%)] transition-all duration-300">
+
                     <TikTokIcon size={24} />
                   </a>
                 </div>
