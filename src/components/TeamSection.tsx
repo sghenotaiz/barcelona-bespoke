@@ -80,6 +80,9 @@ const TeamSection = () => {
             <span className="italic text-silver-gradient">{t.team.titleAccent}</span>
           </h2>
           <div className="mx-auto silver-line mt-8" />
+          <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
+            {t.team.description}
+          </p>
         </motion.div>
 
         {/* 2-Column Layout */}

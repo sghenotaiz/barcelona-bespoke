@@ -43,7 +43,7 @@ const HeroSection = () => {
               {t.hero.exploreServices}
             </button>
             <button
-              onClick={() => scrollTo("contact")}
+              onClick={() => scrollTo("booking")}
               className="bg-silver px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-background hover:bg-silver-dark transition-all duration-300">
               {t.hero.requestVip}
             </button>
