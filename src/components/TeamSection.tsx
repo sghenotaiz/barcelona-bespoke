@@ -63,7 +63,7 @@ const TeamSection = () => {
   const nextPartner = () => setPartnerIndex((i) => Math.min(partners.length - visiblePartners, i + 1));
 
   return (
-    <section id="team" className="py-24 md:py-20 bg-background border-b border border-gold-dark">
+    <section id="team" className="py-24 bg-background border-b border border-gold-dark md:py-[50px]">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
