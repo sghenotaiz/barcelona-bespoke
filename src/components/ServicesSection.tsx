@@ -95,7 +95,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-24 md:py-20 bg-[#0c121d] border border-gold-dark">
+    <section id="services" className="py-24 bg-[#0c121d] border border-gold-dark md:py-[50px]">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
