@@ -38,7 +38,7 @@ export const translations = {
       description:
         "Live your best experience in one of the most beautiful cities of the world. We will take care of you!",
       exploreServices: "Explore Services",
-      requestVip: "Request VIP Service",
+      requestVip: "Request a Quote",
     },
     about: {
       label: "About Us",
@@ -110,6 +110,7 @@ export const translations = {
       label: "Signature Experiences",
       titleLine1: "Moments Crafted",
       titleLine2: "Just for You",
+      description: "Here you can find some of the hottest moments from our past events in Barcelona: real photos and videos from our parties and experiences. You will also see our clients together with our promoter team, smiling, celebrating, and enjoying unforgettable nights with NightDreams.",
       videoLabel: "Highlights of our events",
       videoCaption1: "Barcelona clubs at peak energy",
       videoCaption2: "VIP celebrations & bottle service",
@@ -173,6 +174,7 @@ export const translations = {
       label: "Our Team",
       title: "OUR",
       titleAccent: "TEAM",
+      description: "Our promoters are normal people just like you, whose only goal is to make sure you have the best time in Barcelona. We carefully listen to every client, understand their tastes, and suggest the most suitable experiences to match their expectations. Our multicultural team comes from different countries and speaks the main international languages (English, Spanish, French, Italian, German), so you can always talk to someone who understands you. We want you to enjoy your nights so much that you will want to come back to us again and again.",
       promotersTitle: "Our",
       promotersAccent: "Promoters",
       partnersTitle: "Our",
@@ -250,7 +252,7 @@ export const translations = {
       description:
         "Vive tu mejor experiencia en una de las ciudades más bellas del mundo. ¡Nos encargaremos de ti!",
       exploreServices: "Explorar Servicios",
-      requestVip: "Solicitar Servicio VIP",
+      requestVip: "Solicitar Presupuesto",
     },
     about: {
       label: "Sobre Nosotros",
@@ -322,6 +324,7 @@ export const translations = {
       label: "Experiencias Exclusivas",
       titleLine1: "Momentos Creados",
       titleLine2: "Solo para Ti",
+      description: "Aquí puedes encontrar algunos de los momentos más candentes de nuestros eventos pasados en Barcelona: fotos y videos reales de nuestras fiestas y experiencias. También verás a nuestros clientes junto con nuestro equipo de promotores, sonriendo, celebrando y disfrutando de noches inolvidables con NightDreams.",
       videoLabel: "Highlights of our events",
       videoCaption1: "Los clubs de Barcelona a máxima energía",
       videoCaption2: "Celebraciones VIP y servicio de botellas",
@@ -385,6 +388,7 @@ export const translations = {
       label: "Nuestro Equipo",
       title: "NUESTRO",
       titleAccent: "EQUIPO",
+      description: "Nuestros promotores son personas normales como tú, cuyo único objetivo es asegurarse de que pases el mejor momento en Barcelona. Escuchamos atentamente a cada cliente, entendemos sus gustos y sugerimos las experiencias más adecuadas para cumplir sus expectativas. Nuestro equipo multicultural proviene de diferentes países y habla los principales idiomas internacionales (inglés, español, francés, italiano, alemán), por lo que siempre puedes hablar con alguien que te entienda. Queremos que disfrutes tanto de tus noches que quieras volver a nosotros una y otra vez.",
       promotersTitle: "Nuestros",
       promotersAccent: "Promotores",
       partnersTitle: "Nuestros",
@@ -462,7 +466,7 @@ export const translations = {
       description:
         "Vivez votre meilleure expérience dans l'une des plus belles villes du monde. Nous prendrons soin de vous !",
       exploreServices: "Découvrir les Services",
-      requestVip: "Demander un Service VIP",
+      requestVip: "Demander un Devis",
     },
     about: {
       label: "À Propos",
@@ -534,6 +538,7 @@ export const translations = {
       label: "Expériences Signature",
       titleLine1: "Des Moments Créés",
       titleLine2: "Rien que pour Vous",
+      description: "Ici vous pouvez retrouver certains des moments les plus intenses de nos événements passés à Barcelone : de vraies photos et vidéos de nos soirées et expériences. Vous verrez également nos clients avec notre équipe de promoteurs, souriants, festifs et profitant de nuits inoubliables avec NightDreams.",
       videoLabel: "Highlights of our events",
       videoCaption1: "Les clubs de Barcelone à pleine énergie",
       videoCaption2: "Célébrations VIP et service bouteilles",
@@ -597,6 +602,7 @@ export const translations = {
       label: "Notre Équipe",
       title: "NOTRE",
       titleAccent: "ÉQUIPE",
+      description: "Nos promoteurs sont des personnes normales comme vous, dont le seul objectif est de vous faire passer le meilleur moment à Barcelone. Nous écoutons attentivement chaque client, comprenons ses goûts et suggérons les expériences les plus adaptées à ses attentes. Notre équipe multiculturelle vient de différents pays et parle les principales langues internationales (anglais, espagnol, français, italien, allemand), pour que vous puissiez toujours parler à quelqu'un qui vous comprend. Nous voulons que vous profitiez tellement de vos nuits que vous aurez envie de revenir encore et encore.",
       promotersTitle: "Nos",
       promotersAccent: "Promoteurs",
       partnersTitle: "Nos",
@@ -674,7 +680,7 @@ export const translations = {
       description:
         "Vivi la tua migliore esperienza in una delle città più belle del mondo. Ci prenderemo cura di te!",
       exploreServices: "Scopri i Servizi",
-      requestVip: "Richiedi Servizio VIP",
+      requestVip: "Richiedi un Preventivo",
     },
     about: {
       label: "Chi Siamo",
@@ -746,6 +752,7 @@ export const translations = {
       label: "Esperienze Esclusive",
       titleLine1: "Momenti Creati",
       titleLine2: "Solo per Te",
+      description: "Qui puoi trovare alcuni dei momenti più emozionanti dei nostri eventi passati a Barcellona: foto e video reali delle nostre feste ed esperienze. Vedrai anche i nostri clienti insieme al nostro team di promoter, sorridenti, festosi e mentre si godono notti indimenticabili con NightDreams.",
       videoLabel: "Highlights of our events",
       videoCaption1: "I club di Barcellona al massimo dell'energia",
       videoCaption2: "Celebrazioni VIP e servizio bottiglie",
@@ -809,6 +816,7 @@ export const translations = {
       label: "La Nostra Squadra",
       title: "IL NOSTRO",
       titleAccent: "TEAM",
+      description: "I nostri promoter sono persone normali proprio come te, il cui unico obiettivo è assicurarsi che tu viva il miglior momento a Barcellona. Ascoltiamo attentamente ogni cliente, capiamo i suoi gusti e suggeriamo le esperienze più adatte alle sue aspettative. Il nostro team multiculturale proviene da diversi paesi e parla le principali lingue internazionali (inglese, spagnolo, francese, italiano, tedesco), così puoi sempre parlare con qualcuno che ti capisce. Vogliamo che ti goda così tanto le tue serate da voler tornare da noi ancora e ancora.",
       promotersTitle: "I Nostri",
       promotersAccent: "Promoter",
       partnersTitle: "I Nostri",
