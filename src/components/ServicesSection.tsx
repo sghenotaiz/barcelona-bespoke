@@ -78,7 +78,7 @@ const servicesDefs: ServiceDef[] = [
 },
 {
   image: altroImg,
-  title: "Altro — Qualsiasi Cosa",
+  title: "& much more..",
   description: "Tickets, reservations, private transfers, shopping assistance, luxury bags, exclusive events... ANYTHING you need — just ask our team!",
   badgeKey: "badgeAnything",
   highlight: true
