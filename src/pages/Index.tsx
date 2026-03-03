@@ -19,6 +19,10 @@ const Index = () => {
 
   const dismissIntro = useCallback(() => {
     setShowIntro(false);
+    // Smooth scroll to gallery after intro dismisses
+    setTimeout(() => {
+      document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" });
+    }, 200);
   }, []);
 
   return (
@@ -35,8 +39,8 @@ const Index = () => {
       <TeamSection />
       <TestimonialsSection />
       <Footer />
-      <FloatingCTA />
-      <FloatingWhatsApp />
+      {!showIntro && <FloatingCTA />}
+      {!showIntro && <FloatingWhatsApp />}
     </main>
   );
 };
