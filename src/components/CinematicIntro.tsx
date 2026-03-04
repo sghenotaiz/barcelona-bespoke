@@ -26,7 +26,7 @@ const CinematicIntro = ({ visible, onDismiss }: CinematicIntroProps) => {
             className="absolute w-[600px] h-[600px] rounded-full opacity-20 pointer-events-none"
             style={{
               background:
-                "radial-gradient(circle, hsl(40, 50%, 50%) 0%, transparent 70%)",
+                "radial-gradient(circle, hsl(0, 0%, 70%) 0%, transparent 70%)",
             }}
           />
 
@@ -50,7 +50,7 @@ const CinematicIntro = ({ visible, onDismiss }: CinematicIntroProps) => {
               fontFamily: "'Aldo the Apache', sans-serif",
               color: "hsl(0, 0%, 100%)",
               textShadow:
-                "0 0 20px hsla(40, 60%, 60%, 0.6), 0 0 60px hsla(40, 60%, 50%, 0.3), 0 0 120px hsla(40, 60%, 50%, 0.15)",
+                "0 0 20px hsla(0, 0%, 80%, 0.6), 0 0 60px hsla(0, 0%, 75%, 0.3), 0 0 120px hsla(0, 0%, 70%, 0.15)",
             }}
           >
             NightDreams
