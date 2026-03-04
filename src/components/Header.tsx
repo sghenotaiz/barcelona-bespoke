@@ -8,8 +8,8 @@ import NightDreamsLogo from "@/components/NightDreamsLogo";
 
 const navItems = [
   { key: "home", label: "home", path: "/" },
-  { key: "services", label: "services", path: "/services" },
   { key: "about", label: "about", path: "/about" },
+  { key: "services", label: "services", path: "/services" },
   { key: "moments", label: "experiences", path: "/moments" },
   { key: "plan", label: "bookNow", path: "/plan" },
 ];

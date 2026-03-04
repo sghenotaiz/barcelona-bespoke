@@ -95,14 +95,15 @@ const CircularGallery = () => {
     el.addEventListener("touchend", handleTouchEnd);
   };
 
-  const radius = typeof window !== "undefined" && window.innerWidth < 768 ? 260 : 420;
-  const cardW = typeof window !== "undefined" && window.innerWidth < 768 ? 200 : 300;
-  const cardH = typeof window !== "undefined" && window.innerWidth < 768 ? 280 : 400;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const radius = isMobile ? 220 : 360;
+  const cardW = isMobile ? 160 : 240;
+  const cardH = isMobile ? 220 : 310;
 
   return (
     <div id="gallery" className="relative" onTouchStart={handleTouchStart}>
       <div
-        className="w-full h-screen overflow-hidden flex items-center justify-center relative"
+        className="w-full min-h-screen overflow-hidden flex items-center justify-center relative pt-20"
         style={{ backgroundColor: "hsl(0, 0%, 3%)" }}
       >
         {/* Background image crossfade */}
@@ -148,9 +149,9 @@ const CircularGallery = () => {
 
         {/* 3D Carousel */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-16 md:px-24">
-          <div
+        <div
             className="relative mx-auto"
-            style={{ perspective: "1400px", height: "440px" }}
+            style={{ perspective: "1400px", height: isMobile ? "280px" : "360px" }}
           >
             <motion.div
               className="absolute inset-0 will-change-transform"
@@ -191,12 +192,12 @@ const CircularGallery = () => {
                             "linear-gradient(to top, hsl(0,0%,0%) 0%, hsla(0,0%,0%,0.5) 40%, transparent 100%)",
                         }}
                       />
-                      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                        <h3 className="font-display text-lg md:text-2xl text-foreground mb-1 leading-tight">
+                      <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                      <h3 className="font-display text-sm md:text-lg text-foreground mb-0.5 leading-snug">
                           {texts[item.titleKey]}
                         </h3>
                         <p
-                          className="font-body text-[9px] md:text-[11px] tracking-[0.2em] uppercase"
+                          className="font-body text-[8px] md:text-[10px] tracking-[0.15em] uppercase"
                           style={{ color: "hsl(0, 0%, 55%)" }}
                         >
                           {texts[item.subtitleKey]}
@@ -210,7 +211,7 @@ const CircularGallery = () => {
           </div>
 
           {/* Center info panel */}
-          <div className="text-center mt-6 md:mt-10">
+          <div className="text-center mt-4 md:mt-6">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
