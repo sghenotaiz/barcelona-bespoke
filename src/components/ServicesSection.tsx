@@ -133,7 +133,7 @@ const ServicesSection = () => {
                 </p>
                 <div className="silver-line mb-1" />
                 <a
-                  href="#booking"
+                  href="/plan"
                   className="inline-block mt-1 font-body text-xs tracking-[0.2em] uppercase text-center border border-silver/40 text-silver hover:bg-silver hover:text-background transition-all duration-300 px-5 py-3">
                   {t.services.bookNow}
                 </a>

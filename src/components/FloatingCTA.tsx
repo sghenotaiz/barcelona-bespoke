@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const FloatingCTA = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    const el = document.getElementById("booking");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    navigate("/plan");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

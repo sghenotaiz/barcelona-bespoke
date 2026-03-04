@@ -1,5 +1,7 @@
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 import vipTablesImg from "@/assets/services/vip-tables.jpg";
 import barcelonaSkylineImg from "@/assets/barcelona-skyline.jpg";
@@ -12,15 +14,15 @@ interface GalleryItem {
   titleKey: string;
   subtitleKey: string;
   image: string;
-  scrollTarget: string;
+  path: string;
 }
 
 const galleryItems: GalleryItem[] = [
-  { id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: vipTablesImg, scrollTarget: "services" },
-  { id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: barcelonaSkylineImg, scrollTarget: "about" },
-  { id: "booking", titleKey: "planExperience", subtitleKey: "planExperienceDesc", image: restaurantImg, scrollTarget: "booking" },
-  { id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, scrollTarget: "team" },
-  { id: "moments", titleKey: "momentsCrafted", subtitleKey: "momentsCraftedDesc", image: diningImg, scrollTarget: "experiences" },
+  { id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: vipTablesImg, path: "/services" },
+  { id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: barcelonaSkylineImg, path: "/about" },
+  { id: "plan", titleKey: "planExperience", subtitleKey: "planExperienceDesc", image: restaurantImg, path: "/plan" },
+  { id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about" },
+  { id: "moments", titleKey: "momentsCrafted", subtitleKey: "momentsCraftedDesc", image: diningImg, path: "/moments" },
 ];
 
 const galleryTexts: Record<string, Record<string, string>> = {
@@ -30,7 +32,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
     planExperience: "Plan Your Experience", planExperienceDesc: "Book VIP Services",
     ourTeam: "Our Team", ourTeamDesc: "Meet Our Promoters",
     momentsCrafted: "Moments Crafted", momentsCraftedDesc: "Real Client Memories",
-    explore: "Explore", scrollHint: "Scroll to explore",
+    explore: "Explore",
   },
   it: {
     ourServices: "I Nostri Servizi", ourServicesDesc: "Esperienze VIP Barcellona",
@@ -38,7 +40,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
     planExperience: "Pianifica la Tua Esperienza", planExperienceDesc: "Prenota Servizi VIP",
     ourTeam: "Il Nostro Team", ourTeamDesc: "Incontra i Nostri Promoter",
     momentsCrafted: "Momenti Creati", momentsCraftedDesc: "Ricordi dei Clienti",
-    explore: "Esplora", scrollHint: "Scorri per esplorare",
+    explore: "Esplora",
   },
   es: {
     ourServices: "Nuestros Servicios", ourServicesDesc: "Experiencias VIP Barcelona",
@@ -46,7 +48,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
     planExperience: "Planifica Tu Experiencia", planExperienceDesc: "Reserva Servicios VIP",
     ourTeam: "Nuestro Equipo", ourTeamDesc: "Conoce a Nuestros Promotores",
     momentsCrafted: "Momentos Creados", momentsCraftedDesc: "Recuerdos de Clientes",
-    explore: "Explorar", scrollHint: "Desplázate para explorar",
+    explore: "Explorar",
   },
   fr: {
     ourServices: "Nos Services", ourServicesDesc: "Expériences VIP Barcelone",
@@ -54,62 +56,53 @@ const galleryTexts: Record<string, Record<string, string>> = {
     planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Réservez des Services VIP",
     ourTeam: "Notre Équipe", ourTeamDesc: "Rencontrez Nos Promoteurs",
     momentsCrafted: "Moments Créés", momentsCraftedDesc: "Souvenirs de Clients",
-    explore: "Explorer", scrollHint: "Faites défiler pour explorer",
+    explore: "Explorer",
   },
 };
 
 const ITEM_COUNT = galleryItems.length;
 const ROTATION_PER_ITEM = 360 / ITEM_COUNT;
-const SCROLL_HEIGHT_VH = 500;
 
 const CircularGallery = () => {
   const { language } = useLanguage();
   const texts = galleryTexts[language] || galleryTexts.en;
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Track scroll position within the tall container
-  useEffect(() => {
-    const onScroll = () => {
-      const el = scrollContainerRef.current;
-      if (!el) return;
-      const rect = el.getBoundingClientRect();
-      const scrollableHeight = el.offsetHeight - window.innerHeight;
-      if (scrollableHeight <= 0) return;
-      const scrolled = Math.max(0, -rect.top);
-      const progress = Math.min(1, scrolled / scrollableHeight);
-      setScrollProgress(progress);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const rotationAngle = activeIndex * ROTATION_PER_ITEM;
 
-  const activeIndex = useMemo(() => {
-    const raw = scrollProgress * ITEM_COUNT;
-    return Math.min(Math.floor(raw), ITEM_COUNT - 1);
-  }, [scrollProgress]);
+  const goNext = () => setActiveIndex((i) => (i + 1) % ITEM_COUNT);
+  const goPrev = () => setActiveIndex((i) => (i - 1 + ITEM_COUNT) % ITEM_COUNT);
 
-  // Only rotate through the items (0 to last item angle), not full 360
-  const maxRotation = (ITEM_COUNT - 1) * ROTATION_PER_ITEM;
-  const rotationAngle = scrollProgress * maxRotation;
-
-  const handleItemClick = (scrollTarget: string) => {
-    document.getElementById(scrollTarget)?.scrollIntoView({ behavior: "smooth" });
+  const handleItemClick = (path: string) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const currentItem = galleryItems[activeIndex];
 
+  // Swipe support
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const startX = e.touches[0].clientX;
+    const el = e.currentTarget;
+    const handleTouchEnd = (ev: TouchEvent) => {
+      const diff = startX - ev.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? goNext() : goPrev();
+      }
+      el.removeEventListener("touchend", handleTouchEnd);
+    };
+    el.addEventListener("touchend", handleTouchEnd);
+  };
+
+  const radius = typeof window !== "undefined" && window.innerWidth < 768 ? 260 : 420;
+  const cardW = typeof window !== "undefined" && window.innerWidth < 768 ? 200 : 300;
+  const cardH = typeof window !== "undefined" && window.innerWidth < 768 ? 280 : 400;
+
   return (
-    <div
-      ref={scrollContainerRef}
-      id="gallery"
-      style={{ height: `${SCROLL_HEIGHT_VH}vh` }}
-      className="relative"
-    >
-      {/* Sticky viewport */}
+    <div id="gallery" className="relative" onTouchStart={handleTouchStart}>
       <div
-        className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center"
+        className="w-full h-screen overflow-hidden flex items-center justify-center relative"
         style={{ backgroundColor: "hsl(0, 0%, 3%)" }}
       >
         {/* Background image crossfade */}
@@ -135,25 +128,38 @@ const CircularGallery = () => {
           }}
         />
 
+        {/* Left Arrow */}
+        <button
+          onClick={goPrev}
+          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center border border-border/40 text-foreground/70 hover:text-silver hover:border-silver/60 transition-all duration-300 bg-background/20 backdrop-blur-sm"
+          aria-label="Previous"
+        >
+          <ChevronLeft size={28} />
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          onClick={goNext}
+          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center border border-border/40 text-foreground/70 hover:text-silver hover:border-silver/60 transition-all duration-300 bg-background/20 backdrop-blur-sm"
+          aria-label="Next"
+        >
+          <ChevronRight size={28} />
+        </button>
+
         {/* 3D Carousel */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-16 md:px-24">
           <div
             className="relative mx-auto"
             style={{ perspective: "1400px", height: "440px" }}
           >
-            <div
+            <motion.div
               className="absolute inset-0 will-change-transform"
-              style={{
-                transformStyle: "preserve-3d",
-                transform: `rotateY(${-rotationAngle}deg)`,
-                transition: "transform 0.1s linear",
-              }}
+              style={{ transformStyle: "preserve-3d" }}
+              animate={{ rotateY: -rotationAngle }}
+              transition={{ type: "spring", stiffness: 120, damping: 20 }}
             >
               {galleryItems.map((item, index) => {
                 const angle = index * ROTATION_PER_ITEM;
-                const radius = typeof window !== "undefined" && window.innerWidth < 768 ? 260 : 420;
-                const cardW = typeof window !== "undefined" && window.innerWidth < 768 ? 200 : 300;
-                const cardH = typeof window !== "undefined" && window.innerWidth < 768 ? 280 : 400;
                 return (
                   <div
                     key={item.id}
@@ -166,7 +172,7 @@ const CircularGallery = () => {
                       transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
                       transformStyle: "preserve-3d",
                     }}
-                    onClick={() => handleItemClick(item.scrollTarget)}
+                    onClick={() => handleItemClick(item.path)}
                   >
                     <div
                       className="w-full h-full overflow-hidden border border-border/20 hover:border-silver/40 transition-all duration-500"
@@ -181,7 +187,8 @@ const CircularGallery = () => {
                       <div
                         className="absolute inset-0"
                         style={{
-                          background: "linear-gradient(to top, hsl(0,0%,0%) 0%, hsla(0,0%,0%,0.5) 40%, transparent 100%)",
+                          background:
+                            "linear-gradient(to top, hsl(0,0%,0%) 0%, hsla(0,0%,0%,0.5) 40%, transparent 100%)",
                         }}
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
@@ -199,7 +206,7 @@ const CircularGallery = () => {
                   </div>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
 
           {/* Center info panel */}
@@ -223,7 +230,7 @@ const CircularGallery = () => {
                   {texts[currentItem.subtitleKey]}
                 </p>
                 <button
-                  onClick={() => handleItemClick(currentItem.scrollTarget)}
+                  onClick={() => handleItemClick(currentItem.path)}
                   className="mt-2 border border-silver/40 px-8 py-3 font-body text-xs tracking-[0.2em] uppercase text-silver hover:bg-silver hover:text-background transition-all duration-300"
                 >
                   {texts.explore} →
@@ -235,32 +242,20 @@ const CircularGallery = () => {
           {/* Progress dots */}
           <div className="flex justify-center gap-2.5 mt-6 md:mt-8">
             {galleryItems.map((_, i) => (
-              <div
+              <button
                 key={i}
+                onClick={() => setActiveIndex(i)}
                 className="h-1.5 rounded-full transition-all duration-500"
                 style={{
                   width: i === activeIndex ? "24px" : "6px",
-                  backgroundColor: i === activeIndex ? "hsl(0, 0%, 75%)" : "hsl(0, 0%, 22%)",
+                  backgroundColor:
+                    i === activeIndex
+                      ? "hsl(0, 0%, 75%)"
+                      : "hsl(0, 0%, 22%)",
                 }}
               />
             ))}
           </div>
-
-          {/* Scroll hint at bottom */}
-          <motion.div
-            animate={{ opacity: scrollProgress < 0.05 ? 1 : 0 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-          >
-            <span className="font-body text-[10px] tracking-[0.3em] uppercase" style={{ color: "hsl(0, 0%, 40%)" }}>
-              {texts.scrollHint}
-            </span>
-            <motion.div
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-px h-6"
-              style={{ background: "linear-gradient(to bottom, hsl(0, 0%, 40%), transparent)" }}
-            />
-          </motion.div>
         </div>
       </div>
     </div>
