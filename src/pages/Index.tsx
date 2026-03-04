@@ -2,14 +2,8 @@ import { useState, useCallback } from "react";
 import Header from "@/components/Header";
 import CinematicIntro from "@/components/CinematicIntro";
 import CircularGallery from "@/components/CircularGallery";
+import LanguageFlags from "@/components/LanguageFlags";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import WorkWithUsSection from "@/components/WorkWithUsSection";
-import ExperiencesSection from "@/components/ExperiencesSection";
-import TeamSection from "@/components/TeamSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import BookingSection from "@/components/BookingSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -19,10 +13,6 @@ const Index = () => {
 
   const dismissIntro = useCallback(() => {
     setShowIntro(false);
-    // Smooth scroll to gallery after intro dismisses
-    setTimeout(() => {
-      document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" });
-    }, 200);
   }, []);
 
   return (
@@ -30,14 +20,8 @@ const Index = () => {
       <CinematicIntro visible={showIntro} onDismiss={dismissIntro} />
       <Header />
       <CircularGallery />
+      <LanguageFlags />
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ExperiencesSection />
-      <BookingSection />
-      <WorkWithUsSection />
-      <TeamSection />
-      <TestimonialsSection />
       <Footer />
       {!showIntro && <FloatingCTA />}
       {!showIntro && <FloatingWhatsApp />}
