@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/barcelona-night.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import NightDreamsLogo from "@/components/NightDreamsLogo";
 
 const HeroSection = () => {
   const { t } = useLanguage();
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const navigate = useNavigate();
+
+  const goTo = (path: string) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -38,12 +42,12 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => scrollTo("services")}
+              onClick={() => goTo("/services")}
               className="border border-primary-foreground/30 px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300">
               {t.hero.exploreServices}
             </button>
             <button
-              onClick={() => scrollTo("booking")}
+              onClick={() => goTo("/plan")}
               className="bg-silver px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-background hover:bg-silver-dark transition-all duration-300">
               {t.hero.requestVip}
             </button>
