@@ -1,7 +1,5 @@
 import Header from "@/components/Header";
 import BookingSection from "@/components/BookingSection";
-import WorkWithUsSection from "@/components/WorkWithUsSection";
-
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -12,7 +10,6 @@ const PlanPage = () => {
       <Header />
       <div className="pt-20">
         <BookingSection />
-        <WorkWithUsSection />
       </div>
       <Footer />
       <FloatingCTA />

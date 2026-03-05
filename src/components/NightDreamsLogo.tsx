@@ -30,13 +30,12 @@ const NightDreamsLogo = ({ size = "md", showIcon = true }: NightDreamsLogoProps)
 
       }
       <span
-        className={`font-logo ${sizeClasses[size]} italic tracking-wider`}
+        className={`${sizeClasses[size]} tracking-wider uppercase`}
         style={{
-          WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.8)",
-          paintOrder: "stroke fill"
+          fontFamily: "'Aldo the Apache', sans-serif",
+          color: "hsl(0, 0%, 100%)",
         }}>
-
-        <span style={{ WebkitTextFillColor: "#FFFFFF", WebkitTextStroke: "1px hsla(0, 0%, 0%, 0.8)" }} className="px-0 pr-[40px]">NightDreams</span>
+        NightDreams
       </span>
     </div>);
 
