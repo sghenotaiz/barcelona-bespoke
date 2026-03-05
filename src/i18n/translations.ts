@@ -946,7 +946,7 @@ export const translations = {
       label: "Mettiamoci in contatto!",
       titleLine1: "Pianifica la Tua",
       titleLine2: "Esperienza",
-      description: "Seleziona le tue date, la dimensione del gruppo e le attività desiderate — ti invieremo una proposta VIP personalizzata via email.",
+      description: "Seleziona le tue date, la dimensione del gruppo e le attività desiderate — ti invieremo una proposta personalizzata via email.",
       arrivalDate: "Data di Arrivo",
       departureDate: "Data di Partenza (opzionale)",
       pickDate: "Scegli una data",
