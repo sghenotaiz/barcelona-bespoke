@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/barcelona-night.jpg";
+import nightdreamsBadge from "@/assets/nightdreams-badge.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import NightDreamsLogo from "@/components/NightDreamsLogo";
 
@@ -30,6 +31,15 @@ const HeroSection = () => {
 
           <div className="mx-auto silver-line-wide mb-8" />
           
+          <motion.img
+            src={nightdreamsBadge}
+            alt="NightDreams Logo"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mx-auto w-28 h-28 md:w-36 md:h-36 object-contain mb-6"
+          />
+
           <div className="flex justify-center mb-4">
             <NightDreamsLogo size="hero" showIcon={false} />
           </div>
