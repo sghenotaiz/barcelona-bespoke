@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
+import nightdreamsBadge from "@/assets/nightdreams-badge.png";
 
 interface CinematicIntroProps {
   visible: boolean;
@@ -21,24 +21,16 @@ const CinematicIntro = ({ visible, onDismiss }: CinematicIntroProps) => {
           onWheel={onDismiss}
           onTouchMove={onDismiss}
         >
-          {/* Subtle radial glow behind logo */}
+          {/* Badge as background */}
           <div
-            className="absolute w-[600px] h-[600px] rounded-full opacity-20 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(circle, hsl(0, 0%, 70%) 0%, transparent 70%)",
-            }}
-          />
-
-          {/* Logo */}
-          <motion.img
-            src={nightdreamsLogo}
-            alt="NightDreams Logo"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-            className="w-32 h-32 md:w-44 md:h-44 object-contain mb-8 relative z-10"
-          />
+            className="absolute inset-0 flex items-center justify-center pointer-events-none"
+          >
+            <img
+              src={nightdreamsBadge}
+              alt=""
+              className="w-[70vmin] h-[70vmin] max-w-[600px] max-h-[600px] object-contain opacity-15"
+            />
+          </div>
 
           {/* Title in Aldo the Apache */}
           <motion.h1
