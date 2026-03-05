@@ -55,9 +55,11 @@ const Header = () => {
               key={item.key}
               onClick={() => handleNav(item.path)}
               className={`font-body text-xs tracking-[0.2em] uppercase transition-colors duration-300 px-0 ${
-                location.pathname === item.path
-                  ? "text-silver"
-                  : "text-primary-foreground/80 hover:text-silver"
+                item.key === "plan"
+                  ? "border-2 border-silver px-4 py-1.5 hover:bg-silver hover:text-background " + (location.pathname === item.path ? "text-silver" : "text-primary-foreground/80")
+                  : location.pathname === item.path
+                    ? "text-silver"
+                    : "text-primary-foreground/80 hover:text-silver"
               }`}
             >
               {getLabel(item.label)}
