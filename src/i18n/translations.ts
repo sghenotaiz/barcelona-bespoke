@@ -100,6 +100,7 @@ export const translations = {
       card9Desc: "We organize tailor-made private events for bachelor groups and companies: themed parties, VIP areas, and custom experiences designed for your group.",
       card10Title: "& much more..",
       card10Desc: "Tickets, reservations, private transfers, shopping assistance, luxury bags, exclusive events... ANYTHING you need — just ask our team!",
+      andMore: "and much more...",
       yacht: {
         title: "Yacht & Boat Charters",
         description:
@@ -337,6 +338,7 @@ export const translations = {
       card9Desc: "Organizamos eventos privados a medida para despedidas y empresas: fiestas temáticas, áreas VIP y experiencias personalizadas para tu grupo.",
       card10Title: "y mucho más..",
       card10Desc: "Entradas, reservas, transfers privados, asistencia de compras, bolsos de lujo, eventos exclusivos... ¡CUALQUIER COSA que necesites, pregunta a nuestro equipo!",
+      andMore: "y mucho más...",
       yacht: {
         title: "Alquiler de Yates",
         description:
@@ -574,6 +576,7 @@ export const translations = {
       card9Desc: "Nous organisons des événements privés sur mesure pour enterrements de vie et entreprises : soirées à thème, espaces VIP et expériences personnalisées.",
       card10Title: "& bien plus encore..",
       card10Desc: "Billets, réservations, transferts privés, assistance shopping, sacs de luxe, événements exclusifs... TOUT ce dont vous avez besoin — demandez à notre équipe !",
+      andMore: "et bien plus encore...",
       yacht: {
         title: "Location de Yachts",
         description:
@@ -811,6 +814,7 @@ export const translations = {
       card9Desc: "Organizziamo eventi privati su misura per addii al celibato/nubilato e aziende: feste a tema, aree VIP private ed esperienze personalizzate per il tuo gruppo.",
       card10Title: "Altro",
       card10Desc: "",
+      andMore: "e altro ancora...",
       yacht: {
         title: "Noleggio Yacht",
         description:

@@ -10,7 +10,6 @@ import apartmentsImg from "@/assets/services/apartments.jpg";
 import limousineImg from "@/assets/services/limousine.jpg";
 import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
 import jetSkiImg from "@/assets/services/jet-ski.jpg";
-import altroImg from "@/assets/services/altro.jpg";
 
 type ServiceDef = {
   image: string;
@@ -30,7 +29,6 @@ const servicesDefs: ServiceDef[] = [
   { image: limousineImg, titleKey: "card7Title", descKey: "card7Desc", badgeKey: "badgeAffordable" },
   { image: jetSkiImg, titleKey: "card8Title", descKey: "card8Desc", badgeKey: "badgeWeekly" },
   { image: bachelorPartyImg, titleKey: "card9Title", descKey: "card9Desc", badgeKey: "badgeExclusive" },
-  { image: altroImg, titleKey: "card10Title", descKey: "card10Desc", badgeKey: "badgeAnything", highlight: true },
 ];
 
 const ServicesSection = () => {
@@ -141,6 +139,16 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* "And more" text */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+          className="font-body text-sm italic text-silver text-center mt-10"
+        >
+          {getText("andMore")}
+        </motion.p>
       </div>
     </section>
   );
