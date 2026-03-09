@@ -139,6 +139,16 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* "And more" text */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+          className="font-body text-sm italic text-silver text-center mt-10"
+        >
+          {getText("andMore")}
+        </motion.p>
       </div>
     </section>
   );
