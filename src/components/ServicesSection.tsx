@@ -10,7 +10,6 @@ import apartmentsImg from "@/assets/services/apartments.jpg";
 import limousineImg from "@/assets/services/limousine.jpg";
 import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
 import jetSkiImg from "@/assets/services/jet-ski.jpg";
-import altroImg from "@/assets/services/altro.jpg";
 
 type ServiceDef = {
   image: string;
