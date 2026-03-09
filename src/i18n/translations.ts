@@ -338,6 +338,7 @@ export const translations = {
       card9Desc: "Organizamos eventos privados a medida para despedidas y empresas: fiestas temáticas, áreas VIP y experiencias personalizadas para tu grupo.",
       card10Title: "y mucho más..",
       card10Desc: "Entradas, reservas, transfers privados, asistencia de compras, bolsos de lujo, eventos exclusivos... ¡CUALQUIER COSA que necesites, pregunta a nuestro equipo!",
+      andMore: "y mucho más...",
       yacht: {
         title: "Alquiler de Yates",
         description:
