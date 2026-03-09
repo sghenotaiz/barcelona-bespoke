@@ -29,7 +29,6 @@ const servicesDefs: ServiceDef[] = [
   { image: limousineImg, titleKey: "card7Title", descKey: "card7Desc", badgeKey: "badgeAffordable" },
   { image: jetSkiImg, titleKey: "card8Title", descKey: "card8Desc", badgeKey: "badgeWeekly" },
   { image: bachelorPartyImg, titleKey: "card9Title", descKey: "card9Desc", badgeKey: "badgeExclusive" },
-  { image: altroImg, titleKey: "card10Title", descKey: "card10Desc", badgeKey: "badgeAnything", highlight: true },
 ];
 
 const ServicesSection = () => {
