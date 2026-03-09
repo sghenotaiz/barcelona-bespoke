@@ -100,6 +100,7 @@ export const translations = {
       card9Desc: "We organize tailor-made private events for bachelor groups and companies: themed parties, VIP areas, and custom experiences designed for your group.",
       card10Title: "& much more..",
       card10Desc: "Tickets, reservations, private transfers, shopping assistance, luxury bags, exclusive events... ANYTHING you need — just ask our team!",
+      andMore: "and much more...",
       yacht: {
         title: "Yacht & Boat Charters",
         description:
