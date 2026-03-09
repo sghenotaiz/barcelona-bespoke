@@ -576,6 +576,7 @@ export const translations = {
       card9Desc: "Nous organisons des événements privés sur mesure pour enterrements de vie et entreprises : soirées à thème, espaces VIP et expériences personnalisées.",
       card10Title: "& bien plus encore..",
       card10Desc: "Billets, réservations, transferts privés, assistance shopping, sacs de luxe, événements exclusifs... TOUT ce dont vous avez besoin — demandez à notre équipe !",
+      andMore: "et bien plus encore...",
       yacht: {
         title: "Location de Yachts",
         description:
