@@ -39,7 +39,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
     aboutUs: "Chi Siamo", aboutUsDesc: "La Storia di NightDreams",
     planExperience: "Pianifica la Tua Esperienza", planExperienceDesc: "Contattaci e chiedi un preventivo",
     ourTeam: "Il Nostro Team", ourTeamDesc: "Incontra i Nostri Promoter",
-    momentsCrafted: "Momenti Creati", momentsCraftedDesc: "Ricordi dei Clienti",
+    momentsCrafted: "Highlights eventi", momentsCraftedDesc: "Ricordi dei Clienti",
     explore: "Esplora",
   },
   es: {
