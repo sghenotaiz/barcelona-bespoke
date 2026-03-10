@@ -1,7 +1,7 @@
 // WorkWithUsSection - careers and partnerships
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, Handshake, ArrowRight } from "lucide-react";
+import { Briefcase, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const WorkWithUsSection = () => {
@@ -34,11 +34,11 @@ const WorkWithUsSection = () => {
           <div className="mx-auto silver-line mt-8" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Careers Column */}
+        <div className="max-w-2xl mx-auto">
+          {/* Careers */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}>
 
             <div className="flex items-center gap-3 mb-8">
@@ -71,36 +71,6 @@ const WorkWithUsSection = () => {
               className="inline-flex items-center gap-2 mt-8 border border-silver/60 px-8 py-3 font-body text-xs tracking-[0.15em] uppercase text-silver hover:bg-silver hover:text-background transition-all duration-300">
 
               {t.workWithUs.applyCta}
-              <ArrowRight size={14} />
-            </a>
-          </motion.div>
-
-          {/* Partnerships Column */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.3 }}>
-
-            <div className="flex items-center gap-3 mb-8">
-              <Handshake className="w-6 h-6 text-silver" strokeWidth={1.2} />
-              <h3 className="font-display text-2xl text-foreground">{t.workWithUs.partnersTitle}</h3>
-            </div>
-            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
-              {t.workWithUs.partnersDesc}
-            </p>
-            <ul className="space-y-3 mb-8">
-              {[t.workWithUs.partner1, t.workWithUs.partner2, t.workWithUs.partner3, t.workWithUs.partner4].map((item) =>
-              <li key={item} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-silver mt-1.5 flex-shrink-0" />
-                  <span className="font-body text-sm text-muted-foreground">{item}</span>
-                </li>
-              )}
-            </ul>
-            <a
-              href="mailto:nightdreamsbarcelona@gmail.com?subject=Richiesta%20Partnership%20-%20NightDreams"
-              className="inline-flex items-center gap-2 bg-silver px-8 py-3 font-body text-xs tracking-[0.15em] uppercase text-background hover:bg-silver-dark transition-all duration-300">
-
-              {t.workWithUs.partnerCta}
               <ArrowRight size={14} />
             </a>
           </motion.div>
