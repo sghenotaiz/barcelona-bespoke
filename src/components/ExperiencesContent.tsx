@@ -580,7 +580,7 @@ const ExperiencesContent = () => {
                   </button>
                 </div>
               </form>
-            </motion.div>
+            </div>
           </div>
         </div>
 
