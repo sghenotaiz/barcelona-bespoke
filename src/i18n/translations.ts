@@ -971,7 +971,7 @@ export const translations = {
       expPoolBullet3: "Le migliori piscine e beach club",
       expRestaurantTitle: "Ristoranti",
       expRestaurantSubtitle: "Assapora il meglio di Barcellona",
-      expRestaurantDesc: "Sconti esclusivi 10-20% nei migliori ristoranti con prenotazione tavolo garantita.",
+      expRestaurantDesc: "Sconti esclusivi 10-20% nei migliori ristoranti con prenotazione tavolo garantita. Dicci le tue preferenze, penseremo a tutto noi.",
       expRestaurantBullet1: "10-20% di sconto nei ristoranti partner",
       expRestaurantBullet2: "Prenotazione tavolo garantita",
       expApartmentsTitle: "Alloggi Premium",
