@@ -485,11 +485,7 @@ const ExperiencesContent = () => {
             </div>
 
             {/* ===== REVIEW FORM ===== */}
-            <motion.div
-              ref={formRef}
-              initial={{ opacity: 0, y: 30 }}
-              animate={formInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8 }}
+            <div
               className="mt-10 border border-border p-4 sm:p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm overflow-hidden"
             >
               <div className="text-center mb-8">
