@@ -436,10 +436,40 @@ const ExperiencesContent = () => {
               <span className="text-silver-gradient">{getText("eventsColumnTitle")}</span>
             </h3>
 
-            {/* Grid: 2 columns on all sizes */}
-            <div className="grid grid-cols-2 gap-2 sm:gap-4 max-w-2xl mx-auto lg:max-w-none">
+            {/* Mobile: stacked 1-column, Desktop: 2-column grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-4 max-w-2xl mx-auto lg:max-w-none">
               {eventHighlights.map((item, i) => (
-                <EventCard key={i} item={item} getText={getText} onOpen={() => setActiveVideo(item)} />
+                <div key={i} className="md:hidden w-full" style={{ height: 250 }}>
+                  <div className="relative w-full h-full border border-border cursor-pointer overflow-hidden" onClick={() => setActiveVideo(item)}>
+                    <img
+                      src={item.image}
+                      alt={getText(item.titleKey)}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full border border-silver/50 flex items-center justify-center bg-black/40">
+                        <Play size={20} className="text-silver ml-0.5" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 z-[3]">
+                      <h4
+                        className="font-display text-base text-foreground tracking-wide"
+                        style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
+                      >
+                        {getText(item.titleKey)}
+                      </h4>
+                      <p className="font-body text-[10px] text-silver tracking-widest uppercase mt-1">{getText(item.dateKey)}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              {/* Desktop event cards - keep original */}
+              {eventHighlights.map((item, i) => (
+                <div key={`desk-${i}`} className="hidden md:block">
+                  <EventCard item={item} getText={getText} onOpen={() => setActiveVideo(item)} />
+                </div>
               ))}
             </div>
           </div>
@@ -488,7 +518,7 @@ const ExperiencesContent = () => {
               {/* Scrollable container - NO overflow-hidden on parent */}
               <div
                 ref={reviewScrollRef}
-                className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-4 px-1"
+                className="mobile-review-scroll flex gap-3 overflow-x-auto snap-x snap-mandatory pb-4 px-1 touch-pan-x"
                 style={{
                   scrollbarWidth: "none",
                   WebkitOverflowScrolling: "touch",
