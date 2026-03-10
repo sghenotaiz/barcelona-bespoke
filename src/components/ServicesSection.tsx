@@ -139,17 +139,23 @@ const ServiceBlockItem = ({
   });
   const imageY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
+  // Odd blocks: image LEFT, text RIGHT. Even blocks: image RIGHT, text LEFT.
+  const imageSlideX = isEven ? -100 : 100;
+  const textSlideX = isEven ? 100 : -100;
+  const easeOutCubic = [0.33, 1, 0.68, 1] as const;
+
   return (
-    <div ref={ref} className="w-full relative">
-      <motion.div
-        initial={isMobile ? { opacity: 0, y: 60 } : { opacity: 0, x: isEven ? -80 : 80 }}
-        animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
-        className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}
-        style={{ willChange: "transform, opacity" }}>
+    <div ref={ref} className="w-full relative overflow-hidden">
+      <div
+        className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}>
         
-        {/* IMAGE — 55% desktop, 60vh mobile */}
-        <div className="relative w-full min-h-[300px] h-[60vh] lg:h-auto lg:min-h-0 lg:w-[55%] overflow-hidden">
+        {/* IMAGE — slides from one side */}
+        <motion.div
+          initial={isMobile ? { opacity: 0, y: 60 } : { opacity: 0, x: imageSlideX }}
+          animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+          transition={{ duration: 1, ease: easeOutCubic }}
+          style={{ willChange: "transform, opacity" }}
+          className="relative w-full min-h-[300px] h-[60vh] lg:h-auto lg:min-h-0 lg:w-[55%] overflow-hidden">
           <motion.div style={{ y: imageY }} className="absolute inset-[-16%] w-[100%] h-[132%]">
             <img
               src={block.image}
@@ -164,7 +170,7 @@ const ServiceBlockItem = ({
             "bg-gradient-to-l from-transparent via-transparent to-black/80"} hidden lg:block`
             } />
           
-          {/* Mobile bottom gradient — stronger for text readability */}
+          {/* Mobile bottom gradient */}
           <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-transparent via-black/20 to-black lg:hidden" />
           
           {/* Badge on image */}
@@ -179,10 +185,15 @@ const ServiceBlockItem = ({
               </span>
             </motion.div>
           }
-        </div>
+        </motion.div>
 
-        {/* TEXT — 45% desktop, full width mobile */}
-        <div className="w-full lg:w-[45%] flex flex-col justify-center px-6 py-8 md:px-12 lg:px-16 lg:py-20 relative bg-black">
+        {/* TEXT — slides from opposite side */}
+        <motion.div
+          initial={isMobile ? { opacity: 0, y: -40 } : { opacity: 0, x: textSlideX }}
+          animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+          transition={{ duration: 1, ease: easeOutCubic, delay: 0.15 }}
+          style={{ willChange: "transform, opacity" }}
+          className="w-full lg:w-[45%] flex flex-col justify-center px-6 py-8 md:px-12 lg:px-16 lg:py-20 relative bg-black">
           {/* Glassmorphism subtle card overlay */}
           <div className="absolute inset-3 lg:inset-8 bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] rounded-sm pointer-events-none" />
 
