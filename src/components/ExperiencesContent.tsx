@@ -1,4 +1,4 @@
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight, ArrowRight, Play, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -295,11 +295,6 @@ const UserReviewCard = ({ item, index }: { item: { name: string; rating: number;
 // === MAIN COMPONENT ===
 const ExperiencesContent = () => {
   const ref = useRef(null);
-  const ctaRef = useRef(null);
-  const formRef = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
-  const ctaInView = useInView(ctaRef, { once: true, margin: "-50px" });
-  const formInView = useInView(formRef, { once: true, margin: "-50px" });
   const { t } = useLanguage();
 
   // Mobile carousel refs
@@ -387,13 +382,7 @@ const ExperiencesContent = () => {
     <section className="bg-background py-10 md:py-12">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-20"
-        >
+        <div className="text-center mb-12 sm:mb-20">
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {getText("label")}
           </span>
@@ -408,47 +397,39 @@ const ExperiencesContent = () => {
           <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
             {getText("description")}
           </p>
-        </motion.div>
+        </div>
 
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Column 1: Event Highlights */}
           <div>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+            <h3
               className="text-xl tracking-wider uppercase text-center mb-8"
               style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
             >
               <span className="text-silver-gradient">{getText("eventsColumnTitle")}</span>
-            </motion.h3>
+            </h3>
             <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto lg:max-w-none">
               {eventHighlights.map((item, i) => (
-                <EventCard key={i} item={item} index={i} inView={inView} getText={getText} onOpen={() => setActiveVideo(item)} />
+                <EventCard key={i} item={item} index={i} getText={getText} onOpen={() => setActiveVideo(item)} />
               ))}
             </div>
           </div>
 
           {/* Column 2: Client Reviews */}
           <div>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+            <h3
               className="text-xl tracking-wider uppercase text-center mb-8"
               style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
             >
               <span className="text-silver-gradient">{getText("reviewsColumnTitle")}</span>
-            </motion.h3>
+            </h3>
 
             {/* Desktop: vertical scrollable container */}
             <div className="hidden md:block max-h-[600px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-silver/20 scrollbar-track-transparent" style={{ scrollbarWidth: "thin" }}>
               <div className="flex flex-col gap-4">
                 {clientReviews.map((item, i) => (
-                  <ReviewCard key={i} item={item} index={i} inView={inView} getText={getText} />
+                  <ReviewCard key={i} item={item} index={i} getText={getText} />
                 ))}
                 {userReviews.map((item, i) => (
                   <UserReviewCard key={`user-${i}`} item={item} index={i} />
@@ -481,7 +462,7 @@ const ExperiencesContent = () => {
               >
                 {clientReviews.map((item, i) => (
                   <div key={i} className="flex-shrink-0 w-[85vw] max-w-[340px] snap-center">
-                    <ReviewCard item={item} index={i} inView={inView} getText={getText} />
+                    <ReviewCard item={item} index={i} getText={getText} />
                   </div>
                 ))}
                 {userReviews.map((item, i) => (
@@ -499,11 +480,7 @@ const ExperiencesContent = () => {
             </div>
 
             {/* ===== REVIEW FORM ===== */}
-            <motion.div
-              ref={formRef}
-              initial={{ opacity: 0, y: 30 }}
-              animate={formInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8 }}
+            <div
               className="mt-10 border border-border p-4 sm:p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm overflow-hidden"
             >
               <div className="text-center mb-8">
@@ -598,18 +575,12 @@ const ExperiencesContent = () => {
                   </button>
                 </div>
               </form>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Final CTA */}
-        <motion.div
-          ref={ctaRef}
-          initial={{ opacity: 0, y: 40 }}
-          animate={ctaInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-24 text-center"
-        >
+        <div className="mt-24 text-center">
           <h3
             className="text-3xl md:text-4xl lg:text-5xl tracking-wider uppercase mb-8 animate-neon-pulse"
             style={{
@@ -625,7 +596,7 @@ const ExperiencesContent = () => {
             variant="large"
             className="justify-center"
           />
-        </motion.div>
+        </div>
       </div>
 
       {/* Video Modal */}
