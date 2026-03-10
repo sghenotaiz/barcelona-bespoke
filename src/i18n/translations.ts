@@ -959,7 +959,7 @@ export const translations = {
       badgeGroups: "Gruppi & Feste",
       expNightlifeTitle: "Nightlife Experience",
       expNightlifeSubtitle: "Vivi la notte come VIP a Barcellona",
-      expNightlifeDesc: "Tavoli VIP con bottiglie magnum, saltafila garantito e pack settimanali nei migliori club — sempre ai prezzi più convenienti.",
+      expNightlifeDesc: "Affida a noi la tua prenotazione tavoli VIP, ti garantiamo il miglior prezzo/posizione, ti forniremo servizio H24 e accoglienza al di fuori della discoteca accompagnandoti all'ingresso.",
       expNightlifeBullet1: "Tavoli esclusivi nelle migliori discoteche",
       expNightlifeBullet2: "Accesso immediato — senza coda, mai",
       expNightlifeBullet3: "Pack multi-serata = sconti esclusivi",
