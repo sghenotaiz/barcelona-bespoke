@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import AboutHero from "@/components/AboutHero";
 import AboutSection from "@/components/AboutSection";
 import TeamSection from "@/components/TeamSection";
 import WorkWithUsSection from "@/components/WorkWithUsSection";
@@ -8,9 +9,10 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const AboutPage = () => {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden bg-black">
       <Header />
       <div className="pt-20">
+        <AboutHero />
         <AboutSection />
         <TeamSection />
         <WorkWithUsSection />
