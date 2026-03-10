@@ -8,14 +8,14 @@ const ServicesPage = () => {
   return (
     <main className="overflow-x-hidden">
       <Header />
-      <div className="pt-20">
+      <div className="pt-20 bg-black">
         <ServicesSection />
       </div>
       <Footer />
       <FloatingCTA />
       <FloatingWhatsApp />
-    </main>
-  );
+    </main>);
+
 };
 
 export default ServicesPage;
