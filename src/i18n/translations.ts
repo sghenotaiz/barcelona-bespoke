@@ -58,6 +58,9 @@ export const translations = {
       stat3Label: "Days a Year",
     },
     services: {
+      heroTitle: "Our Services",
+      heroSubtitle: "Barcelona's nightlife energy",
+      heroButton: "Discover",
       label: "Our Services",
       titleLine1: "Tailored for",
       titleLine2: "Everyone",
