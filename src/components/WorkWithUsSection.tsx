@@ -2,7 +2,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Handshake, ArrowRight } from "lucide-react";
-import DualCTA from "@/components/DualCTA";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const WorkWithUsSection = () => {
