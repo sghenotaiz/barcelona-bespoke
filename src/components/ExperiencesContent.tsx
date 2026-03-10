@@ -346,6 +346,7 @@ const ExperiencesContent = () => {
   const [form, setForm] = useState({ name: "", email: "", rating: 0, comment: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<typeof eventHighlights[0] | null>(null);
 
   const exp = t.experiences as Record<string, unknown>;
   const getText = (key: string): string => (exp[key] as string) || key;
