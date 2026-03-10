@@ -281,62 +281,7 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="bg-black">
-      {/* Section Header — dramatic, Lío-style */}
-      <div className="py-24 relative overflow-hidden md:py-[100px]" ref={headerRef}>
-        {/* Subtle radial glow */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full blur-[120px]" />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={headerInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1 }}
-            className="text-center">
-            
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={headerInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-body text-[11px] tracking-[0.4em] uppercase text-silver/60 mb-6 block">
-              
-              {t.services.label}
-            </motion.span>
-
-            <h2
-              className="text-5xl md:text-7xl lg:text-8xl font-light tracking-wide mb-4"
-              style={{ fontFamily: "'Aldo the Apache', sans-serif" }}>
-              
-              <span className="text-white/90">{t.services.titleLine1}</span>{" "}
-              <span className="text-silver-gradient italic">{t.services.titleLine2}</span>
-            </h2>
-
-            {/* VIP tagline */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={headerInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-body text-sm md:text-base text-white/40 tracking-wider mt-6 max-w-lg mx-auto">
-              
-              {getText("vipBannerTitle")}{" "}
-              <span className="text-silver font-medium">{getText("vipBannerSubtitle")}</span>
-            </motion.p>
-
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={headerInView ? { scaleX: 1 } : {}}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="mx-auto mt-10 w-32 h-px origin-center"
-              style={{
-                background: "linear-gradient(90deg, transparent, hsl(0 0% 75%), transparent)"
-              }} />
-            
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Service Blocks — alternating Lío-style */}
+      {/* Service Blocks — alternating Lío-style, starts immediately */}
       <div className="flex flex-col">
         {serviceBlocks.map((block, i) =>
         <ServiceBlockItem
