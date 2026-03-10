@@ -277,15 +277,15 @@ const ServiceBlockItem = ({
             </div>
 
             {/* CTA Button — silver border + neon hover, thumb-friendly */}
-            <DualCTA
-              waLabel="WhatsApp"
-              bookLabel={bookNow}
-              variant="default"
-              animated
-              inView={inView}
-              delay={0.6}
-              className="w-full lg:w-fit"
-            />
+            <motion.a
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.6 }}
+              href="/plan"
+              className="inline-flex items-center justify-center gap-2 font-body text-[11px] tracking-[0.25em] uppercase border border-silver/40 text-silver px-10 py-4 min-h-[48px] w-full lg:w-fit transition-all duration-500 hover:bg-white/10 hover:border-white/60 hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+            >
+              {bookNow}
+            </motion.a>
           </div>
         </motion.div>
       </div>
