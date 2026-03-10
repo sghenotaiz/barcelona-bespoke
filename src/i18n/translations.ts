@@ -961,7 +961,7 @@ export const translations = {
       expNightlifeSubtitle: "Vivi la notte come VIP a Barcellona",
       expNightlifeDesc: "Affida a noi la tua prenotazione tavoli VIP, ti garantiamo il miglior prezzo/posizione, ti forniremo servizio H24 e accoglienza al di fuori della discoteca accompagnandoti all'ingresso.",
       expNightlifeBullet1: "Tavoli esclusivi nelle migliori discoteche",
-      expNightlifeBullet2: "Accesso immediato — senza coda, mai",
+      expNightlifeBullet2: "Accesso immediato con i nostri ticket saltafila",
       expNightlifeBullet3: "Pack multi-serata = sconti esclusivi",
       expPoolTitle: "Pool Party",
       expPoolSubtitle: "Sotto il sole di Barcellona",
