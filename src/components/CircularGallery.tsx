@@ -29,7 +29,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   en: {
     ourServices: "Our Services", ourServicesDesc: "Everything you need for an unforgettable vacation",
     aboutUs: "About Us", aboutUsDesc: "The NightDreams Story",
-    planExperience: "Plan Your Experience", planExperienceDesc: "Book VIP Services",
+    planExperience: "Plan Your Experience", planExperienceDesc: "Contact us and ask for a quote",
     ourTeam: "Our Team", ourTeamDesc: "Meet Our Promoters",
     momentsCrafted: "Moments Crafted", momentsCraftedDesc: "Real Client Memories",
     explore: "Explore",
@@ -37,7 +37,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   it: {
     ourServices: "I Nostri Servizi", ourServicesDesc: "Ciò di cui hai bisogno per una vacanza indimenticabile",
     aboutUs: "Chi Siamo", aboutUsDesc: "La Storia di NightDreams",
-    planExperience: "Pianifica la Tua Esperienza", planExperienceDesc: "Prenota Servizi VIP",
+    planExperience: "Pianifica la Tua Esperienza", planExperienceDesc: "Contattaci e chiedi un preventivo",
     ourTeam: "Il Nostro Team", ourTeamDesc: "Incontra i Nostri Promoter",
     momentsCrafted: "Momenti Creati", momentsCraftedDesc: "Ricordi dei Clienti",
     explore: "Esplora",
@@ -45,7 +45,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   es: {
     ourServices: "Nuestros Servicios", ourServicesDesc: "Todo lo que necesitas para unas vacaciones inolvidables",
     aboutUs: "Sobre Nosotros", aboutUsDesc: "La Historia de NightDreams",
-    planExperience: "Planifica Tu Experiencia", planExperienceDesc: "Reserva Servicios VIP",
+    planExperience: "Planifica Tu Experiencia", planExperienceDesc: "Contáctanos y pide un presupuesto",
     ourTeam: "Nuestro Equipo", ourTeamDesc: "Conoce a Nuestros Promotores",
     momentsCrafted: "Momentos Creados", momentsCraftedDesc: "Recuerdos de Clientes",
     explore: "Explorar",
@@ -53,7 +53,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   fr: {
     ourServices: "Nos Services", ourServicesDesc: "Tout ce dont vous avez besoin pour des vacances inoubliables",
     aboutUs: "À Propos", aboutUsDesc: "L'Histoire de NightDreams",
-    planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Réservez des Services VIP",
+    planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Contactez-nous et demandez un devis",
     ourTeam: "Notre Équipe", ourTeamDesc: "Rencontrez Nos Promoteurs",
     momentsCrafted: "Moments Créés", momentsCraftedDesc: "Souvenirs de Clients",
     explore: "Explorer",
