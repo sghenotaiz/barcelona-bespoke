@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import DualCTA from "@/components/DualCTA";
 
 // Event highlight cards data
 const eventHighlights = [
