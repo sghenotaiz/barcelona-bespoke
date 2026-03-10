@@ -91,7 +91,7 @@ const EventCard = ({ item, index, inView, getText }: { item: typeof eventHighlig
       initial={{ opacity: 0, x: -60 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.8, delay: 0.15 * index, ease: [0.16, 1, 0.3, 1] }}
-      className="relative group overflow-hidden border border-border aspect-[3/4] cursor-pointer"
+      className="relative group overflow-hidden border border-border aspect-auto max-h-[280px] sm:aspect-[3/4] sm:max-h-none cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
