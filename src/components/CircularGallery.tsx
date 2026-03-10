@@ -51,7 +51,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
     explore: "Explorar",
   },
   fr: {
-    ourServices: "Nos Services", ourServicesDesc: "Expériences VIP Barcelone",
+    ourServices: "Nos Services", ourServicesDesc: "Tout ce dont vous avez besoin pour des vacances inoubliables",
     aboutUs: "À Propos", aboutUsDesc: "L'Histoire de NightDreams",
     planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Réservez des Services VIP",
     ourTeam: "Notre Équipe", ourTeamDesc: "Rencontrez Nos Promoteurs",
