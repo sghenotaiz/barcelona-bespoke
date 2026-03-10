@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+// Force HMR refresh - animations removed for mobile compatibility
 import { Star, ChevronLeft, ChevronRight, ArrowRight, Play, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { z } from "zod";
