@@ -4,6 +4,7 @@ import ExperiencesContent from "@/components/ExperiencesContent";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingSocials from "@/components/FloatingSocials";
 
 const MomentsPage = () => {
   return (
@@ -16,6 +17,7 @@ const MomentsPage = () => {
       <Footer />
       <FloatingCTA />
       <FloatingWhatsApp />
+      <FloatingSocials />
     </main>
   );
 };

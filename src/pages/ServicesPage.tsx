@@ -4,6 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingSocials from "@/components/FloatingSocials";
 
 const ServicesPage = () => {
   return (
@@ -16,6 +17,7 @@ const ServicesPage = () => {
       <Footer />
       <FloatingCTA />
       <FloatingWhatsApp />
+      <FloatingSocials />
     </main>
   );
 };
