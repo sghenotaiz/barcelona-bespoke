@@ -131,7 +131,7 @@ const EventCard = ({ item, index, inView, getText }: { item: typeof eventHighlig
       initial={{ opacity: 0, x: -60 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.8, delay: 0.15 * index, ease: [0.16, 1, 0.3, 1] }}
-      className="relative group overflow-hidden border border-border aspect-auto max-h-[180px] sm:aspect-[3/4] sm:max-h-[240px] cursor-pointer"
+      className="relative group overflow-hidden border border-border aspect-auto max-h-[240px] sm:aspect-[3/4] sm:max-h-[360px] cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -382,7 +382,7 @@ const ExperiencesContent = () => {
             >
               <span className="text-silver-gradient">{getText("eventsColumnTitle")}</span>
             </motion.h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 max-w-2xl mx-auto lg:max-w-none">
               {eventHighlights.map((item, i) => (
                 <EventCard key={i} item={item} index={i} inView={inView} getText={getText} />
               ))}
