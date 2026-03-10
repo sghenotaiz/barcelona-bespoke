@@ -1121,7 +1121,7 @@ export const translations = {
       label: "La Nostra Squadra",
       title: "IL NOSTRO",
       titleAccent: "TEAM",
-      description: "I nostri promoter sono persone normali proprio come te, il cui unico obiettivo è assicurarsi che tu viva il miglior momento a Barcellona. Ascoltiamo attentamente ogni cliente, capiamo i suoi gusti e suggeriamo le esperienze più adatte alle sue aspettative. Il nostro team multiculturale proviene da diversi paesi e parla le principali lingue internazionali (inglese, spagnolo, francese, italiano, tedesco), così puoi sempre parlare con qualcuno che ti capisce. Vogliamo che ti goda così tanto le tue serate da voler tornare da noi ancora e ancora.",
+      description: "I nostri promoter sono persone normali proprio come te, il cui unico obiettivo è assicurarsi che tu viva la migliore vacanza a Barcellona. Ascoltiamo attentamente ogni cliente, capiamo i suoi gusti e suggeriamo le esperienze più adatte alle sue aspettative. Il nostro team multiculturale proviene da diversi paesi e parla le principali lingue internazionali (inglese, spagnolo, francese, italiano, tedesco), così puoi sempre parlare con qualcuno che ti capisce. Entra e conosci i nostri promoter o diventa un nostro partner!",
       promotersTitle: "I Nostri",
       promotersAccent: "Promoter",
       partnersTitle: "I Nostri",
