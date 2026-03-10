@@ -624,6 +624,9 @@ export const translations = {
       stat3Label: "Jours par An",
     },
     services: {
+      heroTitle: "Nos Services",
+      heroSubtitle: "L'énergie de la nuit de Barcelone",
+      heroButton: "Découvrir",
       label: "Nos Services",
       titleLine1: "Pensé pour",
       titleLine2: "Tous",
