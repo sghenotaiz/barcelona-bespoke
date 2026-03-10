@@ -20,9 +20,8 @@ const GlowStat = ({ children }: { children: React.ReactNode }) => (
 );
 
 const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 24 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay, ease: [0.25, 0.46, 0.45, 0.94] },
+  initial: { opacity: 0, y: 24 } as const,
+  transition: { duration: 0.8, delay, ease: "easeOut" as const },
 });
 
 const AboutSection = () => {
