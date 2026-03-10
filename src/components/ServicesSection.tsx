@@ -272,8 +272,6 @@ const ServiceBlockItem = ({
 };
 
 const ServicesSection = () => {
-  const headerRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
   const { t } = useLanguage();
 
   const svc = t.services as Record<string, unknown>;
