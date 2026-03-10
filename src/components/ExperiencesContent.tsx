@@ -183,12 +183,8 @@ const EventCard = ({ item, index, getText, onOpen }: { item: typeof eventHighlig
   const [hovered, setHovered] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6, delay: 0.1 * Math.min(index, 3), ease: [0.16, 1, 0.3, 1] }}
-      className="relative group overflow-hidden border border-border aspect-[3/4] min-h-[220px] sm:max-h-[360px] cursor-pointer"
+    <div
+      className="relative group overflow-hidden border border-border aspect-[3/4] min-h-[180px] sm:min-h-[220px] sm:max-h-[360px] cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={onOpen}
