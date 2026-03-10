@@ -411,7 +411,7 @@ const ExperiencesContent = () => {
             </h3>
             <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto lg:max-w-none">
               {eventHighlights.map((item, i) => (
-                <EventCard key={i} item={item} index={i} inView={inView} getText={getText} onOpen={() => setActiveVideo(item)} />
+                <EventCard key={i} item={item} index={i} getText={getText} onOpen={() => setActiveVideo(item)} />
               ))}
             </div>
           </div>
