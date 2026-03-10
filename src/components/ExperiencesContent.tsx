@@ -408,16 +408,12 @@ const ExperiencesContent = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Column 1: Event Highlights */}
           <div>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+            <h3
               className="text-xl tracking-wider uppercase text-center mb-8"
               style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
             >
               <span className="text-silver-gradient">{getText("eventsColumnTitle")}</span>
-            </motion.h3>
+            </h3>
             <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto lg:max-w-none">
               {eventHighlights.map((item, i) => (
                 <EventCard key={i} item={item} index={i} inView={inView} getText={getText} onOpen={() => setActiveVideo(item)} />
