@@ -115,7 +115,7 @@ const AboutSection = () => {
           </span>
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/nightdreamsofficial_/"
+              href="https://www.instagram.com/nightdreamsofficial_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-silver hover:drop-shadow-[0_0_12px_hsl(0,0%,75%)] transition-all duration-300"
