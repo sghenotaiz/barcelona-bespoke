@@ -29,7 +29,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   en: {
     ourServices: "Our Services", ourServicesDesc: "Everything you need for an unforgettable vacation",
     aboutUs: "About Us", aboutUsDesc: "The NightDreams Story",
-    planExperience: "Plan Your Experience", planExperienceDesc: "Book VIP Services",
+    planExperience: "Plan Your Experience", planExperienceDesc: "Contact us and ask for a quote",
     ourTeam: "Our Team", ourTeamDesc: "Meet Our Promoters",
     momentsCrafted: "Moments Crafted", momentsCraftedDesc: "Real Client Memories",
     explore: "Explore",
