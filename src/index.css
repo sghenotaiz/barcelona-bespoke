@@ -151,4 +151,23 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Neon silver pulse animation */
+  @keyframes neon-pulse {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px hsl(0 0% 75% / 0.6)); }
+    50% { opacity: 0.92; filter: drop-shadow(0 0 16px hsl(0 0% 80% / 0.8)); }
+  }
+
+  .animate-neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite;
+  }
+
+  /* Hide scrollbar for mobile carousels */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
