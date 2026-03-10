@@ -518,7 +518,7 @@ const ExperiencesContent = () => {
               {/* Scrollable container - NO overflow-hidden on parent */}
               <div
                 ref={reviewScrollRef}
-                className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-4 px-1"
+                className="mobile-review-scroll flex gap-3 overflow-x-auto snap-x snap-mandatory pb-4 px-1 touch-pan-x"
                 style={{
                   scrollbarWidth: "none",
                   WebkitOverflowScrolling: "touch",
