@@ -54,7 +54,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-12 bg-background">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Centered title + text */}
         <motion.div
