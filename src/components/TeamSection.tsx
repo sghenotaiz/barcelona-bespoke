@@ -37,7 +37,7 @@ const teamMembers = [
 
 
 const partners = [
-{ name: "Pacha Barcelona", category: "Nightclub" },
+{ name: "Ku Barcelona", category: "Nightclub" },
 { name: "Opium Barcelona", category: "Beach Club" },
 { name: "Shôko", category: "Restaurant & Club" },
 { name: "W Barcelona", category: "5-Star Hotel" },
