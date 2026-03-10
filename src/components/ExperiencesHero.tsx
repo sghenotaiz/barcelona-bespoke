@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import badge from "@/assets/nightdreams-badge.png";
+import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
 
 const ExperiencesHero = () => {
   const ref = useRef<HTMLDivElement>(null);

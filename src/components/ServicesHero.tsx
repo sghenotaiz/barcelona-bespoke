@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
 
 const ServicesHero = () => {
   const ref = useRef<HTMLDivElement>(null);
