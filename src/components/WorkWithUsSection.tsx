@@ -74,13 +74,12 @@ const WorkWithUsSection = () => {
                 </motion.div>
               ))}
             </div>
-            <a
-              href="mailto:nightdreamsbarcelona@gmail.com?subject=Richiesta%20Lavoro%20-%20NightDreams"
-              className="inline-flex items-center gap-2 mt-8 border border-silver/60 px-8 py-3 font-body text-xs tracking-[0.15em] uppercase text-silver hover:bg-silver hover:text-background transition-all duration-300"
-            >
-              {t.workWithUs.applyCta}
-              <ArrowRight size={14} />
-            </a>
+            <DualCTA
+              waLabel="WhatsApp"
+              bookLabel={t.workWithUs.applyCta}
+              bookHref="mailto:nightdreamsbarcelona@gmail.com?subject=Richiesta%20Lavoro%20-%20NightDreams"
+              variant="default"
+            />
           </motion.div>
 
           {/* Partnerships */}
