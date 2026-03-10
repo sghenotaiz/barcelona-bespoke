@@ -922,7 +922,7 @@ export const translations = {
       label: "Expériences Signature",
       titleLine1: "Des Moments Créés",
       titleLine2: "Rien que pour Vous",
-      heroTitle: "EXPÉRIENCES VÉCUES",
+      heroTitle: "HIGHLIGHTS",
       heroSubtitle: "Les meilleurs moments de nos événements",
       description: "Ici vous pouvez retrouver certains des moments les plus intenses de nos événements passés à Barcelone : de vraies photos et vidéos de nos soirées et expériences. Vous verrez également nos clients avec notre équipe de promoteurs, souriants, festifs et profitant de nuits inoubliables avec NightDreams.",
       eventsColumnTitle: "HIGHLIGHTS ÉVÉNEMENTS",
