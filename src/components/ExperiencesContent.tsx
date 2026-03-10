@@ -256,7 +256,7 @@ const ReviewCard = ({ item, index, getText }: { item: typeof clientReviews[0]; i
         </div>
       </div>
     </div>
-  </motion.div>
+  </div>
 );
 
 // --- User-submitted review card (same style) ---
