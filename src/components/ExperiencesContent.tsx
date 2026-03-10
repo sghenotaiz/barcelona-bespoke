@@ -234,11 +234,12 @@ const EventCard = ({ item, index, inView, getText, onOpen }: { item: typeof even
 };
 
 // --- Review Card ---
-const ReviewCard = ({ item, index, inView, getText }: { item: typeof clientReviews[0]; index: number; inView: boolean; getText: (key: string) => string }) => (
+const ReviewCard = ({ item, index, getText }: { item: typeof clientReviews[0]; index: number; inView?: boolean; getText: (key: string) => string }) => (
   <motion.div
-    initial={{ opacity: 0, x: 60 }}
-    animate={inView ? { opacity: 1, x: 0 } : {}}
-    transition={{ duration: 0.8, delay: 0.15 * index, ease: [0.16, 1, 0.3, 1] }}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-30px" }}
+    transition={{ duration: 0.6, delay: 0.1 * index, ease: [0.16, 1, 0.3, 1] }}
     className="relative overflow-hidden border border-border bg-white/[0.03] backdrop-blur-sm group hover:border-silver/40 transition-all duration-500"
   >
     <div className="flex items-start gap-4 p-5">
