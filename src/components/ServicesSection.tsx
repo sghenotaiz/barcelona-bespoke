@@ -1,6 +1,7 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Wine, Clock, CalendarDays, Waves, UtensilsCrossed,
   Building2, Car, Ship, PartyPopper, Sparkles, Star,
