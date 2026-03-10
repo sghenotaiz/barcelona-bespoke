@@ -199,9 +199,8 @@ const ServiceBlockItem = ({
               initial={{ opacity: 0, y: 25 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-[3.5rem] font-light text-foreground mb-6 leading-[1.1] tracking-wide"
+              className="text-2xl md:text-5xl lg:text-[3.5rem] font-bold lg:font-light text-foreground mb-4 lg:mb-6 leading-[1.1] tracking-wide"
               style={{ fontFamily: "'Aldo the Apache', sans-serif" }}>
-              
               <span className="text-silver-gradient">{getText(block.titleKey)}</span>
             </motion.h3>
 
