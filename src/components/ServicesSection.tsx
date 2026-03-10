@@ -276,7 +276,8 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="bg-black">
-      {/* Service Blocks — alternating Lío-style, starts immediately */}
+      {/* Spacing after video dissolve */}
+      <div className="h-[120px]" />
       <div className="flex flex-col">
         {serviceBlocks.map((block, i) =>
         <ServiceBlockItem
