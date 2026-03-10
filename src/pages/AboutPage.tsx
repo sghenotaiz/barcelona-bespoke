@@ -16,7 +16,6 @@ const AboutPage = () => {
         <AboutSection />
         <TeamSection />
         <WorkWithUsSection />
-        <BecomePartnerSection />
       </div>
       <Footer />
       <FloatingCTA />

@@ -1,7 +1,7 @@
 // WorkWithUsSection - careers and partnerships
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, ArrowRight } from "lucide-react";
+import { Briefcase, Handshake, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const WorkWithUsSection = () => {
@@ -10,10 +10,17 @@ const WorkWithUsSection = () => {
   const { t } = useLanguage();
 
   const careers = [
-  { title: t.workWithUs.role1Title, desc: t.workWithUs.role1Desc },
-  { title: t.workWithUs.role2Title, desc: t.workWithUs.role2Desc },
-  { title: t.workWithUs.role3Title, desc: t.workWithUs.role3Desc }];
+    { title: t.workWithUs.role1Title, desc: t.workWithUs.role1Desc },
+    { title: t.workWithUs.role2Title, desc: t.workWithUs.role2Desc },
+    { title: t.workWithUs.role3Title, desc: t.workWithUs.role3Desc },
+  ];
 
+  const partnerPerks = [
+    t.workWithUs.partner1,
+    t.workWithUs.partner2,
+    t.workWithUs.partner3,
+    t.workWithUs.partner4,
+  ];
 
   return (
     <section id="work-with-us" className="pb-24 md:pb-[50px] bg-background">
@@ -22,8 +29,8 @@ const WorkWithUsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20">
-
+          className="text-center mb-20"
+        >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {t.workWithUs.label}
           </span>
@@ -34,13 +41,13 @@ const WorkWithUsSection = () => {
           <div className="mx-auto silver-line mt-8" />
         </motion.div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Careers */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}>
-
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
             <div className="flex items-center gap-3 mb-8">
               <Briefcase className="w-6 h-6 text-silver" strokeWidth={1.2} />
               <h3 className="font-display text-2xl text-foreground">{t.workWithUs.careersTitle}</h3>
@@ -49,14 +56,14 @@ const WorkWithUsSection = () => {
               {t.workWithUs.careersDesc}
             </p>
             <div className="space-y-4">
-              {careers.map((role, i) =>
-              <motion.div
-                key={role.title}
-                initial={{ opacity: 0, y: 15 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                className="border border-border p-5 hover:border-silver/40 transition-colors duration-300 group">
-
+              {careers.map((role, i) => (
+                <motion.div
+                  key={role.title}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                  className="border border-border p-5 hover:border-silver/40 transition-colors duration-300 group"
+                >
                   <h4 className="font-display text-lg text-foreground mb-1 group-hover:text-silver transition-colors">
                     {role.title}
                   </h4>
@@ -64,20 +71,57 @@ const WorkWithUsSection = () => {
                     {role.desc}
                   </p>
                 </motion.div>
-              )}
+              ))}
             </div>
             <a
               href="mailto:nightdreamsbarcelona@gmail.com?subject=Richiesta%20Lavoro%20-%20NightDreams"
-              className="inline-flex items-center gap-2 mt-8 border border-silver/60 px-8 py-3 font-body text-xs tracking-[0.15em] uppercase text-silver hover:bg-silver hover:text-background transition-all duration-300">
-
+              className="inline-flex items-center gap-2 mt-8 border border-silver/60 px-8 py-3 font-body text-xs tracking-[0.15em] uppercase text-silver hover:bg-silver hover:text-background transition-all duration-300"
+            >
               {t.workWithUs.applyCta}
+              <ArrowRight size={14} />
+            </a>
+          </motion.div>
+
+          {/* Partnerships */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <Handshake className="w-6 h-6 text-silver" strokeWidth={1.2} />
+              <h3 className="font-display text-2xl text-foreground">{t.workWithUs.partnersTitle}</h3>
+            </div>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8">
+              {t.workWithUs.partnersDesc}
+            </p>
+            <div className="space-y-4">
+              {partnerPerks.map((perk, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
+                  className="border border-border p-5 hover:border-silver/40 transition-colors duration-300 group"
+                >
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
+                    {perk}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+            <a
+              href="mailto:nightdreamsbarcelona@gmail.com?subject=Richiesta%20Partnership%20-%20NightDreams"
+              className="inline-flex items-center gap-2 mt-8 border border-silver/60 px-8 py-3 font-body text-xs tracking-[0.15em] uppercase text-silver hover:bg-silver hover:text-background transition-all duration-300"
+            >
+              {t.workWithUs.partnerCta}
               <ArrowRight size={14} />
             </a>
           </motion.div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default WorkWithUsSection;
