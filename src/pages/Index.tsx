@@ -7,6 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingSocials from "@/components/FloatingSocials";
 
 const Index = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -25,6 +26,7 @@ const Index = () => {
       <Footer />
       {!showIntro && <FloatingCTA />}
       {!showIntro && <FloatingWhatsApp />}
+      {!showIntro && <FloatingSocials />}
     </main>
   );
 };
