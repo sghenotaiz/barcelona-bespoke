@@ -140,10 +140,11 @@ const ServiceBlockItem = ({
   return (
     <div ref={ref} className="w-full relative">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}>
+        initial={{ opacity: 0, x: isEven ? -80 : 80, y: 0 }}
+        animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
+        className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}
+        style={{ willChange: "transform, opacity" }}>
         
         {/* IMAGE — 55% desktop, 60vh mobile */}
         <div className="relative w-full min-h-[300px] h-[60vh] lg:h-auto lg:min-h-0 lg:w-[55%] overflow-hidden">
