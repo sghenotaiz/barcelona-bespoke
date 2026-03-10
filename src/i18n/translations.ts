@@ -774,10 +774,10 @@ export const translations = {
     services: {
       label: "I Nostri Servizi",
       titleLine1: "Su Misura per",
-      titleLine2: "l'Élite",
+      titleLine2: "Tutti",
       bookNow: "Prenota Ora",
-      vipBannerTitle: "ESPERIENZA VIP",
-      vipBannerSubtitle: "ai MIGLIORI PREZZI!",
+      vipBannerTitle: "Sentiti come un VIP",
+      vipBannerSubtitle: "al MIGLIOR PREZZO!",
       vipBannerDesc: "I pacchetti settimanali costano MENO di quanto pensi.",
       vipBannerDiscount: "10-20%",
       vipBannerDiscountLabel: "di sconto nei ristoranti.",
