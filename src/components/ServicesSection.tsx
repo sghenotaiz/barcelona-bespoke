@@ -128,7 +128,8 @@ const ServiceBlockItem = ({
 
 }: {block: ServiceBlock;index: number;getText: (key: string) => string;bookNow: string;}) => {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
+  const isMobile = useIsMobile();
+  const inView = useInView(ref, { once: true, amount: 0.3 });
   const isEven = index % 2 === 0;
 
   // Parallax on the image
