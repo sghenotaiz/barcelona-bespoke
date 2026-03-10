@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import AboutHero from "@/components/AboutHero";
 import AboutSection from "@/components/AboutSection";
 import TeamSection from "@/components/TeamSection";
-import BecomePartnerSection from "@/components/BecomePartnerSection";
 import WorkWithUsSection from "@/components/WorkWithUsSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -17,7 +16,6 @@ const AboutPage = () => {
         <AboutSection />
         <TeamSection />
         <WorkWithUsSection />
-        <BecomePartnerSection />
       </div>
       <Footer />
       <FloatingCTA />
