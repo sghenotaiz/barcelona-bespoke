@@ -965,7 +965,7 @@ export const translations = {
       expNightlifeBullet3: "Pack multi-serata = sconti esclusivi",
       expPoolTitle: "Pool Party",
       expPoolSubtitle: "Sotto il sole di Barcellona",
-      expPoolDesc: "Giorni di sole, acqua cristallina e i migliori DJ — feste diverse ogni giorno della settimana.",
+      expPoolDesc: "Giorni di sole, acqua cristallina e i migliori DJ — feste diverse ogni giorno della settimana, dall'afrohouse all'hip-hop, reggaeton, vivi i tuoi pomeriggi all'insegna del divertimento!",
       expPoolBullet1: "Eventi giornalieri con DJ internazionali",
       expPoolBullet2: "Musica, cocktail e buone vibrazioni",
       expPoolBullet3: "Le migliori piscine e beach club",
