@@ -27,7 +27,7 @@ const galleryItems: GalleryItem[] = [
 
 const galleryTexts: Record<string, Record<string, string>> = {
   en: {
-    ourServices: "Our Services", ourServicesDesc: "VIP Experiences Barcelona",
+    ourServices: "Our Services", ourServicesDesc: "Everything you need for an unforgettable vacation",
     aboutUs: "About Us", aboutUsDesc: "The NightDreams Story",
     planExperience: "Plan Your Experience", planExperienceDesc: "Book VIP Services",
     ourTeam: "Our Team", ourTeamDesc: "Meet Our Promoters",
@@ -35,7 +35,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
     explore: "Explore",
   },
   it: {
-    ourServices: "I Nostri Servizi", ourServicesDesc: "Esperienze VIP Barcellona",
+    ourServices: "I Nostri Servizi", ourServicesDesc: "Ciò di cui hai bisogno per una vacanza indimenticabile",
     aboutUs: "Chi Siamo", aboutUsDesc: "La Storia di NightDreams",
     planExperience: "Pianifica la Tua Esperienza", planExperienceDesc: "Prenota Servizi VIP",
     ourTeam: "Il Nostro Team", ourTeamDesc: "Incontra i Nostri Promoter",
@@ -43,7 +43,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
     explore: "Esplora",
   },
   es: {
-    ourServices: "Nuestros Servicios", ourServicesDesc: "Experiencias VIP Barcelona",
+    ourServices: "Nuestros Servicios", ourServicesDesc: "Todo lo que necesitas para unas vacaciones inolvidables",
     aboutUs: "Sobre Nosotros", aboutUsDesc: "La Historia de NightDreams",
     planExperience: "Planifica Tu Experiencia", planExperienceDesc: "Reserva Servicios VIP",
     ourTeam: "Nuestro Equipo", ourTeamDesc: "Conoce a Nuestros Promotores",
@@ -51,7 +51,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
     explore: "Explorar",
   },
   fr: {
-    ourServices: "Nos Services", ourServicesDesc: "Expériences VIP Barcelone",
+    ourServices: "Nos Services", ourServicesDesc: "Tout ce dont vous avez besoin pour des vacances inoubliables",
     aboutUs: "À Propos", aboutUsDesc: "L'Histoire de NightDreams",
     planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Réservez des Services VIP",
     ourTeam: "Notre Équipe", ourTeamDesc: "Rencontrez Nos Promoteurs",
