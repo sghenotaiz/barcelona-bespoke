@@ -3,6 +3,7 @@ import BookingSection from "@/components/BookingSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingSocials from "@/components/FloatingSocials";
 
 const PlanPage = () => {
   return (
