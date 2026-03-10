@@ -423,16 +423,12 @@ const ExperiencesContent = () => {
 
           {/* Column 2: Client Reviews */}
           <div>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+            <h3
               className="text-xl tracking-wider uppercase text-center mb-8"
               style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
             >
               <span className="text-silver-gradient">{getText("reviewsColumnTitle")}</span>
-            </motion.h3>
+            </h3>
 
             {/* Desktop: vertical scrollable container */}
             <div className="hidden md:block max-h-[600px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-silver/20 scrollbar-track-transparent" style={{ scrollbarWidth: "thin" }}>
