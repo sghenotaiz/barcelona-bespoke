@@ -507,7 +507,7 @@ const ExperiencesContent = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={formInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="mt-10 border border-border p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm"
+              className="mt-10 border border-border p-4 sm:p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm overflow-hidden"
             >
               <div className="text-center mb-8">
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-3 block">
