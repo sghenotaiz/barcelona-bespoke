@@ -29,17 +29,29 @@ type ServiceBlock = {
 
 const serviceBlocks: ServiceBlock[] = [
 {
-  id: "nightlife",
+  id: "vip-tables",
   image: vipTablesImg,
-  titleKey: "expNightlifeTitle",
-  subtitleKey: "expNightlifeSubtitle",
-  descKey: "expNightlifeDesc",
+  titleKey: "expVipTablesTitle",
+  subtitleKey: "expVipTablesSubtitle",
+  descKey: "expVipTablesDesc",
   badge: "badgeVip",
   bullets: [
-  { icon: Crown, key: "expNightlifeBullet1" },
-  { icon: Ticket, key: "expNightlifeBullet2" },
-  { icon: CalendarDays, key: "expNightlifeBullet3" }]
-
+  { icon: Crown, key: "expVipTablesBullet1" },
+  { icon: CalendarDays, key: "expVipTablesBullet2" },
+  { icon: DollarSign, key: "expVipTablesBullet3" }]
+},
+{
+  id: "skip-line",
+  image: skipLineImg,
+  titleKey: "expSkipLineTitle",
+  subtitleKey: "expSkipLineSubtitle",
+  descKey: "expSkipLineDesc",
+  badge: "badgeVip",
+  bullets: [
+  { icon: Ticket, key: "expSkipLineBullet1" },
+  { icon: Users, key: "expSkipLineBullet2" },
+  { icon: ShieldCheck, key: "expSkipLineBullet3" },
+  { icon: DollarSign, key: "expSkipLineBullet4" }]
 },
 {
   id: "pool",
