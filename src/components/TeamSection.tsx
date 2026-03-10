@@ -108,7 +108,7 @@ const TeamSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16"
+          className="mt-8"
         >
           <h3 className="font-display text-xl font-light text-foreground mb-6 tracking-wider uppercase text-center animate-neon-pulse">
             {t.team.partnersTitle}{" "}
