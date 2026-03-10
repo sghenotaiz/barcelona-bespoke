@@ -51,7 +51,7 @@ const BookingSection = () => {
     filter(Boolean).
     join("\n");
 
-    const subject = encodeURIComponent("VIP Booking Request — NightDreams Barcelona");
+    const subject = encodeURIComponent("Richiesta Preventivo - NightDreams");
     const encodedBody = encodeURIComponent(body);
     window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${encodedBody}`;
     setSubmitted(true);

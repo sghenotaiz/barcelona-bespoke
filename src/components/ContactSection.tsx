@@ -19,7 +19,9 @@ const ContactSection = () => {
     const text = encodeURIComponent(
       `Hello, I'm ${formData.name}. ${formData.message} (Email: ${formData.email}, Phone: ${formData.phone})`
     );
-    window.open(`https://wa.me/34600000000?text=${text}`, "_blank");
+    const subject = encodeURIComponent("Richiesta Informazioni - NightDreams");
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`);
+    window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
