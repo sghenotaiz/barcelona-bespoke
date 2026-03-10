@@ -1,4 +1,4 @@
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight, ArrowRight, Play, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
