@@ -1,151 +1,289 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { Wine, Clock, CalendarDays, Waves, UtensilsCrossed, Building2, Car, Ship, PartyPopper, Sparkles, Star, Users, Percent, BedDouble, Plane, Zap, Sun, Eye } from "lucide-react";
 import vipTablesImg from "@/assets/services/vip-tables.jpg";
-import vipEntryImg from "@/assets/services/vip-entry.jpg";
-import weeklyPackImg from "@/assets/services/multi-entry.jpg";
 import poolPartyImg from "@/assets/services/pool-party.jpg";
 import restaurantImg from "@/assets/services/restaurant.jpg";
 import apartmentsImg from "@/assets/services/apartments.jpg";
 import limousineImg from "@/assets/services/limousine.jpg";
-import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
 import jetSkiImg from "@/assets/services/jet-ski.jpg";
+import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
 
-type ServiceDef = {
+type ServiceBlock = {
+  id: string;
   image: string;
   titleKey: string;
   descKey: string;
-  badgeKey: string;
-  highlight?: boolean;
+  bullets: { icon: React.ElementType; key: string }[];
+  badge?: string;
 };
 
-const servicesDefs: ServiceDef[] = [
-  { image: vipTablesImg, titleKey: "card1Title", descKey: "card1Desc", badgeKey: "badgeUnbeatable" },
-  { image: vipEntryImg, titleKey: "card2Title", descKey: "card2Desc", badgeKey: "badgeAffordable" },
-  { image: weeklyPackImg, titleKey: "card3Title", descKey: "card3Desc", badgeKey: "badgeWeekly" },
-  { image: poolPartyImg, titleKey: "card4Title", descKey: "card4Desc", badgeKey: "badgeAffordable" },
-  { image: restaurantImg, titleKey: "card5Title", descKey: "card5Desc", badgeKey: "badgeDiscount" },
-  { image: apartmentsImg, titleKey: "card6Title", descKey: "card6Desc", badgeKey: "badgeUnbeatable" },
-  { image: limousineImg, titleKey: "card7Title", descKey: "card7Desc", badgeKey: "badgeAffordable" },
-  { image: jetSkiImg, titleKey: "card8Title", descKey: "card8Desc", badgeKey: "badgeWeekly" },
-  { image: bachelorPartyImg, titleKey: "card9Title", descKey: "card9Desc", badgeKey: "badgeExclusive" },
+const serviceBlocks: ServiceBlock[] = [
+  {
+    id: "nightlife",
+    image: vipTablesImg,
+    titleKey: "expNightlifeTitle",
+    descKey: "expNightlifeDesc",
+    badge: "badgeVip",
+    bullets: [
+      { icon: Wine, key: "expNightlifeBullet1" },
+      { icon: Clock, key: "expNightlifeBullet2" },
+      { icon: CalendarDays, key: "expNightlifeBullet3" },
+    ],
+  },
+  {
+    id: "pool",
+    image: poolPartyImg,
+    titleKey: "expPoolTitle",
+    descKey: "expPoolDesc",
+    badge: "badgeSummer",
+    bullets: [
+      { icon: Sun, key: "expPoolBullet1" },
+      { icon: Waves, key: "expPoolBullet2" },
+    ],
+  },
+  {
+    id: "restaurant",
+    image: restaurantImg,
+    titleKey: "expRestaurantTitle",
+    descKey: "expRestaurantDesc",
+    badge: "badgeDiscount",
+    bullets: [
+      { icon: Percent, key: "expRestaurantBullet1" },
+      { icon: UtensilsCrossed, key: "expRestaurantBullet2" },
+    ],
+  },
+  {
+    id: "apartments",
+    image: apartmentsImg,
+    titleKey: "expApartmentsTitle",
+    descKey: "expApartmentsDesc",
+    badge: "badgeTopPick",
+    bullets: [
+      { icon: BedDouble, key: "expApartmentsBullet1" },
+      { icon: Building2, key: "expApartmentsBullet2" },
+    ],
+  },
+  {
+    id: "limo",
+    image: limousineImg,
+    titleKey: "expLimoTitle",
+    descKey: "expLimoDesc",
+    badge: "badgeVip",
+    bullets: [
+      { icon: Car, key: "expLimoBullet1" },
+      { icon: Plane, key: "expLimoBullet2" },
+    ],
+  },
+  {
+    id: "jetski",
+    image: jetSkiImg,
+    titleKey: "expJetskiTitle",
+    descKey: "expJetskiDesc",
+    badge: "badgeSummer",
+    bullets: [
+      { icon: Zap, key: "expJetskiBullet1" },
+      { icon: Eye, key: "expJetskiBullet2" },
+    ],
+  },
+  {
+    id: "events",
+    image: bachelorPartyImg,
+    titleKey: "expEventsTitle",
+    descKey: "expEventsDesc",
+    badge: "badgeGroups",
+    bullets: [
+      { icon: PartyPopper, key: "expEventsBullet1" },
+      { icon: Users, key: "expEventsBullet2" },
+      { icon: Sparkles, key: "expEventsBullet3" },
+    ],
+  },
 ];
 
-const ServicesSection = () => {
+const ServiceBlockItem = ({
+  block,
+  index,
+  getText,
+  bookNow,
+}: {
+  block: ServiceBlock;
+  index: number;
+  getText: (key: string) => string;
+  bookNow: string;
+}) => {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const isEven = index % 2 === 0;
+
+  return (
+    <div ref={ref} className="w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-0 min-h-[420px] md:min-h-[500px]`}
+      >
+        {/* Image */}
+        <div className="relative w-full md:w-1/2 overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent via-transparent to-background/30 z-10 pointer-events-none" />
+          <img
+            src={block.image}
+            alt={getText(block.titleKey)}
+            className="w-full h-[300px] md:h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+          />
+          {/* Subtle light reflection overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.03] to-transparent pointer-events-none z-10" />
+        </div>
+
+        {/* Text */}
+        <div className={`w-full md:w-1/2 flex flex-col justify-center px-8 py-10 md:px-14 md:py-16 relative`}>
+          {/* Subtle background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-card/80 via-background to-card/60 pointer-events-none" />
+          
+          <div className="relative z-10">
+            {/* Badge */}
+            {block.badge && (
+              <motion.span
+                initial={{ opacity: 0, x: -10 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="inline-block font-body text-[10px] tracking-[0.2em] uppercase border border-silver/30 px-4 py-1.5 text-silver bg-silver/5 mb-6"
+              >
+                {getText(block.badge)}
+              </motion.span>
+            )}
+
+            {/* Title */}
+            <motion.h3
+              initial={{ opacity: 0, y: 15 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-4 leading-tight"
+            >
+              {getText(block.titleKey)}
+            </motion.h3>
+
+            {/* Silver line */}
+            <div className="silver-line mb-6" />
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="font-body text-sm text-muted-foreground leading-relaxed mb-8 max-w-lg"
+            >
+              {getText(block.descKey)}
+            </motion.p>
+
+            {/* Bullet points */}
+            <div className="space-y-3 mb-8">
+              {block.bullets.map((bullet, bi) => {
+                const Icon = bullet.icon;
+                return (
+                  <motion.div
+                    key={bullet.key}
+                    initial={{ opacity: 0, x: -15 }}
+                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.4, delay: 0.3 + bi * 0.08 }}
+                    className="flex items-center gap-3"
+                  >
+                    <div className="flex-shrink-0 w-8 h-8 border border-silver/20 flex items-center justify-center bg-silver/5">
+                      <Icon className="w-4 h-4 text-silver" />
+                    </div>
+                    <span className="font-body text-xs text-silver tracking-wide">
+                      {getText(bullet.key)}
+                    </span>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* CTA */}
+            <motion.a
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.5 }}
+              href="/plan"
+              className="inline-block font-body text-xs tracking-[0.2em] uppercase text-center border border-silver/40 text-silver hover:bg-silver hover:text-background transition-all duration-300 px-8 py-3 w-fit"
+            >
+              {bookNow}
+            </motion.a>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+const ServicesSection = () => {
+  const headerRef = useRef(null);
+  const headerInView = useInView(headerRef, { once: true, margin: "-100px" });
   const { t } = useLanguage();
 
   const svc = t.services as Record<string, unknown>;
   const getText = (key: string): string => (svc[key] as string) || key;
 
   return (
-    <section id="services" className="py-24 bg-[#0c121d] border border-gold-dark md:py-[50px]">
-      <div className="container mx-auto px-6" ref={ref}>
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12">
-          <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
-            {t.services.label}
-          </span>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
-            {t.services.titleLine1}{" "}
-            <span className="italic text-silver-gradient">{t.services.titleLine2}</span>
-          </h2>
-          <div className="mx-auto silver-line mt-8" />
-        </motion.div>
+    <section id="services" className="bg-background">
+      {/* Section Header */}
+      <div className="py-20 md:py-28" ref={headerRef}>
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
+              {t.services.label}
+            </span>
+            <h2 className="font-display text-4xl md:text-6xl font-light text-foreground">
+              {t.services.titleLine1}{" "}
+              <span className="italic text-silver-gradient">{t.services.titleLine2}</span>
+            </h2>
+            <div className="mx-auto silver-line mt-8" />
+          </motion.div>
 
-        {/* KEY MESSAGE BANNER */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="max-w-3xl mx-auto text-center mb-8 border border-silver/30 bg-gradient-to-r from-card/60 via-card/80 to-card/60 px-8 py-7 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-silver/5 to-transparent pointer-events-none" />
-          <p className="font-display text-lg md:text-2xl text-foreground leading-relaxed relative z-10">
-            🏆{" "}
-            <span className="font-semibold tracking-wide">{t.services.vipBannerTitle}</span>{" "}
-            <span className="text-silver-gradient font-bold">{t.services.vipBannerSubtitle}</span>
-          </p>
-          <p className="font-body text-sm text-silver mt-3 leading-relaxed relative z-10">
-            {t.services.vipBannerDesc}{" "}
-            <span className="font-bold text-silver-gradient">{t.services.vipBannerDiscount}</span>{" "}
-            {t.services.vipBannerDiscountLabel}{" "}
-            <span className="italic text-silver-gradient">{t.services.vipBannerAnything}</span>{" "}
-            {t.services.vipBannerAnythingLabel}
-          </p>
-        </motion.div>
-
-        {/* About Us Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="max-w-2xl mx-auto text-center mb-16 border border-silver/20 bg-card/40 px-8 py-6">
-          <p className="font-body text-sm text-silver leading-relaxed">
-            <span className="font-semibold text-foreground">{t.services.aboutText}</span>{" "}
-            <span className="font-semibold text-foreground uppercase tracking-wide">
-              {t.services.aboutStrength}
-            </span>{" "}
-            {t.services.aboutYear}{" "}
-            <span className="italic text-silver-gradient">{t.services.aboutSeasonal}</span>
-          </p>
-        </motion.div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {servicesDefs.map((service, i) => (
-            <motion.div
-              key={service.titleKey}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.07 }}
-              className={`group flex flex-col bg-card border overflow-hidden hover:border-silver/40 transition-colors duration-500 ${
-                service.highlight ? "border-silver/30" : "border-border"
-              }`}>
-              <div className="relative overflow-hidden" style={{ height: "208px" }}>
-                <img
-                  src={service.image}
-                  alt={getText(service.titleKey)}
-                  className="w-full h-full object-cover transition-transform duration-700"
-                  style={{ transform: "scale(1)", transition: "transform 0.7s ease" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.08)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
-                <div className="absolute top-3 left-3">
-                  <span className="font-body text-[10px] tracking-[0.15em] uppercase border px-3 py-1 bg-silver/20 text-silver border-silver/40">
-                    {getText(service.badgeKey)}
-                  </span>
-                </div>
-              </div>
-              <div className="flex flex-col flex-1 p-6 gap-3">
-                <h3 className={`font-display text-xl leading-snug ${service.highlight ? "text-silver-gradient" : "text-foreground"}`}>
-                  {getText(service.titleKey)}
-                </h3>
-                <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
-                  {getText(service.descKey)}
-                </p>
-                <div className="silver-line mb-1" />
-                <a
-                  href="/plan"
-                  className="inline-block mt-1 font-body text-xs tracking-[0.2em] uppercase text-center border border-silver/40 text-silver hover:bg-silver hover:text-background transition-all duration-300 px-5 py-3">
-                  {t.services.bookNow}
-                </a>
-              </div>
-            </motion.div>
-          ))}
+          {/* VIP Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="max-w-3xl mx-auto text-center mt-12 border border-silver/20 bg-gradient-to-r from-card/60 via-card/80 to-card/60 px-8 py-7 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-silver/5 to-transparent pointer-events-none" />
+            <p className="font-display text-lg md:text-2xl text-foreground leading-relaxed relative z-10">
+              🏆{" "}
+              <span className="font-semibold tracking-wide">{t.services.vipBannerTitle}</span>{" "}
+              <span className="text-silver-gradient font-bold">{t.services.vipBannerSubtitle}</span>
+            </p>
+          </motion.div>
         </div>
+      </div>
 
-        {/* "And more" text */}
+      {/* Service Blocks — alternating layout */}
+      <div className="flex flex-col">
+        {serviceBlocks.map((block, i) => (
+          <ServiceBlockItem
+            key={block.id}
+            block={block}
+            index={i}
+            getText={getText}
+            bookNow={t.services.bookNow}
+          />
+        ))}
+      </div>
+
+      {/* "And more" */}
+      <div className="py-16">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-          className="font-body text-sm italic text-silver text-center mt-10"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="font-body text-sm italic text-silver text-center"
         >
           {getText("andMore")}
         </motion.p>
