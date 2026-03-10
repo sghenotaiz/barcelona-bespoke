@@ -145,16 +145,15 @@ const ServiceBlockItem = ({
         transition={{ duration: 1, ease: "easeOut" }}
         className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}>
         
-        {/* IMAGE — 55% on desktop */}
-        <div className="relative w-full lg:w-[55%] overflow-hidden">
+        {/* IMAGE — 55% desktop, 60vh mobile */}
+        <div className="relative w-full min-h-[300px] h-[60vh] lg:h-auto lg:min-h-0 lg:w-[55%] overflow-hidden">
           <motion.div style={{ y: imageY }} className="absolute inset-[-16%] w-[100%] h-[132%]">
             <img
               src={block.image}
               alt={getText(block.titleKey)}
               className="w-full h-full object-cover transition-transform duration-[2s] ease-out hover:scale-[1.03]" />
-            
           </motion.div>
-          {/* Gradient overlay toward text side */}
+          {/* Gradient overlay toward text side (desktop) */}
           <div
             className={`absolute inset-0 z-10 pointer-events-none ${
             isEven ?
@@ -162,8 +161,8 @@ const ServiceBlockItem = ({
             "bg-gradient-to-l from-transparent via-transparent to-black/80"} hidden lg:block`
             } />
           
-          {/* Mobile bottom gradient */}
-          <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-black lg:hidden" />
+          {/* Mobile bottom gradient — stronger for text readability */}
+          <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-transparent via-black/20 to-black lg:hidden" />
           
           {/* Badge on image */}
           {block.badge &&
@@ -172,7 +171,6 @@ const ServiceBlockItem = ({
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="absolute top-6 left-6 z-20">
-            
               <span className="font-body text-[10px] tracking-[0.25em] uppercase px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white/90">
                 {getText(block.badge)}
               </span>
@@ -180,10 +178,10 @@ const ServiceBlockItem = ({
           }
         </div>
 
-        {/* TEXT — 45% on desktop */}
-        <div className="w-full lg:w-[45%] flex flex-col justify-center px-8 py-12 md:px-12 lg:px-16 lg:py-20 relative bg-black">
+        {/* TEXT — 45% desktop, full width mobile */}
+        <div className="w-full lg:w-[45%] flex flex-col justify-center px-6 py-8 md:px-12 lg:px-16 lg:py-20 relative bg-black">
           {/* Glassmorphism subtle card overlay */}
-          <div className="absolute inset-4 lg:inset-8 bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] rounded-sm pointer-events-none" />
+          <div className="absolute inset-3 lg:inset-8 bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] rounded-sm pointer-events-none" />
 
           <div className="relative z-10">
             {/* Subtitle line */}
