@@ -16,7 +16,7 @@ const WorkWithUsSection = () => {
 
 
   return (
-    <section id="work-with-us" className="py-24 border border-gold-dark md:py-[50px] bg-[#010b18]">
+    <section id="work-with-us" className="py-24 md:py-[50px] bg-background">
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
