@@ -238,7 +238,7 @@ const ReviewCard = ({ item, index, getText }: { item: typeof clientReviews[0]; i
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-30px" }}
+    viewport={{ once: true, amount: 0.1 }}
     transition={{ duration: 0.6, delay: 0.1 * index, ease: [0.16, 1, 0.3, 1] }}
     className="relative overflow-hidden border border-border bg-white/[0.03] backdrop-blur-sm group hover:border-silver/40 transition-all duration-500"
   >
