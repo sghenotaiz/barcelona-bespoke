@@ -462,7 +462,7 @@ const ExperiencesContent = () => {
               >
                 {clientReviews.map((item, i) => (
                   <div key={i} className="flex-shrink-0 w-[85vw] max-w-[340px] snap-center">
-                    <ReviewCard item={item} index={i} inView={inView} getText={getText} />
+                    <ReviewCard item={item} index={i} getText={getText} />
                   </div>
                 ))}
                 {userReviews.map((item, i) => (
