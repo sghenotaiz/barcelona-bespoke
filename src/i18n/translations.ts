@@ -325,6 +325,10 @@ export const translations = {
     floatingCta: {
       label: "Contact Us!",
     },
+    dualCta: {
+      whatsapp: "WhatsApp",
+      book: "Book Now",
+    },
     whatsapp: {
       contactUs: "Contact us on WhatsApp",
     },
