@@ -387,12 +387,7 @@ const ExperiencesContent = () => {
     <section className="bg-background py-10 md:py-12">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-20"
+        <div className="text-center mb-12 sm:mb-20">
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {getText("label")}
