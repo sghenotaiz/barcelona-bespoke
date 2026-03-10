@@ -303,7 +303,7 @@ const ExperiencesContent = () => {
   const ref = useRef(null);
   const ctaRef = useRef(null);
   const formRef = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-50px" });
   const ctaInView = useInView(ctaRef, { once: true, margin: "-50px" });
   const formInView = useInView(formRef, { once: true, margin: "-50px" });
   const { t } = useLanguage();
