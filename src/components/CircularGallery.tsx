@@ -53,7 +53,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   fr: {
     ourServices: "Nos Services", ourServicesDesc: "Tout ce dont vous avez besoin pour des vacances inoubliables",
     aboutUs: "À Propos", aboutUsDesc: "L'Histoire de NightDreams",
-    planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Réservez des Services VIP",
+    planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Contactez-nous et demandez un devis",
     ourTeam: "Notre Équipe", ourTeamDesc: "Rencontrez Nos Promoteurs",
     momentsCrafted: "Moments Créés", momentsCraftedDesc: "Souvenirs de Clients",
     explore: "Explorer",
