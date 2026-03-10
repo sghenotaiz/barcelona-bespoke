@@ -179,7 +179,7 @@ const VideoModal = ({ item, getText, onClose }: { item: typeof eventHighlights[0
 );
 
 // --- Event Card ---
-const EventCard = ({ item, index, inView, getText, onOpen }: { item: typeof eventHighlights[0]; index: number; inView: boolean; getText: (key: string) => string; onOpen: () => void }) => {
+const EventCard = ({ item, index, getText, onOpen }: { item: typeof eventHighlights[0]; index: number; inView?: boolean; getText: (key: string) => string; onOpen: () => void }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
