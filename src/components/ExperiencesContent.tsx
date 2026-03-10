@@ -225,7 +225,7 @@ const EventCard = ({ item, index, getText, onOpen }: { item: typeof eventHighlig
           <p className="font-body text-xs text-muted-foreground">{getText(item.statsKey)}</p>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
