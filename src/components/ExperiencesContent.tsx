@@ -49,34 +49,6 @@ const eventHighlights = [
     statsKey: "event6Stats" as const,
     videoUrl: "",
   },
-  {
-    image: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=600&h=800&fit=crop",
-    titleKey: "event7Title" as const,
-    dateKey: "event7Date" as const,
-    statsKey: "event7Stats" as const,
-    videoUrl: "",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=800&fit=crop",
-    titleKey: "event8Title" as const,
-    dateKey: "event8Date" as const,
-    statsKey: "event8Stats" as const,
-    videoUrl: "",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=600&h=800&fit=crop",
-    titleKey: "event9Title" as const,
-    dateKey: "event9Date" as const,
-    statsKey: "event9Stats" as const,
-    videoUrl: "",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=600&h=800&fit=crop",
-    titleKey: "event10Title" as const,
-    dateKey: "event10Date" as const,
-    statsKey: "event10Stats" as const,
-    videoUrl: "",
-  },
 ];
 
 // Client review cards data
