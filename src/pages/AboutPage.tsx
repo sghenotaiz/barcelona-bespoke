@@ -21,6 +21,7 @@ const AboutPage = () => {
       <Footer />
       <FloatingCTA />
       <FloatingWhatsApp />
+      <FloatingSocials />
     </main>
   );
 };

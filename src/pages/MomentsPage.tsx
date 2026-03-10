@@ -17,6 +17,7 @@ const MomentsPage = () => {
       <Footer />
       <FloatingCTA />
       <FloatingWhatsApp />
+      <FloatingSocials />
     </main>
   );
 };

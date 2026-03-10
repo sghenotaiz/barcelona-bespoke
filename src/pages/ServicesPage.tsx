@@ -17,6 +17,7 @@ const ServicesPage = () => {
       <Footer />
       <FloatingCTA />
       <FloatingWhatsApp />
+      <FloatingSocials />
     </main>
   );
 };

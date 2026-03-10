@@ -15,6 +15,7 @@ const PlanPage = () => {
       <Footer />
       <FloatingCTA />
       <FloatingWhatsApp />
+      <FloatingSocials />
     </main>
   );
 };
