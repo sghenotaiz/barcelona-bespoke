@@ -479,8 +479,8 @@ const ExperiencesContent = () => {
               )}
               <div
                 ref={reviewScrollRef}
-                className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-1 touch-pan-x"
-                style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
+                className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-1 -mx-1"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch", touchAction: "pan-x" }}
               >
                 {clientReviews.map((item, i) => (
                   <div key={i} className="flex-shrink-0 w-[85vw] max-w-[340px] snap-center">
