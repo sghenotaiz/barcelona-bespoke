@@ -585,13 +585,7 @@ const ExperiencesContent = () => {
         </div>
 
         {/* Final CTA */}
-        <motion.div
-          ref={ctaRef}
-          initial={{ opacity: 0, y: 40 }}
-          animate={ctaInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-24 text-center"
-        >
+        <div className="mt-24 text-center">
           <h3
             className="text-3xl md:text-4xl lg:text-5xl tracking-wider uppercase mb-8 animate-neon-pulse"
             style={{
@@ -607,7 +601,7 @@ const ExperiencesContent = () => {
             variant="large"
             className="justify-center"
           />
-        </motion.div>
+        </div>
       </div>
 
       {/* Video Modal */}
