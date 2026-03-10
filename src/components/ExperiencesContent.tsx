@@ -418,7 +418,7 @@ const ExperiencesContent = () => {
     "w-full bg-background border border-border text-foreground font-body text-sm px-4 py-3 placeholder:text-muted-foreground focus:outline-none focus:border-silver transition-colors duration-200";
 
   return (
-    <section className="bg-background py-24 md:py-28">
+    <section className="bg-background py-10 md:py-12">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
