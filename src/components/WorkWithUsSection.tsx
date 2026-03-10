@@ -1,7 +1,7 @@
 // WorkWithUsSection - careers and partnerships
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, Handshake, ArrowRight } from "lucide-react";
+import { Briefcase, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const WorkWithUsSection = () => {
