@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import badge from "@/assets/nightdreams-badge.png";
+import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
 
 const ExperiencesHero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -38,6 +39,16 @@ const ExperiencesHero = () => {
 
       {/* Dark overlay 60% */}
       <div className="absolute inset-0 bg-black/60 z-10" />
+
+      {/* NightDreams logo top-right */}
+      <motion.img
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.7, scale: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        src={nightdreamsLogo}
+        alt="NightDreams"
+        className="absolute top-6 right-6 w-16 h-16 md:w-20 md:h-20 object-contain rounded-lg z-20 opacity-70"
+      />
 
       {/* Centered text */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full px-6 text-center">

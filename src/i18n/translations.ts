@@ -325,6 +325,10 @@ export const translations = {
     floatingCta: {
       label: "Contact Us!",
     },
+    dualCta: {
+      whatsapp: "WhatsApp",
+      book: "Book Now",
+    },
     whatsapp: {
       contactUs: "Contact us on WhatsApp",
     },
@@ -677,6 +681,10 @@ export const translations = {
     },
     floatingCta: {
       label: "¡Contáctanos!",
+    },
+    dualCta: {
+      whatsapp: "WhatsApp",
+      book: "Reservar",
     },
     whatsapp: {
       contactUs: "Contáctanos por WhatsApp",
@@ -1031,6 +1039,10 @@ export const translations = {
     floatingCta: {
       label: "Contactez-nous !",
     },
+    dualCta: {
+      whatsapp: "WhatsApp",
+      book: "Réserver",
+    },
     whatsapp: {
       contactUs: "Contactez-nous sur WhatsApp",
     },
@@ -1383,6 +1395,10 @@ export const translations = {
     },
     floatingCta: {
       label: "Contattaci!",
+    },
+    dualCta: {
+      whatsapp: "WhatsApp",
+      book: "Prenota",
     },
     whatsapp: {
       contactUs: "Contattaci su WhatsApp",
