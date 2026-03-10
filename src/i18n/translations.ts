@@ -1180,7 +1180,7 @@ export const translations = {
       emailPlaceholder: "tua@email.com",
       notes: "Note Aggiuntive (opzionale)",
       notesPlaceholder: "Preferenze, esigenze alimentari, occasioni speciali...",
-      submit: "Invia Richiesta VIP",
+      submit: "Invia Richiesta",
       successTitle: "Grazie!",
       successMessage: "La tua richiesta VIP è stata inviata. Il nostro team di concierge ti contatterà a breve con una proposta personalizzata.",
     },
