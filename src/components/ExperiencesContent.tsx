@@ -658,6 +658,13 @@ const ExperiencesContent = () => {
           />
         </motion.div>
       </div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {activeVideo && (
+          <VideoModal item={activeVideo} getText={getText} onClose={() => setActiveVideo(null)} />
+        )}
+      </AnimatePresence>
     </section>
   );
 };
