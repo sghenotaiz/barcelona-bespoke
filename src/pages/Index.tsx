@@ -26,6 +26,7 @@ const Index = () => {
       <Footer />
       {!showIntro && <FloatingCTA />}
       {!showIntro && <FloatingWhatsApp />}
+      {!showIntro && <FloatingSocials />}
     </main>
   );
 };
