@@ -58,6 +58,9 @@ export const translations = {
       stat3Label: "Days a Year",
     },
     services: {
+      heroTitle: "Our Services",
+      heroSubtitle: "Barcelona's nightlife energy",
+      heroButton: "Discover",
       label: "Our Services",
       titleLine1: "Tailored for",
       titleLine2: "Everyone",
@@ -338,6 +341,9 @@ export const translations = {
       stat3Label: "Días al Año",
     },
     services: {
+      heroTitle: "Nuestros Servicios",
+      heroSubtitle: "La energía de la noche de Barcelona",
+      heroButton: "Descubrir",
       label: "Nuestros Servicios",
       titleLine1: "Pensado para",
       titleLine2: "Todos",
@@ -618,6 +624,9 @@ export const translations = {
       stat3Label: "Jours par An",
     },
     services: {
+      heroTitle: "Nos Services",
+      heroSubtitle: "L'énergie de la nuit de Barcelone",
+      heroButton: "Découvrir",
       label: "Nos Services",
       titleLine1: "Pensé pour",
       titleLine2: "Tous",
@@ -898,6 +907,9 @@ export const translations = {
       stat3Label: "Giorni all'Anno",
     },
     services: {
+      heroTitle: "I Nostri Servizi",
+      heroSubtitle: "L'energia della notte di Barcellona",
+      heroButton: "Scopri",
       label: "I Nostri Servizi",
       titleLine1: "Su Misura per",
       titleLine2: "Tutti",
