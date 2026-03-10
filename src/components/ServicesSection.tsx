@@ -145,16 +145,15 @@ const ServiceBlockItem = ({
         transition={{ duration: 1, ease: "easeOut" }}
         className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}>
         
-        {/* IMAGE — 55% on desktop */}
-        <div className="relative w-full lg:w-[55%] overflow-hidden">
+        {/* IMAGE — 55% desktop, 60vh mobile */}
+        <div className="relative w-full min-h-[300px] h-[60vh] lg:h-auto lg:min-h-0 lg:w-[55%] overflow-hidden">
           <motion.div style={{ y: imageY }} className="absolute inset-[-16%] w-[100%] h-[132%]">
             <img
               src={block.image}
               alt={getText(block.titleKey)}
               className="w-full h-full object-cover transition-transform duration-[2s] ease-out hover:scale-[1.03]" />
-            
           </motion.div>
-          {/* Gradient overlay toward text side */}
+          {/* Gradient overlay toward text side (desktop) */}
           <div
             className={`absolute inset-0 z-10 pointer-events-none ${
             isEven ?
@@ -162,8 +161,8 @@ const ServiceBlockItem = ({
             "bg-gradient-to-l from-transparent via-transparent to-black/80"} hidden lg:block`
             } />
           
-          {/* Mobile bottom gradient */}
-          <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-black lg:hidden" />
+          {/* Mobile bottom gradient — stronger for text readability */}
+          <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-transparent via-black/20 to-black lg:hidden" />
           
           {/* Badge on image */}
           {block.badge &&
@@ -172,7 +171,6 @@ const ServiceBlockItem = ({
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="absolute top-6 left-6 z-20">
-            
               <span className="font-body text-[10px] tracking-[0.25em] uppercase px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white/90">
                 {getText(block.badge)}
               </span>
@@ -180,10 +178,10 @@ const ServiceBlockItem = ({
           }
         </div>
 
-        {/* TEXT — 45% on desktop */}
-        <div className="w-full lg:w-[45%] flex flex-col justify-center px-8 py-12 md:px-12 lg:px-16 lg:py-20 relative bg-black">
+        {/* TEXT — 45% desktop, full width mobile */}
+        <div className="w-full lg:w-[45%] flex flex-col justify-center px-6 py-8 md:px-12 lg:px-16 lg:py-20 relative bg-black">
           {/* Glassmorphism subtle card overlay */}
-          <div className="absolute inset-4 lg:inset-8 bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] rounded-sm pointer-events-none" />
+          <div className="absolute inset-3 lg:inset-8 bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] rounded-sm pointer-events-none" />
 
           <div className="relative z-10">
             {/* Subtitle line */}
@@ -201,9 +199,8 @@ const ServiceBlockItem = ({
               initial={{ opacity: 0, y: 25 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-[3.5rem] font-light text-foreground mb-6 leading-[1.1] tracking-wide"
+              className="text-2xl md:text-5xl lg:text-[3.5rem] font-bold lg:font-light text-foreground mb-4 lg:mb-6 leading-[1.1] tracking-wide"
               style={{ fontFamily: "'Aldo the Apache', sans-serif" }}>
-              
               <span className="text-silver-gradient">{getText(block.titleKey)}</span>
             </motion.h3>
 
@@ -251,14 +248,13 @@ const ServiceBlockItem = ({
               })}
             </div>
 
-            {/* CTA Button — silver border + neon hover */}
+            {/* CTA Button — silver border + neon hover, thumb-friendly */}
             <motion.a
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.6 }}
               href="/plan"
-              className="inline-block font-body text-[11px] tracking-[0.25em] uppercase text-center border border-silver/40 text-silver px-10 py-4 w-fit transition-all duration-500 hover:bg-white/10 hover:border-white/60 hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
-              
+              className="inline-block font-body text-[11px] tracking-[0.25em] uppercase text-center border border-silver/40 text-silver px-10 py-4 min-h-[48px] flex items-center justify-center w-full lg:w-fit transition-all duration-500 hover:bg-white/10 hover:border-white/60 hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
               {bookNow}
             </motion.a>
           </div>
@@ -272,8 +268,6 @@ const ServiceBlockItem = ({
 };
 
 const ServicesSection = () => {
-  const headerRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
   const { t } = useLanguage();
 
   const svc = t.services as Record<string, unknown>;
@@ -281,62 +275,7 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="bg-black">
-      {/* Section Header — dramatic, Lío-style */}
-      <div className="py-24 relative overflow-hidden md:py-[100px]" ref={headerRef}>
-        {/* Subtle radial glow */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full blur-[120px]" />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={headerInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1 }}
-            className="text-center">
-            
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={headerInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-body text-[11px] tracking-[0.4em] uppercase text-silver/60 mb-6 block">
-              
-              {t.services.label}
-            </motion.span>
-
-            <h2
-              className="text-5xl md:text-7xl lg:text-8xl font-light tracking-wide mb-4"
-              style={{ fontFamily: "'Aldo the Apache', sans-serif" }}>
-              
-              <span className="text-white/90">{t.services.titleLine1}</span>{" "}
-              <span className="text-silver-gradient italic">{t.services.titleLine2}</span>
-            </h2>
-
-            {/* VIP tagline */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={headerInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-body text-sm md:text-base text-white/40 tracking-wider mt-6 max-w-lg mx-auto">
-              
-              {getText("vipBannerTitle")}{" "}
-              <span className="text-silver font-medium">{getText("vipBannerSubtitle")}</span>
-            </motion.p>
-
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={headerInView ? { scaleX: 1 } : {}}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="mx-auto mt-10 w-32 h-px origin-center"
-              style={{
-                background: "linear-gradient(90deg, transparent, hsl(0 0% 75%), transparent)"
-              }} />
-            
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Service Blocks — alternating Lío-style */}
+      {/* Service Blocks — alternating Lío-style, starts immediately */}
       <div className="flex flex-col">
         {serviceBlocks.map((block, i) =>
         <ServiceBlockItem
