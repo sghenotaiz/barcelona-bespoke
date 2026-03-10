@@ -184,7 +184,7 @@ export const translations = {
       label: "Signature Experiences",
       titleLine1: "Moments Crafted",
       titleLine2: "Just for You",
-      heroTitle: "LIVED EXPERIENCES",
+      heroTitle: "HIGHLIGHTS",
       heroSubtitle: "The best moments from our events",
       description: "Here you can find some of the hottest moments from our past events in Barcelona: real photos and videos from our parties and experiences. You will also see our clients together with our promoter team, smiling, celebrating, and enjoying unforgettable nights with NightDreams.",
       eventsColumnTitle: "EVENT HIGHLIGHTS",
