@@ -154,7 +154,7 @@ const CircularGallery = () => {
             style={{ perspective: "1400px", height: isMobile ? "280px" : "360px" }}>
             
             <motion.div
-              className="absolute inset-0 will-change-transform py-0 my-[10px]"
+              className="absolute inset-0 will-change-transform my-0 py-0"
               style={{ transformStyle: "preserve-3d" }}
               animate={{ rotateY: -rotationAngle }}
               transition={{ type: "spring", stiffness: 120, damping: 20 }}>
