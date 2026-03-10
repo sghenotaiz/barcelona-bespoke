@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { z } from "zod";
 import DualCTA from "@/components/DualCTA";
 
 // Event highlight cards data
@@ -84,6 +85,44 @@ const clientReviews = [
   },
 ];
 
+// --- Zod schema for review form ---
+const reviewSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(80),
+  email: z.string().trim().email("Invalid email").max(255),
+  rating: z.number().min(1, "Rating is required").max(5),
+  comment: z.string().trim().min(1, "Comment is required").max(1000),
+});
+
+// --- Star rating input ---
+const StarRatingInput = ({ value, onChange }: { value: number; onChange: (v: number) => void }) => {
+  const [hovered, setHovered] = useState(0);
+  return (
+    <div className="flex gap-1">
+      {[1, 2, 3, 4, 5].map((s) => (
+        <button
+          key={s}
+          type="button"
+          onClick={() => onChange(s)}
+          onMouseEnter={() => setHovered(s)}
+          onMouseLeave={() => setHovered(0)}
+          className="transition-transform hover:scale-110"
+          aria-label={`${s} star`}
+        >
+          <Star
+            size={22}
+            className={
+              s <= (hovered || value)
+                ? "fill-silver text-silver"
+                : "fill-transparent text-muted-foreground"
+            }
+          />
+        </button>
+      ))}
+    </div>
+  );
+};
+
+// --- Event Card ---
 const EventCard = ({ item, index, inView, getText }: { item: typeof eventHighlights[0]; index: number; inView: boolean; getText: (key: string) => string }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -102,10 +141,8 @@ const EventCard = ({ item, index, inView, getText }: { item: typeof eventHighlig
         className={`w-full h-full object-cover transition-transform duration-700 ${hovered ? "scale-110" : "scale-100"}`}
         loading="lazy"
       />
-      {/* Glassmorphism overlay */}
       <div className={`absolute inset-0 transition-all duration-500 ${hovered ? "bg-black/70 backdrop-blur-[2px]" : "bg-gradient-to-t from-black/80 via-black/20 to-transparent"}`} />
-      
-      {/* Always visible title */}
+
       <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
         <h4
           className="font-display text-lg md:text-xl text-foreground mb-1 tracking-wide"
@@ -123,7 +160,6 @@ const EventCard = ({ item, index, inView, getText }: { item: typeof eventHighlig
         </motion.div>
       </div>
 
-      {/* Dual CTA on hover */}
       <motion.div
         initial={false}
         animate={{ opacity: hovered ? 1 : 0, y: hovered ? 0 : 15 }}
@@ -151,6 +187,7 @@ const EventCard = ({ item, index, inView, getText }: { item: typeof eventHighlig
   );
 };
 
+// --- Review Card ---
 const ReviewCard = ({ item, index, inView, getText }: { item: typeof clientReviews[0]; index: number; inView: boolean; getText: (key: string) => string }) => (
   <motion.div
     initial={{ opacity: 0, x: 60 }}
@@ -180,7 +217,6 @@ const ReviewCard = ({ item, index, inView, getText }: { item: typeof clientRevie
         </div>
       </div>
     </div>
-    {/* Dual CTA */}
     <div className="flex border-t border-border">
       <a
         href="https://wa.me/393494104470"
@@ -202,39 +238,128 @@ const ReviewCard = ({ item, index, inView, getText }: { item: typeof clientRevie
   </motion.div>
 );
 
+// --- User-submitted review card (same style) ---
+const UserReviewCard = ({ item, index }: { item: { name: string; rating: number; quote: string; image: string }; index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, x: 40 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5 }}
+    className="relative overflow-hidden border border-silver/30 bg-white/[0.03] backdrop-blur-sm group hover:border-silver/40 transition-all duration-500"
+  >
+    <div className="flex items-start gap-4 p-5">
+      <img
+        src={item.image}
+        alt={item.name}
+        className="w-14 h-14 rounded-full object-cover border border-silver/20 flex-shrink-0"
+        loading="lazy"
+      />
+      <div className="flex-1 min-w-0">
+        <div className="flex gap-0.5 mb-1.5">
+          {Array.from({ length: item.rating }).map((_, i) => (
+            <Star key={i} size={12} className="fill-silver text-silver" />
+          ))}
+          {Array.from({ length: 5 - item.rating }).map((_, i) => (
+            <Star key={`e-${i}`} size={12} className="fill-transparent text-muted-foreground" />
+          ))}
+        </div>
+        <p className="font-body text-sm text-foreground/90 italic leading-relaxed mb-2">
+          "{item.quote}"
+        </p>
+        <span className="font-display text-sm text-foreground">{item.name}</span>
+      </div>
+    </div>
+  </motion.div>
+);
+
+// === MAIN COMPONENT ===
 const ExperiencesContent = () => {
   const ref = useRef(null);
   const ctaRef = useRef(null);
+  const formRef = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const ctaInView = useInView(ctaRef, { once: true, margin: "-50px" });
+  const formInView = useInView(formRef, { once: true, margin: "-50px" });
   const { t } = useLanguage();
-  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Mobile carousel refs
+  const reviewScrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+
+  // Review form state
+  const [userReviews, setUserReviews] = useState<{ name: string; rating: number; quote: string; image: string }[]>([]);
+  const [form, setForm] = useState({ name: "", email: "", rating: 0, comment: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitted, setSubmitted] = useState(false);
 
   const exp = t.experiences as Record<string, unknown>;
   const getText = (key: string): string => (exp[key] as string) || key;
 
   const checkScroll = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+    if (!reviewScrollRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = reviewScrollRef.current;
     setCanScrollLeft(scrollLeft > 10);
     setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
   };
 
   useEffect(() => {
-    const el = scrollRef.current;
+    const el = reviewScrollRef.current;
     if (!el) return;
     el.addEventListener("scroll", checkScroll);
     checkScroll();
     return () => el.removeEventListener("scroll", checkScroll);
-  }, []);
+  }, [userReviews]);
 
   const scroll = (dir: "left" | "right") => {
-    if (!scrollRef.current) return;
-    const amount = scrollRef.current.clientWidth * 0.7;
-    scrollRef.current.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+    if (!reviewScrollRef.current) return;
+    const amount = reviewScrollRef.current.clientWidth * 0.7;
+    reviewScrollRef.current.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
   };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const result = reviewSchema.safeParse(form);
+
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.errors.forEach((err) => {
+        if (err.path[0]) fieldErrors[String(err.path[0])] = err.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    // Send review via email for approval
+    const body = [
+      `Name: ${result.data.name}`,
+      `Email: ${result.data.email}`,
+      `Rating: ${"★".repeat(result.data.rating)}${"☆".repeat(5 - result.data.rating)}`,
+      `Review: ${result.data.comment}`,
+    ].join("\n");
+
+    const subject = encodeURIComponent("Nuova Recensione - NightDreams Esperienze");
+    const encodedBody = encodeURIComponent(body);
+    window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${encodedBody}`;
+
+    // Also show it locally
+    const avatarSeed = encodeURIComponent(result.data.name.trim());
+    setUserReviews((prev) => [
+      ...prev,
+      {
+        name: result.data.name,
+        rating: result.data.rating,
+        quote: result.data.comment,
+        image: `https://api.dicebear.com/7.x/initials/svg?seed=${avatarSeed}&backgroundColor=1a1a1a&textColor=c0c0c0`,
+      },
+    ]);
+    setForm({ name: "", email: "", rating: 0, comment: "" });
+    setErrors({});
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 5000);
+  };
+
+  const inputClass =
+    "w-full bg-background border border-border text-foreground font-body text-sm px-4 py-3 placeholder:text-muted-foreground focus:outline-none focus:border-silver transition-colors duration-200";
 
   return (
     <section className="bg-background py-24 md:py-28">
@@ -262,7 +387,7 @@ const ExperiencesContent = () => {
           </p>
         </motion.div>
 
-        {/* Two-column layout: desktop side by side, mobile stacked */}
+        {/* Two-column layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Column 1: Event Highlights */}
           <div>
@@ -299,6 +424,10 @@ const ExperiencesContent = () => {
               {clientReviews.map((item, i) => (
                 <ReviewCard key={i} item={item} index={i} inView={inView} getText={getText} />
               ))}
+              {/* User-submitted reviews (desktop) */}
+              {userReviews.map((item, i) => (
+                <UserReviewCard key={`user-${i}`} item={item} index={i} />
+              ))}
             </div>
 
             {/* Mobile: horizontal swipe carousel */}
@@ -320,17 +449,130 @@ const ExperiencesContent = () => {
                 </button>
               )}
               <div
-                ref={scrollRef}
-                className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1"
-                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                ref={reviewScrollRef}
+                className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-1 touch-pan-x"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
               >
                 {clientReviews.map((item, i) => (
                   <div key={i} className="flex-shrink-0 w-[85vw] max-w-[340px] snap-center">
                     <ReviewCard item={item} index={i} inView={inView} getText={getText} />
                   </div>
                 ))}
+                {userReviews.map((item, i) => (
+                  <div key={`user-${i}`} className="flex-shrink-0 w-[85vw] max-w-[340px] snap-center">
+                    <UserReviewCard item={item} index={i} />
+                  </div>
+                ))}
+              </div>
+              {/* Scroll indicator dots */}
+              <div className="flex justify-center gap-1.5 mt-3">
+                {clientReviews.concat(userReviews as any).map((_, i) => (
+                  <div key={i} className="w-1.5 h-1.5 rounded-full bg-silver/30" />
+                ))}
               </div>
             </div>
+
+            {/* ===== REVIEW FORM ===== */}
+            <motion.div
+              ref={formRef}
+              initial={{ opacity: 0, y: 30 }}
+              animate={formInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8 }}
+              className="mt-10 border border-border p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm"
+            >
+              <div className="text-center mb-8">
+                <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-3 block">
+                  {t.testimonials.formLabel}
+                </span>
+                <h3
+                  className="text-2xl md:text-3xl font-light text-foreground"
+                  style={{ fontFamily: "'Aldo the Apache', sans-serif" }}
+                >
+                  {t.testimonials.formTitle}{" "}
+                  <span className="italic text-silver-gradient">{t.testimonials.formTitleAccent}</span>
+                </h3>
+                <div className="mx-auto silver-line mt-5" />
+              </div>
+
+              {submitted && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-6 border border-silver/30 bg-silver/5 px-5 py-3 text-center font-body text-sm text-silver tracking-widest uppercase"
+                >
+                  {t.testimonials.formSuccess}
+                </motion.div>
+              )}
+
+              <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {/* Name */}
+                <div className="flex flex-col gap-1.5">
+                  <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                    {t.testimonials.formName}
+                  </label>
+                  <input
+                    type="text"
+                    value={form.name}
+                    onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
+                    placeholder={t.testimonials.formNamePlaceholder}
+                    maxLength={80}
+                    className={inputClass}
+                  />
+                  {errors.name && <span className="font-body text-xs text-destructive">{errors.name}</span>}
+                </div>
+
+                {/* Email */}
+                <div className="flex flex-col gap-1.5">
+                  <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                    {t.testimonials.formEmail}
+                  </label>
+                  <input
+                    type="email"
+                    value={form.email}
+                    onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
+                    placeholder={t.testimonials.formEmailPlaceholder}
+                    maxLength={255}
+                    className={inputClass}
+                  />
+                  {errors.email && <span className="font-body text-xs text-destructive">{errors.email}</span>}
+                </div>
+
+                {/* Rating */}
+                <div className="flex flex-col gap-1.5">
+                  <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                    {t.testimonials.formRating}
+                  </label>
+                  <StarRatingInput value={form.rating} onChange={(v) => setForm((p) => ({ ...p, rating: v }))} />
+                  {errors.rating && <span className="font-body text-xs text-destructive">{errors.rating}</span>}
+                </div>
+
+                {/* Comment */}
+                <div className="flex flex-col gap-1.5 md:col-span-2">
+                  <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                    {t.testimonials.formComment}
+                  </label>
+                  <textarea
+                    value={form.comment}
+                    onChange={(e) => setForm((p) => ({ ...p, comment: e.target.value }))}
+                    placeholder={t.testimonials.formCommentPlaceholder}
+                    rows={4}
+                    maxLength={1000}
+                    className={`${inputClass} resize-none`}
+                  />
+                  {errors.comment && <span className="font-body text-xs text-destructive">{errors.comment}</span>}
+                </div>
+
+                {/* Submit */}
+                <div className="md:col-span-2 flex justify-center pt-2">
+                  <button
+                    type="submit"
+                    className="font-body text-xs tracking-[0.2em] uppercase bg-silver text-background px-10 py-3.5 hover:bg-silver-dark transition-colors duration-300 min-h-[44px]"
+                  >
+                    {t.testimonials.formSubmit}
+                  </button>
+                </div>
+              </form>
+            </motion.div>
           </div>
         </div>
 
