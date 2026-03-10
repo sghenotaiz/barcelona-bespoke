@@ -458,7 +458,7 @@ const ExperiencesContent = () => {
             </motion.h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 max-w-2xl mx-auto lg:max-w-none">
               {eventHighlights.map((item, i) => (
-                <EventCard key={i} item={item} index={i} inView={inView} getText={getText} />
+                <EventCard key={i} item={item} index={i} inView={inView} getText={getText} onOpen={() => setActiveVideo(item)} />
               ))}
             </div>
           </div>
