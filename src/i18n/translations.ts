@@ -908,7 +908,7 @@ export const translations = {
     },
     services: {
       heroTitle: "I Nostri Servizi",
-      heroSubtitle: "L'energia della notte di Barcellona",
+      heroSubtitle: "Vivi al massimo l'energia di Barcellona",
       heroButton: "Scopri",
       label: "I Nostri Servizi",
       titleLine1: "Su Misura per",
