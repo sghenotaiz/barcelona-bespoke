@@ -53,7 +53,7 @@ const BookingSection = () => {
 
     const subject = encodeURIComponent("VIP Booking Request — NightDreams Barcelona");
     const encodedBody = encodeURIComponent(body);
-    window.location.href = `mailto:hello@nightdreamsbarcelona.com?subject=${subject}&body=${encodedBody}`;
+    window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${encodedBody}`;
     setSubmitted(true);
   };
 
