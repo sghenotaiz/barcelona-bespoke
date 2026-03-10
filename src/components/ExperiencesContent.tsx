@@ -179,15 +179,12 @@ const VideoModal = ({ item, getText, onClose }: { item: typeof eventHighlights[0
 );
 
 // --- Event Card ---
-const EventCard = ({ item, index, inView, getText, onOpen }: { item: typeof eventHighlights[0]; index: number; inView: boolean; getText: (key: string) => string; onOpen: () => void }) => {
+const EventCard = ({ item, index, getText, onOpen }: { item: typeof eventHighlights[0]; index: number; inView?: boolean; getText: (key: string) => string; onOpen: () => void }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -60 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.8, delay: 0.15 * Math.min(index, 5), ease: [0.16, 1, 0.3, 1] }}
-      className="relative group overflow-hidden border border-border aspect-[3/4] min-h-[220px] sm:max-h-[360px] cursor-pointer"
+    <div
+      className="relative group overflow-hidden border border-border aspect-[3/4] min-h-[180px] sm:min-h-[220px] sm:max-h-[360px] cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={onOpen}
@@ -228,16 +225,13 @@ const EventCard = ({ item, index, inView, getText, onOpen }: { item: typeof even
           <p className="font-body text-xs text-muted-foreground">{getText(item.statsKey)}</p>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 // --- Review Card ---
-const ReviewCard = ({ item, index, inView, getText }: { item: typeof clientReviews[0]; index: number; inView: boolean; getText: (key: string) => string }) => (
-  <motion.div
-    initial={{ opacity: 0, x: 60 }}
-    animate={inView ? { opacity: 1, x: 0 } : {}}
-    transition={{ duration: 0.8, delay: 0.15 * index, ease: [0.16, 1, 0.3, 1] }}
+const ReviewCard = ({ item, index, getText }: { item: typeof clientReviews[0]; index: number; inView?: boolean; getText: (key: string) => string }) => (
+  <div
     className="relative overflow-hidden border border-border bg-white/[0.03] backdrop-blur-sm group hover:border-silver/40 transition-all duration-500"
   >
     <div className="flex items-start gap-4 p-5">
@@ -262,7 +256,7 @@ const ReviewCard = ({ item, index, inView, getText }: { item: typeof clientRevie
         </div>
       </div>
     </div>
-  </motion.div>
+  </div>
 );
 
 // --- User-submitted review card (same style) ---
@@ -303,7 +297,7 @@ const ExperiencesContent = () => {
   const ref = useRef(null);
   const ctaRef = useRef(null);
   const formRef = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-50px" });
   const ctaInView = useInView(ctaRef, { once: true, margin: "-50px" });
   const formInView = useInView(formRef, { once: true, margin: "-50px" });
   const { t } = useLanguage();
@@ -395,9 +389,10 @@ const ExperiencesContent = () => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {getText("label")}
@@ -421,14 +416,15 @@ const ExperiencesContent = () => {
           <div>
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-xl tracking-wider uppercase text-center mb-8"
               style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
             >
               <span className="text-silver-gradient">{getText("eventsColumnTitle")}</span>
             </motion.h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 max-w-2xl mx-auto lg:max-w-none">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto lg:max-w-none">
               {eventHighlights.map((item, i) => (
                 <EventCard key={i} item={item} index={i} inView={inView} getText={getText} onOpen={() => setActiveVideo(item)} />
               ))}
@@ -439,7 +435,8 @@ const ExperiencesContent = () => {
           <div>
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: 0.15 }}
               className="text-xl tracking-wider uppercase text-center mb-8"
               style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
@@ -460,7 +457,7 @@ const ExperiencesContent = () => {
             </div>
 
             {/* Mobile: horizontal swipe carousel */}
-            <div className="md:hidden relative">
+            <div className="md:hidden relative overflow-hidden">
               {canScrollLeft && (
                 <button
                   onClick={() => scroll("left")}
