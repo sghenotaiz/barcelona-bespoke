@@ -929,6 +929,7 @@ export const translations = {
       stat2Label: "Anni di Eccellenza",
       stat3Num: "365",
       stat3Label: "Giorni all'Anno",
+      followUs: "Seguici sui social media!",
     },
     services: {
       heroTitle: "I Nostri Servizi",
