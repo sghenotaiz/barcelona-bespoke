@@ -402,7 +402,7 @@ const ExperiencesContent = () => {
           <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
             {getText("description")}
           </p>
-        </motion.div>
+        </div>
 
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
