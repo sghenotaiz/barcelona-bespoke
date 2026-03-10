@@ -952,7 +952,7 @@ export const translations = {
       card9Desc: "Organizziamo eventi privati su misura per addii al celibato/nubilato e aziende: feste a tema, aree VIP private ed esperienze personalizzate per il tuo gruppo.",
       card10Title: "Altro",
       card10Desc: "",
-      andMore: "e altro ancora...",
+      andMore: "e tanto altro...",
       badgeVip: "Esperienza VIP",
       badgeSummer: "Preferito d'Estate",
       badgeTopPick: "Top Pick",
