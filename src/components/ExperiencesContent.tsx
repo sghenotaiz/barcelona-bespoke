@@ -231,11 +231,7 @@ const EventCard = ({ item, index, getText, onOpen }: { item: typeof eventHighlig
 
 // --- Review Card ---
 const ReviewCard = ({ item, index, getText }: { item: typeof clientReviews[0]; index: number; inView?: boolean; getText: (key: string) => string }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.1 }}
-    transition={{ duration: 0.6, delay: 0.1 * index, ease: [0.16, 1, 0.3, 1] }}
+  <div
     className="relative overflow-hidden border border-border bg-white/[0.03] backdrop-blur-sm group hover:border-silver/40 transition-all duration-500"
   >
     <div className="flex items-start gap-4 p-5">
