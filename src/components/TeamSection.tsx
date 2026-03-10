@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
@@ -52,10 +52,18 @@ const TeamSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [partnerIndex, setPartnerIndex] = useState(0);
+  const partnerScrollRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
 
-  const visiblePartners = 4;
+  const scrollPartner = useCallback((dir: "left" | "right") => {
+    if (!partnerScrollRef.current) return;
+    const card = partnerScrollRef.current.querySelector("[data-partner-card]");
+    const w = card ? card.clientWidth + 16 : 200;
+    partnerScrollRef.current.scrollBy({ left: dir === "left" ? -w : w, behavior: "smooth" });
+  }, []);
 
+  // Desktop grid pagination
+  const visiblePartners = 4;
   const prevPartner = () => setPartnerIndex((i) => Math.max(0, i - 1));
   const nextPartner = () => setPartnerIndex((i) => Math.min(partners.length - visiblePartners, i + 1));
 
@@ -72,7 +80,7 @@ const TeamSection = () => {
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {t.team.label}
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground animate-neon-pulse">
             {t.team.title}{" "}
             <span className="italic text-silver-gradient">{t.team.titleAccent}</span>
           </h2>
@@ -82,7 +90,7 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        {/* Promoters - Animated Testimonials Style */}
+        {/* Promoters - AnimatedTestimonials */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -95,32 +103,31 @@ const TeamSection = () => {
           <AnimatedTestimonials testimonials={teamMembers} autoplay />
         </motion.div>
 
-        {/* Partners Grid */}
+        {/* Partners */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-16"
         >
-          <h3 className="font-display text-xl font-light text-foreground mb-6 tracking-wider uppercase text-center">
+          <h3 className="font-display text-xl font-light text-foreground mb-6 tracking-wider uppercase text-center animate-neon-pulse">
             {t.team.partnersTitle}{" "}
             <span className="italic text-silver-gradient">{t.team.partnersAccent}</span>
           </h3>
 
           <div className="max-w-3xl mx-auto">
-            <div className="overflow-hidden">
-              <motion.div
-                className="grid grid-cols-2 md:grid-cols-4 gap-4"
-                animate={{ y: 0 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            {/* Mobile: horizontal scroll */}
+            <div className="md:hidden">
+              <div
+                ref={partnerScrollRef}
+                className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-2 px-2"
+                style={{ WebkitOverflowScrolling: "touch" }}
               >
-                {partners.slice(partnerIndex, partnerIndex + visiblePartners).map((partner, i) => (
-                  <motion.div
+                {partners.map((partner) => (
+                  <div
                     key={partner.name}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: i * 0.08 }}
-                    className="group border border-border hover:border-silver/40 transition-all duration-500 p-5 flex flex-col items-center justify-center text-center aspect-[5/4] bg-card/30"
+                    data-partner-card
+                    className="flex-shrink-0 w-[75vw] max-w-[280px] snap-center border border-border hover:border-silver/40 transition-all duration-500 p-5 flex flex-col items-center justify-center text-center aspect-[5/4] bg-card/30"
                   >
                     <div className="w-12 h-12 mb-4 border border-silver/30 flex items-center justify-center rounded-full">
                       <span className="font-display text-lg text-silver-gradient">
@@ -131,38 +138,84 @@ const TeamSection = () => {
                     <p className="font-body text-[10px] tracking-[0.2em] uppercase text-muted-foreground mt-1">
                       {partner.category}
                     </p>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
-
-            {/* Partner Nav */}
-            <div className="flex items-center gap-4 mt-4">
-              <button
-                onClick={prevPartner}
-                disabled={partnerIndex === 0}
-                className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30"
-              >
-                <ChevronLeft size={18} />
-              </button>
-              <div className="flex gap-1.5 flex-1">
-                {Array.from({ length: Math.ceil(partners.length / visiblePartners) }).map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setPartnerIndex(i * visiblePartners)}
-                    className={`h-0.5 flex-1 transition-all duration-300 ${
-                      Math.floor(partnerIndex / visiblePartners) === i ? "bg-silver" : "bg-border"
-                    }`}
-                  />
+                  </div>
                 ))}
               </div>
-              <button
-                onClick={nextPartner}
-                disabled={partnerIndex >= partners.length - visiblePartners}
-                className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30"
-              >
-                <ChevronRight size={18} />
-              </button>
+              {/* Mobile nav arrows */}
+              <div className="flex items-center justify-center gap-4 mt-3">
+                <button
+                  onClick={() => scrollPartner("left")}
+                  className="w-12 h-12 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 active:scale-95"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={() => scrollPartner("right")}
+                  className="w-12 h-12 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 active:scale-95"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+            </div>
+
+            {/* Desktop: paginated grid */}
+            <div className="hidden md:block">
+              <div className="overflow-hidden">
+                <motion.div
+                  className="grid grid-cols-4 gap-4"
+                  animate={{ y: 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                >
+                  {partners.slice(partnerIndex, partnerIndex + visiblePartners).map((partner, i) => (
+                    <motion.div
+                      key={partner.name}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: i * 0.08 }}
+                      className="group border border-border hover:border-silver/40 transition-all duration-500 p-5 flex flex-col items-center justify-center text-center aspect-[5/4] bg-card/30 hover:-translate-y-1"
+                    >
+                      <div className="w-12 h-12 mb-4 border border-silver/30 flex items-center justify-center rounded-full">
+                        <span className="font-display text-lg text-silver-gradient">
+                          {partner.name.charAt(0)}
+                        </span>
+                      </div>
+                      <p className="font-display text-sm text-foreground tracking-wide">{partner.name}</p>
+                      <p className="font-body text-[10px] tracking-[0.2em] uppercase text-muted-foreground mt-1">
+                        {partner.category}
+                      </p>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
+
+              {/* Desktop nav */}
+              <div className="flex items-center gap-4 mt-4">
+                <button
+                  onClick={prevPartner}
+                  disabled={partnerIndex === 0}
+                  className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <div className="flex gap-1.5 flex-1">
+                  {Array.from({ length: Math.ceil(partners.length / visiblePartners) }).map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setPartnerIndex(i * visiblePartners)}
+                      className={`h-0.5 flex-1 transition-all duration-300 ${
+                        Math.floor(partnerIndex / visiblePartners) === i ? "bg-silver" : "bg-border"
+                      }`}
+                    />
+                  ))}
+                </div>
+                <button
+                  onClick={nextPartner}
+                  disabled={partnerIndex >= partners.length - visiblePartners}
+                  className="w-10 h-10 border border-border flex items-center justify-center text-foreground hover:border-silver/40 hover:text-silver transition-all duration-300 disabled:opacity-30"
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
             </div>
 
             {/* Decorative Note */}
