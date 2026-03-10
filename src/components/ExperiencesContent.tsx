@@ -460,7 +460,7 @@ const ExperiencesContent = () => {
             </div>
 
             {/* Mobile: horizontal swipe carousel */}
-            <div className="md:hidden relative">
+            <div className="md:hidden relative overflow-hidden">
               {canScrollLeft && (
                 <button
                   onClick={() => scroll("left")}
