@@ -187,7 +187,7 @@ const EventCard = ({ item, index, inView, getText, onOpen }: { item: typeof even
       initial={{ opacity: 0, x: -60 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.8, delay: 0.15 * Math.min(index, 5), ease: [0.16, 1, 0.3, 1] }}
-      className="relative group overflow-hidden border border-border aspect-auto max-h-[240px] sm:aspect-[3/4] sm:max-h-[360px] cursor-pointer"
+      className="relative group overflow-hidden border border-border aspect-[3/4] min-h-[220px] sm:max-h-[360px] cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={onOpen}
@@ -479,8 +479,8 @@ const ExperiencesContent = () => {
               )}
               <div
                 ref={reviewScrollRef}
-                className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-1 touch-pan-x"
-                style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
+                className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-1 -mx-1"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch", touchAction: "pan-x" }}
               >
                 {clientReviews.map((item, i) => (
                   <div key={i} className="flex-shrink-0 w-[85vw] max-w-[340px] snap-center">
@@ -507,7 +507,7 @@ const ExperiencesContent = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={formInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="mt-10 border border-border p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm"
+              className="mt-10 border border-border p-4 sm:p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm overflow-hidden"
             >
               <div className="text-center mb-8">
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-3 block">
