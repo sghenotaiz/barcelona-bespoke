@@ -1,6 +1,7 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Wine, Clock, CalendarDays, Waves, UtensilsCrossed,
   Building2, Car, Ship, PartyPopper, Sparkles, Star,
@@ -127,7 +128,8 @@ const ServiceBlockItem = ({
 
 }: {block: ServiceBlock;index: number;getText: (key: string) => string;bookNow: string;}) => {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
+  const isMobile = useIsMobile();
+  const inView = useInView(ref, { once: true, amount: 0.3 });
   const isEven = index % 2 === 0;
 
   // Parallax on the image
@@ -140,10 +142,11 @@ const ServiceBlockItem = ({
   return (
     <div ref={ref} className="w-full relative">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}>
+        initial={isMobile ? { opacity: 0, y: 60 } : { opacity: 0, x: isEven ? -80 : 80 }}
+        animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
+        className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}
+        style={{ willChange: "transform, opacity" }}>
         
         {/* IMAGE — 55% desktop, 60vh mobile */}
         <div className="relative w-full min-h-[300px] h-[60vh] lg:h-auto lg:min-h-0 lg:w-[55%] overflow-hidden">
@@ -275,7 +278,8 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="bg-black">
-      {/* Service Blocks — alternating Lío-style, starts immediately */}
+      {/* Spacing after video dissolve */}
+      <div className="h-[120px]" />
       <div className="flex flex-col">
         {serviceBlocks.map((block, i) =>
         <ServiceBlockItem
