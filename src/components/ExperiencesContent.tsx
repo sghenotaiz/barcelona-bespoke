@@ -401,15 +401,16 @@ const ExperiencesContent = () => {
               <span className="text-silver-gradient">{getText("reviewsColumnTitle")}</span>
             </motion.h3>
 
-            {/* Desktop: vertical stack */}
-            <div className="hidden md:flex flex-col gap-4">
-              {clientReviews.map((item, i) => (
-                <ReviewCard key={i} item={item} index={i} inView={inView} getText={getText} />
-              ))}
-              {/* User-submitted reviews (desktop) */}
-              {userReviews.map((item, i) => (
-                <UserReviewCard key={`user-${i}`} item={item} index={i} />
-              ))}
+            {/* Desktop: vertical scrollable container */}
+            <div className="hidden md:block max-h-[600px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-silver/20 scrollbar-track-transparent" style={{ scrollbarWidth: "thin" }}>
+              <div className="flex flex-col gap-4">
+                {clientReviews.map((item, i) => (
+                  <ReviewCard key={i} item={item} index={i} inView={inView} getText={getText} />
+                ))}
+                {userReviews.map((item, i) => (
+                  <UserReviewCard key={`user-${i}`} item={item} index={i} />
+                ))}
+              </div>
             </div>
 
             {/* Mobile: horizontal swipe carousel */}
