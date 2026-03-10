@@ -388,7 +388,6 @@ const ExperiencesContent = () => {
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-20">
-        >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
             {getText("label")}
           </span>
