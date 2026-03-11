@@ -29,18 +29,6 @@ type ServiceBlock = {
 
 const serviceBlocks: ServiceBlock[] = [
 {
-  id: "vip-tables",
-  image: vipTablesImg,
-  titleKey: "expVipTablesTitle",
-  subtitleKey: "expVipTablesSubtitle",
-  descKey: "expVipTablesDesc",
-  badge: "badgeVip",
-  bullets: [
-  { icon: Crown, key: "expVipTablesBullet1" },
-  { icon: CalendarDays, key: "expVipTablesBullet2" },
-  { icon: DollarSign, key: "expVipTablesBullet3" }]
-},
-{
   id: "skip-line",
   image: skipLineImg,
   titleKey: "expSkipLineTitle",
@@ -54,6 +42,18 @@ const serviceBlocks: ServiceBlock[] = [
   { icon: DollarSign, key: "expSkipLineBullet4" }]
 },
 {
+  id: "vip-tables",
+  image: vipTablesImg,
+  titleKey: "expVipTablesTitle",
+  subtitleKey: "expVipTablesSubtitle",
+  descKey: "expVipTablesDesc",
+  badge: "badgeVip",
+  bullets: [
+  { icon: Crown, key: "expVipTablesBullet1" },
+  { icon: CalendarDays, key: "expVipTablesBullet2" },
+  { icon: DollarSign, key: "expVipTablesBullet3" }]
+},
+{
   id: "pool",
   image: poolPartyImg,
   titleKey: "expPoolTitle",
@@ -64,43 +64,6 @@ const serviceBlocks: ServiceBlock[] = [
   { icon: Sun, key: "expPoolBullet1" },
   { icon: Music, key: "expPoolBullet2" },
   { icon: Waves, key: "expPoolBullet3" }]
-
-},
-{
-  id: "restaurant",
-  image: restaurantImg,
-  titleKey: "expRestaurantTitle",
-  subtitleKey: "expRestaurantSubtitle",
-  descKey: "expRestaurantDesc",
-  badge: "badgeDiscount",
-  bullets: [
-  { icon: Percent, key: "expRestaurantBullet1" },
-  { icon: UtensilsCrossed, key: "expRestaurantBullet2" }]
-
-},
-{
-  id: "apartments",
-  image: apartmentsImg,
-  titleKey: "expApartmentsTitle",
-  subtitleKey: "expApartmentsSubtitle",
-  descKey: "expApartmentsDesc",
-  badge: "badgeTopPick",
-  bullets: [
-  { icon: BedDouble, key: "expApartmentsBullet1" },
-  { icon: Building2, key: "expApartmentsBullet2" }]
-
-},
-{
-  id: "limo",
-  image: limousineImg,
-  titleKey: "expLimoTitle",
-  subtitleKey: "expLimoSubtitle",
-  descKey: "expLimoDesc",
-  badge: "badgeVip",
-  bullets: [
-  { icon: Car, key: "expLimoBullet1" },
-  { icon: Plane, key: "expLimoBullet2" }]
-
 },
 {
   id: "jetski",
@@ -112,7 +75,39 @@ const serviceBlocks: ServiceBlock[] = [
   bullets: [
   { icon: Zap, key: "expJetskiBullet1" },
   { icon: Eye, key: "expJetskiBullet2" }]
-
+},
+{
+  id: "restaurant",
+  image: restaurantImg,
+  titleKey: "expRestaurantTitle",
+  subtitleKey: "expRestaurantSubtitle",
+  descKey: "expRestaurantDesc",
+  badge: "badgeDiscount",
+  bullets: [
+  { icon: Percent, key: "expRestaurantBullet1" },
+  { icon: UtensilsCrossed, key: "expRestaurantBullet2" }]
+},
+{
+  id: "apartments",
+  image: apartmentsImg,
+  titleKey: "expApartmentsTitle",
+  subtitleKey: "expApartmentsSubtitle",
+  descKey: "expApartmentsDesc",
+  badge: "badgeTopPick",
+  bullets: [
+  { icon: BedDouble, key: "expApartmentsBullet1" },
+  { icon: Building2, key: "expApartmentsBullet2" }]
+},
+{
+  id: "limo",
+  image: limousineImg,
+  titleKey: "expLimoTitle",
+  subtitleKey: "expLimoSubtitle",
+  descKey: "expLimoDesc",
+  badge: "badgeVip",
+  bullets: [
+  { icon: Car, key: "expLimoBullet1" },
+  { icon: Plane, key: "expLimoBullet2" }]
 },
 {
   id: "events",
@@ -125,7 +120,6 @@ const serviceBlocks: ServiceBlock[] = [
   { icon: PartyPopper, key: "expEventsBullet1" },
   { icon: Users, key: "expEventsBullet2" },
   { icon: Sparkles, key: "expEventsBullet3" }]
-
 }];
 
 
