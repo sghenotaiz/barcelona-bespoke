@@ -376,7 +376,7 @@ export const translations = {
       sourceOther: "Other",
       notes: "Additional Notes (optional)",
       notesPlaceholder: "Any preferences, dietary needs, special occasions...",
-      submitEmail: "Send via Email",
+      submitEmail: "Send Email",
       submitWhatsApp: "Send via WhatsApp",
       successTitle: "Thank You!",
       successMessage: "Your request has been sent. Our team will contact you shortly with a tailored proposal.",
