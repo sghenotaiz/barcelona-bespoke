@@ -35,7 +35,8 @@ const PlanHero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://videos.pexels.com/video-files/20047573/20047573-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2020/08/31/48688-454879706_large.mp4" type="video/mp4" />
+          <source src="/videos/plan-hero.mp4" type="video/mp4" />
         </video>
       </motion.div>
 
