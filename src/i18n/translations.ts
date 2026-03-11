@@ -344,6 +344,15 @@ export const translations = {
     whatsapp: {
       contactUs: "Contact us on WhatsApp",
     },
+    planHero: {
+      title: "Contact Us",
+      subtitle: "Request your free quote",
+      free: "Free",
+      subtitleEnd: "and enjoy your holiday worry-free, we'll take care of everything!",
+      urgency: "The sooner you request it, the better the deal",
+      urgencyNote: "(Don't leave it to the last minute! We're waiting for you ✨)",
+      cta: "Fill in the Form ↓",
+    },
     booking: {
       label: "",
       titleLine1: "Plan Your",
