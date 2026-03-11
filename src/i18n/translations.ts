@@ -1511,6 +1511,15 @@ export const translations = {
     whatsapp: {
       contactUs: "Contattaci su WhatsApp",
     },
+    planHero: {
+      title: "Contattaci",
+      subtitle: "Richiedi il tuo preventivo",
+      free: "Gratis",
+      subtitleEnd: "e goditi la tua vacanza senza preoccupazioni, penseremo a tutto noi!",
+      urgency: "Prima lo richiedi, più conveniente sarà",
+      urgencyNote: "(Non ridurti all'ultimo! Ti aspettiamo ✨)",
+      cta: "Compila il Form ↓",
+    },
     booking: {
       label: "",
       titleLine1: "Pianifica la Tua",
