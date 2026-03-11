@@ -7,11 +7,13 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 
-const ACTIVITY_OPTIONS = [
-  { value: "vip-table", labelKey: "activityVipTable" },
-  { value: "skip-line", labelKey: "activitySkipLine" },
-  { value: "night-package", labelKey: "activityNightPackage" },
-  { value: "private-events", labelKey: "activityPrivateEvents" },
+const ACTIVITY_KEYS = [
+  "nightclubs",
+  "poolParties",
+  "jetSkis",
+  "restaurants",
+  "apartments",
+  "other",
 ] as const;
 
 const BookingSection = () => {
