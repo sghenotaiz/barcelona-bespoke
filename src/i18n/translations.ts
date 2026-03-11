@@ -725,10 +725,10 @@ export const translations = {
       contactUs: "Contáctanos por WhatsApp",
     },
     booking: {
-      label: "¡Contactemos!",
+      label: "",
       titleLine1: "Planifica Tu",
       titleLine2: "Experiencia VIP",
-      description: "Selecciona tus fechas, tamaño del grupo y actividades deseadas — te enviaremos una propuesta personalizada por email.",
+      description: "Selecciona tus fechas, tamaño del grupo y actividades deseadas — te enviaremos una propuesta personalizada por email o WhatsApp.",
       fullName: "Nombre Completo",
       fullNamePlaceholder: "Tu nombre completo",
       arrivalDate: "Fecha de Llegada",
