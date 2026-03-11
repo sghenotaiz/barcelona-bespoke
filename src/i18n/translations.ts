@@ -1282,7 +1282,7 @@ export const translations = {
       expVipTablesBullet1: "Tavoli esclusivi nelle migliori discoteche",
       expVipTablesBullet2: "Controlla la posizione prima di entrare sulla mappa e otterrai il tavolo richiesto",
       expVipTablesBullet3: "Miglior prezzo garantito",
-      expSkipLineTitle: "Skip Line Ticket",
+      expSkipLineTitle: "Ticket Salta-Fila",
       expSkipLineSubtitle: "Mai più in coda",
       expSkipLineDesc: "Saltare ore di fila è fondamentale per goderti la serata. I nostri promoter ti aspettano FUORI dalla discoteca, pronti ad accoglierti e accompagnarti all'ingresso facendoti saltare file interminabili. Più tickets prenoti, più risparmi. I nostri pack settimanali sono famosi per far godere delle maggiori discoteche della città a prezzi accessibili e saltando sempre le file.",
       expSkipLineBullet1: "Salta ore di coda e file interminabili",
