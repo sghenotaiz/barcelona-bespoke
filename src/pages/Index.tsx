@@ -4,6 +4,7 @@ import CinematicIntro from "@/components/CinematicIntro";
 import CircularGallery from "@/components/CircularGallery";
 import LanguageFlags from "@/components/LanguageFlags";
 import HeroSection from "@/components/HeroSection";
+import SocialFeedSection from "@/components/SocialFeedSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -23,6 +24,7 @@ const Index = () => {
       <CircularGallery />
       <LanguageFlags />
       <HeroSection />
+      <SocialFeedSection />
       <Footer />
       {!showIntro && <FloatingCTA />}
       {!showIntro && <FloatingWhatsApp />}
