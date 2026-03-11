@@ -24,6 +24,7 @@ const Index = () => {
       <CircularGallery />
       <LanguageFlags />
       <HeroSection />
+      <SocialFeedSection />
       <Footer />
       {!showIntro && <FloatingCTA />}
       {!showIntro && <FloatingWhatsApp />}
