@@ -34,7 +34,7 @@ const PlanHero = () => {
           muted
           playsInline
           className="w-full h-full object-cover"
-          src="https://videos.pexels.com/video-files/3753716/3753716-uhd_2560_1440_25fps.mp4"
+          src="https://videos.pexels.com/video-files/3843990/3843990-uhd_2560_1440_24fps.mp4"
         />
       </motion.div>
 
@@ -55,7 +55,7 @@ const PlanHero = () => {
               "0 0 20px hsla(0, 0%, 80%, 0.5), 0 0 60px hsla(0, 0%, 75%, 0.2)",
           }}
         >
-          <span className="text-silver-gradient">Sei Pronto a Partire?</span>{" "}
+          <span className="text-silver-gradient">Contattaci</span>{" "}
           <span className="text-2xl md:text-4xl">✨</span>
         </motion.h1>
 
