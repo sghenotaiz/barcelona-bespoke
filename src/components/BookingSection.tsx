@@ -40,19 +40,22 @@ const BookingSection = () => {
     map((k) => (t.booking as Record<string, string>)[k]).
     join(", ");
 
+    const sourceLabel = source ? source.toUpperCase() : "N/A";
+
     const body = [
+    `Email: ${email}`,
     `Arrival: ${arrivalDate ? format(arrivalDate, "PPP") : "N/A"}`,
     departureDate ? `Departure: ${format(departureDate, "PPP")}` : null,
     `People: ${people}`,
     `Activities: ${selectedActivities || "None"}`,
     activities.other && otherText ? `Other request: ${otherText}` : null,
-    `Email: ${email}`,
+    `✅ COME CI HAI CONOSCIUTO: ${sourceLabel}`,
     notes ? `Notes: ${notes}` : null].
 
     filter(Boolean).
     join("\n");
 
-    const subject = encodeURIComponent("Richiesta Preventivo - NightDreams");
+    const subject = encodeURIComponent("Nuova Prenotazione NightDreams");
     const encodedBody = encodeURIComponent(body);
     window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${encodedBody}`;
     setSubmitted(true);
