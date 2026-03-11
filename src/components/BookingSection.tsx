@@ -27,6 +27,7 @@ const BookingSection = () => {
   const [activities, setActivities] = useState<Record<string, boolean>>({});
   const [otherText, setOtherText] = useState("");
   const [email, setEmail] = useState("");
+  const [source, setSource] = useState("");
   const [notes, setNotes] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -39,19 +40,22 @@ const BookingSection = () => {
     map((k) => (t.booking as Record<string, string>)[k]).
     join(", ");
 
+    const sourceLabel = source ? source.toUpperCase() : "N/A";
+
     const body = [
+    `Email: ${email}`,
     `Arrival: ${arrivalDate ? format(arrivalDate, "PPP") : "N/A"}`,
     departureDate ? `Departure: ${format(departureDate, "PPP")}` : null,
     `People: ${people}`,
     `Activities: ${selectedActivities || "None"}`,
     activities.other && otherText ? `Other request: ${otherText}` : null,
-    `Email: ${email}`,
+    `✅ COME CI HAI CONOSCIUTO: ${sourceLabel}`,
     notes ? `Notes: ${notes}` : null].
 
     filter(Boolean).
     join("\n");
 
-    const subject = encodeURIComponent("Richiesta Preventivo - NightDreams");
+    const subject = encodeURIComponent("Nuova Prenotazione NightDreams");
     const encodedBody = encodeURIComponent(body);
     window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${encodedBody}`;
     setSubmitted(true);
@@ -255,6 +259,31 @@ const BookingSection = () => {
 
           </div>
 
+          {/* How did you find us */}
+          <div className="space-y-2">
+            <label className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground">
+              {(t.booking as Record<string, string>).howDidYouFind} *
+            </label>
+            <select
+              required
+              value={source}
+              onChange={(e) => setSource(e.target.value)}
+              className={cn(
+                "w-full bg-transparent border border-border px-4 py-3 font-body text-sm transition-colors focus:outline-none focus:border-silver appearance-none cursor-pointer",
+                source ? "text-foreground" : "text-muted-foreground"
+              )}>
+              <option value="" disabled className="bg-background text-muted-foreground">
+                {(t.booking as Record<string, string>).howDidYouFindPlaceholder}
+              </option>
+              <option value="instagram" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceInstagram}</option>
+              <option value="tiktok" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceTiktok}</option>
+              <option value="google" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceGoogle}</option>
+              <option value="amici" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceFriends}</option>
+              <option value="promoter" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourcePromoter}</option>
+              <option value="altro" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceOther}</option>
+            </select>
+          </div>
+
           {/* Notes */}
           <div className="space-y-2">
             <label className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground">
@@ -280,7 +309,7 @@ const BookingSection = () => {
 
             <div>
               <a
-                href="https://wa.me/393494104470"
+                href={`https://wa.me/393494104470?text=${encodeURIComponent(`Nuova prenotazione!\nEmail: ${email}\nData: ${arrivalDate ? format(arrivalDate, "PPP") : "N/A"}\nPersone: ${people}\nOrigine: ${source || "N/A"}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 font-body text-xs tracking-[0.2em] uppercase text-background transition-all duration-300 font-medium px-[40px] py-[15px] bg-green-400">
