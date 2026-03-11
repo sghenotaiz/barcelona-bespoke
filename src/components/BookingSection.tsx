@@ -26,7 +26,8 @@ const BookingSection = () => {
   const [departureDate, setDepartureDate] = useState<Date>();
   const [people, setPeople] = useState("");
   const [email, setEmail] = useState("");
-  const [activity, setActivity] = useState("");
+  const [activities, setActivities] = useState<Record<string, boolean>>({});
+  const [otherText, setOtherText] = useState("");
   const [source, setSource] = useState("");
   const [notes, setNotes] = useState("");
   const [submitted, setSubmitted] = useState(false);
