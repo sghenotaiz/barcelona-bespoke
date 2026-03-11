@@ -309,7 +309,7 @@ const BookingSection = () => {
 
             <div>
               <a
-                href="https://wa.me/393494104470"
+                href={`https://wa.me/393494104470?text=${encodeURIComponent(`Nuova prenotazione!\nEmail: ${email}\nData: ${arrivalDate ? format(arrivalDate, "PPP") : "N/A"}\nPersone: ${people}\nOrigine: ${source || "N/A"}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 font-body text-xs tracking-[0.2em] uppercase text-background transition-all duration-300 font-medium px-[40px] py-[15px] bg-green-400">
