@@ -81,8 +81,8 @@ const BookingSection = () => {
   }
 
   return (
-    <section id="booking" className="py-24 bg-[hsl(0,0%,0%)] md:py-[50px] border border-gold-dark">
-      <div className="container mx-auto px-6" ref={ref}>
+    <section id="booking" className="py-24 bg-[hsl(0,0%,0%)] border-gold-dark border-0 md:py-[40px]">
+      <div className="container mx-auto px-6 border-black" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
