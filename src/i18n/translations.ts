@@ -756,7 +756,7 @@ export const translations = {
       sourceOther: "Otro",
       notes: "Notas Adicionales (opcional)",
       notesPlaceholder: "Preferencias, necesidades dietéticas, ocasiones especiales...",
-      submitEmail: "Enviar por Email",
+      submitEmail: "Enviar Email",
       submitWhatsApp: "Enviar por WhatsApp",
       successTitle: "¡Gracias!",
       successMessage: "Tu solicitud ha sido enviada. Nuestro equipo te contactará en breve con una propuesta personalizada.",
