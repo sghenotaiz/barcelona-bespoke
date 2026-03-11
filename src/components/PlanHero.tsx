@@ -68,9 +68,7 @@ const PlanHero = () => {
           Richiedi il tuo preventivo{" "}
           <span className="text-silver font-semibold uppercase tracking-wider">Gratis</span>
           <br />
-          e goditi la tua vacanza senza preoccupazioni
-          <br />
-          in questa meravigliosa città!
+          e goditi la tua vacanza senza preoccupazioni, penseremo a tutto noi!
         </motion.p>
 
         <motion.p
