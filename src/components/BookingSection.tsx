@@ -34,9 +34,13 @@ const BookingSection = () => {
 
   const booking = t.booking as Record<string, string>;
 
-  const getActivityLabel = (val: string) => {
-    const opt = ACTIVITY_OPTIONS.find((o) => o.value === val);
-    return opt ? booking[opt.labelKey] || val : val;
+  const toggleActivity = (key: string) =>
+    setActivities((prev) => ({ ...prev, [key]: !prev[key] }));
+
+  const getSelectedActivities = () => {
+    return ACTIVITY_KEYS.filter((k) => activities[k])
+      .map((k) => booking[k])
+      .join(", ");
   };
 
   const buildBody = () => {
