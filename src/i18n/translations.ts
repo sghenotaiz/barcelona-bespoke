@@ -1105,10 +1105,10 @@ export const translations = {
       contactUs: "Contactez-nous sur WhatsApp",
     },
     booking: {
-      label: "Contactez-nous !",
+      label: "",
       titleLine1: "Planifiez Votre",
       titleLine2: "Expérience VIP",
-      description: "Sélectionnez vos dates, la taille de votre groupe et les activités souhaitées — nous vous enverrons une proposition sur mesure par email.",
+      description: "Sélectionnez vos dates, la taille de votre groupe et les activités souhaitées — nous vous enverrons une proposition sur mesure par email ou WhatsApp.",
       fullName: "Nom Complet",
       fullNamePlaceholder: "Votre nom complet",
       arrivalDate: "Date d'Arrivée",
