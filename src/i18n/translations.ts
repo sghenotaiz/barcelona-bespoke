@@ -1107,7 +1107,7 @@ export const translations = {
     booking: {
       label: "",
       titleLine1: "Planifiez Votre",
-      titleLine2: "Expérience VIP",
+      titleLine2: "Expérience",
       description: "Sélectionnez vos dates, la taille de votre groupe et les activités souhaitées — nous vous enverrons une proposition sur mesure par email ou WhatsApp.",
       fullName: "Nom Complet",
       fullNamePlaceholder: "Votre nom complet",
