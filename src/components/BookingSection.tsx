@@ -253,30 +253,56 @@ const BookingSection = () => {
             />
           </div>
 
-          {/* 6. Attività dropdown */}
-          <div className="space-y-2">
-            <label className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground">
+          {/* 6. Attività toggle buttons */}
+          <div className="space-y-4">
+            <label className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground block">
               {booking.activities} *
             </label>
-            <select
-              required
-              value={activity}
-              onChange={(e) => setActivity(e.target.value)}
-              className={cn(
-                inputClass,
-                "appearance-none cursor-pointer",
-                !activity && "text-muted-foreground"
-              )}
-            >
-              <option value="" disabled className="bg-background text-muted-foreground">
-                {booking.activitiesPlaceholder}
-              </option>
-              {ACTIVITY_OPTIONS.map((opt) => (
-                <option key={opt.value} value={opt.value} className="bg-background text-foreground">
-                  {booking[opt.labelKey]}
-                </option>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {ACTIVITY_KEYS.map((key) => (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => toggleActivity(key)}
+                  className={cn(
+                    "flex items-center gap-3 border px-4 py-3 font-body text-sm transition-all duration-200",
+                    activities[key]
+                      ? "border-silver bg-silver/10 text-foreground"
+                      : "border-border text-muted-foreground hover:border-silver/50"
+                  )}
+                >
+                  <span
+                    className={cn(
+                      "w-4 h-4 border flex items-center justify-center flex-shrink-0 transition-colors",
+                      activities[key] ? "border-silver bg-silver" : "border-muted-foreground/30"
+                    )}
+                  >
+                    {activities[key] && (
+                      <svg className="w-3 h-3 text-background" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6L5 9L10 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )}
+                  </span>
+                  {booking[key]}
+                </button>
               ))}
-            </select>
+            </div>
+
+            {activities.other && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+              >
+                <input
+                  type="text"
+                  value={otherText}
+                  onChange={(e) => setOtherText(e.target.value)}
+                  placeholder={booking.otherPlaceholder}
+                  className={inputClass}
+                />
+              </motion.div>
+            )}
           </div>
 
           {/* 7. Come ci hai conosciuto */}
