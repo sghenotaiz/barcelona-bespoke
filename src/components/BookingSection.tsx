@@ -27,6 +27,7 @@ const BookingSection = () => {
   const [activities, setActivities] = useState<Record<string, boolean>>({});
   const [otherText, setOtherText] = useState("");
   const [email, setEmail] = useState("");
+  const [source, setSource] = useState("");
   const [notes, setNotes] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
