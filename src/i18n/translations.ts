@@ -1122,6 +1122,15 @@ export const translations = {
     whatsapp: {
       contactUs: "Contactez-nous sur WhatsApp",
     },
+    planHero: {
+      title: "Contactez-nous",
+      subtitle: "Demandez votre devis",
+      free: "Gratuit",
+      subtitleEnd: "et profitez de vos vacances sans soucis, on s'occupe de tout !",
+      urgency: "Plus tôt vous le demandez, plus c'est avantageux",
+      urgencyNote: "(Ne tardez pas ! On vous attend ✨)",
+      cta: "Remplissez le Formulaire ↓",
+    },
     booking: {
       label: "",
       titleLine1: "Planifiez Votre",
