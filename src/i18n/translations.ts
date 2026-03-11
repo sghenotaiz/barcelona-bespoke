@@ -344,6 +344,15 @@ export const translations = {
     whatsapp: {
       contactUs: "Contact us on WhatsApp",
     },
+    planHero: {
+      title: "Contact Us",
+      subtitle: "Request your free quote",
+      free: "Free",
+      subtitleEnd: "and enjoy your holiday worry-free, we'll take care of everything!",
+      urgency: "The sooner you request it, the better the deal",
+      urgencyNote: "(Don't leave it to the last minute! We're waiting for you ✨)",
+      cta: "Fill in the Form ↓",
+    },
     booking: {
       label: "",
       titleLine1: "Plan Your",
@@ -723,6 +732,15 @@ export const translations = {
     },
     whatsapp: {
       contactUs: "Contáctanos por WhatsApp",
+    },
+    planHero: {
+      title: "Contáctanos",
+      subtitle: "Solicita tu presupuesto",
+      free: "Gratis",
+      subtitleEnd: "y disfruta de tus vacaciones sin preocupaciones, ¡nos encargamos de todo!",
+      urgency: "Cuanto antes lo solicites, más conveniente será",
+      urgencyNote: "(¡No lo dejes para el último momento! Te esperamos ✨)",
+      cta: "Rellena el Formulario ↓",
     },
     booking: {
       label: "",
@@ -1104,6 +1122,15 @@ export const translations = {
     whatsapp: {
       contactUs: "Contactez-nous sur WhatsApp",
     },
+    planHero: {
+      title: "Contactez-nous",
+      subtitle: "Demandez votre devis",
+      free: "Gratuit",
+      subtitleEnd: "et profitez de vos vacances sans soucis, on s'occupe de tout !",
+      urgency: "Plus tôt vous le demandez, plus c'est avantageux",
+      urgencyNote: "(Ne tardez pas ! On vous attend ✨)",
+      cta: "Remplissez le Formulaire ↓",
+    },
     booking: {
       label: "",
       titleLine1: "Planifiez Votre",
@@ -1483,6 +1510,15 @@ export const translations = {
     },
     whatsapp: {
       contactUs: "Contattaci su WhatsApp",
+    },
+    planHero: {
+      title: "Contattaci",
+      subtitle: "Richiedi il tuo preventivo",
+      free: "Gratis",
+      subtitleEnd: "e goditi la tua vacanza senza preoccupazioni, penseremo a tutto noi!",
+      urgency: "Prima lo richiedi, più conveniente sarà",
+      urgencyNote: "(Non ridurti all'ultimo! Ti aspettiamo ✨)",
+      cta: "Compila il Form ↓",
     },
     booking: {
       label: "",
