@@ -34,7 +34,7 @@ const PlanHero = () => {
           muted
           playsInline
           className="w-full h-full object-cover"
-          src="https://videos.pexels.com/video-files/4065924/4065924-uhd_2560_1440_24fps.mp4"
+          src="https://videos.pexels.com/video-files/15499203/15499203-uhd_2560_1440_30fps.mp4"
         />
       </motion.div>
 
