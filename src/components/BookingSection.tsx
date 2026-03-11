@@ -259,6 +259,31 @@ const BookingSection = () => {
 
           </div>
 
+          {/* How did you find us */}
+          <div className="space-y-2">
+            <label className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground">
+              {(t.booking as Record<string, string>).howDidYouFind} *
+            </label>
+            <select
+              required
+              value={source}
+              onChange={(e) => setSource(e.target.value)}
+              className={cn(
+                "w-full bg-transparent border border-border px-4 py-3 font-body text-sm transition-colors focus:outline-none focus:border-silver appearance-none cursor-pointer",
+                source ? "text-foreground" : "text-muted-foreground"
+              )}>
+              <option value="" disabled className="bg-background text-muted-foreground">
+                {(t.booking as Record<string, string>).howDidYouFindPlaceholder}
+              </option>
+              <option value="instagram" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceInstagram}</option>
+              <option value="tiktok" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceTiktok}</option>
+              <option value="google" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceGoogle}</option>
+              <option value="amici" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceFriends}</option>
+              <option value="promoter" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourcePromoter}</option>
+              <option value="altro" className="bg-background text-foreground">{(t.booking as Record<string, string>).sourceOther}</option>
+            </select>
+          </div>
+
           {/* Notes */}
           <div className="space-y-2">
             <label className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground">
