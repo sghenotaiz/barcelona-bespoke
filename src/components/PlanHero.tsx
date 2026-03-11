@@ -1,8 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const PlanHero = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
+  const planHero = t.planHero as Record<string, string>;
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -57,7 +60,7 @@ const PlanHero = () => {
               "0 0 20px hsla(0, 0%, 80%, 0.5), 0 0 60px hsla(0, 0%, 75%, 0.2)",
           }}
         >
-          <span className="text-silver-gradient">Contattaci</span>{" "}
+          <span className="text-silver-gradient">{planHero.title}</span>{" "}
           <span className="text-2xl md:text-4xl">✨</span>
         </motion.h1>
 
@@ -67,10 +70,10 @@ const PlanHero = () => {
           transition={{ duration: 1, delay: 0.7 }}
           className="font-body text-base md:text-lg text-white/80 max-w-2xl leading-relaxed mb-4"
         >
-          Richiedi il tuo preventivo{" "}
-          <span className="text-silver font-semibold uppercase tracking-wider">Gratis</span>
+          {planHero.subtitle}{" "}
+          <span className="text-silver font-semibold uppercase tracking-wider">{planHero.free}</span>
           <br />
-          e goditi la tua vacanza senza preoccupazioni, penseremo a tutto noi!
+          {planHero.subtitleEnd}
         </motion.p>
 
         <motion.p
@@ -79,10 +82,10 @@ const PlanHero = () => {
           transition={{ duration: 1, delay: 1.1 }}
           className="font-body text-sm md:text-base tracking-[0.15em] uppercase text-silver mb-10"
         >
-          ⏰ Prima lo richiedi, più conveniente sarà
+          ⏰ {planHero.urgency}
           <br />
           <span className="text-white/50 text-xs normal-case tracking-normal">
-            (Non ridurti all'ultimo! Ti aspettiamo ✨)
+            {planHero.urgencyNote}
           </span>
         </motion.p>
 
@@ -93,7 +96,7 @@ const PlanHero = () => {
           onClick={scrollToBooking}
           className="font-body text-[11px] tracking-[0.25em] uppercase border border-silver/40 text-silver px-10 py-4 transition-all duration-500 hover:bg-white/10 hover:border-white/60 hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
         >
-          Compila il Form ↓
+          {planHero.cta}
         </motion.button>
 
         {/* Scroll indicator */}
