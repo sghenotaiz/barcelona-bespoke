@@ -50,7 +50,8 @@ const BookingSection = () => {
       `Data di ripartenza: ${departureDate ? format(departureDate, "PPP") : "N/A"}`,
       `Numero persone: ${people}`,
       `Indirizzo email: ${email}`,
-      `Attività: ${getActivityLabel(activity)}`,
+      `Attività: ${getSelectedActivities() || "Nessuna"}`,
+      activities.other && otherText ? `Richiesta speciale: ${otherText}` : null,
       `Come ci hai conosciuto: ${source ? source.toUpperCase() : "N/A"}`,
       notes ? `Note aggiuntive: ${notes}` : null,
     ]
