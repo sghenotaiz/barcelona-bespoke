@@ -177,29 +177,21 @@ const SocialFeedSection = () => {
 
   return (
     <section ref={sectionRef} className="bg-black py-20 lg:py-28 overflow-hidden">
-      {/* Title */}
+      {/* Section Header — same style as TeamSection */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
         className="text-center mb-14 px-6"
       >
-        <h2
-          className="text-3xl md:text-5xl font-bold tracking-wide mb-4"
-          style={{ fontFamily: "'Aldo the Apache', sans-serif" }}
-        >
-          <span className="text-silver-gradient">LE ULTIME DAI NOSTRI SOCIAL</span>
+        <span className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-4 block">
+          Social
+        </span>
+        <h2 className="font-display text-4xl md:text-5xl font-light text-foreground animate-neon-pulse">
+          Le Ultime dai Nostri{" "}
+          <span className="italic text-silver-gradient">Social</span>
         </h2>
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={inView ? { scaleX: 1 } : {}}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="mx-auto w-32 h-px origin-center"
-          style={{
-            background:
-              "linear-gradient(90deg, transparent, hsl(0 0% 70%), hsl(0 0% 50%), transparent)",
-          }}
-        />
+        <div className="mx-auto silver-line mt-8" />
       </motion.div>
 
       {/* Carousel */}
