@@ -75,7 +75,8 @@ const BookingSection = () => {
       `Ripartenza: ${departureDate ? format(departureDate, "PPP") : "N/A"}`,
       `Persone: ${people}`,
       `Email: ${email}`,
-      `Attività: ${getActivityLabel(activity)}`,
+      `Attività: ${getSelectedActivities() || "Nessuna"}`,
+      activities.other && otherText ? `Richiesta: ${otherText}` : null,
       `Origine: ${source || "N/A"}`,
       notes ? `Note: ${notes}` : null,
     ]
