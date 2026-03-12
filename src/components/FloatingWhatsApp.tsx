@@ -7,8 +7,8 @@ const FloatingWhatsApp = () => {
   const { t } = useLanguage();
 
   const handleClick = () => {
-    if (typeof window.gtag === "function") {
-      window.gtag("event", "whatsapp_click", { source: "floating_button" });
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "whatsapp_click", { source: "floating_button" });
     }
   };
 

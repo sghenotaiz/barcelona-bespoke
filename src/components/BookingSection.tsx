@@ -71,8 +71,8 @@ const BookingSection = () => {
   };
 
   const handleWhatsApp = () => {
-    if (typeof window.gtag === "function") {
-      window.gtag("event", "whatsapp_click", { source: "booking_form" });
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "whatsapp_click", { source: "booking_form" });
     }
     const waBody = [
       "🆕 NUOVA PRENOTAZIONE",
