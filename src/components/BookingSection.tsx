@@ -61,6 +61,9 @@ const BookingSection = () => {
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "prenotazione_submit", { method: "email" });
+    }
     const subject = encodeURIComponent("Nuova Prenotazione NightDreams");
     const encodedBody = encodeURIComponent(buildBody());
     window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${encodedBody}`;
@@ -68,6 +71,9 @@ const BookingSection = () => {
   };
 
   const handleWhatsApp = () => {
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "whatsapp_click", { source: "booking_form" });
+    }
     const waBody = [
       "🆕 NUOVA PRENOTAZIONE",
       `Nome: ${name}`,

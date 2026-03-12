@@ -6,11 +6,18 @@ const WHATSAPP_URL = "https://wa.me/393494104470";
 const FloatingWhatsApp = () => {
   const { t } = useLanguage();
 
+  const handleClick = () => {
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "whatsapp_click", { source: "floating_button" });
+    }
+  };
+
   return (
     <motion.a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ delay: 1.8, type: "spring", stiffness: 200 }}
