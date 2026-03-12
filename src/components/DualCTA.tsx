@@ -63,6 +63,7 @@ const DualCTA = ({
         href="https://wa.me/393494104470"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => { if (typeof window.gtag === "function") window.gtag("event", "whatsapp_click", { source: "dual_cta" }); }}
         className={waBtn}
       >
         <WhatsAppIcon className="w-4 h-4" />

@@ -17,6 +17,7 @@ const FloatingWhatsApp = () => {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ delay: 1.8, type: "spring", stiffness: 200 }}
