@@ -61,8 +61,8 @@ const BookingSection = () => {
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (typeof window.gtag === "function") {
-      window.gtag("event", "prenotazione_submit", { method: "email" });
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "prenotazione_submit", { method: "email" });
     }
     const subject = encodeURIComponent("Nuova Prenotazione NightDreams");
     const encodedBody = encodeURIComponent(buildBody());
