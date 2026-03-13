@@ -36,7 +36,7 @@ const AboutSection = () => {
 
 
   return (
-    <section id="about" className="bg-background py-[10px]">
+    <section id="about" className="bg-background py-[20px]">
       <div className="container mx-auto px-6" ref={ref}>
         {/* Title with neon pulse */}
         <motion.div
