@@ -39,13 +39,10 @@ const teamMembers = [
 
 const partners = [
 { name: "Ku Barcelona", category: "Nightclub" },
-{ name: "Opium Barcelona", category: "Beach Club" },
-{ name: "Shôko", category: "Restaurant & Club" },
-{ name: "W Barcelona", category: "5-Star Hotel" },
-{ name: "Razzmatazz", category: "Nightclub" },
-{ name: "La Fira", category: "Exclusive Venue" },
-{ name: "Arts Barcelona", category: "Luxury Hotel" },
-{ name: "Eclipse Bar", category: "Rooftop Bar" }];
+{ name: "Opium Barcelona", category: "Nightclub" },
+{ name: "Bling Bling", category: "Nightclub" },
+{ name: "Bastian Beach", category: "Beach Club" },
+{ name: "Mirandoalmar", category: "Ristorante" }];
 
 
 const TeamSection = () => {
