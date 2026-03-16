@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
+import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
 
 const teamMembers = [
 {
@@ -39,7 +40,7 @@ const teamMembers = [
 
 
 const partners = [
-{ name: "Ku Barcelona", category: "Nightclub", logo: null },
+{ name: "Ku Barcelona", category: "Nightclub", logo: kuBarcelonaLogo },
 { name: "Opium Barcelona", category: "Nightclub", logo: null },
 { name: "Bling Bling", category: "Nightclub", logo: null },
 { name: "Bastian Beach", category: "Beach Club", logo: bastianBeachLogo },
