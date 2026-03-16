@@ -5,6 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
 import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
+import opiumBarcelonaLogo from "@/assets/partners/opium-barcelona.png";
 
 const teamMembers = [
 {
@@ -41,7 +42,7 @@ const teamMembers = [
 
 const partners = [
 { name: "Ku Barcelona", category: "Nightclub", logo: kuBarcelonaLogo },
-{ name: "Opium Barcelona", category: "Nightclub", logo: null },
+{ name: "Opium Barcelona", category: "Nightclub", logo: opiumBarcelonaLogo },
 { name: "Bling Bling", category: "Nightclub", logo: null },
 { name: "Bastian Beach", category: "Beach Club", logo: bastianBeachLogo },
 { name: "Mirandoalmar", category: "Ristorante", logo: null }];
