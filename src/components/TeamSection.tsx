@@ -39,11 +39,11 @@ const teamMembers = [
 
 
 const partners = [
-{ name: "Ku Barcelona", category: "Nightclub" },
-{ name: "Opium Barcelona", category: "Nightclub" },
-{ name: "Bling Bling", category: "Nightclub" },
-{ name: "Bastian Beach", category: "Beach Club" },
-{ name: "Mirandoalmar", category: "Ristorante" }];
+{ name: "Ku Barcelona", category: "Nightclub", logo: null },
+{ name: "Opium Barcelona", category: "Nightclub", logo: null },
+{ name: "Bling Bling", category: "Nightclub", logo: null },
+{ name: "Bastian Beach", category: "Beach Club", logo: bastianBeachLogo },
+{ name: "Mirandoalmar", category: "Ristorante", logo: null }];
 
 
 const TeamSection = () => {
