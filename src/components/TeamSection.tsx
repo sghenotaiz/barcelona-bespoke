@@ -176,11 +176,15 @@ const TeamSection = () => {
                     transition={{ duration: 0.4, delay: i * 0.08 }}
                     className="group border border-border hover:border-silver/40 transition-all duration-500 p-5 flex flex-col items-center justify-center text-center aspect-[5/4] bg-card/30 hover:-translate-y-1">
                     
-                      <div className="w-12 h-12 mb-4 border border-silver/30 flex items-center justify-center rounded-full">
-                        <span className="font-display text-lg text-silver-gradient">
-                          {partner.name.charAt(0)}
-                        </span>
-                      </div>
+                      {partner.logo ? (
+                        <img src={partner.logo} alt={partner.name} className="w-12 h-12 mb-4 object-contain" />
+                      ) : (
+                        <div className="w-12 h-12 mb-4 border border-silver/30 flex items-center justify-center rounded-full">
+                          <span className="font-display text-lg text-silver-gradient">
+                            {partner.name.charAt(0)}
+                          </span>
+                        </div>
+                      )}
                       <p className="font-display text-sm text-foreground tracking-wide">{partner.name}</p>
                       <p className="font-body text-[10px] tracking-[0.2em] uppercase text-muted-foreground mt-1">
                         {partner.category}
