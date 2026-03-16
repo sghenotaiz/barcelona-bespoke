@@ -40,7 +40,7 @@ const teamMembers = [
 
 
 const partners = [
-{ name: "Ku Barcelona", category: "Nightclub", logo: null },
+{ name: "Ku Barcelona", category: "Nightclub", logo: kuBarcelonaLogo },
 { name: "Opium Barcelona", category: "Nightclub", logo: null },
 { name: "Bling Bling", category: "Nightclub", logo: null },
 { name: "Bastian Beach", category: "Beach Club", logo: bastianBeachLogo },
