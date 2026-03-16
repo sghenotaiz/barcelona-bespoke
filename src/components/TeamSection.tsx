@@ -6,6 +6,7 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
 import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
 import opiumBarcelonaLogo from "@/assets/partners/opium-barcelona.png";
+import blingBlingLogo from "@/assets/partners/bling-bling.jpg";
 
 const teamMembers = [
 {
