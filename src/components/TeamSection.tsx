@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
+import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
 
 const teamMembers = [
 {
