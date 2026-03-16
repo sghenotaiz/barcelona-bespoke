@@ -131,7 +131,7 @@ const TeamSection = () => {
                   className="flex-shrink-0 w-[75vw] max-w-[280px] snap-center border border-border hover:border-silver/40 transition-all duration-500 p-5 flex flex-col items-center justify-center text-center aspect-[5/4] bg-card/30">
                   
                     {partner.logo ? (
-                       <img src={partner.logo} alt={partner.name} className="w-16 h-16 mb-4 object-contain" />
+                       <img src={partner.logo} alt={partner.name} className={`${partner.name === "Bling Bling" || partner.name === "Bastian Beach" ? "w-20 h-20" : "w-16 h-16"} mb-4 object-contain`} />
                     ) : (
                       <div className="w-12 h-12 mb-4 border border-silver/30 flex items-center justify-center rounded-full">
                         <span className="font-display text-lg text-silver-gradient">
