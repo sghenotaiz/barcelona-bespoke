@@ -61,17 +61,22 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        {/* Promoters - AnimatedTestimonials */}
+        {/* Promoters */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}>
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-4">
           
-          <h3 className="font-display text-xl font-light text-foreground text-center tracking-wider uppercase">
+          <h3 className="font-display text-xl font-light text-foreground text-center tracking-wider uppercase mb-8">
             {t.team.promotersTitle}{" "}
             <span className="italic text-silver-gradient">{t.team.promotersAccent}</span>
           </h3>
-          <AnimatedTestimonials testimonials={teamMembers} autoplay />
+          <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+            {promoters.map((p, i) => (
+              <PromoterCard key={p.name} promoter={p} index={i} />
+            ))}
+          </div>
         </motion.div>
 
         {/* Partners */}
