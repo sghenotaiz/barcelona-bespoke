@@ -6,6 +6,7 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import simoneImg from "@/assets/team/simone.jpeg";
 import thomasImg from "@/assets/team/thomas.jpeg";
 import martinaImg from "@/assets/team/martina.jpeg";
+import samuelImg from "@/assets/team/samuel.jpeg";
 import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
 import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
 import opiumBarcelonaLogo from "@/assets/partners/opium-barcelona.png";
