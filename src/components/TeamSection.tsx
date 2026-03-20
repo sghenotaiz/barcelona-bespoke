@@ -44,6 +44,14 @@ const TeamSection = () => {
       instagram: "https://www.instagram.com/tombuono/",
       languages: ["italian" as const, "spanish" as const],
     },
+    {
+      name: "Martina",
+      designation: t.team.martinaRole,
+      quote: t.team.martinaBio,
+      src: martinaImg,
+      instagram: "https://www.instagram.com/smarty717",
+      languages: ["italian" as const, "spanish" as const, "english" as const],
+    },
   ];
 
   const scrollPartner = useCallback((dir: "left" | "right") => {
