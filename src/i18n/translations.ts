@@ -1106,6 +1106,8 @@ export const translations = {
       thomasBio: "Premières expériences de promoteur dès ses 18 ans, Thomàs est l'un des fondateurs de l'agence NightDreams. Depuis plus de dix ans, il s'occupe du divertissement et des vacances de milliers de clients qui choisissent Barcelone pour s'amuser. Vous le trouverez tous les jours, toute l'année à la Barceloneta pour vous accueillir.",
       martinaRole: "Fondatrice NightDreams",
       martinaBio: "asighaofihas",
+      samuelRole: "Promoteur ND",
+      samuelBio: "Samu, 24 ans, est promoteur pour l'agence NightDreams depuis l'été 2025. Son objectif est simple : faire vivre à chaque client une nuit inoubliable, avec professionnalisme, souci du détail et une touche personnelle qui fait la différence.",
       partnersTitle: "Nos",
       partnersAccent: "Partenaires",
       partnersNote: "Nous collaborons avec les meilleurs établissements de Barcelone — clubs exclusifs, hôtels de luxe, restaurants gastronomiques et bien plus.",
