@@ -314,6 +314,8 @@ export const translations = {
       martinaBio: "asighaofihas",
       samuelRole: "Promoter ND",
       samuelBio: "Samu, 24, has been a promoter for the NightDreams agency since the summer of 2025. His goal is simple: to make every client experience an unforgettable night, with professionalism, attention to detail, and a personal touch that makes the difference.",
+      gialloRole: "Promoter ND",
+      gialloBio: "Marco, NightDreams promoter since summer 2025, after a career behind the most exclusive bars, decided to bring the art of Neapolitan hospitality to the heart of Barcelona. He doesn't just sell entries: he takes care of your night down to the smallest detail. Whether you're looking for the best table in the VIP area or the fastest access to the clubs, he's your man. He speaks your language, understands your tastes, and knows exactly where the right beat hits every night. His motto? 'You bring the desire to have fun, I'll take care of the rest.'",
       partnersTitle: "Our",
       partnersAccent: "Partners",
       partnersNote: "We collaborate with the best venues in Barcelona — exclusive clubs, luxury hotels, gourmet restaurants and much more.",
