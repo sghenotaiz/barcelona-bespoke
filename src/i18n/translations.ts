@@ -307,7 +307,7 @@ export const translations = {
       promotersTitle: "Our",
       promotersAccent: "Promoters",
       simoneRole: "Promoter ND + Online Manager",
-      simoneBio: "Promoter since summer 2020, after spending the entire year in Barcelona in 2021, in the following years from July to September he is present outside the Barceloneta clubs taking care of VIP tables and promoting skip-the-line tickets. He is responsible for the website — he'll be your point of contact.",
+      simoneBio: "ND Promoter since 2020, after spending the entire year in Barcelona in 2021, he has remained a key figure in the NightDreams team and a reference point for new promoters. He also has experience as a promoter in Madrid and Marbella, and is now responsible for the website as well as being present in summer.",
       thomasRole: "Founder NightDreams",
       thomasBio: "First experiences as a promoter since he was 18, Thomàs is one of the founding leaders of the NightDreams agency. For over ten years he has been taking care of the entertainment and vacations of thousands of clients who choose Barcelona to have fun. You'll find him every day, all year round in Barceloneta to welcome you.",
       martinaRole: "Founder NightDreams",
