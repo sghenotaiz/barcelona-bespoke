@@ -5,6 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import simoneImg from "@/assets/team/simone.jpeg";
 import thomasImg from "@/assets/team/thomas.jpeg";
+import martinaImg from "@/assets/team/martina.jpeg";
 import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
 import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
 import opiumBarcelonaLogo from "@/assets/partners/opium-barcelona.png";
@@ -42,6 +43,14 @@ const TeamSection = () => {
       src: thomasImg,
       instagram: "https://www.instagram.com/tombuono/",
       languages: ["italian" as const, "spanish" as const],
+    },
+    {
+      name: "Martina",
+      designation: t.team.martinaRole,
+      quote: t.team.martinaBio,
+      src: martinaImg,
+      instagram: "https://www.instagram.com/smarty717",
+      languages: ["italian" as const, "spanish" as const, "english" as const],
     },
   ];
 
