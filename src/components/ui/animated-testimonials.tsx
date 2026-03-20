@@ -148,7 +148,45 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-silver font-body tracking-[0.15em] uppercase mt-1">
               {current.designation}
             </p>
-            <motion.p className="text-lg text-muted-foreground mt-8 font-body leading-relaxed">
+
+            {/* Language flags + Instagram — positioned after name for visibility */}
+            <div className="flex flex-wrap items-center gap-4 mt-3">
+              {current.languages && current.languages.length > 0 && (
+                <div className="flex flex-wrap items-center gap-3">
+                  {current.languages.map((lang) => {
+                    const flag = flagMap[lang];
+                    if (!flag) return null;
+                    return (
+                      <div
+                        key={lang}
+                        title={flag.label}
+                        className="flex items-center gap-1.5 group/flag cursor-default"
+                      >
+                        <span className="text-lg transition-all duration-300 group-hover/flag:drop-shadow-[0_0_6px_hsla(0,0%,75%,0.5)]">
+                          {flag.emoji}
+                        </span>
+                        <span className="font-body text-[9px] tracking-[0.15em] uppercase text-muted-foreground group-hover/flag:text-silver transition-colors duration-300">
+                          {flag.label}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+              {current.instagram && (
+                <a
+                  href={current.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-silver hover:text-foreground transition-colors duration-300 w-fit group/ig"
+                >
+                  <Instagram size={16} className="group-hover/ig:drop-shadow-[0_0_6px_hsla(0,0%,75%,0.5)] transition-all duration-300" />
+                  <span className="font-body text-xs tracking-wider">Instagram</span>
+                </a>
+              )}
+            </div>
+
+            <motion.p className="text-lg text-muted-foreground mt-5 font-body leading-relaxed">
               {current.quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -165,43 +203,6 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
-
-            {/* Language flags */}
-            {current.languages && current.languages.length > 0 && (
-              <div className="flex flex-wrap items-center gap-3 mt-5">
-                {current.languages.map((lang) => {
-                  const flag = flagMap[lang];
-                  if (!flag) return null;
-                  return (
-                    <div
-                      key={lang}
-                      title={flag.label}
-                      className="flex items-center gap-1.5 group/flag cursor-default"
-                    >
-                      <span className="text-lg transition-all duration-300 group-hover/flag:drop-shadow-[0_0_6px_hsla(0,0%,75%,0.5)]">
-                        {flag.emoji}
-                      </span>
-                      <span className="font-body text-[9px] tracking-[0.15em] uppercase text-muted-foreground group-hover/flag:text-silver transition-colors duration-300">
-                        {flag.label}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-
-            {/* Instagram link */}
-            {current.instagram && (
-              <a
-                href={current.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 text-silver hover:text-foreground transition-colors duration-300 w-fit group/ig"
-              >
-                <Instagram size={16} className="group-hover/ig:drop-shadow-[0_0_6px_hsla(0,0%,75%,0.5)] transition-all duration-300" />
-                <span className="font-body text-xs tracking-wider">Instagram</span>
-              </a>
-            )}
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
