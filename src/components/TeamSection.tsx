@@ -13,38 +13,6 @@ import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
 import opiumBarcelonaLogo from "@/assets/partners/opium-barcelona.png";
 import blingBlingLogo from "@/assets/partners/bling-bling.jpg";
 
-const teamMembers = [
-{
-  name: "Carlos M.",
-  designation: "Head Promoter",
-  quote: "5+ years connecting guests with Barcelona's best nightlife experiences.",
-  src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=600&fit=crop&crop=face"
-},
-{
-  name: "Sofia R.",
-  designation: "VIP Concierge Manager",
-  quote: "Specialist in luxury hospitality and premium client relations.",
-  src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=600&fit=crop&crop=face"
-},
-{
-  name: "Alex T.",
-  designation: "Events Coordinator",
-  quote: "Expert in bachelor parties, corporate events & themed nights.",
-  src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=600&fit=crop&crop=face"
-},
-{
-  name: "Laura B.",
-  designation: "Partnerships Director",
-  quote: "Maintains exclusive relationships with Barcelona's top venues.",
-  src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop&crop=face"
-},
-{
-  name: "Diego P.",
-  designation: "Senior Promoter",
-  quote: "Inside access to the most exclusive clubs in the city.",
-  src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face"
-}];
-
 
 const partners = [
 { name: "Ku Barcelona", category: "Nightclub", logo: kuBarcelonaLogo },
