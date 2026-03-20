@@ -7,6 +7,7 @@ import simoneImg from "@/assets/team/simone.jpeg";
 import thomasImg from "@/assets/team/thomas.jpeg";
 import martinaImg from "@/assets/team/martina.jpeg";
 import samuelImg from "@/assets/team/samuel.jpeg";
+import gialloImg from "@/assets/team/giallo.jpeg";
 import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
 import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
 import opiumBarcelonaLogo from "@/assets/partners/opium-barcelona.png";
@@ -60,6 +61,14 @@ const TeamSection = () => {
       src: samuelImg,
       instagram: "https://www.instagram.com/_samuelgiossi_/",
       languages: ["italian" as const, "spanish" as const],
+    },
+    {
+      name: "Giallo",
+      designation: t.team.gialloRole,
+      quote: t.team.gialloBio,
+      src: gialloImg,
+      instagram: "https://www.instagram.com/marcogiaaa/",
+      languages: ["italian" as const, "spanish" as const, "english" as const],
     },
   ];
 
