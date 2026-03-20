@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import PromoterCard, { type PromoterData } from "@/components/PromoterCard";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import simoneImg from "@/assets/team/simone.jpeg";
 import thomasImg from "@/assets/team/thomas.jpeg";
 import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
@@ -26,22 +26,22 @@ const TeamSection = () => {
   const partnerScrollRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
 
-  const promoters: PromoterData[] = [
+  const teamMembers = [
     {
       name: "Simone",
-      role: t.team.simoneRole,
-      bio: t.team.simoneBio,
+      designation: t.team.simoneRole,
+      quote: t.team.simoneBio,
       src: simoneImg,
       instagram: "https://www.instagram.com/simsnip/",
-      languages: ["italian", "spanish", "english"],
+      languages: ["italian" as const, "spanish" as const, "english" as const],
     },
     {
       name: "Thomàs",
-      role: t.team.thomasRole,
-      bio: t.team.thomasBio,
+      designation: t.team.thomasRole,
+      quote: t.team.thomasBio,
       src: thomasImg,
       instagram: "https://www.instagram.com/tombuono/",
-      languages: ["italian", "spanish"],
+      languages: ["italian" as const, "spanish" as const],
     },
   ];
 
@@ -80,22 +80,17 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        {/* Promoters */}
+        {/* Promoters - AnimatedTestimonials */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-4">
+          transition={{ duration: 0.8, delay: 0.2 }}>
           
-          <h3 className="font-display text-xl font-light text-foreground text-center tracking-wider uppercase mb-8">
+          <h3 className="font-display text-xl font-light text-foreground text-center tracking-wider uppercase">
             {t.team.promotersTitle}{" "}
             <span className="italic text-silver-gradient">{t.team.promotersAccent}</span>
           </h3>
-          <div className="flex flex-col gap-6 max-w-4xl mx-auto">
-            {promoters.map((p, i) => (
-              <PromoterCard key={p.name} promoter={p} index={i} />
-            ))}
-          </div>
+          <AnimatedTestimonials testimonials={teamMembers} autoplay />
         </motion.div>
 
         {/* Partners */}

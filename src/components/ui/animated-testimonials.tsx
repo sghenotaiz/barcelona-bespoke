@@ -4,12 +4,28 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Instagram } from "lucide-react";
+
+type SpokenLanguage = "italian" | "spanish" | "english" | "french" | "dutch" | "german" | "russian" | "catalan";
+
+const flagMap: Record<SpokenLanguage, { emoji: string; label: string }> = {
+  italian:  { emoji: "🇮🇹", label: "Italiano" },
+  spanish:  { emoji: "🇪🇸", label: "Español" },
+  english:  { emoji: "🇬🇧", label: "English" },
+  french:   { emoji: "🇫🇷", label: "Français" },
+  dutch:    { emoji: "🇳🇱", label: "Nederlands" },
+  german:   { emoji: "🇩🇪", label: "Deutsch" },
+  russian:  { emoji: "🇷🇺", label: "Русский" },
+  catalan:  { emoji: "🏴", label: "Català" },
+};
 
 type Testimonial = {
   quote: string;
   name: string;
   designation: string;
   src: string;
+  instagram?: string;
+  languages?: SpokenLanguage[];
 };
 
 export const AnimatedTestimonials = ({
@@ -45,6 +61,8 @@ export const AnimatedTestimonials = ({
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
+
+  const current = testimonials[active];
 
   return (
     <div className={cn("max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20", className)}>
@@ -83,12 +101,34 @@ export const AnimatedTestimonials = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <img
-                    src={testimonial.src}
-                    alt={testimonial.name}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
-                  />
+                  {testimonial.instagram ? (
+                    <a
+                      href={testimonial.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block h-full w-full group relative"
+                    >
+                      <img
+                        src={testimonial.src}
+                        alt={testimonial.name}
+                        draggable={false}
+                        className="h-full w-full rounded-3xl object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 rounded-3xl bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-center justify-center">
+                        <Instagram
+                          size={28}
+                          className="text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
+                        />
+                      </div>
+                    </a>
+                  ) : (
+                    <img
+                      src={testimonial.src}
+                      alt={testimonial.name}
+                      draggable={false}
+                      className="h-full w-full rounded-3xl object-cover object-center"
+                    />
+                  )}
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -103,13 +143,13 @@ export const AnimatedTestimonials = ({
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
             <h3 className="font-display text-2xl font-bold text-foreground">
-              {testimonials[active].name}
+              {current.name}
             </h3>
             <p className="text-sm text-silver font-body tracking-[0.15em] uppercase mt-1">
-              {testimonials[active].designation}
+              {current.designation}
             </p>
             <motion.p className="text-lg text-muted-foreground mt-8 font-body leading-relaxed">
-              {testimonials[active].quote.split(" ").map((word, index) => (
+              {current.quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
                   initial={{ filter: "blur(10px)", opacity: 0, y: 5 }}
@@ -125,17 +165,54 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
+
+            {/* Language flags */}
+            {current.languages && current.languages.length > 0 && (
+              <div className="flex flex-wrap items-center gap-3 mt-5">
+                {current.languages.map((lang) => {
+                  const flag = flagMap[lang];
+                  if (!flag) return null;
+                  return (
+                    <div
+                      key={lang}
+                      title={flag.label}
+                      className="flex items-center gap-1.5 group/flag cursor-default"
+                    >
+                      <span className="text-lg transition-all duration-300 group-hover/flag:drop-shadow-[0_0_6px_hsla(0,0%,75%,0.5)]">
+                        {flag.emoji}
+                      </span>
+                      <span className="font-body text-[9px] tracking-[0.15em] uppercase text-muted-foreground group-hover/flag:text-silver transition-colors duration-300">
+                        {flag.label}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Instagram link */}
+            {current.instagram && (
+              <a
+                href={current.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-4 text-silver hover:text-foreground transition-colors duration-300 w-fit group/ig"
+              >
+                <Instagram size={16} className="group-hover/ig:drop-shadow-[0_0_6px_hsla(0,0%,75%,0.5)] transition-all duration-300" />
+                <span className="font-body text-xs tracking-wider">Instagram</span>
+              </a>
+            )}
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
-              className="h-10 w-10 rounded-full bg-card/50 border border-border flex items-center justify-center group/button hover:border-silver/40 transition-colors"
+              className="h-10 w-10 rounded-full bg-card/50 border border-border flex items-center justify-center group/button hover:border-silver/40 transition-colors active:scale-95"
             >
               <IconArrowLeft className="h-5 w-5 text-muted-foreground group-hover/button:text-silver transition-colors" />
             </button>
             <button
               onClick={handleNext}
-              className="h-10 w-10 rounded-full bg-card/50 border border-border flex items-center justify-center group/button hover:border-silver/40 transition-colors"
+              className="h-10 w-10 rounded-full bg-card/50 border border-border flex items-center justify-center group/button hover:border-silver/40 transition-colors active:scale-95"
             >
               <IconArrowRight className="h-5 w-5 text-muted-foreground group-hover/button:text-silver transition-colors" />
             </button>
