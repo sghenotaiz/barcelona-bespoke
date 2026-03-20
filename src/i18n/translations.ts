@@ -1100,6 +1100,8 @@ export const translations = {
       simoneBio: "Promoteur depuis l'été 2020, après avoir passé toute l'année à Barcelone en 2021, les années suivantes de juillet à septembre il est présent devant les discothèques de la Barceloneta pour s'occuper des tables VIP et promouvoir les billets coupe-file. Responsable du site web, c'est avec lui que vous serez en contact.",
       thomasRole: "Fondateur NightDreams",
       thomasBio: "Premières expériences de promoteur dès ses 18 ans, Thomàs est l'un des fondateurs de l'agence NightDreams. Depuis plus de dix ans, il s'occupe du divertissement et des vacances de milliers de clients qui choisissent Barcelone pour s'amuser. Vous le trouverez tous les jours, toute l'année à la Barceloneta pour vous accueillir.",
+      martinaRole: "Fondatrice NightDreams",
+      martinaBio: "asighaofihas",
       partnersTitle: "Nos",
       partnersAccent: "Partenaires",
       partnersNote: "Nous collaborons avec les meilleurs établissements de Barcelone — clubs exclusifs, hôtels de luxe, restaurants gastronomiques et bien plus.",
