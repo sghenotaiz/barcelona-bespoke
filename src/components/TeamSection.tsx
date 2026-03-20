@@ -26,6 +26,25 @@ const TeamSection = () => {
   const partnerScrollRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
 
+  const promoters: PromoterData[] = [
+    {
+      name: "Simone",
+      role: t.team.simoneRole,
+      bio: t.team.simoneBio,
+      src: simoneImg,
+      instagram: "https://www.instagram.com/simsnip/",
+      languages: ["italian", "spanish", "english"],
+    },
+    {
+      name: "Thomàs",
+      role: t.team.thomasRole,
+      bio: t.team.thomasBio,
+      src: thomasImg,
+      instagram: "https://www.instagram.com/tombuono/",
+      languages: ["italian", "spanish"],
+    },
+  ];
+
   const scrollPartner = useCallback((dir: "left" | "right") => {
     if (!partnerScrollRef.current) return;
     const card = partnerScrollRef.current.querySelector("[data-partner-card]");
