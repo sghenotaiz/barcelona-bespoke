@@ -717,6 +717,8 @@ export const translations = {
       samuelBio: "Samu, 24 años, es promotor de la agencia NightDreams desde el verano de 2025. Su objetivo es sencillo: hacer que cada cliente viva una noche inolvidable, con profesionalidad, atención al detalle y un toque personal que marca la diferencia.",
       gialloRole: "Promoter ND",
       gialloBio: "Marco, promoter de NightDreams desde el verano de 2025, tras una carrera detrás de las barras más exclusivas, decidió llevar el arte de la hospitalidad napolitana al corazón de Barcelona. No solo vende entradas: cuida tu noche hasta el más mínimo detalle. Ya sea que busques la mejor mesa en el reservado o el acceso más rápido a las discotecas, él es tu hombre. Habla tu idioma, entiende tus gustos y sabe exactamente dónde late el ritmo correcto cada noche. ¿Su lema? 'Tú pon las ganas de divertirte, del resto me encargo yo.'",
+      alessiaRole: "Promoter ND",
+      alessiaBio: "Alessia hizo su primera temporada como promotora en el verano de 2025: mientras estaba de Erasmus en Barcelona, continuó durante la temporada de verano, formando parte de la familia NightDreams.",
       partnersTitle: "Nuestros",
       partnersAccent: "Socios",
       partnersNote: "Colaboramos con los mejores locales de Barcelona — clubs exclusivos, hoteles de lujo, restaurantes gourmet y mucho más.",
