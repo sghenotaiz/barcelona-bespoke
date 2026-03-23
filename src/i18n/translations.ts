@@ -311,7 +311,7 @@ export const translations = {
       thomasRole: "Founder NightDreams",
       thomasBio: "First experiences as a promoter since he was 18, Thomàs is one of the founding leaders of the NightDreams agency. For over ten years he has been taking care of the entertainment and vacations of thousands of clients who choose Barcelona to have fun. You'll find him every day, all year round in Barceloneta to welcome you.",
       martinaRole: "Founder NightDreams",
-      martinaBio: "asighaofihas",
+      martinaBio: "Martina is co-founder of Nightdreams and responsible for operational development and strategic relationships with clients, partners, and venues. She coordinates the promoter team, oversees VIP reservations, and manages the organization of offered experiences, ensuring professionalism, reliability, and a highly personalized service. Thanks to her direct experience in the industry and a strong network in Barcelona's nightlife, she is the operational point of reference for clients and collaborations.",
       samuelRole: "Promoter ND",
       samuelBio: "Samu, 24, has been a promoter for the NightDreams agency since the summer of 2025. His goal is simple: to make every client experience an unforgettable night, with professionalism, attention to detail, and a personal touch that makes the difference.",
       gialloRole: "Promoter ND",
