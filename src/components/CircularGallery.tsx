@@ -18,9 +18,9 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-{ id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: vipTablesImg, path: "/services" },
-{ id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: barcelonaSkylineImg, path: "/about" },
 { id: "plan", titleKey: "planExperience", subtitleKey: "planExperienceDesc", image: restaurantImg, path: "/plan" },
+{ id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: barcelonaSkylineImg, path: "/about" },
+{ id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: vipTablesImg, path: "/services" },
 { id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about" },
 { id: "moments", titleKey: "momentsCrafted", subtitleKey: "momentsCraftedDesc", image: diningImg, path: "/moments" }];
 
