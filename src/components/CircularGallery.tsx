@@ -18,9 +18,9 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-{ id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: vipTablesImg, path: "/services" },
-{ id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: barcelonaSkylineImg, path: "/about" },
 { id: "plan", titleKey: "planExperience", subtitleKey: "planExperienceDesc", image: restaurantImg, path: "/plan" },
+{ id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: barcelonaSkylineImg, path: "/about" },
+{ id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: vipTablesImg, path: "/services" },
 { id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about" },
 { id: "moments", titleKey: "momentsCrafted", subtitleKey: "momentsCraftedDesc", image: diningImg, path: "/moments" }];
 
@@ -29,7 +29,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   en: {
     ourServices: "Our Services", ourServicesDesc: "VIP Experiences Barcelona",
     aboutUs: "About Us", aboutUsDesc: "The NightDreams Story",
-    planExperience: "Plan Your Experience", planExperienceDesc: "Book VIP Services",
+    planExperience: "Contact Us for a Quote", planExperienceDesc: "The sooner you do it, the more you save",
     ourTeam: "Our Team", ourTeamDesc: "Meet Our Promoters",
     momentsCrafted: "Moments Crafted", momentsCraftedDesc: "Real Client Memories",
     explore: "Explore"
@@ -37,7 +37,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   it: {
     ourServices: "I Nostri Servizi", ourServicesDesc: "Tutto ciò di cui hai bisogno per una vacanza indimenticabile",
     aboutUs: "Chi Siamo", aboutUsDesc: "La Storia di NightDreams",
-    planExperience: "Pianifica la Tua Esperienza", planExperienceDesc: "Contattaci per un preventivo",
+    planExperience: "Contattaci per un preventivo", planExperienceDesc: "Prima lo fai, più risparmi",
     ourTeam: "Il Nostro Team", ourTeamDesc: "I Nostri promoter e partner",
     momentsCrafted: "Highlights eventi", momentsCraftedDesc: "Ricordi dei Clienti",
     explore: "Esplora"
@@ -45,7 +45,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   es: {
     ourServices: "Nuestros Servicios", ourServicesDesc: "Experiencias VIP Barcelona",
     aboutUs: "Sobre Nosotros", aboutUsDesc: "La Historia de NightDreams",
-    planExperience: "Planifica Tu Experiencia", planExperienceDesc: "Reserva Servicios VIP",
+    planExperience: "Contáctanos para un presupuesto", planExperienceDesc: "Cuanto antes lo hagas, más ahorras",
     ourTeam: "Nuestro Equipo", ourTeamDesc: "Conoce a Nuestros Promotores",
     momentsCrafted: "Momentos Creados", momentsCraftedDesc: "Recuerdos de Clientes",
     explore: "Explorar"
@@ -53,7 +53,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   fr: {
     ourServices: "Nos Services", ourServicesDesc: "Expériences VIP Barcelone",
     aboutUs: "À Propos", aboutUsDesc: "L'Histoire de NightDreams",
-    planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Réservez des Services VIP",
+    planExperience: "Contactez-nous pour un devis", planExperienceDesc: "Plus tôt vous le faites, plus vous économisez",
     ourTeam: "Notre Équipe", ourTeamDesc: "Rencontrez Nos Promoteurs",
     momentsCrafted: "Moments Créés", momentsCraftedDesc: "Souvenirs de Clients",
     explore: "Explorer"
