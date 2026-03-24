@@ -53,7 +53,7 @@ const galleryTexts: Record<string, Record<string, string>> = {
   fr: {
     ourServices: "Nos Services", ourServicesDesc: "Expériences VIP Barcelone",
     aboutUs: "À Propos", aboutUsDesc: "L'Histoire de NightDreams",
-    planExperience: "Planifiez Votre Expérience", planExperienceDesc: "Réservez des Services VIP",
+    planExperience: "Contactez-nous pour un devis", planExperienceDesc: "Plus tôt vous le faites, plus vous économisez",
     ourTeam: "Notre Équipe", ourTeamDesc: "Rencontrez Nos Promoteurs",
     momentsCrafted: "Moments Créés", momentsCraftedDesc: "Souvenirs de Clients",
     explore: "Explorer"
