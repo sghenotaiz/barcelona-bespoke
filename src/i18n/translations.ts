@@ -1317,7 +1317,7 @@ export const translations = {
       skipLine: "TICKET SALTAFILA",
       skipLineDesc1: "Niente code di 3 ore davanti ai club, rischiando di non entrare",
       skipLineDesc2: "Accesso immediato ai migliori party",
-      vipTables: "Tavoli VIP garantiti",
+      vipTables: "Tavoli VIP al miglior prezzo",
       ctaButton: "Chiedici ciò che vuoi",
       enterWorld: "ENTRA NEL MONDO NIGHTDREAMS",
       yearRound: "365 giorni l'anno",
