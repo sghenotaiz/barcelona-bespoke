@@ -37,6 +37,8 @@ export const translations = {
       subtitle: "Barcelona",
       description:
         "Live your best experience in one of the most beautiful cities of the world. We will take care of you!",
+      heroDescription:
+        "Live your best experience in the ultimate party city. Over ten thousand clients a year trust us — discover our world and become part of the NightDreams family!",
       exploreServices: "Explore Services",
       requestVip: "Request a Quote",
     },
@@ -451,6 +453,8 @@ export const translations = {
       subtitle: "Barcelona",
       description:
         "Vive tu mejor experiencia en una de las ciudades más bellas del mundo. ¡Nos encargaremos de ti!",
+      heroDescription:
+        "Vive tu mejor experiencia en la ciudad del entretenimiento por excelencia. Más de diez mil clientes al año confían en nosotros — descubre nuestro mundo y forma parte de la familia NightDreams!",
       exploreServices: "Explorar Servicios",
       requestVip: "Solicitar Presupuesto",
     },
@@ -865,6 +869,8 @@ export const translations = {
       subtitle: "Barcelona",
       description:
         "Vivez votre meilleure expérience dans l'une des plus belles villes du monde. Nous prendrons soin de vous !",
+      heroDescription:
+        "Vivez votre meilleure expérience dans la capitale de la fête par excellence. Plus de dix mille clients par an nous font confiance — découvrez notre monde et rejoignez la famille NightDreams !",
       exploreServices: "Découvrir les Services",
       requestVip: "Demander un Devis",
     },
@@ -1279,6 +1285,8 @@ export const translations = {
       subtitle: "Barcelona",
       description:
         "Vivi la tua migliore esperienza in una delle città più belle del mondo. Ci prenderemo cura di te!",
+      heroDescription:
+        "Vivi la tua migliore esperienza nella città del divertimento per eccellenza. Oltre dieci mila clienti all'anno si affidano a noi, scopri il nostro mondo e entra a far parte della famiglia NightDreams!",
       exploreServices: "Scopri i Servizi",
       requestVip: "Richiedi un Preventivo",
     },

@@ -40,7 +40,7 @@ const HeroSection = () => {
           </p>
 
           <p className="text-sm md:text-lg text-silver-light/80 max-w-2xl mx-auto leading-relaxed text-center">
-            Vivi la tua migliore esperienza nella città del divertimento per eccellenza. Oltre dieci mila clienti all'anno si affidano a noi, scopri il nostro mondo e entra a far parte della famiglia NightDreams!
+            {t.hero.heroDescription}
           </p>
         </motion.div>
       </div>
