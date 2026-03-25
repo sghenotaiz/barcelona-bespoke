@@ -988,7 +988,7 @@ export const translations = {
       expPoolBullet3: "Les meilleures piscines et beach clubs",
       expRestaurantTitle: "Restaurants",
       expRestaurantSubtitle: "Savourez le meilleur de Barcelone",
-      expRestaurantDesc: "Réductions exclusives de 10-20% dans les meilleurs restaurants avec réservation de table garantie.",
+      expRestaurantDesc: "Réductions exclusives de 10-20% dans les meilleurs restaurants avec réservation de table garantie. Dites-nous vos préférences, on s'occupe de tout.",
       expRestaurantBullet1: "10-20% de réduction chez nos partenaires",
       expRestaurantBullet2: "Réservation de table garantie",
       expTattooTitle: "Studio de Tatouage",
