@@ -63,6 +63,7 @@ const serviceBlocks: ServiceBlock[] = [
   subtitleKey: "expPoolSubtitle",
   descKey: "expPoolDesc",
   badge: "badgeSummer",
+  imageScale: 0.8,
   bullets: [
   { icon: Sun, key: "expPoolBullet1" },
   { icon: Music, key: "expPoolBullet2" },
