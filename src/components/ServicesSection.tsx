@@ -185,7 +185,7 @@ const ServiceBlockItem = ({
   const easeOutCubic = [0.33, 1, 0.68, 1] as const;
 
   return (
-    <div ref={ref} className="w-full relative overflow-hidden">
+    <div ref={ref} id={block.id} className="w-full relative overflow-hidden scroll-mt-24">
       <div
         className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[550px] lg:min-h-[650px]`}>
         

@@ -134,8 +134,9 @@ const HeroSection = () => {
             <motion.div
               animate={{ boxShadow: ["0 0 8px hsl(0, 75%, 50%)", "0 0 24px hsl(0, 75%, 55%)", "0 0 8px hsl(0, 75%, 50%)"] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm cursor-pointer"
               style={{ backgroundColor: "hsl(0, 75%, 50%)" }}
+              onClick={() => navigate("/services#skip-line")}
             >
               <Zap size={18} className="text-foreground" style={{ color: "hsl(0, 0%, 100%)" }} />
               <span className="text-sm md:text-base font-bold tracking-wider uppercase font-body" style={{ color: "hsl(0, 0%, 100%)" }}>
