@@ -170,7 +170,7 @@ const ServiceBlockItem = ({
   const ref = useRef(null);
   const isMobile = useIsMobile();
   const inView = useInView(ref, { once: true, amount: 0.3 });
-  const [videoModal, setVideoModal] = useState<"ku" | "opium" | null>(null);
+  const [videoModal, setVideoModal] = useState<"ku" | "opium" | "bling" | null>(null);
   const isEven = index % 2 === 0;
 
   // Parallax on the image
@@ -341,6 +341,13 @@ const ServiceBlockItem = ({
                   <Play size={14} />
                   Video saltafila Opium
                 </button>
+                <button
+                  onClick={() => setVideoModal("bling")}
+                  className="inline-flex items-center gap-2 font-body text-xs tracking-wide text-silver/80 hover:text-white transition-colors duration-300 underline underline-offset-4 decoration-silver/30 hover:decoration-white/60"
+                >
+                  <Play size={14} />
+                  Video saltafila Bling Bling
+                </button>
               </motion.div>
             )}
           </div>
@@ -373,23 +380,19 @@ const ServiceBlockItem = ({
               >
                 <X size={16} />
               </button>
-              {videoModal === "ku" ? (
-                <video
-                  src="/videos/saltafila-ku.mp4"
-                  controls
-                  autoPlay
-                  playsInline
-                  className="w-full h-full object-contain"
-                />
-              ) : (
-                <video
-                  src="/videos/saltafila-opium.mp4"
-                  controls
-                  autoPlay
-                  playsInline
-                  className="w-full h-full object-contain"
-                />
-              )}
+              <video
+                src={
+                  videoModal === "ku"
+                    ? "/videos/saltafila-ku.mp4"
+                    : videoModal === "opium"
+                    ? "/videos/saltafila-opium.mp4"
+                    : "/videos/saltafila-bling-bling.mp4"
+                }
+                controls
+                autoPlay
+                playsInline
+                className="w-full h-full object-contain"
+              />
             </motion.div>
           </motion.div>
         )}
