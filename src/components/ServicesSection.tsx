@@ -26,6 +26,7 @@ type ServiceBlock = {
   descKey: string;
   bullets: {icon: React.ElementType;key: string;}[];
   badge?: string;
+  imagePosition?: string;
 };
 
 const serviceBlocks: ServiceBlock[] = [
