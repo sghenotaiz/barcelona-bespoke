@@ -3,6 +3,7 @@ import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
 interface NightDreamsLogoProps {
   size?: "sm" | "md" | "lg" | "hero";
   showIcon?: boolean;
+  showText?: boolean;
 }
 
 const sizeClasses = {
