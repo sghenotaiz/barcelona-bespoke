@@ -7,7 +7,7 @@ import vipTablesImg from "@/assets/services/vip-tables.jpg";
 import barcelonaSkylineImg from "@/assets/barcelona-skyline.jpg";
 import restaurantImg from "@/assets/restaurant.jpg";
 import nightlifeImg from "@/assets/nightlife.jpg";
-import diningImg from "@/assets/dining.jpg";
+import diningImg from "@/assets/highlights-eventi.jpg";
 
 interface GalleryItem {
   id: string;
