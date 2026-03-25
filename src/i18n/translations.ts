@@ -954,6 +954,7 @@ export const translations = {
       expTattooDesc: "Studios de tatouage partenaires avec les meilleurs artistes — repartez avec une pièce unique en souvenir de Barcelone.",
       expTattooBullet1: "Artistes professionnels et studios premium",
       expTattooBullet2: "Designs personnalisés et sans rendez-vous",
+      expTattooBullet3: "Propreté et sécurité garanties, au meilleur prix",
       expDinnerShowTitle: "Dîners Spectacles",
       expDinnerShowSubtitle: "Dînez avec une touche spectaculaire",
       expDinnerShowDesc: "Expériences gastronomiques exclusives avec divertissement en direct — cabaret, musique et cuisine gourmet en une soirée inoubliable.",
