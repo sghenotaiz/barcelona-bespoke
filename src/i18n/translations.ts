@@ -161,6 +161,12 @@ export const translations = {
       expEventsBullet1: "Bachelor & bachelorette parties",
       expEventsBullet2: "Corporate events & team building",
       expEventsBullet3: "Fully customized experiences",
+      expHotelTitle: "Apartments & Hotels",
+      expHotelSubtitle: "Accommodation for every group",
+      expHotelDesc: "Wide availability of rooms for every type of group, from cozy apartments to premium hotels. Plus, dedicated transfers to the best clubs at set times.",
+      expHotelBullet1: "Rooms for groups of any size",
+      expHotelBullet2: "Apartments & hotel options",
+      expHotelBullet3: "Scheduled club transfers included",
       yacht: {
         title: "Yacht & Boat Charters",
         description:
@@ -569,6 +575,12 @@ export const translations = {
       expEventsBullet1: "Despedidas de soltero y soltera",
       expEventsBullet2: "Eventos corporativos y team building",
       expEventsBullet3: "Experiencias totalmente personalizadas",
+      expHotelTitle: "Apartamentos & Hoteles",
+      expHotelSubtitle: "Alojamiento para cada grupo",
+      expHotelDesc: "Amplia disponibilidad de habitaciones para todo tipo de grupos, desde apartamentos acogedores hasta hoteles premium. Además, transfers dedicados a las mejores discotecas a horas establecidas.",
+      expHotelBullet1: "Habitaciones para grupos de cualquier tamaño",
+      expHotelBullet2: "Opciones de apartamentos y hoteles",
+      expHotelBullet3: "Transfers programados a discotecas incluidos",
       yacht: {
         title: "Alquiler de Yates",
         description:
@@ -977,6 +989,12 @@ export const translations = {
       expEventsBullet1: "Enterrements de vie de garçon/fille",
       expEventsBullet2: "Événements corporate et team building",
       expEventsBullet3: "Expériences entièrement personnalisées",
+      expHotelTitle: "Appartements & Hôtels",
+      expHotelSubtitle: "Hébergement pour chaque groupe",
+      expHotelDesc: "Large disponibilité de chambres pour tout type de groupe, des appartements confortables aux hôtels premium. En plus, des transferts dédiés vers les meilleures discothèques à des heures fixes.",
+      expHotelBullet1: "Chambres pour groupes de toute taille",
+      expHotelBullet2: "Options appartements et hôtels",
+      expHotelBullet3: "Transferts programmés vers les clubs inclus",
       yacht: {
         title: "Location de Yachts",
         description:
@@ -1385,6 +1403,12 @@ export const translations = {
       expEventsBullet1: "Addii al celibato e nubilato",
       expEventsBullet2: "Eventi aziendali e team building",
       expEventsBullet3: "Esperienze completamente personalizzate",
+      expHotelTitle: "Appartamenti & Hotel",
+      expHotelSubtitle: "Alloggi per ogni tipo di gruppo",
+      expHotelDesc: "Vasta disponibilità di stanze per ogni tipo di gruppo, dagli appartamenti accoglienti agli hotel premium. In più, transfer dedicati per le discoteche ad ore prestabilite.",
+      expHotelBullet1: "Stanze per gruppi di qualsiasi dimensione",
+      expHotelBullet2: "Opzioni appartamenti e hotel",
+      expHotelBullet3: "Transfer programmati per le discoteche inclusi",
       yacht: {
         title: "Noleggio Yacht",
         description:

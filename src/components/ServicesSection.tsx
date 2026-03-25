@@ -17,6 +17,7 @@ import dinnerShowImg from "@/assets/services/dinner-show.jpg";
 import limousineImg from "@/assets/services/limousine.jpg";
 import jetSkiImg from "@/assets/services/jet-ski.jpg";
 import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
+import apartmentsHotelImg from "@/assets/services/apartments-hotel.jpg";
 
 type ServiceBlock = {
   id: string;
@@ -137,7 +138,19 @@ const serviceBlocks: ServiceBlock[] = [
   bullets: [
   { icon: PartyPopper, key: "expEventsBullet1" },
   { icon: Users, key: "expEventsBullet2" },
-  { icon: Sparkles, key: "expEventsBullet3" }]
+   { icon: Sparkles, key: "expEventsBullet3" }]
+},
+{
+  id: "hotel",
+  image: apartmentsHotelImg,
+  titleKey: "expHotelTitle",
+  subtitleKey: "expHotelSubtitle",
+  descKey: "expHotelDesc",
+  badge: "badgeTopPick",
+  bullets: [
+  { icon: BedDouble, key: "expHotelBullet1" },
+  { icon: Building2, key: "expHotelBullet2" },
+  { icon: Car, key: "expHotelBullet3" }]
 }];
 
 
