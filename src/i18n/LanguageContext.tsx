@@ -8,22 +8,29 @@ interface LanguageContextType {
 }
 
 const defaultContext: LanguageContextType = {
-  language: "en",
+  language: "it",
   setLanguage: () => {},
-  t: translations.en,
+  t: translations.it,
 };
 
 const LanguageContext = createContext<LanguageContextType>(defaultContext);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    const stored = localStorage.getItem("lang") as Language;
-    return stored && translations[stored] ? stored : "en";
+    const stored = localStorage.getItem("userLanguage") as Language;
+    if (stored && translations[stored]) return stored;
+    const legacy = localStorage.getItem("lang") as Language;
+    if (legacy && translations[legacy]) {
+      localStorage.setItem("userLanguage", legacy);
+      localStorage.removeItem("lang");
+      return legacy;
+    }
+    return "it"; // Default: Italiano
   });
 
   const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("lang", lang);
+    localStorage.setItem("userLanguage", lang);
   }, []);
 
   const t = translations[language];
