@@ -575,6 +575,12 @@ export const translations = {
       expEventsBullet1: "Despedidas de soltero y soltera",
       expEventsBullet2: "Eventos corporativos y team building",
       expEventsBullet3: "Experiencias totalmente personalizadas",
+      expHotelTitle: "Apartamentos & Hoteles",
+      expHotelSubtitle: "Alojamiento para cada grupo",
+      expHotelDesc: "Amplia disponibilidad de habitaciones para todo tipo de grupos, desde apartamentos acogedores hasta hoteles premium. Además, transfers dedicados a las mejores discotecas a horas establecidas.",
+      expHotelBullet1: "Habitaciones para grupos de cualquier tamaño",
+      expHotelBullet2: "Opciones de apartamentos y hoteles",
+      expHotelBullet3: "Transfers programados a discotecas incluidos",
       yacht: {
         title: "Alquiler de Yates",
         description:
