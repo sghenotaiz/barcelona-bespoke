@@ -118,6 +118,18 @@ const serviceBlocks: ServiceBlock[] = [
    { icon: Wine, key: "expDinnerShowBullet3" }]
 },
 {
+  id: "hotel",
+  image: apartmentsHotelImg,
+  titleKey: "expHotelTitle",
+  subtitleKey: "expHotelSubtitle",
+  descKey: "expHotelDesc",
+  badge: "badgeTopPick",
+  bullets: [
+  { icon: BedDouble, key: "expHotelBullet1" },
+  { icon: Building2, key: "expHotelBullet2" },
+  { icon: Car, key: "expHotelBullet3" }]
+},
+{
   id: "limo",
   image: limousineImg,
   titleKey: "expLimoTitle",
@@ -141,18 +153,6 @@ const serviceBlocks: ServiceBlock[] = [
   { icon: PartyPopper, key: "expEventsBullet1" },
   { icon: Users, key: "expEventsBullet2" },
    { icon: Sparkles, key: "expEventsBullet3" }]
-},
-{
-  id: "hotel",
-  image: apartmentsHotelImg,
-  titleKey: "expHotelTitle",
-  subtitleKey: "expHotelSubtitle",
-  descKey: "expHotelDesc",
-  badge: "badgeTopPick",
-  bullets: [
-  { icon: BedDouble, key: "expHotelBullet1" },
-  { icon: Building2, key: "expHotelBullet2" },
-  { icon: Car, key: "expHotelBullet3" }]
 }];
 
 
