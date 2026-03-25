@@ -8,6 +8,8 @@ import marcoCarolaCover from "@/assets/images/marco-carola-cover.jpg";
 import marcoCarolaVideo from "@/assets/videos/marco-carola-ku-bcn.mp4";
 import tygaOpiumCover from "@/assets/images/tyga-opium-cover.jpg";
 import tygaOpiumVideo from "@/assets/videos/tyga-opium.mp4";
+import sferaEbbastaCover from "@/assets/images/sfera-ebbasta-cover.jpg";
+import sferaEbbastaVideo from "@/assets/videos/sfera-ebbasta-ku-bcn.mp4";
 
 // Event highlight cards data
 const eventHighlights = [
@@ -26,11 +28,11 @@ const eventHighlights = [
     videoUrl: tygaOpiumVideo,
   },
   {
-    image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&h=800&fit=crop",
+    image: sferaEbbastaCover,
     titleKey: "event3Title" as const,
     dateKey: "event3Date" as const,
     statsKey: "event3Stats" as const,
-    videoUrl: "",
+    videoUrl: sferaEbbastaVideo,
   },
   {
     image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=800&fit=crop",
