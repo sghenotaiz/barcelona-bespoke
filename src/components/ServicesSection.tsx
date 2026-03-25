@@ -75,6 +75,7 @@ const serviceBlocks: ServiceBlock[] = [
   descKey: "expJetskiDesc",
   badge: "badgeSummer",
   imagePosition: "center center",
+  mobileImagePosition: "right center",
   bullets: [
   { icon: Zap, key: "expJetskiBullet1" },
   { icon: Eye, key: "expJetskiBullet2" }]
