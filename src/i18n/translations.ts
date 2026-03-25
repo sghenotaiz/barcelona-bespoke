@@ -750,7 +750,7 @@ export const translations = {
       label: "Nuestro Equipo",
       title: "NUESTRO",
       titleAccent: "EQUIPO",
-      description: "Nuestros promotores son personas normales como tú, cuyo único objetivo es asegurarse de que pases el mejor momento en Barcelona. Escuchamos atentamente a cada cliente, entendemos sus gustos y sugerimos las experiencias más adecuadas para cumplir sus expectativas. Nuestro equipo multicultural proviene de diferentes países y habla los principales idiomas internacionales (inglés, español, francés, italiano, alemán), por lo que siempre puedes hablar con alguien que te entienda. Queremos que disfrutes tanto de tus noches que quieras volver a nosotros una y otra vez.",
+      description: "Nuestros promotores son personas normales como tú, cuyo único objetivo es asegurarse de que vivas las mejores vacaciones en Barcelona. Escuchamos atentamente a cada cliente, entendemos sus gustos y sugerimos las experiencias más adecuadas para cumplir sus expectativas. Nuestro equipo multicultural proviene de diferentes países y habla los principales idiomas internacionales (inglés, español, francés, italiano, alemán), por lo que siempre puedes hablar con alguien que te entienda. ¡Entra y conoce a nuestros promotores o conviértete en nuestro partner!",
       promotersTitle: "Nuestros",
       promotersAccent: "Promotores",
       simoneRole: "Promotor ND + Manager Online",
