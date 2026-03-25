@@ -982,7 +982,7 @@ export const translations = {
       expSkipLineBullet4: "Packs hebdomadaires = meilleurs prix et réductions de groupe",
       expPoolTitle: "Pool Parties",
       expPoolSubtitle: "Sous le soleil de Barcelone",
-      expPoolDesc: "Journées ensoleillées, eau cristalline et les meilleurs DJs — des fêtes différentes chaque jour.",
+      expPoolDesc: "Journées ensoleillées, eau cristalline et les meilleurs DJs — des fêtes différentes chaque jour, de l'afrohouse au hip-hop, reggaeton — vivez vos après-midi sous le signe du fun !",
       expPoolBullet1: "Événements quotidiens avec DJs internationaux",
       expPoolBullet2: "Musique, cocktails & bonne ambiance",
       expPoolBullet3: "Les meilleures piscines et beach clubs",
