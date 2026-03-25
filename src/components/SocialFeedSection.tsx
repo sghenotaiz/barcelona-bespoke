@@ -176,7 +176,7 @@ const SocialFeedSection = () => {
   }, [cardWidth, gap]);
 
   return (
-    <section ref={sectionRef} className="bg-black py-20 overflow-hidden lg:py-[40px]">
+    <section ref={sectionRef} className="bg-black py-8 overflow-hidden lg:py-6">
       {/* Section Header — same style as TeamSection */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
