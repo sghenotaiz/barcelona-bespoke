@@ -4,6 +4,8 @@ import { Star, Play, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { z } from "zod";
 import DualCTA from "@/components/DualCTA";
+import marcoCarolaCover from "@/assets/images/marco-carola-cover.jpg";
+import marcoCarolaVideo from "@/assets/videos/marco-carola-ku-bcn.mp4";
 
 // Event highlight cards data
 const eventHighlights = [
