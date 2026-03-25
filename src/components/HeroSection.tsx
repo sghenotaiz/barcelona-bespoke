@@ -1,260 +1,206 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { Zap, PartyPopper } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import nightdreamsBadge from "@/assets/nightdreams-badge.png";
 import { useLanguage } from "@/i18n/LanguageContext";
-import HeroParticles from "@/components/HeroParticles";
+import NightDreamsLogo from "@/components/NightDreamsLogo";
+
+const CLUBS = ["Ku BCN", "Opium", "Bling Bling", "& Much More..."];
 
 const AnimatedCounter = ({ target }: { target: number }) => {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (v) => `${Math.floor(v).toLocaleString("it-IT")}+`);
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const controls = animate(count, target, { duration: 2.5, ease: "easeOut" });
     return controls.stop;
   }, [count, target]);
 
-  return <motion.span>{rounded}</motion.span>;
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
+
+const ClubMarquee = () => {
+  const doubled = [...CLUBS, ...CLUBS];
+  return (
+    <div className="overflow-hidden w-full max-w-lg mx-auto mt-2">
+      <motion.div
+        className="flex gap-6 whitespace-nowrap"
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+      >
+        {doubled.map((club, i) => (
+          <span
+            key={i}
+            className="text-sm md:text-base font-body tracking-widest uppercase"
+            style={{
+              color: "hsl(0, 0%, 85%)",
+              textShadow: "0 0 8px hsl(0 0% 75% / 0.6), 0 0 20px hsl(0 0% 80% / 0.3)",
+            }}
+          >
+            {club}
+          </span>
+        ))}
+      </motion.div>
+    </div>
+  );
 };
 
 const HeroSection = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    setMousePos({
-      x: ((e.clientX - rect.left) / rect.width - 0.5) * 2,
-      y: ((e.clientY - rect.top) / rect.height - 0.5) * 2,
-    });
+  const handleCta = () => {
+    navigate("/plan");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <section
-      id="home"
-      ref={containerRef}
-      onMouseMove={handleMouseMove}
-      className="relative w-full overflow-hidden"
-      style={{
-        height: "clamp(600px, 100vh, 800px)",
-        background: "linear-gradient(180deg, hsl(220 15% 4%) 0%, hsl(0 0% 0%) 40%, hsl(220 20% 6%) 100%)",
-      }}
-    >
-      {/* Subtle navy radial glow */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "radial-gradient(ellipse 80% 60% at 50% 40%, hsl(220 20% 12% / 0.5), transparent)",
-        }}
-      />
-
-      {/* Parallax gold accent light following mouse */}
-      <motion.div
-        className="absolute z-0 w-[600px] h-[600px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, hsl(43 72% 52% / 0.04), transparent 70%)",
-          left: "50%",
-          top: "40%",
-          transform: `translate(calc(-50% + ${mousePos.x * 30}px), calc(-50% + ${mousePos.y * 20}px))`,
-          transition: "transform 0.3s ease-out",
-        }}
-      />
-
-      {/* Star particles */}
-      <HeroParticles />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
-        {/* Logo with gentle glow pulse */}
+    <section id="home" className="relative min-h-fit md:min-h-screen w-full overflow-hidden pb-4 md:pb-0" style={{ backgroundColor: "hsl(0, 0%, 0%)" }}>
+      {/* Party lights background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative mb-8"
+          className="absolute w-[600px] h-[600px] rounded-full opacity-[0.06]"
+          style={{ background: "radial-gradient(circle, hsl(280, 70%, 50%), transparent 70%)", top: "-10%", left: "-10%" }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.04, 0.08, 0.04] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-[500px] h-[500px] rounded-full opacity-[0.05]"
+          style={{ background: "radial-gradient(circle, hsl(330, 70%, 50%), transparent 70%)", bottom: "-5%", right: "-5%" }}
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.03, 0.07, 0.03] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
+      </div>
+
+      <div className="relative z-10 flex h-full min-h-[85vh] md:min-h-screen flex-col items-center justify-center px-4 pt-16 pb-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="max-w-3xl w-full"
         >
-          <motion.div
-            className="absolute inset-0 rounded-full pointer-events-none"
-            style={{
-              background: "radial-gradient(circle, hsl(43 72% 52% / 0.15), transparent 70%)",
-              transform: "scale(2.5)",
-            }}
-            animate={{
-              opacity: [0.4, 0.7, 0.4],
-              scale: [2.2, 2.6, 2.2],
-            }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          />
+          <div className="mx-auto silver-line-wide mb-6" />
+
+          {/* Rotating logo with glow pulse */}
           <motion.img
             src={nightdreamsBadge}
-            alt="Night Dreams BCN"
-            className="w-20 h-20 md:w-28 md:h-28 object-contain relative z-10"
-            animate={{
-              rotateY: [0, 360],
-            }}
+            alt="NightDreams Logo"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 360 }}
             transition={{
-              rotateY: { duration: 20, repeat: Infinity, ease: "linear" },
+              opacity: { duration: 0.8, delay: 0.5 },
+              scale: { duration: 0.8, delay: 0.5 },
+              rotateY: { duration: 4, repeat: Infinity, ease: "linear" },
             }}
             style={{
               transformStyle: "preserve-3d",
-              filter: "drop-shadow(0 0 20px hsl(43 72% 52% / 0.3))",
+              filter: "drop-shadow(0 0 16px hsl(45, 80%, 55%)) drop-shadow(0 0 40px hsl(45, 70%, 45% / 0.4))",
             }}
+            className="mx-auto w-24 h-24 md:w-32 md:h-32 object-contain mb-4 animate-neon-pulse"
           />
-        </motion.div>
 
-        {/* Gold decorative line */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-          className="w-24 h-px mb-8"
-          style={{
-            background: "linear-gradient(90deg, transparent, hsl(43 72% 52%), transparent)",
-          }}
-        />
-
-        {/* Main title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="font-body font-bold tracking-[0.08em] uppercase mb-3"
-          style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
-        >
-          <span style={{ color: "hsl(0 0% 95%)" }}>Night </span>
-          <span
-            style={{
-              background: "linear-gradient(135deg, hsl(43 80% 65%), hsl(43 72% 52%), hsl(43 65% 40%))",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Dreams
-          </span>
-          <span style={{ color: "hsl(0 0% 95%)" }}> BCN</span>
-        </motion.h1>
-
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="font-body font-light text-sm md:text-lg tracking-[0.15em] uppercase mb-6 max-w-xl"
-          style={{ color: "hsl(0 0% 70%)" }}
-        >
-          {t.hero.description}
-        </motion.p>
-
-        {/* Counter */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-          className="mb-6"
-        >
-          <span
-            className="text-3xl md:text-5xl font-body font-bold"
-            style={{ color: "hsl(43 72% 52%)" }}
-          >
-            <AnimatedCounter target={10000} />
-          </span>
-          <p
-            className="text-xs md:text-sm tracking-[0.2em] uppercase mt-1 font-body"
-            style={{ color: "hsl(0 0% 55%)" }}
-          >
-            {t.hero.vipTrust}
+          {/* NIGHTDREAMS BARCELLONA */}
+          <div className="flex justify-center mb-1">
+            <NightDreamsLogo size="hero" showIcon={false} />
+          </div>
+          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-6 font-mono md:text-lg">
+            {t.hero.subtitle}
           </p>
-        </motion.div>
 
-        {/* Year-round tagline */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="font-body font-medium text-xs md:text-sm tracking-[0.25em] uppercase mb-8"
-        >
-          <motion.span
-            style={{ color: "hsl(43 72% 52%)" }}
-            animate={{
-              textShadow: [
-                "0 0 8px hsl(43 72% 52% / 0.3)",
-                "0 0 20px hsl(43 72% 52% / 0.5)",
-                "0 0 8px hsl(43 72% 52% / 0.3)",
-              ],
-            }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          {/* Animated counter */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1, duration: 0.6 }}
+            className="mb-6"
           >
-            {t.hero.yearRound}
-          </motion.span>
-        </motion.p>
+            <span className="text-3xl md:text-5xl font-display font-bold" style={{ color: "hsl(45, 80%, 55%)" }}>
+              <AnimatedCounter target={10000} />
+            </span>
+            <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-silver-light/80 mt-1 font-body">
+              {t.hero.vipTrust}
+            </p>
+          </motion.div>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.8, duration: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4"
-        >
-          <button
-            onClick={() => {
-              navigate("/plan");
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="font-body text-xs tracking-[0.2em] uppercase px-10 py-4 border transition-all duration-500"
-            style={{
-              borderColor: "hsl(43 72% 52%)",
-              color: "hsl(43 72% 52%)",
-              background: "transparent",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "hsl(43 72% 52%)";
-              e.currentTarget.style.color = "hsl(0 0% 0%)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = "hsl(43 72% 52%)";
-            }}
+          {/* Skip-the-line badge */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.4, duration: 0.5 }}
+            className="mb-5"
           >
-            {t.hero.exploreServices}
-          </button>
+            <motion.div
+              animate={{ boxShadow: ["0 0 8px hsl(0, 75%, 50%)", "0 0 24px hsl(0, 75%, 55%)", "0 0 8px hsl(0, 75%, 50%)"] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm cursor-pointer"
+              style={{ backgroundColor: "hsl(0, 75%, 50%)" }}
+              onClick={() => navigate("/services#skip-line")}
+            >
+              <Zap size={18} className="text-foreground" style={{ color: "hsl(0, 0%, 100%)" }} />
+              <span className="text-sm md:text-base font-bold tracking-wider uppercase font-body" style={{ color: "hsl(0, 0%, 100%)" }}>
+                {t.hero.skipLine}
+              </span>
+              <Zap size={18} className="text-foreground" style={{ color: "hsl(0, 0%, 100%)" }} />
+            </motion.div>
+            <div className="mt-3 space-y-1">
+              <p className="text-xs md:text-sm text-silver-light/90 font-body">{t.hero.skipLineDesc1}</p>
+              <p className="text-xs md:text-sm text-silver-light/90 font-body">{t.hero.skipLineDesc2}</p>
+            </div>
+          </motion.div>
 
-          <button
-            onClick={() => navigate("/services#skip-line")}
-            className="font-body text-xs tracking-[0.2em] uppercase px-10 py-4 border transition-all duration-500"
-            style={{
-              borderColor: "hsl(0 0% 30%)",
-              color: "hsl(0 0% 75%)",
-              background: "transparent",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "hsl(0 0% 60%)";
-              e.currentTarget.style.color = "hsl(0 0% 95%)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "hsl(0 0% 30%)";
-              e.currentTarget.style.color = "hsl(0 0% 75%)";
-            }}
+          {/* VIP Tables + Club marquee */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.8, duration: 0.5 }}
+            className="mb-6"
           >
-            {t.hero.skipLine}
-          </button>
-        </motion.div>
+            <div className="inline-flex items-center gap-2 mb-1">
+              <PartyPopper size={18} style={{ color: "hsl(45, 80%, 55%)" }} />
+              <span className="text-sm md:text-base font-bold tracking-wider uppercase font-body text-silver-light">
+                {t.hero.vipTables}
+              </span>
+            </div>
+            <ClubMarquee />
+          </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-8"
-        >
-          <div
-            className="w-px h-12"
-            style={{
-              background: "linear-gradient(to bottom, hsl(43 72% 52% / 0.5), transparent)",
-            }}
-          />
+          {/* Enter the world */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.2 }}
+            className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-silver-dark font-mono mb-4"
+          >
+            {t.hero.enterWorld}
+          </motion.p>
+
+          {/* 365 days animated text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.4, duration: 0.5 }}
+            className="relative"
+          >
+            <motion.p
+              className="text-lg md:text-2xl font-display font-bold tracking-[0.15em] uppercase"
+              style={{ color: "hsl(45, 80%, 55%)" }}
+              animate={{
+                textShadow: [
+                  "0 0 10px hsl(45, 80%, 55% / 0.4), 0 0 20px hsl(45, 80%, 55% / 0.2)",
+                  "0 0 20px hsl(45, 80%, 55% / 0.6), 0 0 40px hsl(45, 80%, 55% / 0.3)",
+                  "0 0 10px hsl(45, 80%, 55% / 0.4), 0 0 20px hsl(45, 80%, 55% / 0.2)",
+                ],
+              }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {t.hero.yearRound}
+            </motion.p>
+          </motion.div>
         </motion.div>
       </div>
+
     </section>
   );
 };
