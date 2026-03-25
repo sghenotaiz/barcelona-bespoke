@@ -130,14 +130,20 @@ const HeroSection = () => {
             transition={{ delay: 1.4, duration: 0.5 }}
             className="mb-5"
           >
-            <motion.div
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 min-h-[48px] cursor-pointer font-body text-[11px] tracking-[0.25em] uppercase border border-silver/40 text-silver transition-all duration-500 hover:bg-white/10 hover:border-white/60 hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
-              onClick={() => navigate("/services#skip-line")}
-            >
-              <span>
-                {t.hero.skipLine}
-              </span>
-            </motion.div>
+            <div className="inline-flex items-center gap-3">
+              <motion.div
+                className="inline-flex items-center justify-center gap-2 px-10 py-4 min-h-[48px] cursor-pointer font-body text-[11px] tracking-[0.25em] uppercase border border-silver/40 text-silver transition-all duration-500 hover:bg-white/10 hover:border-white/60 hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+                onClick={() => navigate("/services#skip-line")}
+              >
+                <span>{t.hero.skipLine}</span>
+              </motion.div>
+              <motion.div
+                className="inline-flex items-center justify-center gap-2 px-10 py-4 min-h-[48px] cursor-pointer font-body text-[11px] tracking-[0.25em] uppercase border border-silver/40 text-silver transition-all duration-500 hover:bg-white/10 hover:border-white/60 hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+                onClick={() => navigate("/moments#testimonials")}
+              >
+                <span>Recensioni</span>
+              </motion.div>
+            </div>
             <div className="mt-3 space-y-1">
               <p className="text-xs md:text-sm text-silver-light/90 font-body">{t.hero.skipLineDesc1}</p>
               <p className="text-xs md:text-sm text-silver-light/90 font-body">{t.hero.skipLineDesc2}</p>
