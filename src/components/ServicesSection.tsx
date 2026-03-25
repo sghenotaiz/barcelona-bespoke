@@ -100,8 +100,9 @@ const serviceBlocks: ServiceBlock[] = [
   descKey: "expTattooDesc",
   badge: "badgeTopPick",
   bullets: [
-  { icon: Star, key: "expTattooBullet1" },
-  { icon: Sparkles, key: "expTattooBullet2" }]
+   { icon: Star, key: "expTattooBullet1" },
+   { icon: Sparkles, key: "expTattooBullet2" },
+   { icon: ShieldCheck, key: "expTattooBullet3" }]
 },
 {
   id: "dinner-show",

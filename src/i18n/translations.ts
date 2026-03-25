@@ -1362,6 +1362,7 @@ export const translations = {
       expTattooDesc: "Studi di tatuaggi partner con i migliori artisti — portati a casa un pezzo unico per ricordare la tua esperienza a Barcellona.",
       expTattooBullet1: "Artisti professionisti e studi premium",
       expTattooBullet2: "Design personalizzati e senza appuntamento",
+      expTattooBullet3: "Pulizia e sicurezza garantita, al miglior prezzo",
       expDinnerShowTitle: "Cene Spettacolo",
       expDinnerShowSubtitle: "Cena con un tocco spettacolare",
       expDinnerShowDesc: "Esperienze gastronomiche esclusive con intrattenimento dal vivo — cabaret, musica e cucina gourmet in una serata indimenticabile.",
