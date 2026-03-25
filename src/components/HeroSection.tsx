@@ -6,7 +6,7 @@ import nightdreamsBadge from "@/assets/nightdreams-badge.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import NightDreamsLogo from "@/components/NightDreamsLogo";
 
-const CLUBS = ["Ku", "Opium", "Bling Bling", "Pacha", "Sala Apolo", "Razzmatazz", "Shôko"];
+const CLUBS = ["Ku", "Opium", "Bling Bling", "Pacha", "& Much More..."];
 
 const AnimatedCounter = ({ target }: { target: number }) => {
   const count = useMotionValue(0);
