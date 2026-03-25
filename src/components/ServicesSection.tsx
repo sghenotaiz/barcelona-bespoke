@@ -27,7 +27,6 @@ type ServiceBlock = {
   bullets: {icon: React.ElementType;key: string;}[];
   badge?: string;
   imagePosition?: string;
-  imageScale?: number;
 };
 
 const serviceBlocks: ServiceBlock[] = [
@@ -63,7 +62,6 @@ const serviceBlocks: ServiceBlock[] = [
   subtitleKey: "expPoolSubtitle",
   descKey: "expPoolDesc",
   badge: "badgeSummer",
-  imageScale: 0.8,
   bullets: [
   { icon: Sun, key: "expPoolBullet1" },
   { icon: Music, key: "expPoolBullet2" },
@@ -184,10 +182,7 @@ const ServiceBlockItem = ({
               src={block.image}
               alt={getText(block.titleKey)}
               className="w-full h-full object-cover transition-transform duration-[2s] ease-out hover:scale-[1.03]"
-              style={{
-                ...(block.imagePosition ? { objectPosition: block.imagePosition } : {}),
-                ...(block.imageScale ? { transform: `scale(${block.imageScale})` } : {})
-              }} />
+              style={block.imagePosition ? { objectPosition: block.imagePosition } : undefined} />
           </motion.div>
           {/* Gradient overlay toward text side (desktop) */}
           <div
