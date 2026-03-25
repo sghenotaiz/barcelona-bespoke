@@ -979,7 +979,7 @@ export const translations = {
       expSkipLineBullet1: "Évitez des heures de queue et files interminables",
       expSkipLineBullet2: "Promoteurs vous attendent devant les clubs et vous accompagnent à l'entrée, en vous faisant couper la file",
       expSkipLineBullet3: "Contrôle de tenue pour garantir votre entrée",
-      expSkipLineBullet4: "Packs hebdomadaires = meilleurs prix",
+      expSkipLineBullet4: "Packs hebdomadaires = meilleurs prix et réductions de groupe",
       expPoolTitle: "Pool Parties",
       expPoolSubtitle: "Sous le soleil de Barcelone",
       expPoolDesc: "Journées ensoleillées, eau cristalline et les meilleurs DJs — des fêtes différentes chaque jour.",
