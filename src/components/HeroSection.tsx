@@ -7,8 +7,8 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="home" className="relative min-h-[80vh] md:min-h-screen w-full overflow-hidden" style={{ backgroundColor: "hsl(0, 0%, 0%)" }}>
-      <div className="relative z-10 flex h-full min-h-[80vh] md:min-h-screen flex-col items-center justify-center px-6 text-center">
+    <section id="home" className="relative min-h-[70vh] md:min-h-[85vh] w-full overflow-hidden" style={{ backgroundColor: "hsl(0, 0%, 0%)" }}>
+      <div className="relative z-10 flex h-full min-h-[70vh] md:min-h-[85vh] flex-col items-center justify-center px-6 pt-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ const HeroSection = () => {
             {t.hero.subtitle}
           </p>
 
-          <p className="text-sm md:text-lg text-silver-light/80 max-w-2xl mx-auto leading-relaxed text-center">
+          <p className="text-sm md:text-lg text-silver-light/80 max-w-2xl mx-auto leading-relaxed text-center mb-0">
             {t.hero.heroDescription}
           </p>
         </motion.div>
