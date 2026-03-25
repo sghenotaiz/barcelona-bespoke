@@ -15,13 +15,14 @@ interface GalleryItem {
   subtitleKey: string;
   image: string;
   path: string;
+  objectPosition?: string;
 }
 
 const galleryItems: GalleryItem[] = [
 { id: "plan", titleKey: "planExperience", subtitleKey: "planExperienceDesc", image: sagradaFamiliaImg, path: "/plan" },
 { id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: ndStickerImg, path: "/about" },
 { id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: homeServicesImg, path: "/services" },
-{ id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about" },
+{ id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about", objectPosition: "30% center" },
 { id: "moments", titleKey: "momentsCrafted", subtitleKey: "momentsCraftedDesc", image: diningImg, path: "/moments" }];
 
 
@@ -183,6 +184,7 @@ const CircularGallery = () => {
                         src={item.image}
                         alt={texts[item.titleKey]}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                         loading="lazy" />
                       
                       <div
