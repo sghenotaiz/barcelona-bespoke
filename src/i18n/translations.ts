@@ -545,7 +545,7 @@ export const translations = {
       expTattooSubtitle: "Tatúa tu recuerdo de Barcelona",
       expTattooDesc: "Estudios de tatuajes partner con los mejores artistas — llévate una pieza única para recordar tu experiencia en Barcelona.",
       expTattooBullet1: "Artistas profesionales y estudios premium",
-      expTattooBullet2: "Diseños personalizados y sin cita previa",
+      expTattooBullet2: "Elige lo que quieras, te reservamos la sesión",
       expTattooBullet3: "Limpieza y seguridad garantizada, al mejor precio",
       expDinnerShowTitle: "Cenas Espectáculo",
       expDinnerShowSubtitle: "Cena con un toque espectacular",
