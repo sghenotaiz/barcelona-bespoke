@@ -1,28 +1,14 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import heroImage from "@/assets/barcelona-night.jpg";
 import nightdreamsBadge from "@/assets/nightdreams-badge.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import NightDreamsLogo from "@/components/NightDreamsLogo";
 
 const HeroSection = () => {
   const { t } = useLanguage();
-  const navigate = useNavigate();
-
-  const goTo = (path: string) => {
-    navigate(path);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }} />
-
-      <div className="absolute inset-0 bg-hero-overlay" />
-
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+    <section id="home" className="relative min-h-[80vh] md:min-h-screen w-full overflow-hidden" style={{ backgroundColor: "hsl(0, 0%, 0%)" }}>
+      <div className="relative z-10 flex h-full min-h-[80vh] md:min-h-screen flex-col items-center justify-center px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,21 +33,6 @@ const HeroSection = () => {
           <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-6 font-mono text-center md:text-2xl">
             {t.hero.subtitle}
           </p>
-          <p className="font-body text-sm tracking-wide max-w-xl mx-auto mb-10 leading-relaxed text-center font-normal md:text-sm text-secondary-foreground">
-            {t.hero.description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => goTo("/services")}
-              className="border border-primary-foreground/30 px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300">
-              {t.hero.exploreServices}
-            </button>
-            <button
-              onClick={() => goTo("/plan")}
-              className="bg-silver px-10 py-3.5 font-body text-xs tracking-[0.2em] uppercase text-background hover:bg-silver-dark transition-all duration-300">
-              {t.hero.requestVip}
-            </button>
-          </div>
         </motion.div>
       </div>
 
