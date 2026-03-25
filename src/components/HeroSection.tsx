@@ -153,7 +153,6 @@ const HeroSection = () => {
             className="mb-6"
           >
             <div className="inline-flex items-center gap-2 mb-1">
-              <PartyPopper size={18} style={{ color: "hsl(45, 80%, 55%)" }} />
               <span className="text-sm md:text-base font-bold tracking-wider uppercase font-body text-silver-light">
                 {t.hero.vipTables}
               </span>
