@@ -326,7 +326,7 @@ export const translations = {
       label: "Our Team",
       title: "OUR",
       titleAccent: "TEAM",
-      description: "Our promoters are normal people just like you, whose only goal is to make sure you have the best time in Barcelona. We carefully listen to every client, understand their tastes, and suggest the most suitable experiences to match their expectations. Our multicultural team comes from different countries and speaks the main international languages (English, Spanish, French, Italian, German), so you can always talk to someone who understands you. We want you to enjoy your nights so much that you will want to come back to us again and again.",
+      description: "Our promoters are normal people just like you, whose only goal is to make sure you have the best holiday in Barcelona. We carefully listen to every client, understand their tastes, and suggest the most suitable experiences to match their expectations. Our multicultural team comes from different countries and speaks the main international languages (English, Spanish, French, Italian, German), so you can always talk to someone who understands you. Come meet our promoters or become one of our partners!",
       promotersTitle: "Our",
       promotersAccent: "Promoters",
       simoneRole: "Promoter ND + Online Manager",
