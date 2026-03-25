@@ -6,7 +6,7 @@ import {
   Wine, Clock, CalendarDays, Waves, UtensilsCrossed,
   Building2, Car, Ship, PartyPopper, Sparkles, Star,
   Users, Percent, BedDouble, Plane, Zap, Sun, Eye,
-  Crown, Music, Ticket, ShieldCheck, DollarSign } from
+  Crown, Music, Ticket, ShieldCheck, DollarSign, Play, X } from
 "lucide-react";
 import vipTablesImg from "@/assets/services/vip-tables.jpg";
 import skipLineImg from "@/assets/services/multi-entry.jpg";
