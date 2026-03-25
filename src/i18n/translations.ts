@@ -161,6 +161,12 @@ export const translations = {
       expEventsBullet1: "Bachelor & bachelorette parties",
       expEventsBullet2: "Corporate events & team building",
       expEventsBullet3: "Fully customized experiences",
+      expHotelTitle: "Apartments & Hotels",
+      expHotelSubtitle: "Accommodation for every group",
+      expHotelDesc: "Wide availability of rooms for every type of group, from cozy apartments to premium hotels. Plus, dedicated transfers to the best clubs at set times.",
+      expHotelBullet1: "Rooms for groups of any size",
+      expHotelBullet2: "Apartments & hotel options",
+      expHotelBullet3: "Scheduled club transfers included",
       yacht: {
         title: "Yacht & Boat Charters",
         description:
