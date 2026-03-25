@@ -1339,7 +1339,7 @@ export const translations = {
       expSkipLineBullet1: "Salta ore di coda e file interminabili",
       expSkipLineBullet2: "Promoter ti aspettano fuori dalle discoteche e ti accompagnano alla porta, facendoti saltare la fila",
       expSkipLineBullet3: "Outfit check per garantirti l'entrata",
-      expSkipLineBullet4: "Pack settimanali  = prezzi migliori",
+      expSkipLineBullet4: "Pack settimanali  = prezzi migliori e sconti comitiva",
       expPoolTitle: "Pool Party",
       expPoolSubtitle: "Sotto il sole di Barcellona",
       expPoolDesc: "Giorni di sole, acqua cristallina e i migliori DJ — feste diverse ogni giorno della settimana, dall'afrohouse all'hip-hop, reggaeton, vivi i tuoi pomeriggi all'insegna del divertimento!",
