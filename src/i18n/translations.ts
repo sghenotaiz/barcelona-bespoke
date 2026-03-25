@@ -137,7 +137,7 @@ export const translations = {
       expTattooSubtitle: "Ink your Barcelona memory",
       expTattooDesc: "Partner tattoo studios with top artists — get a unique piece to remember your Barcelona experience forever.",
       expTattooBullet1: "Professional artists & premium studios",
-      expTattooBullet2: "Custom designs & walk-ins welcome",
+      expTattooBullet2: "Choose what you want, we book your session",
       expTattooBullet3: "Guaranteed cleanliness & safety, at the best price",
       expDinnerShowTitle: "Dinner Shows",
       expDinnerShowSubtitle: "Dine with a spectacular twist",
