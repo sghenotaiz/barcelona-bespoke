@@ -124,8 +124,8 @@ const serviceBlocks: ServiceBlock[] = [
   subtitleKey: "expLimoSubtitle",
   descKey: "expLimoDesc",
   badge: "badgeVip",
-  imagePosition: "60% center",
-  mobileImagePosition: "60% center",
+  imagePosition: "30% center",
+  mobileImagePosition: "30% center",
   bullets: [
   { icon: Car, key: "expLimoBullet1" },
   { icon: Plane, key: "expLimoBullet2" }]
