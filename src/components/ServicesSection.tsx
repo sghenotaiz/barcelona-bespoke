@@ -373,9 +373,19 @@ const ServiceBlockItem = ({
               >
                 <X size={16} />
               </button>
-              <div className="w-full h-full flex items-center justify-center text-white/40 font-body text-sm tracking-wide">
-                {videoModal === "ku" ? "Video Ku BCN — coming soon" : "Video Opium — coming soon"}
-              </div>
+              {videoModal === "ku" ? (
+                <div className="w-full h-full flex items-center justify-center text-white/40 font-body text-sm tracking-wide">
+                  Video Ku BCN — coming soon
+                </div>
+              ) : (
+                <video
+                  src="/videos/saltafila-opium.mp4"
+                  controls
+                  autoPlay
+                  playsInline
+                  className="w-full h-full object-contain"
+                />
+              )}
             </motion.div>
           </motion.div>
         )}
