@@ -1337,7 +1337,7 @@ export const translations = {
       expSkipLineSubtitle: "Mai più in coda",
       expSkipLineDesc: "Saltare ore di fila è fondamentale per goderti la serata. I nostri promoter ti aspettano FUORI dalla discoteca, pronti ad accoglierti e accompagnarti all'ingresso facendoti saltare file interminabili. Più tickets prenoti, più risparmi. I nostri pack settimanali sono famosi per far godere delle maggiori discoteche della città a prezzi accessibili e saltando sempre le file.",
       expSkipLineBullet1: "Salta ore di coda e file interminabili",
-      expSkipLineBullet2: "Promoter ti aspettano fuori dalle discoteche e ti accompagnano alla porta",
+      expSkipLineBullet2: "Promoter ti aspettano fuori dalle discoteche e ti accompagnano alla porta, facendoti saltare la fila",
       expSkipLineBullet3: "Outfit check per garantirti l'entrata",
       expSkipLineBullet4: "Pack settimanali  = prezzi migliori",
       expPoolTitle: "Pool Party",
