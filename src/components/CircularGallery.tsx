@@ -176,7 +176,7 @@ const CircularGallery = () => {
                     onClick={() => handleItemClick(item.path)}>
                     
                     <div
-                      className="w-full h-full overflow-hidden border border-border/20 hover:border-silver/40 transition-all duration-500"
+                      className="w-full h-full overflow-hidden border-2 border-black hover:border-silver/40 transition-all duration-500"
                       style={{ backfaceVisibility: "hidden" }}>
                       
                       <img
