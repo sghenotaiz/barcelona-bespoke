@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { PartyPopper } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import nightdreamsBadge from "@/assets/nightdreams-badge.png";
 import { useLanguage } from "@/i18n/LanguageContext";
