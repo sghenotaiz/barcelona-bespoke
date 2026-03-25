@@ -14,7 +14,7 @@ const sizeClasses = {
 };
 
 const iconSizes = {
-  sm: "w-8 h-8",
+  sm: "w-10 h-10",
   md: "w-10 h-10",
   lg: "w-16 h-16",
   hero: "w-24 h-24 md:w-32 md:h-32"
