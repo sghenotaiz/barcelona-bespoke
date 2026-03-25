@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
-import vipTablesImg from "@/assets/services/vip-tables.jpg";
+import homeServicesImg from "@/assets/home-services.jpg";
 import ndStickerImg from "@/assets/nd-sticker-barceloneta.png";
 import sagradaFamiliaImg from "@/assets/sagrada-familia.jpg";
 import nightlifeImg from "@/assets/nightlife.jpg";
