@@ -555,7 +555,7 @@ export const translations = {
       expSkipLineBullet1: "Sáltate horas de cola y filas interminables",
       expSkipLineBullet2: "Promotores te esperan fuera de las discotecas y te acompañan a la puerta, haciéndote saltar la fila",
       expSkipLineBullet3: "Control de outfit para garantizarte la entrada",
-      expSkipLineBullet4: "Packs semanales = mejores precios",
+      expSkipLineBullet4: "Packs semanales = mejores precios y descuentos de grupo",
       expPoolTitle: "Pool Parties",
       expPoolSubtitle: "Bajo el sol de Barcelona",
       expPoolDesc: "Días de sol, agua cristalina y los mejores DJs — fiestas diferentes cada día de la semana.",
