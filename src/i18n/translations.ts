@@ -1336,7 +1336,7 @@ export const translations = {
       card4Desc: "Magia diurna a Barcellona, pool party esclusivi e con eventi diversi in base al giorno. Contattaci per chiedere informazioni e acquistare i ticket per la tua festa in piscina.",
       card5Title: "Sconti Ristoranti",
       card5Desc: "Collaboriamo con alcuni ristoranti di Barcellona fornendo ai nostri clienti anche uno sconto oltre al servizio di prenotazione con tavolo garantito.",
-      card6Title: "Appartamenti & Hotel",
+      card6Title: "Appartamenti e Hotel",
       card6Desc: "Abbiamo a disposizione una serie di appartamenti a Barcellona da affittare ai nostri clienti. Contattaci per maggiori info.",
       card7Title: "Limousine & Autista",
       card7Desc: "Arriva con stile. Limousine di lusso con autisti professionisti — dall'hotel alla porta del club o servizio aeroporto.",
