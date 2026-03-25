@@ -896,7 +896,7 @@ export const translations = {
       vipTables: "Tables VIP au meilleur prix",
       ctaButton: "Demandez-nous ce que vous voulez",
       enterWorld: "ENTREZ DANS LE MONDE NIGHTDREAMS",
-      yearRound: "365 jours par an",
+      yearRound: "opérationnels 365 jours par an",
     },
     about: {
       label: "À Propos",
