@@ -15,6 +15,7 @@ interface GalleryItem {
   subtitleKey: string;
   image: string;
   path: string;
+  objectPosition?: string;
 }
 
 const galleryItems: GalleryItem[] = [
