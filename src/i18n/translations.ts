@@ -1320,7 +1320,7 @@ export const translations = {
       vipTables: "Tavoli VIP al miglior prezzo",
       ctaButton: "Chiedici ciò che vuoi",
       enterWorld: "ENTRA NEL MONDO NIGHTDREAMS",
-      yearRound: "365 giorni l'anno",
+      yearRound: "operativi 365 giorni l'anno",
     },
     about: {
       label: "Chi Siamo",
