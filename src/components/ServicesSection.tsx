@@ -89,15 +89,26 @@ const serviceBlocks: ServiceBlock[] = [
   { icon: UtensilsCrossed, key: "expRestaurantBullet2" }]
 },
 {
-  id: "apartments",
-  image: apartmentsImg,
-  titleKey: "expApartmentsTitle",
-  subtitleKey: "expApartmentsSubtitle",
-  descKey: "expApartmentsDesc",
+  id: "tattoo",
+  image: tattooStudioImg,
+  titleKey: "expTattooTitle",
+  subtitleKey: "expTattooSubtitle",
+  descKey: "expTattooDesc",
   badge: "badgeTopPick",
   bullets: [
-  { icon: BedDouble, key: "expApartmentsBullet1" },
-  { icon: Building2, key: "expApartmentsBullet2" }]
+  { icon: Star, key: "expTattooBullet1" },
+  { icon: Sparkles, key: "expTattooBullet2" }]
+},
+{
+  id: "dinner-show",
+  image: dinnerShowImg,
+  titleKey: "expDinnerShowTitle",
+  subtitleKey: "expDinnerShowSubtitle",
+  descKey: "expDinnerShowDesc",
+  badge: "badgeVip",
+  bullets: [
+  { icon: Music, key: "expDinnerShowBullet1" },
+  { icon: UtensilsCrossed, key: "expDinnerShowBullet2" }]
 },
 {
   id: "limo",
