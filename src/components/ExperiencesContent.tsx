@@ -6,6 +6,8 @@ import { z } from "zod";
 import DualCTA from "@/components/DualCTA";
 import marcoCarolaCover from "@/assets/images/marco-carola-cover.jpg";
 import marcoCarolaVideo from "@/assets/videos/marco-carola-ku-bcn.mp4";
+import tygaOpiumCover from "@/assets/images/tyga-opium-cover.jpg";
+import tygaOpiumVideo from "@/assets/videos/tyga-opium.mp4";
 
 // Event highlight cards data
 const eventHighlights = [
