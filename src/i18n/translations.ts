@@ -45,7 +45,7 @@ export const translations = {
       skipLine: "SKIP-THE-LINE TICKETS",
       skipLineDesc1: "No 3-hour queues outside clubs",
       skipLineDesc2: "Instant access to the best parties",
-      vipTables: "Guaranteed VIP Tables",
+      vipTables: "VIP Tables at the best price",
       ctaButton: "Ask us anything",
       enterWorld: "ENTER THE NIGHTDREAMS WORLD",
       yearRound: "365 days a year",
