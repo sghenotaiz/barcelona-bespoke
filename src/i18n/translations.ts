@@ -143,6 +143,7 @@ export const translations = {
       expDinnerShowDesc: "Exclusive dinner experiences with live entertainment — cabaret, music and gourmet dining in one unforgettable night.",
       expDinnerShowBullet1: "Live performances & entertainment",
       expDinnerShowBullet2: "Gourmet multi-course menus",
+      expDinnerShowBullet3: "Bottles & drinks in the after-dinner with DJ set",
       expLimoTitle: "Limousine",
       expLimoSubtitle: "Arrive like a VIP",
       expLimoDesc: "Luxury limousines with professional chauffeurs — from hotel to club door or airport.",
