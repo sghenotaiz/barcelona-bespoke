@@ -893,7 +893,7 @@ export const translations = {
       skipLine: "TICKETS COUPE-FILE",
       skipLineDesc1: "Plus de 3 heures de queue devant les clubs",
       skipLineDesc2: "Accès immédiat aux meilleures soirées",
-      vipTables: "Tables VIP garanties",
+      vipTables: "Tables VIP au meilleur prix",
       ctaButton: "Demandez-nous ce que vous voulez",
       enterWorld: "ENTREZ DANS LE MONDE NIGHTDREAMS",
       yearRound: "365 jours par an",
