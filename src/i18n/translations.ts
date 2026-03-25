@@ -564,7 +564,7 @@ export const translations = {
       expPoolBullet3: "Las mejores piscinas y beach clubs",
       expRestaurantTitle: "Restaurantes",
       expRestaurantSubtitle: "Saborea lo mejor de Barcelona",
-      expRestaurantDesc: "Descuentos exclusivos del 10-20% en los mejores restaurantes con reserva de mesa garantizada.",
+      expRestaurantDesc: "Descuentos exclusivos del 10-20% en los mejores restaurantes con reserva de mesa garantizada. Dinos tus preferencias, nos encargamos de todo.",
       expRestaurantBullet1: "10-20% de descuento en restaurantes partner",
       expRestaurantBullet2: "Reserva de mesa garantizada",
       expTattooTitle: "Estudio de Tatuajes",
