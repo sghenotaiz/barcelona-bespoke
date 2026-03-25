@@ -30,14 +30,16 @@ const NightDreamsLogo = ({ size = "md", showIcon = true, showText = true }: Nigh
         className={`${iconSizes[size]} object-contain`} />
 
       }
-      <span
-        className={`${sizeClasses[size]} tracking-wider uppercase`}
-        style={{
-          fontFamily: "'Aldo the Apache', sans-serif",
-          color: "hsl(0, 0%, 100%)",
-        }}>
-        NightDreams
-      </span>
+      {showText && (
+        <span
+          className={`${sizeClasses[size]} tracking-wider uppercase`}
+          style={{
+            fontFamily: "'Aldo the Apache', sans-serif",
+            color: "hsl(0, 0%, 100%)",
+          }}>
+          NightDreams
+        </span>
+      )}
     </div>);
 
 };
