@@ -977,7 +977,7 @@ export const translations = {
       expSkipLineSubtitle: "Plus jamais de file d'attente",
       expSkipLineDesc: "Éviter des heures de queue est essentiel pour profiter de votre soirée. Nos promoteurs vous attendent DEVANT le club, prêts à vous accueillir et vous accompagner à l'entrée en vous faisant sauter les files interminables. Plus vous réservez de tickets, plus vous économisez. Nos packs hebdomadaires sont réputés pour profiter des meilleures discothèques de la ville à prix accessibles et sans jamais faire la queue.",
       expSkipLineBullet1: "Évitez des heures de queue et files interminables",
-      expSkipLineBullet2: "Promoteurs vous attendent devant les clubs et vous accompagnent à la porte",
+      expSkipLineBullet2: "Promoteurs vous attendent devant les clubs et vous accompagnent à l'entrée, en vous faisant couper la file",
       expSkipLineBullet3: "Contrôle de tenue pour garantir votre entrée",
       expSkipLineBullet4: "Packs hebdomadaires = meilleurs prix",
       expPoolTitle: "Pool Parties",
