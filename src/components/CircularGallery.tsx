@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 import vipTablesImg from "@/assets/services/vip-tables.jpg";
 import barcelonaSkylineImg from "@/assets/barcelona-skyline.jpg";
-import restaurantImg from "@/assets/restaurant.jpg";
+import sagradaFamiliaImg from "@/assets/sagrada-familia.jpg";
 import nightlifeImg from "@/assets/nightlife.jpg";
 import diningImg from "@/assets/highlights-eventi.jpg";
 
