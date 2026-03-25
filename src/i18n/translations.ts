@@ -989,6 +989,12 @@ export const translations = {
       expEventsBullet1: "Enterrements de vie de garçon/fille",
       expEventsBullet2: "Événements corporate et team building",
       expEventsBullet3: "Expériences entièrement personnalisées",
+      expHotelTitle: "Appartements & Hôtels",
+      expHotelSubtitle: "Hébergement pour chaque groupe",
+      expHotelDesc: "Large disponibilité de chambres pour tout type de groupe, des appartements confortables aux hôtels premium. En plus, des transferts dédiés vers les meilleures discothèques à des heures fixes.",
+      expHotelBullet1: "Chambres pour groupes de toute taille",
+      expHotelBullet2: "Options appartements et hôtels",
+      expHotelBullet3: "Transferts programmés vers les clubs inclus",
       yacht: {
         title: "Location de Yachts",
         description:
