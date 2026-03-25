@@ -453,6 +453,8 @@ export const translations = {
       subtitle: "Barcelona",
       description:
         "Vive tu mejor experiencia en una de las ciudades más bellas del mundo. ¡Nos encargaremos de ti!",
+      heroDescription:
+        "Vive tu mejor experiencia en la ciudad del entretenimiento por excelencia. Más de diez mil clientes al año confían en nosotros — descubre nuestro mundo y forma parte de la familia NightDreams!",
       exploreServices: "Explorar Servicios",
       requestVip: "Solicitar Presupuesto",
     },
