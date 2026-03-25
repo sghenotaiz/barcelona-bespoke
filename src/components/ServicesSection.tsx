@@ -17,6 +17,7 @@ import dinnerShowImg from "@/assets/services/dinner-show.jpg";
 import limousineImg from "@/assets/services/limousine.jpg";
 import jetSkiImg from "@/assets/services/jet-ski.jpg";
 import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
+import apartmentsHotelImg from "@/assets/services/apartments-hotel.jpg";
 
 type ServiceBlock = {
   id: string;
