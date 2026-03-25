@@ -57,7 +57,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[85vh] md:min-h-screen w-full overflow-hidden" style={{ backgroundColor: "hsl(0, 0%, 0%)" }}>
+    <section id="home" className="relative min-h-[70vh] md:min-h-screen w-full overflow-hidden" style={{ backgroundColor: "hsl(0, 0%, 0%)" }}>
       {/* Party lights background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
