@@ -1174,7 +1174,7 @@ export const translations = {
       label: "Notre Équipe",
       title: "NOTRE",
       titleAccent: "ÉQUIPE",
-      description: "Nos promoteurs sont des personnes normales comme vous, dont le seul objectif est de vous faire passer le meilleur moment à Barcelone. Nous écoutons attentivement chaque client, comprenons ses goûts et suggérons les expériences les plus adaptées à ses attentes. Notre équipe multiculturelle vient de différents pays et parle les principales langues internationales (anglais, espagnol, français, italien, allemand), pour que vous puissiez toujours parler à quelqu'un qui vous comprend. Nous voulons que vous profitiez tellement de vos nuits que vous aurez envie de revenir encore et encore.",
+      description: "Nos promoteurs sont des personnes normales comme vous, dont le seul objectif est de vous faire passer les meilleures vacances à Barcelone. Nous écoutons attentivement chaque client, comprenons ses goûts et suggérons les expériences les plus adaptées à ses attentes. Notre équipe multiculturelle vient de différents pays et parle les principales langues internationales (anglais, espagnol, français, italien, allemand), pour que vous puissiez toujours parler à quelqu'un qui vous comprend. Venez rencontrer nos promoteurs ou devenez l'un de nos partenaires !",
       promotersTitle: "Nos",
       promotersAccent: "Promoteurs",
       simoneRole: "Promoteur ND + Manager en Ligne",
