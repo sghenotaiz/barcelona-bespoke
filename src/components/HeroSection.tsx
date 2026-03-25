@@ -21,8 +21,13 @@ const HeroSection = () => {
             src={nightdreamsBadge}
             alt="NightDreams Logo"
             initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 360 }}
+            transition={{ 
+              opacity: { duration: 0.8, delay: 0.5 },
+              scale: { duration: 0.8, delay: 0.5 },
+              rotateY: { duration: 4, repeat: Infinity, ease: "linear" }
+            }}
+            style={{ transformStyle: "preserve-3d" }}
             className="mx-auto w-28 h-28 md:w-36 md:h-36 object-contain mb-6"
           />
 
@@ -30,8 +35,12 @@ const HeroSection = () => {
             <NightDreamsLogo size="hero" showIcon={false} />
           </div>
 
-          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-6 font-mono text-center md:text-2xl">
+          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-4 font-mono text-center md:text-2xl">
             {t.hero.subtitle}
+          </p>
+
+          <p className="text-sm md:text-lg text-silver-light/80 max-w-2xl mx-auto leading-relaxed text-center">
+            Vivi la tua migliore esperienza nella città del divertimento per eccellenza. Oltre dieci mila clienti all'anno si affidano a noi, scopri il nostro mondo e entra a far parte della famiglia NightDreams!
           </p>
         </motion.div>
       </div>
