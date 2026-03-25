@@ -472,6 +472,7 @@ export const translations = {
       vipTables: "Mesas VIP garantizadas",
       ctaButton: "Pregúntanos lo que quieras",
       enterWorld: "ENTRA EN EL MUNDO NIGHTDREAMS",
+      yearRound: "365 días al año",
     },
     about: {
       label: "Sobre Nosotros",
