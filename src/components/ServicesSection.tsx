@@ -184,7 +184,11 @@ const ServiceBlockItem = ({
               src={block.image}
               alt={getText(block.titleKey)}
               className="w-full h-full object-cover transition-transform duration-[2s] ease-out hover:scale-[1.03]"
-              style={block.imagePosition ? { objectPosition: block.imagePosition } : undefined} />
+              style={{
+                objectPosition: isMobile && block.mobileImagePosition
+                  ? block.mobileImagePosition
+                  : (block.imagePosition || undefined)
+              }} />
           </motion.div>
           {/* Gradient overlay toward text side (desktop) */}
           <div
