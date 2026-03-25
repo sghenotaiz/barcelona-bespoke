@@ -30,8 +30,8 @@ const Index = () => {
         <LanguageSelector visible={showLangSelector} onComplete={handleLangComplete} />
       )}
       <Header />
-      <CircularGallery />
       <HeroSection />
+      <CircularGallery />
       <SocialFeedSection />
       <Footer />
       {!showIntro && !showLangSelector && <FloatingCTA />}
