@@ -103,7 +103,7 @@ const CircularGallery = () => {
   return (
     <div id="gallery" className="relative" onTouchStart={handleTouchStart}>
       <div
-        className="w-full min-h-screen overflow-hidden flex items-center justify-center relative pt-20"
+        className="w-full min-h-screen overflow-hidden flex items-center justify-center relative pt-24 md:pt-28"
         style={{ backgroundColor: "hsl(0, 0%, 3%)" }}>
         
         {/* Background image crossfade */}
