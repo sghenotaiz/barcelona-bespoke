@@ -131,7 +131,7 @@ export const translations = {
       expSkipLineBullet1: "Skip hours of queue and endless lines",
       expSkipLineBullet2: "Promoters wait outside the clubs and walk you to the door, making you skip the line",
       expSkipLineBullet3: "Outfit check to guarantee your entry",
-      expSkipLineBullet4: "Weekly packs = better prices",
+      expSkipLineBullet4: "Weekly packs = better prices and group discounts",
       expPoolTitle: "Pool Parties",
       expPoolSubtitle: "Under the Barcelona sun",
       expPoolDesc: "Sun-drenched days, crystal water and the best DJs — different parties every day of the week.",
