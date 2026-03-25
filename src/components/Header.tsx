@@ -46,7 +46,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 flex-row flex items-center justify-between">
         <button onClick={() => handleNav("/")} className="flex items-center">
-          <NightDreamsLogo size="sm" showIcon={true} />
+          <NightDreamsLogo size="sm" showIcon={true} showText={false} />
         </button>
 
         <nav className="hidden lg:flex items-center gap-10">

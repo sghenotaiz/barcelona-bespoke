@@ -3,6 +3,7 @@ import nightdreamsLogo from "@/assets/nightdreams-logo.jpeg";
 interface NightDreamsLogoProps {
   size?: "sm" | "md" | "lg" | "hero";
   showIcon?: boolean;
+  showText?: boolean;
 }
 
 const sizeClasses = {
@@ -13,13 +14,13 @@ const sizeClasses = {
 };
 
 const iconSizes = {
-  sm: "w-8 h-8",
+  sm: "w-10 h-10",
   md: "w-10 h-10",
   lg: "w-16 h-16",
   hero: "w-24 h-24 md:w-32 md:h-32"
 };
 
-const NightDreamsLogo = ({ size = "md", showIcon = true }: NightDreamsLogoProps) => {
+const NightDreamsLogo = ({ size = "md", showIcon = true, showText = true }: NightDreamsLogoProps) => {
   return (
     <div className="flex items-center gap-3">
       {showIcon &&
@@ -29,14 +30,16 @@ const NightDreamsLogo = ({ size = "md", showIcon = true }: NightDreamsLogoProps)
         className={`${iconSizes[size]} object-contain`} />
 
       }
-      <span
-        className={`${sizeClasses[size]} tracking-wider uppercase`}
-        style={{
-          fontFamily: "'Aldo the Apache', sans-serif",
-          color: "hsl(0, 0%, 100%)",
-        }}>
-        NightDreams
-      </span>
+      {showText && (
+        <span
+          className={`${sizeClasses[size]} tracking-wider uppercase`}
+          style={{
+            fontFamily: "'Aldo the Apache', sans-serif",
+            color: "hsl(0, 0%, 100%)",
+          }}>
+          NightDreams
+        </span>
+      )}
     </div>);
 
 };
