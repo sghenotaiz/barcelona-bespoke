@@ -111,8 +111,9 @@ const serviceBlocks: ServiceBlock[] = [
   descKey: "expDinnerShowDesc",
   badge: "badgeVip",
   bullets: [
-  { icon: Music, key: "expDinnerShowBullet1" },
-  { icon: UtensilsCrossed, key: "expDinnerShowBullet2" }]
+   { icon: Music, key: "expDinnerShowBullet1" },
+   { icon: UtensilsCrossed, key: "expDinnerShowBullet2" },
+   { icon: Wine, key: "expDinnerShowBullet3" }]
 },
 {
   id: "limo",
