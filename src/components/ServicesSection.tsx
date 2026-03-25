@@ -380,23 +380,19 @@ const ServiceBlockItem = ({
               >
                 <X size={16} />
               </button>
-              {videoModal === "ku" ? (
-                <video
-                  src="/videos/saltafila-ku.mp4"
-                  controls
-                  autoPlay
-                  playsInline
-                  className="w-full h-full object-contain"
-                />
-              ) : (
-                <video
-                  src="/videos/saltafila-opium.mp4"
-                  controls
-                  autoPlay
-                  playsInline
-                  className="w-full h-full object-contain"
-                />
-              )}
+              <video
+                src={
+                  videoModal === "ku"
+                    ? "/videos/saltafila-ku.mp4"
+                    : videoModal === "opium"
+                    ? "/videos/saltafila-opium.mp4"
+                    : "/videos/saltafila-bling-bling.mp4"
+                }
+                controls
+                autoPlay
+                playsInline
+                className="w-full h-full object-contain"
+              />
             </motion.div>
           </motion.div>
         )}
