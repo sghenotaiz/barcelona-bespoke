@@ -39,7 +39,7 @@ const HeroSection = () => {
             {t.hero.subtitle}
           </p>
 
-          <p className="text-sm md:text-lg text-silver-light/80 max-w-2xl mx-auto leading-relaxed text-center">
+          <p className="text-sm md:text-lg text-silver-light/80 max-w-2xl mx-auto leading-relaxed text-center mb-0">
             {t.hero.heroDescription}
           </p>
         </motion.div>
