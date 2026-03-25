@@ -132,17 +132,12 @@ const HeroSection = () => {
             className="mb-5"
           >
             <motion.div
-              animate={{ boxShadow: ["0 0 8px hsl(0, 75%, 50%)", "0 0 24px hsl(0, 75%, 55%)", "0 0 8px hsl(0, 75%, 50%)"] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm cursor-pointer"
-              style={{ backgroundColor: "hsl(0, 75%, 50%)" }}
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 min-h-[48px] cursor-pointer font-body text-[11px] tracking-[0.25em] uppercase border border-silver/40 text-silver transition-all duration-500 hover:bg-white/10 hover:border-white/60 hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
               onClick={() => navigate("/services#skip-line")}
             >
-              <Zap size={18} className="text-foreground" style={{ color: "hsl(0, 0%, 100%)" }} />
-              <span className="text-sm md:text-base font-bold tracking-wider uppercase font-body" style={{ color: "hsl(0, 0%, 100%)" }}>
+              <span>
                 {t.hero.skipLine}
               </span>
-              <Zap size={18} className="text-foreground" style={{ color: "hsl(0, 0%, 100%)" }} />
             </motion.div>
             <div className="mt-3 space-y-1">
               <p className="text-xs md:text-sm text-silver-light/90 font-body">{t.hero.skipLineDesc1}</p>
