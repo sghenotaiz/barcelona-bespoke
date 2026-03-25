@@ -41,6 +41,13 @@ export const translations = {
         "Live your best experience in the ultimate party city. Over ten thousand clients a year trust us — discover our world and become part of the NightDreams family!",
       exploreServices: "Explore Services",
       requestVip: "Request a Quote",
+      vipTrust: "VIPs trust us every year",
+      skipLine: "SKIP-THE-LINE TICKETS",
+      skipLineDesc1: "No 3-hour queues outside clubs",
+      skipLineDesc2: "Instant access to the best parties",
+      vipTables: "Guaranteed VIP Tables",
+      ctaButton: "Ask us anything",
+      enterWorld: "ENTER THE NIGHTDREAMS WORLD",
     },
     about: {
       label: "About Us",
