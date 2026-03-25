@@ -1068,7 +1068,7 @@ export const translations = {
       event2Stats: "Sold out • Show épique",
       event3Title: "Sfera Ebbasta @ Ku BCN",
       event3Date: "25 Juillet 2025",
-      event3Stats: "Sold out • Nuit inoubliable",
+      event3Stats: "Le king de la trap italienne dans un show inoubliable",
       event4Title: "Rooftop Sunset Session",
       event4Date: "Été 2025",
       event4Stats: "100+ invités • Vues panoramiques",
