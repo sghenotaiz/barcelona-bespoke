@@ -317,6 +317,31 @@ const ServiceBlockItem = ({
             >
               {bookNow}
             </motion.a>
+
+            {/* Video links — only for skip-line */}
+            {block.id === "skip-line" && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.7 }}
+                className="flex flex-col sm:flex-row gap-3 mt-5"
+              >
+                <button
+                  onClick={() => setVideoModal("ku")}
+                  className="inline-flex items-center gap-2 font-body text-xs tracking-wide text-silver/80 hover:text-white transition-colors duration-300 underline underline-offset-4 decoration-silver/30 hover:decoration-white/60"
+                >
+                  <Play size={14} />
+                  Video saltafila Ku BCN
+                </button>
+                <button
+                  onClick={() => setVideoModal("opium")}
+                  className="inline-flex items-center gap-2 font-body text-xs tracking-wide text-silver/80 hover:text-white transition-colors duration-300 underline underline-offset-4 decoration-silver/30 hover:decoration-white/60"
+                >
+                  <Play size={14} />
+                  Video saltafila Opium
+                </button>
+              </motion.div>
+            )}
           </div>
         </motion.div>
       </div>
