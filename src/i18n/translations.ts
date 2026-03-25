@@ -48,7 +48,7 @@ export const translations = {
       vipTables: "VIP Tables at the best price",
       ctaButton: "Ask us anything",
       enterWorld: "ENTER THE NIGHTDREAMS WORLD",
-      yearRound: "365 days a year",
+      yearRound: "operational 365 days a year",
     },
     about: {
       label: "About Us",
