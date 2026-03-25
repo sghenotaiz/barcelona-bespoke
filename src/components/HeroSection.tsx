@@ -178,12 +178,12 @@ const HeroSection = () => {
           >
             <motion.p
               className="text-lg md:text-2xl font-display font-bold tracking-[0.15em] uppercase"
-              style={{ color: "hsl(45, 80%, 55%)" }}
+              style={{ color: "hsl(0, 0%, 100%)" }}
               animate={{
                 textShadow: [
-                  "0 0 10px hsl(45, 80%, 55% / 0.4), 0 0 20px hsl(45, 80%, 55% / 0.2)",
-                  "0 0 20px hsl(45, 80%, 55% / 0.6), 0 0 40px hsl(45, 80%, 55% / 0.3)",
-                  "0 0 10px hsl(45, 80%, 55% / 0.4), 0 0 20px hsl(45, 80%, 55% / 0.2)",
+                  "0 0 10px hsl(0 0% 100% / 0.4), 0 0 20px hsl(0 0% 100% / 0.2)",
+                  "0 0 20px hsl(0 0% 100% / 0.6), 0 0 40px hsl(0 0% 100% / 0.3)",
+                  "0 0 10px hsl(0 0% 100% / 0.4), 0 0 20px hsl(0 0% 100% / 0.2)",
                 ],
               }}
               transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
