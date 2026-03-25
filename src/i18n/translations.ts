@@ -553,7 +553,7 @@ export const translations = {
       expSkipLineSubtitle: "Sin más esperas — nunca",
       expSkipLineDesc: "Saltarse horas de cola es fundamental para disfrutar tu noche. Nuestros promotores te esperan FUERA del club, listos para recibirte y acompañarte a la entrada saltándote filas interminables. Cuantos más tickets reserves, más ahorras. Nuestros packs semanales son famosos por disfrutar de las mejores discotecas de la ciudad a precios accesibles y siempre sin colas.",
       expSkipLineBullet1: "Sáltate horas de cola y filas interminables",
-      expSkipLineBullet2: "Promotores te esperan fuera de las discotecas y te acompañan a la puerta",
+      expSkipLineBullet2: "Promotores te esperan fuera de las discotecas y te acompañan a la puerta, haciéndote saltar la fila",
       expSkipLineBullet3: "Control de outfit para garantizarte la entrada",
       expSkipLineBullet4: "Packs semanales = mejores precios",
       expPoolTitle: "Pool Parties",
