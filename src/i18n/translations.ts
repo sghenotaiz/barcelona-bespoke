@@ -48,6 +48,7 @@ export const translations = {
       vipTables: "Guaranteed VIP Tables",
       ctaButton: "Ask us anything",
       enterWorld: "ENTER THE NIGHTDREAMS WORLD",
+      yearRound: "365 days a year",
     },
     about: {
       label: "About Us",
@@ -471,6 +472,7 @@ export const translations = {
       vipTables: "Mesas VIP garantizadas",
       ctaButton: "Pregúntanos lo que quieras",
       enterWorld: "ENTRA EN EL MUNDO NIGHTDREAMS",
+      yearRound: "365 días al año",
     },
     about: {
       label: "Sobre Nosotros",
@@ -894,6 +896,7 @@ export const translations = {
       vipTables: "Tables VIP garanties",
       ctaButton: "Demandez-nous ce que vous voulez",
       enterWorld: "ENTREZ DANS LE MONDE NIGHTDREAMS",
+      yearRound: "365 jours par an",
     },
     about: {
       label: "À Propos",
@@ -1317,6 +1320,7 @@ export const translations = {
       vipTables: "Tavoli VIP garantiti",
       ctaButton: "Chiedici ciò che vuoi",
       enterWorld: "ENTRA NEL MONDO NIGHTDREAMS",
+      yearRound: "365 giorni l'anno",
     },
     about: {
       label: "Chi Siamo",

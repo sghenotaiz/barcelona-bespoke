@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { Zap, PartyPopper, MessageCircle } from "lucide-react";
+import { Zap, PartyPopper } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import nightdreamsBadge from "@/assets/nightdreams-badge.png";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -175,29 +175,28 @@ const HeroSection = () => {
             {t.hero.enterWorld}
           </motion.p>
 
-          {/* CTA Button */}
-          <motion.button
-            onClick={handleCta}
+          {/* 365 days animated text */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.4, duration: 0.5 }}
-            whileHover={{ scale: 1.06, y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            className="relative inline-flex items-center gap-3 px-8 py-3.5 font-body text-xs md:text-sm tracking-[0.2em] uppercase font-semibold transition-all duration-300"
-            style={{
-              background: "linear-gradient(135deg, hsl(45, 80%, 50%), hsl(35, 90%, 45%), hsl(45, 80%, 55%))",
-              color: "hsl(0, 0%, 0%)",
-              boxShadow: "0 0 20px hsl(45, 80%, 50% / 0.4), 0 0 40px hsl(45, 80%, 50% / 0.2)",
-            }}
+            className="relative"
           >
-            <motion.span
-              className="absolute inset-0"
-              animate={{ boxShadow: ["0 0 15px hsl(45, 80%, 50% / 0.3)", "0 0 30px hsl(45, 80%, 50% / 0.5)", "0 0 15px hsl(45, 80%, 50% / 0.3)"] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <MessageCircle size={16} />
-            <span className="relative z-10">{t.hero.ctaButton}</span>
-          </motion.button>
+            <motion.p
+              className="text-lg md:text-2xl font-display font-bold tracking-[0.15em] uppercase"
+              style={{ color: "hsl(45, 80%, 55%)" }}
+              animate={{
+                textShadow: [
+                  "0 0 10px hsl(45, 80%, 55% / 0.4), 0 0 20px hsl(45, 80%, 55% / 0.2)",
+                  "0 0 20px hsl(45, 80%, 55% / 0.6), 0 0 40px hsl(45, 80%, 55% / 0.3)",
+                  "0 0 10px hsl(45, 80%, 55% / 0.4), 0 0 20px hsl(45, 80%, 55% / 0.2)",
+                ],
+              }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {t.hero.yearRound}
+            </motion.p>
+          </motion.div>
         </motion.div>
       </div>
 
