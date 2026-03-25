@@ -200,14 +200,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
-      >
-        <div className="w-px h-10 bg-gradient-to-b from-silver to-transparent pb-0 my-0 pt-0" />
-      </motion.div>
     </section>
   );
 };
