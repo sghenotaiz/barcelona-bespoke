@@ -1403,7 +1403,7 @@ export const translations = {
       expEventsBullet1: "Addii al celibato e nubilato",
       expEventsBullet2: "Eventi aziendali e team building",
       expEventsBullet3: "Esperienze completamente personalizzate",
-      expHotelTitle: "Appartamenti & Hotel",
+      expHotelTitle: "Appartamenti e Hotel",
       expHotelSubtitle: "Alloggi per ogni tipo di gruppo",
       expHotelDesc: "Vasta disponibilità di stanze per ogni tipo di gruppo, dagli appartamenti accoglienti agli hotel premium. In più, transfer dedicati per le discoteche ad ore prestabilite.",
       expHotelBullet1: "Stanze per gruppi di qualsiasi dimensione",
