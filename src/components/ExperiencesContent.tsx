@@ -411,7 +411,7 @@ const ExperiencesContent = () => {
   );
 
   return (
-    <section className="bg-background py-10 md:py-12" style={{ maxWidth: "100vw", overflowX: "hidden" }}>
+    <section id="testimonials" className="bg-background py-10 md:py-12" style={{ maxWidth: "100vw", overflowX: "hidden" }}>
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-20">
