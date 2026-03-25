@@ -220,7 +220,7 @@ export const translations = {
       event2Stats: "Sold out • Epic show",
       event3Title: "Sfera Ebbasta @ Ku BCN",
       event3Date: "July 25, 2025",
-      event3Stats: "Sold out • Unforgettable night",
+      event3Stats: "The king of Italian trap in an unforgettable show",
       event4Title: "Rooftop Sunset Session",
       event4Date: "Summer 2025",
       event4Stats: "100+ guests • Panoramic views",
