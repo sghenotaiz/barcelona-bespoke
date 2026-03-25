@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
-import vipTablesImg from "@/assets/services/vip-tables.jpg";
+import homeServicesImg from "@/assets/home-services.jpg";
 import ndStickerImg from "@/assets/nd-sticker-barceloneta.png";
 import sagradaFamiliaImg from "@/assets/sagrada-familia.jpg";
 import nightlifeImg from "@/assets/nightlife.jpg";
@@ -20,7 +20,7 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
 { id: "plan", titleKey: "planExperience", subtitleKey: "planExperienceDesc", image: sagradaFamiliaImg, path: "/plan" },
 { id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: ndStickerImg, path: "/about" },
-{ id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: vipTablesImg, path: "/services" },
+{ id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: homeServicesImg, path: "/services" },
 { id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about" },
 { id: "moments", titleKey: "momentsCrafted", subtitleKey: "momentsCraftedDesc", image: diningImg, path: "/moments" }];
 
