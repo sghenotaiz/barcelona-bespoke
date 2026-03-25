@@ -6,6 +6,8 @@ import { z } from "zod";
 import DualCTA from "@/components/DualCTA";
 import marcoCarolaCover from "@/assets/images/marco-carola-cover.jpg";
 import marcoCarolaVideo from "@/assets/videos/marco-carola-ku-bcn.mp4";
+import tygaOpiumCover from "@/assets/images/tyga-opium-cover.jpg";
+import tygaOpiumVideo from "@/assets/videos/tyga-opium.mp4";
 
 // Event highlight cards data
 const eventHighlights = [
@@ -17,11 +19,11 @@ const eventHighlights = [
     videoUrl: marcoCarolaVideo,
   },
   {
-    image: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=600&h=800&fit=crop",
+    image: tygaOpiumCover,
     titleKey: "event2Title" as const,
     dateKey: "event2Date" as const,
     statsKey: "event2Stats" as const,
-    videoUrl: "",
+    videoUrl: tygaOpiumVideo,
   },
   {
     image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&h=800&fit=crop",
