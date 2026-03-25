@@ -1364,6 +1364,7 @@ export const translations = {
       expDinnerShowDesc: "Esperienze gastronomiche esclusive con intrattenimento dal vivo — cabaret, musica e cucina gourmet in una serata indimenticabile.",
       expDinnerShowBullet1: "Spettacoli dal vivo e intrattenimento",
       expDinnerShowBullet2: "Menu gourmet multi-portata",
+      expDinnerShowBullet3: "Bottiglie e drink nel post-cena con dj set",
       expLimoTitle: "Limousine",
       expLimoSubtitle: "Arrivi da VIP con autista",
       expLimoDesc: "Limousine di lusso con autisti professionisti — dall'hotel alla porta del club o all'aeroporto.",
