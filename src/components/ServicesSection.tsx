@@ -1,12 +1,12 @@
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Wine, Clock, CalendarDays, Waves, UtensilsCrossed,
   Building2, Car, Ship, PartyPopper, Sparkles, Star,
   Users, Percent, BedDouble, Plane, Zap, Sun, Eye,
-  Crown, Music, Ticket, ShieldCheck, DollarSign } from
+  Crown, Music, Ticket, ShieldCheck, DollarSign, Play, X } from
 "lucide-react";
 import vipTablesImg from "@/assets/services/vip-tables.jpg";
 import skipLineImg from "@/assets/services/multi-entry.jpg";
@@ -170,6 +170,7 @@ const ServiceBlockItem = ({
   const ref = useRef(null);
   const isMobile = useIsMobile();
   const inView = useInView(ref, { once: true, amount: 0.3 });
+  const [videoModal, setVideoModal] = useState<"ku" | "opium" | null>(null);
   const isEven = index % 2 === 0;
 
   // Parallax on the image
@@ -317,12 +318,68 @@ const ServiceBlockItem = ({
             >
               {bookNow}
             </motion.a>
+
+            {/* Video links — only for skip-line */}
+            {block.id === "skip-line" && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.7 }}
+                className="flex flex-col sm:flex-row gap-3 mt-5"
+              >
+                <button
+                  onClick={() => setVideoModal("ku")}
+                  className="inline-flex items-center gap-2 font-body text-xs tracking-wide text-silver/80 hover:text-white transition-colors duration-300 underline underline-offset-4 decoration-silver/30 hover:decoration-white/60"
+                >
+                  <Play size={14} />
+                  Video saltafila Ku BCN
+                </button>
+                <button
+                  onClick={() => setVideoModal("opium")}
+                  className="inline-flex items-center gap-2 font-body text-xs tracking-wide text-silver/80 hover:text-white transition-colors duration-300 underline underline-offset-4 decoration-silver/30 hover:decoration-white/60"
+                >
+                  <Play size={14} />
+                  Video saltafila Opium
+                </button>
+              </motion.div>
+            )}
           </div>
         </motion.div>
       </div>
 
       {/* Thin separator line */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {videoModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+            onClick={() => setVideoModal(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-3xl aspect-video bg-black border border-white/10 rounded-sm overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setVideoModal(null)}
+                className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center bg-black/60 border border-white/20 text-white/80 hover:text-white transition-colors"
+              >
+                <X size={16} />
+              </button>
+              <div className="w-full h-full flex items-center justify-center text-white/40 font-body text-sm tracking-wide">
+                {videoModal === "ku" ? "Video Ku BCN — coming soon" : "Video Opium — coming soon"}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>);
 
 };
