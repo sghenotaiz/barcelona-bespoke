@@ -115,7 +115,7 @@ const HeroSection = () => {
             transition={{ delay: 1, duration: 0.6 }}
             className="mb-6"
           >
-            <span className="text-3xl md:text-5xl font-display font-bold" style={{ color: "hsl(45, 80%, 55%)" }}>
+            <span className="text-3xl md:text-5xl font-display font-bold" style={{ color: "hsl(0, 0%, 100%)" }}>
               <AnimatedCounter target={10000} />
             </span>
             <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-silver-light/80 mt-1 font-body">
