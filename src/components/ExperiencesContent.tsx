@@ -10,11 +10,11 @@ import marcoCarolaVideo from "@/assets/videos/marco-carola-ku-bcn.mp4";
 // Event highlight cards data
 const eventHighlights = [
   {
-    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=800&fit=crop",
+    image: marcoCarolaCover,
     titleKey: "event1Title" as const,
     dateKey: "event1Date" as const,
     statsKey: "event1Stats" as const,
-    videoUrl: "",
+    videoUrl: marcoCarolaVideo,
   },
   {
     image: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=600&h=800&fit=crop",
