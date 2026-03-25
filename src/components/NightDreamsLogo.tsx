@@ -20,7 +20,7 @@ const iconSizes = {
   hero: "w-24 h-24 md:w-32 md:h-32"
 };
 
-const NightDreamsLogo = ({ size = "md", showIcon = true }: NightDreamsLogoProps) => {
+const NightDreamsLogo = ({ size = "md", showIcon = true, showText = true }: NightDreamsLogoProps) => {
   return (
     <div className="flex items-center gap-3">
       {showIcon &&
