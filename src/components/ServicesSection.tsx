@@ -12,7 +12,8 @@ import vipTablesImg from "@/assets/services/vip-tables.jpg";
 import skipLineImg from "@/assets/services/multi-entry.jpg";
 import poolPartyImg from "@/assets/services/pool-party.jpg";
 import restaurantImg from "@/assets/services/restaurant.jpg";
-import apartmentsImg from "@/assets/services/apartments.jpg";
+import tattooStudioImg from "@/assets/services/tattoo-studio.jpg";
+import dinnerShowImg from "@/assets/services/dinner-show.jpg";
 import limousineImg from "@/assets/services/limousine.jpg";
 import jetSkiImg from "@/assets/services/jet-ski.jpg";
 import bachelorPartyImg from "@/assets/services/bachelor-party.jpg";
@@ -88,15 +89,26 @@ const serviceBlocks: ServiceBlock[] = [
   { icon: UtensilsCrossed, key: "expRestaurantBullet2" }]
 },
 {
-  id: "apartments",
-  image: apartmentsImg,
-  titleKey: "expApartmentsTitle",
-  subtitleKey: "expApartmentsSubtitle",
-  descKey: "expApartmentsDesc",
+  id: "tattoo",
+  image: tattooStudioImg,
+  titleKey: "expTattooTitle",
+  subtitleKey: "expTattooSubtitle",
+  descKey: "expTattooDesc",
   badge: "badgeTopPick",
   bullets: [
-  { icon: BedDouble, key: "expApartmentsBullet1" },
-  { icon: Building2, key: "expApartmentsBullet2" }]
+  { icon: Star, key: "expTattooBullet1" },
+  { icon: Sparkles, key: "expTattooBullet2" }]
+},
+{
+  id: "dinner-show",
+  image: dinnerShowImg,
+  titleKey: "expDinnerShowTitle",
+  subtitleKey: "expDinnerShowSubtitle",
+  descKey: "expDinnerShowDesc",
+  badge: "badgeVip",
+  bullets: [
+  { icon: Music, key: "expDinnerShowBullet1" },
+  { icon: UtensilsCrossed, key: "expDinnerShowBullet2" }]
 },
 {
   id: "limo",
