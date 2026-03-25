@@ -138,7 +138,19 @@ const serviceBlocks: ServiceBlock[] = [
   bullets: [
   { icon: PartyPopper, key: "expEventsBullet1" },
   { icon: Users, key: "expEventsBullet2" },
-  { icon: Sparkles, key: "expEventsBullet3" }]
+   { icon: Sparkles, key: "expEventsBullet3" }]
+},
+{
+  id: "hotel",
+  image: apartmentsHotelImg,
+  titleKey: "expHotelTitle",
+  subtitleKey: "expHotelSubtitle",
+  descKey: "expHotelDesc",
+  badge: "badgeTopPick",
+  bullets: [
+  { icon: BedDouble, key: "expHotelBullet1" },
+  { icon: Building2, key: "expHotelBullet2" },
+  { icon: Car, key: "expHotelBullet3" }]
 }];
 
 
