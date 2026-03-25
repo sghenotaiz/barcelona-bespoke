@@ -887,6 +887,13 @@ export const translations = {
         "Vivez votre meilleure expérience dans la capitale de la fête par excellence. Plus de dix mille clients par an nous font confiance — découvrez notre monde et rejoignez la famille NightDreams !",
       exploreServices: "Découvrir les Services",
       requestVip: "Demander un Devis",
+      vipTrust: "VIPs nous font confiance chaque année",
+      skipLine: "TICKETS COUPE-FILE",
+      skipLineDesc1: "Plus de 3 heures de queue devant les clubs",
+      skipLineDesc2: "Accès immédiat aux meilleures soirées",
+      vipTables: "Tables VIP garanties",
+      ctaButton: "Demandez-nous ce que vous voulez",
+      enterWorld: "ENTREZ DANS LE MONDE NIGHTDREAMS",
     },
     about: {
       label: "À Propos",
