@@ -469,7 +469,7 @@ export const translations = {
       skipLine: "TICKETS SIN COLA",
       skipLineDesc1: "Sin 3 horas de cola frente a los clubs",
       skipLineDesc2: "Acceso inmediato a las mejores fiestas",
-      vipTables: "Mesas VIP garantizadas",
+      vipTables: "Mesas VIP al mejor precio",
       ctaButton: "Pregúntanos lo que quieras",
       enterWorld: "ENTRA EN EL MUNDO NIGHTDREAMS",
       yearRound: "365 días al año",
