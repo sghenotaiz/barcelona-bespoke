@@ -28,11 +28,11 @@ const eventHighlights = [
     videoUrl: tygaOpiumVideo,
   },
   {
-    image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&h=800&fit=crop",
+    image: sferaEbbastaCover,
     titleKey: "event3Title" as const,
     dateKey: "event3Date" as const,
     statsKey: "event3Stats" as const,
-    videoUrl: "",
+    videoUrl: sferaEbbastaVideo,
   },
   {
     image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=800&fit=crop",
