@@ -22,7 +22,7 @@ const galleryItems: GalleryItem[] = [
 { id: "plan", titleKey: "planExperience", subtitleKey: "planExperienceDesc", image: sagradaFamiliaImg, path: "/plan" },
 { id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: ndStickerImg, path: "/about" },
 { id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: homeServicesImg, path: "/services" },
-{ id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about" },
+{ id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about", objectPosition: "30% center" },
 { id: "moments", titleKey: "momentsCrafted", subtitleKey: "momentsCraftedDesc", image: diningImg, path: "/moments" }];
 
 
