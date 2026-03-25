@@ -170,6 +170,7 @@ const ServiceBlockItem = ({
   const ref = useRef(null);
   const isMobile = useIsMobile();
   const inView = useInView(ref, { once: true, amount: 0.3 });
+  const [videoModal, setVideoModal] = useState<"ku" | "opium" | null>(null);
   const isEven = index % 2 === 0;
 
   // Parallax on the image
