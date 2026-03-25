@@ -1310,6 +1310,13 @@ export const translations = {
         "Vivi la tua migliore esperienza nella città del divertimento per eccellenza. Oltre dieci mila clienti all'anno si affidano a noi, scopri il nostro mondo e entra a far parte della famiglia NightDreams!",
       exploreServices: "Scopri i Servizi",
       requestVip: "Richiedi un Preventivo",
+      vipTrust: "VIP si affidano a noi ogni anno",
+      skipLine: "TICKET SALTAFILA",
+      skipLineDesc1: "Niente code di 3 ore davanti ai club",
+      skipLineDesc2: "Accesso immediato ai migliori party",
+      vipTables: "Tavoli VIP garantiti",
+      ctaButton: "Chiedici ciò che vuoi",
+      enterWorld: "ENTRA NEL MONDO NIGHTDREAMS",
     },
     about: {
       label: "Chi Siamo",
