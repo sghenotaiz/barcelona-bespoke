@@ -341,6 +341,13 @@ const ServiceBlockItem = ({
                   <Play size={14} />
                   Video saltafila Opium
                 </button>
+                <button
+                  onClick={() => setVideoModal("bling")}
+                  className="inline-flex items-center gap-2 font-body text-xs tracking-wide text-silver/80 hover:text-white transition-colors duration-300 underline underline-offset-4 decoration-silver/30 hover:decoration-white/60"
+                >
+                  <Play size={14} />
+                  Video saltafila Bling Bling
+                </button>
               </motion.div>
             )}
           </div>
