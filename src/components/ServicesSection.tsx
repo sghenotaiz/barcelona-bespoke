@@ -349,6 +349,37 @@ const ServiceBlockItem = ({
 
       {/* Thin separator line */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {videoModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+            onClick={() => setVideoModal(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-3xl aspect-video bg-black border border-white/10 rounded-sm overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setVideoModal(null)}
+                className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center bg-black/60 border border-white/20 text-white/80 hover:text-white transition-colors"
+              >
+                <X size={16} />
+              </button>
+              <div className="w-full h-full flex items-center justify-center text-white/40 font-body text-sm tracking-wide">
+                {videoModal === "ku" ? "Video Ku BCN — coming soon" : "Video Opium — coming soon"}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>);
 
 };
