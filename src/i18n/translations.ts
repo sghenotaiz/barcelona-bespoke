@@ -129,7 +129,7 @@ export const translations = {
       expSkipLineSubtitle: "No more waiting — ever",
       expSkipLineDesc: "Skipping hours of queuing is essential to enjoy your night. Our promoters wait OUTSIDE the club, ready to welcome you and escort you to the entrance, letting you skip endless lines. The more tickets you book, the more you save. Our weekly packs are famous for letting you enjoy the best clubs in the city at affordable prices while always skipping the line.",
       expSkipLineBullet1: "Skip hours of queue and endless lines",
-      expSkipLineBullet2: "Promoters wait outside the clubs and walk you to the door",
+      expSkipLineBullet2: "Promoters wait outside the clubs and walk you to the door, making you skip the line",
       expSkipLineBullet3: "Outfit check to guarantee your entry",
       expSkipLineBullet4: "Weekly packs = better prices",
       expPoolTitle: "Pool Parties",
