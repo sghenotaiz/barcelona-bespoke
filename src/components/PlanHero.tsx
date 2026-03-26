@@ -81,7 +81,7 @@ const PlanHero = () => {
           transition={{ duration: 1, delay: 1.1 }}
           className="font-body text-sm md:text-base tracking-[0.15em] uppercase text-silver mb-10"
         >
-          ⏰ {planHero.urgency}
+          {planHero.urgency}
           <br />
           <span className="text-white/50 text-xs normal-case tracking-normal">
             {planHero.urgencyNote}

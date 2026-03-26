@@ -1677,7 +1677,7 @@ export const translations = {
       free: "Gratis",
       subtitleEnd: "e goditi la tua vacanza senza preoccupazioni, penseremo a tutto noi!",
       urgency: "Prima lo richiedi, più conveniente sarà",
-      urgencyNote: "(Non ridurti all'ultimo! Ti aspettiamo ✨)",
+      urgencyNote: "(Non ridurti all'ultimo! Ti aspettiamo)",
       cta: "Compila il Form ↓",
     },
     booking: {
