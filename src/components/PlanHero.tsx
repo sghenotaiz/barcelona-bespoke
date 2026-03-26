@@ -60,8 +60,7 @@ const PlanHero = () => {
               "0 0 20px hsla(0, 0%, 80%, 0.5), 0 0 60px hsla(0, 0%, 75%, 0.2)",
           }}
         >
-          <span className="text-silver-gradient">{planHero.title}</span>{" "}
-          <span className="text-2xl md:text-4xl">✨</span>
+          <span className="text-silver-gradient">{planHero.title}</span>
         </motion.h1>
 
         <motion.p
