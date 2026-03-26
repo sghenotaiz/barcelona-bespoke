@@ -12,6 +12,8 @@ import sferaEbbastaCover from "@/assets/images/sfera-ebbasta-cover.jpg";
 import sferaEbbastaVideo from "@/assets/videos/sfera-ebbasta-ku-bcn.mp4";
 import erasmusBlingBlingCover from "@/assets/images/erasmus-bling-bling-cover.jpg";
 import erasmusBlingBlingVideo from "@/assets/videos/erasmus-bling-bling.mp4";
+import bobSinclairCover from "@/assets/images/bob-sinclair-cover.jpg";
+import bobSinclairVideo from "@/assets/videos/bob-sinclair-opium.mp4";
 
 // Event highlight cards data
 const eventHighlights = [
