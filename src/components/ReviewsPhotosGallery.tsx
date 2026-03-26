@@ -218,35 +218,23 @@ const ReviewsPhotosGallery = ({ compact = false }: { compact?: boolean }) => {
       <div className={compact ? "space-y-6" : "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"}>
         {/* WhatsApp Screenshots */}
         <div>
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="text-base">💬</span>
-            <h3
-              className="text-sm md:text-base tracking-wider uppercase text-center"
-              style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
-            >
-              <span className="text-silver-gradient">{texts.whatsappTitle}</span>
-            </h3>
-          </div>
-          <p className="text-center font-body text-[9px] tracking-[0.2em] uppercase text-muted-foreground mb-3">
-            {texts.whatsappSub}
-          </p>
+          <h3
+            className="text-xl tracking-wider uppercase text-center mb-6"
+            style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
+          >
+            <span className="text-silver-gradient">{texts.whatsappTitle}</span>
+          </h3>
           <ThumbGrid images={whatsappScreenshots} onOpen={(i) => openModal(whatsappScreenshots, i)} />
         </div>
 
         {/* Client Photos */}
         <div>
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="text-base">📸</span>
-            <h3
-              className="text-sm md:text-base tracking-wider uppercase text-center"
-              style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
-            >
-              <span className="text-silver-gradient">{texts.photosTitle}</span>
-            </h3>
-          </div>
-          <p className="text-center font-body text-[9px] tracking-[0.2em] uppercase text-muted-foreground mb-3">
-            {texts.photosSub}
-          </p>
+          <h3
+            className="text-xl tracking-wider uppercase text-center mb-6"
+            style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
+          >
+            <span className="text-silver-gradient">{texts.photosTitle}</span>
+          </h3>
           <ThumbGrid images={clientPhotos} onOpen={(i) => openModal(clientPhotos, i)} />
         </div>
       </div>
