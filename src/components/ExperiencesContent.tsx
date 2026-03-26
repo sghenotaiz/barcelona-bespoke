@@ -277,6 +277,7 @@ const ExperiencesContent = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [activeVideo, setActiveVideo] = useState<typeof eventHighlights[0] | null>(null);
+  const [activeSaltafila, setActiveSaltafila] = useState<{ src: string; label: string } | null>(null);
 
   const exp = t.experiences as Record<string, unknown>;
   const getText = (key: string): string => (exp[key] as string) || key;
@@ -511,10 +512,7 @@ const ExperiencesContent = () => {
                 key={i}
                 className="relative w-full overflow-hidden border border-border cursor-pointer"
                 style={{ height: "180px" }}
-                onClick={(e) => {
-                  const video = e.currentTarget.querySelector("video");
-                  if (video) { video.paused ? video.play() : video.pause(); }
-                }}
+                onClick={() => setActiveSaltafila(v)}
               >
                 <video
                   src={v.src}
@@ -671,10 +669,7 @@ const ExperiencesContent = () => {
                     key={i}
                     className="relative group border border-border cursor-pointer overflow-hidden"
                     style={{ aspectRatio: "9/16" }}
-                    onClick={(e) => {
-                      const video = e.currentTarget.querySelector("video");
-                      if (video) { video.paused ? video.play() : video.pause(); }
-                    }}
+                    onClick={() => setActiveSaltafila(v)}
                   >
                     <video
                       src={v.src}
@@ -781,6 +776,40 @@ const ExperiencesContent = () => {
       <AnimatePresence>
         {activeVideo && (
           <VideoModal item={activeVideo} getText={getText} onClose={() => setActiveVideo(null)} />
+        )}
+        {activeSaltafila && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+            onClick={() => setActiveSaltafila(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-4xl aspect-video bg-black border border-border"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setActiveSaltafila(null)}
+                className="absolute -top-12 right-0 z-10 w-10 h-10 flex items-center justify-center text-foreground hover:text-silver transition-colors"
+              >
+                <X size={24} />
+              </button>
+              <div className="absolute top-0 left-0 right-0 p-4 z-10 bg-gradient-to-b from-black/80 to-transparent">
+                <h4
+                  className="font-display text-xl md:text-2xl text-foreground tracking-wide"
+                  style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
+                >
+                  Saltafila {activeSaltafila.label}
+                </h4>
+              </div>
+              <video src={activeSaltafila.src} controls autoPlay className="w-full h-full object-cover" />
+            </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
     </section>
