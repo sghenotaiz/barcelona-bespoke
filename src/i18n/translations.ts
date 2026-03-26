@@ -60,7 +60,7 @@ export const translations = {
         "Our real strength? Honesty with our clients: we only suggest what we would personally choose, based on the music and the client's preferences, and above all our presence in Barcelona 365 days a year. This guarantees constant support for any problem, and most importantly, it creates long-term bonds between promoters and clients, who become real friends and part of our NightDreams family.",
       paragraph3:
         "What else can we say? We are waiting for you in this wonderful city! Contact us now for a personalized quote, or come meet us every day from 11:30 PM in Barceloneta, right outside the clubs. See you soon!",
-      stat1Num: "30+",
+      stat1Num: "20+",
       stat1Label: "Exclusive Partners",
       stat2Num: "5+",
       stat2Label: "Years of Excellence",
