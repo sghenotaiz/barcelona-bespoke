@@ -444,12 +444,13 @@ const ExperiencesContent = () => {
                 onClick={() => setActiveSaltafila(v)}
               >
                 <video
-                  src={v.src}
+                  src={`${v.src}#t=0.5`}
                   muted
                   loop
                   playsInline
                   preload="metadata"
                   className="w-full h-full object-cover"
+                  style={{ backgroundColor: "#111" }}
                 />
                 <div
                   className="absolute inset-0 pointer-events-none"
@@ -539,12 +540,13 @@ const ExperiencesContent = () => {
                     onClick={() => setActiveSaltafila(v)}
                   >
                     <video
-                      src={v.src}
+                      src={`${v.src}#t=0.5`}
                       muted
                       loop
                       playsInline
                       preload="metadata"
                       className="w-full h-full object-cover"
+                      style={{ backgroundColor: "#111" }}
                     />
                     <div
                       className="absolute inset-0 pointer-events-none transition-all duration-500"
