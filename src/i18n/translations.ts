@@ -636,6 +636,7 @@ export const translations = {
       heroSubtitle: "Los mejores momentos de nuestros eventos",
       description: "Aquí puedes encontrar algunos de los momentos más candentes de nuestros eventos pasados en Barcelona: fotos y videos reales de nuestras fiestas y experiencias. También verás a nuestros clientes junto con nuestro equipo de promotores, sonriendo, celebrando y disfrutando de noches inolvidables con NightDreams.",
       eventsColumnTitle: "HIGHLIGHTS EVENTOS",
+      skipLineExamplesTitle: "EJEMPLOS SALTAFILA",
       reviewsColumnTitle: "RESEÑAS CLIENTES",
       event1Title: "Marco Carola @ Ku BCN",
       event1Date: "30 de Diciembre 2025",
