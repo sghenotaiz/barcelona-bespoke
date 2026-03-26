@@ -55,6 +55,8 @@ const galleryTexts: Record<string, Record<string, string>> = {
     photosTitle: "Nuestras Fotos",
     photosSub: "Momentos VIP",
     close: "Cerrar",
+    showMore: "Mostrar más",
+    showLess: "Mostrar menos",
   },
   fr: {
     sectionTitle: "AVIS CLIENTS ET PHOTOS",
