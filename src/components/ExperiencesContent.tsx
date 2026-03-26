@@ -64,45 +64,6 @@ const eventHighlights = [
   },
 ];
 
-// Client review cards data
-const clientReviews = [
-  {
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review1Name" as const,
-    cityKey: "review1City" as const,
-    quoteKey: "review1Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review2Name" as const,
-    cityKey: "review2City" as const,
-    quoteKey: "review2Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review3Name" as const,
-    cityKey: "review3City" as const,
-    quoteKey: "review3Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review4Name" as const,
-    cityKey: "review4City" as const,
-    quoteKey: "review4Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review5Name" as const,
-    cityKey: "review5City" as const,
-    quoteKey: "review5Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review6Name" as const,
-    cityKey: "review6City" as const,
-    quoteKey: "review6Quote" as const,
-  },
-];
 
 // --- Zod schema for review form ---
 const reviewSchema = z.object({
