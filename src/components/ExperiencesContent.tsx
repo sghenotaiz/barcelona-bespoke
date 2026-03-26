@@ -202,7 +202,7 @@ const DesktopEventCard = ({ item, getText, onOpen }: { item: typeof eventHighlig
 };
 
 
-// === MAIN COMPONENT ===
+// === MAIN COMPONENT (Reviews & Photos Gallery) ===
 const ExperiencesContent = () => {
   const { t } = useLanguage();
 
