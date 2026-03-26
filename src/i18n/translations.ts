@@ -55,11 +55,11 @@ export const translations = {
       titleLine1: "Your Gateway to",
       titleLine2: "Barcelona's Finest",
       paragraph1:
-        "Ready to experience the best of Barcelona while feeling like a VIP but at convenient prices? We are here for you: NightDreams Barcelona, one of the most important and established promotion agencies in the city. Born from the union of previous agencies in 2020, over the years we have continued to improve and provide our clients with the best services at the most competitive prices possible. From nightclubs, with an excellent VIP TABLES service and GUARANTEED SKIP-THE-LINE access every night and in any period of the year, to restaurant discounts, pool parties, jet skis and much more!",
+        "Ready to experience the best of Barcelona while feeling like a VIP but at convenient prices? We are here for you: NightDreams Barcelona, one of the most important and established promotion agencies in the city. Born from the union of previous agencies in 2019, over the years we have continued to improve and provide our clients with the best services at the most competitive prices. From nightclubs, with an excellent VIP TABLES service, with the possibility to look inside the venue before entering, or with SKIP-THE-LINE access every night and in any period of the year at a fixed price with no surprises, to restaurant discounts, pool parties, jet skis and much more!",
       paragraph2:
-        "Our real strength? Honesty with our clients: we only suggest what we would personally choose, based on the music and the client's preferences, and above all our presence in Barcelona 365 days a year. This guarantees constant support for any problem, and most importantly, it creates long-term bonds between promoters and clients, who become real friends and part of our NightDreams family.",
+        "Our real strength? Honesty with our clients: we only suggest what we would personally choose, based on the music and the client's preferences, and above all our presence in Barcelona 365 days a year. This guarantees constant support for any problem, and creates lasting bonds between promoters and clients, who become real friends and part of our NightDreams family.",
       paragraph3:
-        "What else can we say? We are waiting for you in this wonderful city! Contact us now for a personalized quote, or come meet us every day from 11:30 PM in Barceloneta, right outside the clubs. See you soon!",
+        "What else can we say? We are waiting for you in this wonderful city! Contact us now for a personalized quote, we are ready to offer you the best so that you'll come back to us again and again. If you're already in Barcelona, come find us every day from 11:45 PM in Barceloneta, right outside the club doors. See you soon!",
       stat1Num: "20+",
       stat1Label: "Exclusive Partners",
       stat2Num: "5+",
