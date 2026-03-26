@@ -14,6 +14,8 @@ import erasmusBlingBlingCover from "@/assets/images/erasmus-bling-bling-cover.jp
 import erasmusBlingBlingVideo from "@/assets/videos/erasmus-bling-bling.mp4";
 import bobSinclairCover from "@/assets/images/bob-sinclair-cover.jpg";
 import bobSinclairVideo from "@/assets/videos/bob-sinclair-opium.mp4";
+import hugelCover from "@/assets/images/hugel-cover.jpg";
+import hugelVideo from "@/assets/videos/hugel-ku-bcn.mp4";
 
 // Event highlight cards data
 const eventHighlights = [
