@@ -272,7 +272,7 @@ const ReviewsPhotosGallery = ({ compact = false }: { compact?: boolean }) => {
           >
             <span className="text-silver-gradient">{texts.photosTitle}</span>
           </h3>
-          <ThumbGrid images={clientPhotos} onOpen={(i) => openModal(clientPhotos, i)} />
+          <ThumbGrid images={clientPhotos} onOpen={(i) => openModal(clientPhotos, i)} showMoreLabel={texts.showMore} showLessLabel={texts.showLess} />
         </div>
       </div>
 
