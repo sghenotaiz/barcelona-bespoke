@@ -55,11 +55,11 @@ const eventHighlights = [
     videoUrl: bobSinclairVideo,
   },
   {
-    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=800&fit=crop",
+    image: hugelCover,
     titleKey: "event6Title" as const,
     dateKey: "event6Date" as const,
     statsKey: "event6Stats" as const,
-    videoUrl: "",
+    videoUrl: hugelVideo,
   },
 ];
 
