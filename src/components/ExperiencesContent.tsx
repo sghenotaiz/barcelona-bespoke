@@ -4,6 +4,7 @@ import { Star, Play, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { z } from "zod";
 import DualCTA from "@/components/DualCTA";
+import ReviewsPhotosGallery from "@/components/ReviewsPhotosGallery";
 import marcoCarolaCover from "@/assets/images/marco-carola-cover.jpg";
 import marcoCarolaVideo from "@/assets/videos/marco-carola-ku-bcn.mp4";
 import tygaOpiumCover from "@/assets/images/tyga-opium-cover.jpg";
