@@ -16,14 +16,13 @@ const whatsappScreenshots = [
 ];
 
 const clientPhotos = [
-  "/images/client-photo-1.jpg",
-  "/images/client-photo-2.jpg",
-  "/images/client-photo-3.jpg",
-  "/images/client-photo-4.jpg",
-  "/images/client-photo-5.jpg",
-  "/images/client-photo-6.jpg",
-  "/images/client-photo-7.jpg",
-  "/images/client-photo-8.jpg",
+  "/images/client-exp-1.jpg",
+  "/images/client-exp-2.jpg",
+  "/images/client-exp-3.jpg",
+  "/images/client-exp-4.jpg",
+  "/images/client-exp-5.jpg",
+  "/images/client-exp-6.jpg",
+  "/images/client-exp-7.jpg",
 ];
 
 // ── Translations ──
