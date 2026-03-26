@@ -1215,7 +1215,7 @@ export const translations = {
       quote4: "Du dîner avec chef privé à l'expérience en club — tout a dépassé nos attentes.",
       quote5: "Professionnels, discrets et incroyablement bien connectés. NightDreams est le seul appel dont vous avez besoin à Barcelone.",
       quote6: "Une équipe extraordinaire qui a transformé notre week-end en une expérience unique.",
-      formLabel: "Partagez Vos Moments",
+      formLabel: "maintenant c'est à vous",
       formTitle: "Partagez Vos",
       formTitleAccent: "Moments",
       formSuccess: "Merci — votre envoi a été transmis !",
