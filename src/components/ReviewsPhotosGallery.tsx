@@ -149,39 +149,60 @@ const ImageModal = ({
   </motion.div>
 );
 
-// ── Thumbnail Grid ──
+// ── Thumbnail Grid with expand/collapse ──
 const ThumbGrid = ({
   images,
   onOpen,
+  showMoreLabel,
+  showLessLabel,
 }: {
   images: string[];
   onOpen: (index: number) => void;
-}) => (
-  <div className="grid grid-cols-2 gap-2 max-w-[280px] mx-auto">
-    {images.map((src, i) => (
-      <motion.div
-        key={i}
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
-        className="relative aspect-[3/4] overflow-hidden border border-border cursor-pointer group"
-        onClick={() => onOpen(i)}
-      >
-        <img
-          src={src}
-          alt={`Gallery ${i + 1}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-          <ZoomIn
-            size={28}
-            className="text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          />
-        </div>
-      </motion.div>
-    ))}
-  </div>
-);
+  showMoreLabel: string;
+  showLessLabel: string;
+}) => {
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? images : images.slice(0, 4);
+  const hasMore = images.length > 4;
+
+  return (
+    <div className="max-w-[280px] mx-auto">
+      <div className="grid grid-cols-2 gap-2">
+        {visible.map((src, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="relative aspect-[3/4] overflow-hidden border border-border cursor-pointer group"
+            onClick={() => onOpen(i)}
+          >
+            <img
+              src={src}
+              alt={`Gallery ${i + 1}`}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+              <ZoomIn
+                size={28}
+                className="text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+      {hasMore && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="flex items-center justify-center gap-1.5 mx-auto mt-3 font-body text-[10px] tracking-[0.2em] uppercase text-silver hover:text-foreground transition-colors"
+        >
+          {expanded ? showLessLabel : showMoreLabel}
+          {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+        </button>
+      )}
+    </div>
+  );
+};
 
 // ── Main Component ──
 const ReviewsPhotosGallery = ({ compact = false }: { compact?: boolean }) => {
