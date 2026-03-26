@@ -10,6 +10,8 @@ import tygaOpiumCover from "@/assets/images/tyga-opium-cover.jpg";
 import tygaOpiumVideo from "@/assets/videos/tyga-opium.mp4";
 import sferaEbbastaCover from "@/assets/images/sfera-ebbasta-cover.jpg";
 import sferaEbbastaVideo from "@/assets/videos/sfera-ebbasta-ku-bcn.mp4";
+import erasmusBlingBlingCover from "@/assets/images/erasmus-bling-bling-cover.jpg";
+import erasmusBlingBlingVideo from "@/assets/videos/erasmus-bling-bling.mp4";
 
 // Event highlight cards data
 const eventHighlights = [
@@ -35,11 +37,11 @@ const eventHighlights = [
     videoUrl: sferaEbbastaVideo,
   },
   {
-    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=800&fit=crop",
+    image: erasmusBlingBlingCover,
     titleKey: "event4Title" as const,
     dateKey: "event4Date" as const,
     statsKey: "event4Stats" as const,
-    videoUrl: "",
+    videoUrl: erasmusBlingBlingVideo,
   },
   {
     image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=800&fit=crop",
