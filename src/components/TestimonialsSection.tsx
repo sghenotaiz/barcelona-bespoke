@@ -116,7 +116,7 @@ const TestimonialsSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const result = reviewSchema.safeParse({ name: form.name, email: form.email, rating: form.rating, comment: form.comment });
+    const result = reviewSchema.safeParse({ name: form.name, email: form.email, comment: form.comment, type: form.type });
 
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
@@ -127,25 +127,19 @@ const TestimonialsSection = () => {
       return;
     }
 
-    const avatarSeed = encodeURIComponent(form.name.trim());
-    const newReview: UserReview = {
-      name: result.data.name,
-      location: "Guest",
-      rating: result.data.rating,
-      image: `https://api.dicebear.com/7.x/initials/svg?seed=${avatarSeed}&backgroundColor=1a1a1a&textColor=c0c0c0`,
-      quote: result.data.comment
-    };
+    const typeLabel = form.type === "review" ? "Recensione" : "Le nostre foto";
+    const subject = encodeURIComponent(`NightDreams - ${typeLabel} da ${result.data.name}`);
+    const body = encodeURIComponent(
+      `Nome: ${result.data.name}\nEmail: ${result.data.email}\nTipologia: ${typeLabel}\nCommento: ${result.data.comment}\n\n${selectedFile ? `Foto allegata: ${selectedFile.name} (il cliente ha selezionato una foto - richiedila via email di risposta)` : "Nessuna foto allegata"}`
+    );
+    window.open(`mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${body}`, "_self");
 
-    setUserReviews((prev) => [...prev, newReview]);
-    setForm({ name: "", email: "", rating: 0, comment: "" });
+    setForm({ name: "", email: "", comment: "", type: "review" });
+    setSelectedFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
     setErrors({});
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
-    setTimeout(() => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollTo({ left: scrollRef.current.scrollWidth, behavior: "smooth" });
-      }
-    }, 100);
   };
 
   const inputClass =
