@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Upload } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { z } from "zod";
 
@@ -61,43 +61,9 @@ type UserReview = {
 const reviewSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(80),
   email: z.string().trim().email("Invalid email").max(255),
-  rating: z.number().min(1).max(5),
-  comment: z.string().trim().min(1, "Comment is required").max(1000)
+  comment: z.string().trim().min(1, "Comment is required").max(1000),
+  type: z.enum(["review", "photo"]),
 });
-
-const StarRatingInput = ({
-  value,
-  onChange
-
-
-
-}: {value: number;onChange: (v: number) => void;}) => {
-  const [hovered, setHovered] = useState(0);
-  return (
-    <div className="flex gap-1">
-      {[1, 2, 3, 4, 5].map((s) =>
-      <button
-        key={s}
-        type="button"
-        onClick={() => onChange(s)}
-        onMouseEnter={() => setHovered(s)}
-        onMouseLeave={() => setHovered(0)}
-        className="transition-transform hover:scale-110"
-        aria-label={`${s} star`}>
-
-          <Star
-          size={22}
-          className={
-          s <= (hovered || value) ?
-          "fill-silver text-silver" :
-          "fill-transparent text-muted-foreground"
-          } />
-
-        </button>
-      )}
-    </div>);
-
-};
 
 const TestimonialsSection = () => {
   const ref = useRef(null);
@@ -109,9 +75,11 @@ const TestimonialsSection = () => {
   const [userReviews, setUserReviews] = useState<UserReview[]>([]);
 
   // Form state
-  const [form, setForm] = useState({ name: "", email: "", rating: 0, comment: "" });
+  const [form, setForm] = useState({ name: "", email: "", comment: "", type: "review" as "review" | "photo" });
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const checkScroll = () => {
     if (!scrollRef.current) return;
@@ -148,7 +116,7 @@ const TestimonialsSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const result = reviewSchema.safeParse({ name: form.name, email: form.email, rating: form.rating, comment: form.comment });
+    const result = reviewSchema.safeParse({ name: form.name, email: form.email, comment: form.comment, type: form.type });
 
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
@@ -159,25 +127,19 @@ const TestimonialsSection = () => {
       return;
     }
 
-    const avatarSeed = encodeURIComponent(form.name.trim());
-    const newReview: UserReview = {
-      name: result.data.name,
-      location: "Guest",
-      rating: result.data.rating,
-      image: `https://api.dicebear.com/7.x/initials/svg?seed=${avatarSeed}&backgroundColor=1a1a1a&textColor=c0c0c0`,
-      quote: result.data.comment
-    };
+    const typeLabel = form.type === "review" ? "Recensione" : "Le nostre foto";
+    const subject = encodeURIComponent(`NightDreams - ${typeLabel} da ${result.data.name}`);
+    const body = encodeURIComponent(
+      `Nome: ${result.data.name}\nEmail: ${result.data.email}\nTipologia: ${typeLabel}\nCommento: ${result.data.comment}\n\n${selectedFile ? `Foto allegata: ${selectedFile.name} (il cliente ha selezionato una foto - richiedila via email di risposta)` : "Nessuna foto allegata"}`
+    );
+    window.open(`mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${body}`, "_self");
 
-    setUserReviews((prev) => [...prev, newReview]);
-    setForm({ name: "", email: "", rating: 0, comment: "" });
+    setForm({ name: "", email: "", comment: "", type: "review" });
+    setSelectedFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
     setErrors({});
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
-    setTimeout(() => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollTo({ left: scrollRef.current.scrollWidth, behavior: "smooth" });
-      }
-    }, 100);
   };
 
   const inputClass =
@@ -356,17 +318,41 @@ const TestimonialsSection = () => {
               }
             </div>
 
-            {/* Rating */}
+            {/* File upload */}
             <div className="flex flex-col gap-1.5">
               <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                {t.testimonials.formRating}
+                {t.testimonials.formFile}
               </label>
-              <StarRatingInput
-                value={form.rating}
-                onChange={(v) => setForm((p) => ({ ...p, rating: v }))} />
+              <div
+                onClick={() => fileInputRef.current?.click()}
+                className={`${inputClass} cursor-pointer flex items-center gap-2`}>
+                <Upload size={16} className="text-muted-foreground flex-shrink-0" />
+                <span className={selectedFile ? "text-foreground" : "text-muted-foreground"}>
+                  {selectedFile ? selectedFile.name : t.testimonials.formFilePlaceholder}
+                </span>
+              </div>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={(e) => setSelectedFile(e.target.files?.[0] || null)}
+                className="hidden" />
+            </div>
 
-              {errors.rating &&
-              <span className="font-body text-xs text-destructive">{errors.rating}</span>
+            {/* Type selector */}
+            <div className="flex flex-col gap-1.5">
+              <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                {t.testimonials.formType}
+              </label>
+              <select
+                value={form.type}
+                onChange={(e) => setForm((p) => ({ ...p, type: e.target.value as "review" | "photo" }))}
+                className={inputClass}>
+                <option value="review">{t.testimonials.formTypeReview}</option>
+                <option value="photo">{t.testimonials.formTypePhoto}</option>
+              </select>
+              {errors.type &&
+              <span className="font-body text-xs text-destructive">{errors.type}</span>
               }
             </div>
 

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { Star, Play, X } from "lucide-react";
+import { useState, useRef } from "react";
+import { Star, Play, X, Upload } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { z } from "zod";
 import DualCTA from "@/components/DualCTA";
@@ -69,38 +69,9 @@ const eventHighlights = [
 const reviewSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(80),
   email: z.string().trim().email("Invalid email").max(255),
-  rating: z.number().min(1, "Rating is required").max(5),
   comment: z.string().trim().min(1, "Comment is required").max(1000),
+  type: z.enum(["review", "photo"]),
 });
-
-// --- Star rating input ---
-const StarRatingInput = ({ value, onChange }: { value: number; onChange: (v: number) => void }) => {
-  const [hovered, setHovered] = useState(0);
-  return (
-    <div className="flex gap-1">
-      {[1, 2, 3, 4, 5].map((s) => (
-        <button
-          key={s}
-          type="button"
-          onClick={() => onChange(s)}
-          onMouseEnter={() => setHovered(s)}
-          onMouseLeave={() => setHovered(0)}
-          className="transition-transform hover:scale-110 p-1"
-          aria-label={`${s} star`}
-        >
-          <Star
-            size={24}
-            className={
-              s <= (hovered || value)
-                ? "fill-silver text-silver"
-                : "fill-transparent text-muted-foreground"
-            }
-          />
-        </button>
-      ))}
-    </div>
-  );
-};
 
 // --- Video Modal ---
 const VideoModal = ({ item, getText, onClose }: { item: typeof eventHighlights[0]; getText: (key: string) => string; onClose: () => void }) => (
@@ -208,7 +179,9 @@ const ExperiencesContent = () => {
 
   // Review form state (shared between mobile and desktop)
   const [userReviews, setUserReviews] = useState<{ name: string; rating: number; quote: string; image: string }[]>([]);
-  const [form, setForm] = useState({ name: "", email: "", rating: 0, comment: "" });
+  const [form, setForm] = useState({ name: "", email: "", comment: "", type: "review" as "review" | "photo" });
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [activeVideo, setActiveVideo] = useState<typeof eventHighlights[0] | null>(null);
@@ -230,28 +203,22 @@ const ExperiencesContent = () => {
       return;
     }
 
+    const typeLabel = form.type === "review" ? "Recensione" : "Le nostre foto";
     const body = [
-      `Name: ${result.data.name}`,
+      `Nome: ${result.data.name}`,
       `Email: ${result.data.email}`,
-      `Rating: ${"★".repeat(result.data.rating)}${"☆".repeat(5 - result.data.rating)}`,
-      `Review: ${result.data.comment}`,
+      `Tipologia: ${typeLabel}`,
+      `Commento: ${result.data.comment}`,
+      selectedFile ? `Foto: ${selectedFile.name} (richiedila via email di risposta)` : "Nessuna foto allegata",
     ].join("\n");
 
-    const subject = encodeURIComponent("Nuova Recensione - NightDreams Esperienze");
+    const subject = encodeURIComponent(`NightDreams - ${typeLabel} da ${result.data.name}`);
     const encodedBody = encodeURIComponent(body);
     window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${encodedBody}`;
 
-    const avatarSeed = encodeURIComponent(result.data.name.trim());
-    setUserReviews((prev) => [
-      ...prev,
-      {
-        name: result.data.name,
-        rating: result.data.rating,
-        quote: result.data.comment,
-        image: `https://api.dicebear.com/7.x/initials/svg?seed=${avatarSeed}&backgroundColor=1a1a1a&textColor=c0c0c0`,
-      },
-    ]);
-    setForm({ name: "", email: "", rating: 0, comment: "" });
+    setForm({ name: "", email: "", comment: "", type: "review" });
+    setSelectedFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
     setErrors({});
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
@@ -320,13 +287,40 @@ const ExperiencesContent = () => {
           </div>
         </div>
 
-        {/* Rating */}
+        {/* File upload */}
         <div className="flex flex-col gap-1.5">
           <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-            {t.testimonials.formRating}
+            {t.testimonials.formFile}
           </label>
-          <StarRatingInput value={form.rating} onChange={(v) => setForm((p) => ({ ...p, rating: v }))} />
-          {errors.rating && <span className="font-body text-xs text-destructive">{errors.rating}</span>}
+          <div
+            onClick={() => fileInputRef.current?.click()}
+            className={`${inputClass} cursor-pointer flex items-center gap-2`}>
+            <Upload size={16} className="text-muted-foreground flex-shrink-0" />
+            <span className={selectedFile ? "text-foreground" : "text-muted-foreground"}>
+              {selectedFile ? selectedFile.name : t.testimonials.formFilePlaceholder}
+            </span>
+          </div>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={(e) => setSelectedFile(e.target.files?.[0] || null)}
+            className="hidden" />
+        </div>
+
+        {/* Type selector */}
+        <div className="flex flex-col gap-1.5">
+          <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
+            {t.testimonials.formType}
+          </label>
+          <select
+            value={form.type}
+            onChange={(e) => setForm((p) => ({ ...p, type: e.target.value as "review" | "photo" }))}
+            className={inputClass}>
+            <option value="review">{t.testimonials.formTypeReview}</option>
+            <option value="photo">{t.testimonials.formTypePhoto}</option>
+          </select>
+          {errors.type && <span className="font-body text-xs text-destructive">{errors.type}</span>}
         </div>
 
         {/* Comment */}
