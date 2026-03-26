@@ -209,7 +209,7 @@ const ExperiencesSection = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.35 + i * 0.08 }}
-            className="group relative overflow-hidden aspect-[3/2] border border-border hover:border-silver/40 transition-all duration-500">
+            className="group relative overflow-hidden aspect-[3/4] border border-border hover:border-silver/40 transition-all duration-500">
 
               <img
               src={photo.image}
@@ -220,6 +220,32 @@ const ExperiencesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           )}
+
+          {/* Video card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.35 + photoGrid.length * 0.08 }}
+            className="group relative overflow-hidden aspect-[3/4] border border-border hover:border-silver/40 transition-all duration-500 cursor-pointer"
+            onClick={(e) => {
+              const video = e.currentTarget.querySelector("video");
+              if (video) { video.paused ? video.play() : video.pause(); }
+            }}
+          >
+            <video
+              src="/videos/client-exp-video.mp4"
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-background/20 group-hover:bg-background/0 transition-all duration-300 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full border-2 border-silver/60 flex items-center justify-center bg-background/40 backdrop-blur-sm group-hover:border-silver transition-all duration-300">
+                <Play size={24} className="text-silver ml-1" />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>);
