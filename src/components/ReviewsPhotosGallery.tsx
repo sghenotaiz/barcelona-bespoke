@@ -141,7 +141,7 @@ const ThumbGrid = ({
   images: string[];
   onOpen: (index: number) => void;
 }) => (
-  <div className="grid grid-cols-2 gap-3">
+  <div className="grid grid-cols-2 gap-2 max-w-[280px] mx-auto">
     {images.map((src, i) => (
       <motion.div
         key={i}
