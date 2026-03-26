@@ -261,7 +261,7 @@ const ReviewsPhotosGallery = ({ compact = false }: { compact?: boolean }) => {
           >
             <span className="text-silver-gradient">{texts.whatsappTitle}</span>
           </h3>
-          <ThumbGrid images={whatsappScreenshots} onOpen={(i) => openModal(whatsappScreenshots, i)} />
+          <ThumbGrid images={whatsappScreenshots} onOpen={(i) => openModal(whatsappScreenshots, i)} showMoreLabel={texts.showMore} showLessLabel={texts.showLess} />
         </div>
 
         {/* Client Photos */}
