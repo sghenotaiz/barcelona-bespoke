@@ -109,9 +109,11 @@ const TestimonialsSection = () => {
   const [userReviews, setUserReviews] = useState<UserReview[]>([]);
 
   // Form state
-  const [form, setForm] = useState({ name: "", email: "", rating: 0, comment: "" });
+  const [form, setForm] = useState({ name: "", email: "", comment: "", type: "review" as "review" | "photo" });
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const checkScroll = () => {
     if (!scrollRef.current) return;
