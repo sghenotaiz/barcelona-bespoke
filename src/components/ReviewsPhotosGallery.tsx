@@ -9,6 +9,10 @@ const whatsappScreenshots = [
   "/images/whatsapp-review-2.jpg",
   "/images/whatsapp-review-3.jpg",
   "/images/whatsapp-review-4.jpg",
+  "/images/whatsapp-review-5.jpg",
+  "/images/whatsapp-review-6.jpg",
+  "/images/whatsapp-review-7.jpg",
+  "/images/whatsapp-review-8.jpg",
 ];
 
 const clientPhotos = [
@@ -16,6 +20,10 @@ const clientPhotos = [
   "/images/client-photo-2.jpg",
   "/images/client-photo-3.jpg",
   "/images/client-photo-4.jpg",
+  "/images/client-photo-5.jpg",
+  "/images/client-photo-6.jpg",
+  "/images/client-photo-7.jpg",
+  "/images/client-photo-8.jpg",
 ];
 
 // ── Translations ──
