@@ -69,38 +69,9 @@ const eventHighlights = [
 const reviewSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(80),
   email: z.string().trim().email("Invalid email").max(255),
-  rating: z.number().min(1, "Rating is required").max(5),
   comment: z.string().trim().min(1, "Comment is required").max(1000),
+  type: z.enum(["review", "photo"]),
 });
-
-// --- Star rating input ---
-const StarRatingInput = ({ value, onChange }: { value: number; onChange: (v: number) => void }) => {
-  const [hovered, setHovered] = useState(0);
-  return (
-    <div className="flex gap-1">
-      {[1, 2, 3, 4, 5].map((s) => (
-        <button
-          key={s}
-          type="button"
-          onClick={() => onChange(s)}
-          onMouseEnter={() => setHovered(s)}
-          onMouseLeave={() => setHovered(0)}
-          className="transition-transform hover:scale-110 p-1"
-          aria-label={`${s} star`}
-        >
-          <Star
-            size={24}
-            className={
-              s <= (hovered || value)
-                ? "fill-silver text-silver"
-                : "fill-transparent text-muted-foreground"
-            }
-          />
-        </button>
-      ))}
-    </div>
-  );
-};
 
 // --- Video Modal ---
 const VideoModal = ({ item, getText, onClose }: { item: typeof eventHighlights[0]; getText: (key: string) => string; onClose: () => void }) => (
