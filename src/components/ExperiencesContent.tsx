@@ -669,10 +669,7 @@ const ExperiencesContent = () => {
                     key={i}
                     className="relative group border border-border cursor-pointer overflow-hidden"
                     style={{ aspectRatio: "9/16" }}
-                    onClick={(e) => {
-                      const video = e.currentTarget.querySelector("video");
-                      if (video) { video.paused ? video.play() : video.pause(); }
-                    }}
+                    onClick={() => setActiveSaltafila(v)}
                   >
                     <video
                       src={v.src}
