@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { Star, Play, X } from "lucide-react";
+import { useState, useRef } from "react";
+import { Star, Play, X, Upload } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { z } from "zod";
 import DualCTA from "@/components/DualCTA";
