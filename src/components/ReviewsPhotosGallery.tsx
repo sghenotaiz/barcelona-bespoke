@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ZoomIn, ChevronDown, ChevronUp } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 // ── Placeholder images — replace these paths with real screenshots/photos ──
