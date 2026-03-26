@@ -60,7 +60,7 @@ export const translations = {
         "Our real strength? Honesty with our clients: we only suggest what we would personally choose, based on the music and the client's preferences, and above all our presence in Barcelona 365 days a year. This guarantees constant support for any problem, and most importantly, it creates long-term bonds between promoters and clients, who become real friends and part of our NightDreams family.",
       paragraph3:
         "What else can we say? We are waiting for you in this wonderful city! Contact us now for a personalized quote, or come meet us every day from 11:30 PM in Barceloneta, right outside the clubs. See you soon!",
-      stat1Num: "30+",
+      stat1Num: "20+",
       stat1Label: "Exclusive Partners",
       stat2Num: "5+",
       stat2Label: "Years of Excellence",
@@ -489,7 +489,7 @@ export const translations = {
         "¿Nuestra verdadera fortaleza? La honestidad con nuestros clientes: solo sugerimos lo que nosotros mismos elegiríamos, según la música y las preferencias del cliente, y sobre todo nuestra presencia en Barcelona los 365 días del año. Esto garantiza un apoyo constante ante cualquier problema, y lo más importante, crea vínculos a largo plazo entre promotores y clientes, que se convierten en verdaderos amigos y parte de nuestra familia NightDreams.",
       paragraph3:
         "¿Qué más podemos decir? ¡Te esperamos en esta maravillosa ciudad! Contáctanos ahora para un presupuesto personalizado, o ven a conocernos todos los días desde las 23:30 en la Barceloneta, justo fuera de los clubs. ¡Hasta pronto!",
-      stat1Num: "30+",
+      stat1Num: "20+",
       stat1Label: "Socios Exclusivos",
       stat2Num: "5+",
       stat2Label: "Años de Excelencia",
@@ -918,7 +918,7 @@ export const translations = {
         "Notre vraie force ? L'honnêteté avec nos clients : nous ne suggérons que ce que nous choisirions personnellement, en fonction de la musique et des préférences du client, et surtout notre présence à Barcelone 365 jours par an. Cela garantit un soutien constant pour tout problème, et surtout, cela crée des liens durables entre promoteurs et clients, qui deviennent de vrais amis et font partie de notre famille NightDreams.",
       paragraph3:
         "Que dire de plus ? Nous vous attendons dans cette merveilleuse ville ! Contactez-nous maintenant pour un devis personnalisé, ou venez nous rencontrer tous les jours dès 23h30 à la Barceloneta, juste devant les clubs. À bientôt !",
-      stat1Num: "30+",
+      stat1Num: "20+",
       stat1Label: "Partenaires Exclusifs",
       stat2Num: "5+",
       stat2Label: "Ans d'Excellence",
@@ -1342,12 +1342,12 @@ export const translations = {
       titleLine1: "La Tua Porta verso il",
       titleLine2: "Meglio di Barcellona",
       paragraph1:
-        "Pronto a vivere il meglio di Barcellona sentendoti VIP ma a prezzi convenienti? Siamo qui per te: NightDreams Barcelona, una delle agenzie di promozione più importanti e consolidate della città. Nata dall'unione di agenzie precedenti nel 2020, nel corso degli anni abbiamo continuato a migliorare e a offrire ai nostri clienti i migliori servizi ai prezzi più competitivi. Dalle discoteche, con un eccellente servizio TAVOLI VIP e accesso SKIP-THE-LINE GARANTITO ogni notte e in qualsiasi periodo dell'anno, agli sconti nei ristoranti, pool party, moto d'acqua e tanto altro!",
+        "Pronto a vivere il meglio di Barcellona sentendoti un VIP ma a prezzi convenienti? Siamo qui per te: NightDreams Barcelona, una delle agenzie di promozione più importanti e consolidate della città. Nata dall'unione di agenzie precedenti nel 2019, nel corso degli anni abbiamo continuato a migliorare e a offrire ai nostri clienti i migliori servizi ai prezzi più competitivi. Dalle discoteche, con un eccellente servizio TAVOLI VIP, con la possibilità di entrare a guardare il locale prima di entrare, o con l'accesso con SALTA-FILA ogni notte e in qualsiasi periodo dell'anno ad un prezzo fisso senza sorprese, a sconti nei ristoranti, pool party, moto d'acqua e tanto altro!",
       paragraph2:
         "La nostra vera forza? L'onestà con i nostri clienti: suggeriamo solo ciò che sceglieremmo personalmente, in base alla musica e alle preferenze del cliente, e, soprattutto la nostra presenza a Barcellona 365 giorni all'anno. Questo garantisce un supporto costante per qualsiasi problema, e crea legami duraturi tra promoter e clienti, che diventano veri amici e parte della nostra famiglia NightDreams.",
       paragraph3:
         "Che altro dire? Ti aspettiamo in questa meravigliosa città! Contattaci ora per un preventivo personalizzato, siamo pronti ad offrirti il massimo per far si che ritornerai a scriverci ancora e ancora. Se già sei a Barcellona, vieni a trovarci ogni giorno dalle 23:45 in Barceloneta, proprio al di fuori delle porte dei club. A presto!",
-      stat1Num: "30+",
+      stat1Num: "20+",
       stat1Label: "Partner Esclusivi",
       stat2Num: "5+",
       stat2Label: "Anni di Eccellenza",
