@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <NightDreamsLogo size="sm" showIcon={false} />
+            <NightDreamsLogo size="sm" showIcon={true} showText={false} />
           </div>
           <div className="flex gap-8">
             {navItems.map((item) => (
