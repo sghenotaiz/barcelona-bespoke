@@ -4,6 +4,7 @@ import { Star, Play, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { z } from "zod";
 import DualCTA from "@/components/DualCTA";
+import ReviewsPhotosGallery from "@/components/ReviewsPhotosGallery";
 import marcoCarolaCover from "@/assets/images/marco-carola-cover.jpg";
 import marcoCarolaVideo from "@/assets/videos/marco-carola-ku-bcn.mp4";
 import tygaOpiumCover from "@/assets/images/tyga-opium-cover.jpg";
@@ -63,45 +64,6 @@ const eventHighlights = [
   },
 ];
 
-// Client review cards data
-const clientReviews = [
-  {
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review1Name" as const,
-    cityKey: "review1City" as const,
-    quoteKey: "review1Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review2Name" as const,
-    cityKey: "review2City" as const,
-    quoteKey: "review2Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review3Name" as const,
-    cityKey: "review3City" as const,
-    quoteKey: "review3Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review4Name" as const,
-    cityKey: "review4City" as const,
-    quoteKey: "review4Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review5Name" as const,
-    cityKey: "review5City" as const,
-    quoteKey: "review5Quote" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
-    nameKey: "review6Name" as const,
-    cityKey: "review6City" as const,
-    quoteKey: "review6Quote" as const,
-  },
-];
 
 // --- Zod schema for review form ---
 const reviewSchema = z.object({
@@ -239,33 +201,6 @@ const DesktopEventCard = ({ item, getText, onOpen }: { item: typeof eventHighlig
   );
 };
 
-// --- Desktop Review Card ---
-const DesktopReviewCard = ({ item, getText }: { item: typeof clientReviews[0]; getText: (key: string) => string }) => (
-  <div className="relative border border-border bg-white/[0.03] backdrop-blur-sm group hover:border-silver/40 transition-all duration-500">
-    <div className="flex items-start gap-4 p-5">
-      <img
-        src={item.image}
-        alt={getText(item.nameKey)}
-        className="w-14 h-14 rounded-full object-cover border border-silver/20 flex-shrink-0 group-hover:border-silver/50 transition-colors"
-        loading="lazy"
-      />
-      <div className="flex-1 min-w-0">
-        <div className="flex gap-0.5 mb-1.5">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} size={12} className="fill-silver text-silver" />
-          ))}
-        </div>
-        <p className="font-body text-sm text-foreground/90 italic leading-relaxed mb-2">
-          "{getText(item.quoteKey)}"
-        </p>
-        <div className="flex items-center gap-2">
-          <span className="font-display text-sm text-foreground">{getText(item.nameKey)}</span>
-          <span className="font-body text-[10px] text-muted-foreground tracking-widest uppercase">{getText(item.cityKey)}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 // === MAIN COMPONENT ===
 const ExperiencesContent = () => {
@@ -543,70 +478,8 @@ const ExperiencesContent = () => {
             ))}
           </div>
 
-          {/* MOBILE: Client Reviews - simple vertical stack */}
-          <h3
-            className="text-lg tracking-wider uppercase text-center mt-10 mb-4"
-            style={{ fontFamily: "'Aldo the Apache', sans-serif" }}
-          >
-            <span className="text-silver-gradient">{getText("reviewsColumnTitle")}</span>
-          </h3>
-
-          <div className="space-y-3">
-            {clientReviews.map((item, i) => (
-              <div key={i} className="border border-border bg-white/[0.03] p-4">
-                <div className="flex items-start gap-3">
-                  <img
-                    src={item.image}
-                    alt={getText(item.nameKey)}
-                    className="w-10 h-10 rounded-full object-cover border border-silver/20 flex-shrink-0"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex gap-0.5 mb-1">
-                      {Array.from({ length: 5 }).map((_, si) => (
-                        <Star key={si} size={11} className="fill-silver text-silver" />
-                      ))}
-                    </div>
-                    <p className="font-body text-xs text-foreground/90 italic leading-relaxed mb-1">
-                      "{getText(item.quoteKey)}"
-                    </p>
-                    <div className="flex items-center gap-1.5">
-                      <span className="font-display text-xs text-foreground">{getText(item.nameKey)}</span>
-                      <span className="font-body text-[9px] text-muted-foreground tracking-widest uppercase">
-                        {getText(item.cityKey)}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* User-submitted reviews */}
-            {userReviews.map((item, i) => (
-              <div key={`user-${i}`} className="border border-silver/30 bg-white/[0.03] p-4">
-                <div className="flex items-start gap-3">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-10 h-10 rounded-full object-cover border border-silver/20 flex-shrink-0"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex gap-0.5 mb-1">
-                      {Array.from({ length: item.rating }).map((_, si) => (
-                        <Star key={si} size={11} className="fill-silver text-silver" />
-                      ))}
-                      {Array.from({ length: 5 - item.rating }).map((_, si) => (
-                        <Star key={`e-${si}`} size={11} className="fill-transparent text-muted-foreground" />
-                      ))}
-                    </div>
-                    <p className="font-body text-xs text-foreground/90 italic leading-relaxed mb-1">
-                      "{item.quote}"
-                    </p>
-                    <span className="font-display text-xs text-foreground">{item.name}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* MOBILE: Reviews & Photos Gallery */}
+          <ReviewsPhotosGallery />
 
           {/* MOBILE: Review Form */}
           <div className="mt-8">
@@ -701,54 +574,14 @@ const ExperiencesContent = () => {
               </div>
             </div>
 
-            {/* Column 2: Client Reviews */}
-            <div>
-              <h3
-                className="text-xl tracking-wider uppercase text-center mb-8"
-                style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
-              >
-                <span className="text-silver-gradient">{getText("reviewsColumnTitle")}</span>
-              </h3>
+          </div>
 
-              {/* Desktop: vertical scrollable */}
-              <div className="max-h-[600px] overflow-y-auto pr-2" style={{ scrollbarWidth: "thin" }}>
-                <div className="flex flex-col gap-4">
-                  {clientReviews.map((item, i) => (
-                    <DesktopReviewCard key={i} item={item} getText={getText} />
-                  ))}
-                  {userReviews.map((item, i) => (
-                    <motion.div
-                      key={`user-${i}`}
-                      initial={{ opacity: 0, x: 40 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="relative border border-silver/30 bg-white/[0.03] backdrop-blur-sm"
-                    >
-                      <div className="flex items-start gap-4 p-5">
-                        <img src={item.image} alt={item.name} className="w-14 h-14 rounded-full object-cover border border-silver/20 flex-shrink-0" loading="lazy" />
-                        <div className="flex-1 min-w-0">
-                          <div className="flex gap-0.5 mb-1.5">
-                            {Array.from({ length: item.rating }).map((_, si) => (
-                              <Star key={si} size={12} className="fill-silver text-silver" />
-                            ))}
-                            {Array.from({ length: 5 - item.rating }).map((_, si) => (
-                              <Star key={`e-${si}`} size={12} className="fill-transparent text-muted-foreground" />
-                            ))}
-                          </div>
-                          <p className="font-body text-sm text-foreground/90 italic leading-relaxed mb-2">"{item.quote}"</p>
-                          <span className="font-display text-sm text-foreground">{item.name}</span>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+          {/* Reviews & Photos Gallery - full width */}
+          <ReviewsPhotosGallery />
 
-              {/* Desktop: Review Form */}
-              <div className="mt-10">
-                <ReviewForm />
-              </div>
-            </div>
+          {/* Review Form */}
+          <div className="mt-10">
+            <ReviewForm />
           </div>
 
           {/* Desktop: Final CTA */}
