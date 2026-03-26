@@ -1631,8 +1631,8 @@ export const translations = {
       alessiaBio: "Alessia ha fatto la sua prima stagione da promoter nell'estate del 2025: mentre era in Erasmus a Barcellona ha continuato durante la stagione estiva, entrando a far parte della famiglia NightDreams.",
       partnersTitle: "I Nostri",
       partnersAccent: "Partner",
-      partnersNote: "Collaboriamo con i migliori venue di Barcellona — club esclusivi, hotel di lusso, ristoranti gourmet e molto altro.",
-      partnersNoteHighlight: "Sempre presenti, sempre disponibili.",
+      partnersNote: "Collaboriamo con questi e tanti altri partner, non ti basta che chiedere! Siamo pronti a trovare la soluzione per qualsiasi esigenza, il tutto su misura per TE. ",
+      partnersNoteHighlight: "Scrivici ora!",
     },
     testimonials: {
       label: "Cosa Dicono di Noi",
