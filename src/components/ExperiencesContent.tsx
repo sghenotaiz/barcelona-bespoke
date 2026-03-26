@@ -277,6 +277,7 @@ const ExperiencesContent = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [activeVideo, setActiveVideo] = useState<typeof eventHighlights[0] | null>(null);
+  const [activeSaltafila, setActiveSaltafila] = useState<{ src: string; label: string } | null>(null);
 
   const exp = t.experiences as Record<string, unknown>;
   const getText = (key: string): string => (exp[key] as string) || key;
