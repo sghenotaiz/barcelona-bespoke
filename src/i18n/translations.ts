@@ -489,7 +489,7 @@ export const translations = {
         "¿Nuestra verdadera fortaleza? La honestidad con nuestros clientes: solo sugerimos lo que nosotros mismos elegiríamos, según la música y las preferencias del cliente, y sobre todo nuestra presencia en Barcelona los 365 días del año. Esto garantiza un apoyo constante ante cualquier problema, y lo más importante, crea vínculos a largo plazo entre promotores y clientes, que se convierten en verdaderos amigos y parte de nuestra familia NightDreams.",
       paragraph3:
         "¿Qué más podemos decir? ¡Te esperamos en esta maravillosa ciudad! Contáctanos ahora para un presupuesto personalizado, o ven a conocernos todos los días desde las 23:30 en la Barceloneta, justo fuera de los clubs. ¡Hasta pronto!",
-      stat1Num: "30+",
+      stat1Num: "20+",
       stat1Label: "Socios Exclusivos",
       stat2Num: "5+",
       stat2Label: "Años de Excelencia",
