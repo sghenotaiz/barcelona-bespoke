@@ -1442,7 +1442,7 @@ export const translations = {
       expDinnerShowBullet1: "Spettacoli dal vivo e intrattenimento",
       expDinnerShowBullet2: "Menu gourmet multi-portata",
       expDinnerShowBullet3: "Bottiglie e drink nel post-cena con dj set",
-      expLimoTitle: "Limousine",
+      expLimoTitle: "Trasporti Privati",
       expLimoSubtitle: "Muoviti con comodità",
       expLimoDesc: "Limousine di lusso con autisti professionisti — dall'hotel alla porta del club o all'aeroporto. Adatto per gruppi grandi o piccoli che cercano comodità, professionalità e sicurezza.",
       expLimoBullet1: "Servizio di lusso porta a porta",
