@@ -8,28 +8,32 @@ import barcelonaVideo from "@/assets/videos/barcelona-nightlife.mp4";
 
 const photoGrid = [
 {
-  image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&h=400&fit=crop",
-  alt: "Group celebrating VIP night"
+  image: "/images/client-exp-1.jpg",
+  alt: "Gruppo al Holysh*t Barcelona"
 },
 {
-  image: "https://images.unsplash.com/photo-1529543544282-ea91407df3ae?w=600&h=400&fit=crop",
-  alt: "Friends at Barcelona club"
+  image: "/images/client-exp-2.jpg",
+  alt: "Ragazzi all'Opium Barcelona"
 },
 {
-  image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
-  alt: "VIP bottle service celebration"
+  image: "/images/client-exp-3.jpg",
+  alt: "Amici al The Mood Barcelona"
 },
 {
-  image: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=600&h=400&fit=crop",
-  alt: "Dance floor energy"
+  image: "/images/client-exp-4.jpg",
+  alt: "Selfie di gruppo in Barceloneta"
 },
 {
-  image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=400&fit=crop",
-  alt: "Night out with promoters"
+  image: "/images/client-exp-5.jpg",
+  alt: "Gruppo al Pacha Barcelona"
 },
 {
-  image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop",
-  alt: "Concert and nightlife vibes"
+  image: "/images/client-exp-6.jpg",
+  alt: "Selfie serata fuori dal club"
+},
+{
+  image: "/images/client-exp-7.jpg",
+  alt: "Amici in discoteca"
 }];
 
 
