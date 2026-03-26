@@ -583,6 +583,7 @@ const ExperiencesContent = () => {
                 <ReviewForm />
               </div>
             </div>
+          </div>
 
           {/* Desktop: Final CTA */}
           <div className="mt-24 text-center">
