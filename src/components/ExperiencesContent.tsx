@@ -201,33 +201,6 @@ const DesktopEventCard = ({ item, getText, onOpen }: { item: typeof eventHighlig
   );
 };
 
-// --- Desktop Review Card ---
-const DesktopReviewCard = ({ item, getText }: { item: typeof clientReviews[0]; getText: (key: string) => string }) => (
-  <div className="relative border border-border bg-white/[0.03] backdrop-blur-sm group hover:border-silver/40 transition-all duration-500">
-    <div className="flex items-start gap-4 p-5">
-      <img
-        src={item.image}
-        alt={getText(item.nameKey)}
-        className="w-14 h-14 rounded-full object-cover border border-silver/20 flex-shrink-0 group-hover:border-silver/50 transition-colors"
-        loading="lazy"
-      />
-      <div className="flex-1 min-w-0">
-        <div className="flex gap-0.5 mb-1.5">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} size={12} className="fill-silver text-silver" />
-          ))}
-        </div>
-        <p className="font-body text-sm text-foreground/90 italic leading-relaxed mb-2">
-          "{getText(item.quoteKey)}"
-        </p>
-        <div className="flex items-center gap-2">
-          <span className="font-display text-sm text-foreground">{getText(item.nameKey)}</span>
-          <span className="font-body text-[10px] text-muted-foreground tracking-widest uppercase">{getText(item.cityKey)}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 // === MAIN COMPONENT ===
 const ExperiencesContent = () => {
