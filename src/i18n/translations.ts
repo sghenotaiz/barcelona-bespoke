@@ -262,7 +262,7 @@ export const translations = {
       review6City: "Barcelona",
       review6Quote: "NightDreams is THE reference for nightlife here.",
       cardCta: "Book",
-      finalCtaTitle: "ARE YOU READY TO CREATE YOURS?",
+      finalCtaTitle: "ARE YOU READY TO JOIN US?",
       finalCtaButton: "Contact Us",
       videoLabel: "Highlights of our events",
       videoCaption1: "Barcelona clubs at peak energy",
