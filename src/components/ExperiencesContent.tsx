@@ -587,6 +587,19 @@ const ExperiencesContent = () => {
             <div>
               <ReviewsPhotosGallery compact />
 
+              {/* Link to Google Drive */}
+              <div className="text-center mt-8 mb-2">
+                <a
+                  href="https://drive.google.com/drive/folders/1-OuAO7Uj81nUI98GZaqss-b72gAHKWQD?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm text-silver hover:text-foreground transition-colors duration-300"
+                >
+                  Per altre recensioni e foto clicca{" "}
+                  <span className="underline font-bold text-foreground">QUI</span>!
+                </a>
+              </div>
+
               {/* Review Form */}
               <div className="mt-10">
                 <ReviewForm />
