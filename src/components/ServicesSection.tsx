@@ -9,7 +9,7 @@ import {
   Crown, Music, Ticket, ShieldCheck, DollarSign, Play, X } from
 "lucide-react";
 import vipTablesImg from "@/assets/services/vip-tables.jpg";
-import skipLineImg from "@/assets/services/multi-entry.jpg";
+import skipLineImg from "@/assets/services/skip-line.jpg";
 import poolPartyImg from "@/assets/services/pool-party.jpg";
 import restaurantImg from "@/assets/services/restaurant.jpg";
 import tattooStudioImg from "@/assets/services/tattoo-studio.jpg";
