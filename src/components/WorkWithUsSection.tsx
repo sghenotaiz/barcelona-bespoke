@@ -12,7 +12,6 @@ const WorkWithUsSection = () => {
   const careers = [
     { title: t.workWithUs.role1Title, desc: t.workWithUs.role1Desc },
     { title: t.workWithUs.role2Title, desc: t.workWithUs.role2Desc },
-    { title: t.workWithUs.role3Title, desc: t.workWithUs.role3Desc },
   ];
 
   const partnerPerks = [
