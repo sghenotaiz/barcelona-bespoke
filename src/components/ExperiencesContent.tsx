@@ -10,6 +10,8 @@ import tygaOpiumCover from "@/assets/images/tyga-opium-cover.jpg";
 import tygaOpiumVideo from "@/assets/videos/tyga-opium.mp4";
 import sferaEbbastaCover from "@/assets/images/sfera-ebbasta-cover.jpg";
 import sferaEbbastaVideo from "@/assets/videos/sfera-ebbasta-ku-bcn.mp4";
+import erasmusBlingBlingCover from "@/assets/images/erasmus-bling-bling-cover.jpg";
+import erasmusBlingBlingVideo from "@/assets/videos/erasmus-bling-bling.mp4";
 
 // Event highlight cards data
 const eventHighlights = [
