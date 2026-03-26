@@ -168,7 +168,7 @@ const ThumbGrid = ({
 );
 
 // ── Main Component ──
-const ReviewsPhotosGallery = () => {
+const ReviewsPhotosGallery = ({ compact = false }: { compact?: boolean }) => {
   const { language } = useLanguage();
   const texts = galleryTexts[language] || galleryTexts.it;
 
