@@ -1479,7 +1479,7 @@ export const translations = {
       },
     },
     experiences: {
-      label: "Esperienze Esclusive",
+      label: "Esperienze passate insieme",
       titleLine1: "Momenti Creati",
       titleLine2: "Solo per Te",
       heroTitle: "HIGHLIGHTS",
