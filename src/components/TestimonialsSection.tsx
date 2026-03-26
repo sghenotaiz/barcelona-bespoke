@@ -318,17 +318,41 @@ const TestimonialsSection = () => {
               }
             </div>
 
-            {/* Rating */}
+            {/* File upload */}
             <div className="flex flex-col gap-1.5">
               <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                {t.testimonials.formRating}
+                {t.testimonials.formFile}
               </label>
-              <StarRatingInput
-                value={form.rating}
-                onChange={(v) => setForm((p) => ({ ...p, rating: v }))} />
+              <div
+                onClick={() => fileInputRef.current?.click()}
+                className={`${inputClass} cursor-pointer flex items-center gap-2`}>
+                <Upload size={16} className="text-muted-foreground flex-shrink-0" />
+                <span className={selectedFile ? "text-foreground" : "text-muted-foreground"}>
+                  {selectedFile ? selectedFile.name : t.testimonials.formFilePlaceholder}
+                </span>
+              </div>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={(e) => setSelectedFile(e.target.files?.[0] || null)}
+                className="hidden" />
+            </div>
 
-              {errors.rating &&
-              <span className="font-body text-xs text-destructive">{errors.rating}</span>
+            {/* Type selector */}
+            <div className="flex flex-col gap-1.5">
+              <label className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                {t.testimonials.formType}
+              </label>
+              <select
+                value={form.type}
+                onChange={(e) => setForm((p) => ({ ...p, type: e.target.value as "review" | "photo" }))}
+                className={inputClass}>
+                <option value="review">{t.testimonials.formTypeReview}</option>
+                <option value="photo">{t.testimonials.formTypePhoto}</option>
+              </select>
+              {errors.type &&
+              <span className="font-body text-xs text-destructive">{errors.type}</span>
               }
             </div>
 
