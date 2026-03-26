@@ -653,6 +653,57 @@ const ExperiencesContent = () => {
                   <DesktopEventCard key={i} item={item} getText={getText} onOpen={() => setActiveVideo(item)} />
                 ))}
               </div>
+
+              {/* Esempi Saltafila */}
+              <h3
+                className="text-lg tracking-wider uppercase text-center mt-10 mb-6"
+                style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
+              >
+                <span className="text-silver-gradient">{getText("skipLineExamplesTitle")}</span>
+              </h3>
+              <div className="grid grid-cols-3 gap-4">
+                {[
+                  { src: "/videos/saltafila-ku.mp4", label: "Ku BCN" },
+                  { src: "/videos/saltafila-opium.mp4", label: "Opium" },
+                  { src: "/videos/saltafila-bling-bling.mp4", label: "Bling Bling" },
+                ].map((v, i) => (
+                  <div
+                    key={i}
+                    className="relative group border border-border cursor-pointer overflow-hidden"
+                    style={{ aspectRatio: "9/16" }}
+                    onClick={(e) => {
+                      const video = e.currentTarget.querySelector("video");
+                      if (video) { video.paused ? video.play() : video.pause(); }
+                    }}
+                  >
+                    <video
+                      src={v.src}
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      className="w-full h-full object-cover"
+                    />
+                    <div
+                      className="absolute inset-0 pointer-events-none transition-all duration-500"
+                      style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 50%, transparent 100%)" }}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
+                      <div className="w-14 h-14 rounded-full border-2 border-silver/60 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+                        <Play size={24} className="text-silver ml-1" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 z-[2]">
+                      <h4
+                        className="font-display text-sm text-foreground tracking-wide"
+                        style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
+                      >
+                        Saltafila {v.label}
+                      </h4>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Column 2: Client Reviews */}
