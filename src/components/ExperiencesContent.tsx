@@ -574,14 +574,15 @@ const ExperiencesContent = () => {
               </div>
             </div>
 
-          </div>
+            {/* Column 2: Reviews & Photos Gallery */}
+            <div>
+              <ReviewsPhotosGallery compact />
 
-          {/* Reviews & Photos Gallery - full width */}
-          <ReviewsPhotosGallery />
-
-          {/* Review Form */}
-          <div className="mt-10">
-            <ReviewForm />
+              {/* Review Form */}
+              <div className="mt-10">
+                <ReviewForm />
+              </div>
+            </div>
           </div>
 
           {/* Desktop: Final CTA */}

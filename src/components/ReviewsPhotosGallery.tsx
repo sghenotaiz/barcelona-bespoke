@@ -168,7 +168,7 @@ const ThumbGrid = ({
 );
 
 // ── Main Component ──
-const ReviewsPhotosGallery = () => {
+const ReviewsPhotosGallery = ({ compact = false }: { compact?: boolean }) => {
   const { language } = useLanguage();
   const texts = galleryTexts[language] || galleryTexts.it;
 
@@ -197,54 +197,54 @@ const ReviewsPhotosGallery = () => {
 
   return (
     <>
-      {/* Section Title */}
-      <div className="text-center mt-16 md:mt-24 mb-8 md:mb-12">
-        <h2
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-silver-gradient tracking-wider uppercase"
-          style={{
-            fontFamily: "'Aldo the Apache', sans-serif",
-            textShadow: "0 0 20px hsla(0,0%,80%,0.3)",
-          }}
-        >
-          {texts.sectionTitle}
-        </h2>
-        {/* Gold gradient divider */}
-        <div className="mx-auto mt-4 md:mt-6 h-px w-48 md:w-64" style={{
-          background: "linear-gradient(90deg, transparent, hsl(40,60%,50%), hsl(45,70%,55%), hsl(40,60%,50%), transparent)"
-        }} />
-      </div>
+      {/* Section Title - only when not compact */}
+      {!compact && (
+        <div className="text-center mt-16 md:mt-24 mb-8 md:mb-12">
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-silver-gradient tracking-wider uppercase"
+            style={{
+              fontFamily: "'Aldo the Apache', sans-serif",
+              textShadow: "0 0 20px hsla(0,0%,80%,0.3)",
+            }}
+          >
+            {texts.sectionTitle}
+          </h2>
+          <div className="mx-auto mt-4 md:mt-6 h-px w-48 md:w-64" style={{
+            background: "linear-gradient(90deg, transparent, hsl(40,60%,50%), hsl(45,70%,55%), hsl(40,60%,50%), transparent)"
+          }} />
+        </div>
+      )}
 
-      {/* 2-Column Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-        {/* Column 1: WhatsApp Screenshots */}
+      <div className={compact ? "space-y-6" : "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"}>
+        {/* WhatsApp Screenshots */}
         <div>
-          <div className="flex items-center justify-center gap-2 mb-4 md:mb-6">
-            <span className="text-xl">💬</span>
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <span className="text-base">💬</span>
             <h3
-              className="text-lg md:text-xl tracking-wider uppercase text-center"
+              className="text-sm md:text-base tracking-wider uppercase text-center"
               style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
             >
               <span className="text-silver-gradient">{texts.whatsappTitle}</span>
             </h3>
           </div>
-          <p className="text-center font-body text-[10px] md:text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4 md:mb-6">
+          <p className="text-center font-body text-[9px] tracking-[0.2em] uppercase text-muted-foreground mb-3">
             {texts.whatsappSub}
           </p>
           <ThumbGrid images={whatsappScreenshots} onOpen={(i) => openModal(whatsappScreenshots, i)} />
         </div>
 
-        {/* Column 2: Client Photos */}
+        {/* Client Photos */}
         <div>
-          <div className="flex items-center justify-center gap-2 mb-4 md:mb-6">
-            <span className="text-xl">📸</span>
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <span className="text-base">📸</span>
             <h3
-              className="text-lg md:text-xl tracking-wider uppercase text-center"
+              className="text-sm md:text-base tracking-wider uppercase text-center"
               style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
             >
               <span className="text-silver-gradient">{texts.photosTitle}</span>
             </h3>
           </div>
-          <p className="text-center font-body text-[10px] md:text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4 md:mb-6">
+          <p className="text-center font-body text-[9px] tracking-[0.2em] uppercase text-muted-foreground mb-3">
             {texts.photosSub}
           </p>
           <ThumbGrid images={clientPhotos} onOpen={(i) => openModal(clientPhotos, i)} />
