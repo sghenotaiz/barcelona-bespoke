@@ -37,11 +37,11 @@ const eventHighlights = [
     videoUrl: sferaEbbastaVideo,
   },
   {
-    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=800&fit=crop",
+    image: erasmusBlingBlingCover,
     titleKey: "event4Title" as const,
     dateKey: "event4Date" as const,
     statsKey: "event4Stats" as const,
-    videoUrl: "",
+    videoUrl: erasmusBlingBlingVideo,
   },
   {
     image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=800&fit=crop",
