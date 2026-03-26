@@ -179,7 +179,9 @@ const ExperiencesContent = () => {
 
   // Review form state (shared between mobile and desktop)
   const [userReviews, setUserReviews] = useState<{ name: string; rating: number; quote: string; image: string }[]>([]);
-  const [form, setForm] = useState({ name: "", email: "", rating: 0, comment: "" });
+  const [form, setForm] = useState({ name: "", email: "", comment: "", type: "review" as "review" | "photo" });
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [activeVideo, setActiveVideo] = useState<typeof eventHighlights[0] | null>(null);
@@ -201,28 +203,22 @@ const ExperiencesContent = () => {
       return;
     }
 
+    const typeLabel = form.type === "review" ? "Recensione" : "Le nostre foto";
     const body = [
-      `Name: ${result.data.name}`,
+      `Nome: ${result.data.name}`,
       `Email: ${result.data.email}`,
-      `Rating: ${"★".repeat(result.data.rating)}${"☆".repeat(5 - result.data.rating)}`,
-      `Review: ${result.data.comment}`,
+      `Tipologia: ${typeLabel}`,
+      `Commento: ${result.data.comment}`,
+      selectedFile ? `Foto: ${selectedFile.name} (richiedila via email di risposta)` : "Nessuna foto allegata",
     ].join("\n");
 
-    const subject = encodeURIComponent("Nuova Recensione - NightDreams Esperienze");
+    const subject = encodeURIComponent(`NightDreams - ${typeLabel} da ${result.data.name}`);
     const encodedBody = encodeURIComponent(body);
     window.location.href = `mailto:nightdreamsbarcelona@gmail.com?subject=${subject}&body=${encodedBody}`;
 
-    const avatarSeed = encodeURIComponent(result.data.name.trim());
-    setUserReviews((prev) => [
-      ...prev,
-      {
-        name: result.data.name,
-        rating: result.data.rating,
-        quote: result.data.comment,
-        image: `https://api.dicebear.com/7.x/initials/svg?seed=${avatarSeed}&backgroundColor=1a1a1a&textColor=c0c0c0`,
-      },
-    ]);
-    setForm({ name: "", email: "", rating: 0, comment: "" });
+    setForm({ name: "", email: "", comment: "", type: "review" });
+    setSelectedFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
     setErrors({});
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
