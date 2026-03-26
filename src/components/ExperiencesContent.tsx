@@ -574,54 +574,14 @@ const ExperiencesContent = () => {
               </div>
             </div>
 
-            {/* Column 2: Client Reviews */}
-            <div>
-              <h3
-                className="text-xl tracking-wider uppercase text-center mb-8"
-                style={{ fontFamily: "'Aldo the Apache', sans-serif", textShadow: "0 0 15px hsla(0,0%,80%,0.3)" }}
-              >
-                <span className="text-silver-gradient">{getText("reviewsColumnTitle")}</span>
-              </h3>
+          </div>
 
-              {/* Desktop: vertical scrollable */}
-              <div className="max-h-[600px] overflow-y-auto pr-2" style={{ scrollbarWidth: "thin" }}>
-                <div className="flex flex-col gap-4">
-                  {clientReviews.map((item, i) => (
-                    <DesktopReviewCard key={i} item={item} getText={getText} />
-                  ))}
-                  {userReviews.map((item, i) => (
-                    <motion.div
-                      key={`user-${i}`}
-                      initial={{ opacity: 0, x: 40 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="relative border border-silver/30 bg-white/[0.03] backdrop-blur-sm"
-                    >
-                      <div className="flex items-start gap-4 p-5">
-                        <img src={item.image} alt={item.name} className="w-14 h-14 rounded-full object-cover border border-silver/20 flex-shrink-0" loading="lazy" />
-                        <div className="flex-1 min-w-0">
-                          <div className="flex gap-0.5 mb-1.5">
-                            {Array.from({ length: item.rating }).map((_, si) => (
-                              <Star key={si} size={12} className="fill-silver text-silver" />
-                            ))}
-                            {Array.from({ length: 5 - item.rating }).map((_, si) => (
-                              <Star key={`e-${si}`} size={12} className="fill-transparent text-muted-foreground" />
-                            ))}
-                          </div>
-                          <p className="font-body text-sm text-foreground/90 italic leading-relaxed mb-2">"{item.quote}"</p>
-                          <span className="font-display text-sm text-foreground">{item.name}</span>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+          {/* Reviews & Photos Gallery - full width */}
+          <ReviewsPhotosGallery />
 
-              {/* Desktop: Review Form */}
-              <div className="mt-10">
-                <ReviewForm />
-              </div>
-            </div>
+          {/* Review Form */}
+          <div className="mt-10">
+            <ReviewForm />
           </div>
 
           {/* Desktop: Final CTA */}
