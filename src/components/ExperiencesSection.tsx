@@ -8,28 +8,32 @@ import barcelonaVideo from "@/assets/videos/barcelona-nightlife.mp4";
 
 const photoGrid = [
 {
-  image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&h=400&fit=crop",
-  alt: "Group celebrating VIP night"
+  image: "/images/client-exp-1.jpg",
+  alt: "Gruppo al Holysh*t Barcelona"
 },
 {
-  image: "https://images.unsplash.com/photo-1529543544282-ea91407df3ae?w=600&h=400&fit=crop",
-  alt: "Friends at Barcelona club"
+  image: "/images/client-exp-2.jpg",
+  alt: "Ragazzi all'Opium Barcelona"
 },
 {
-  image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
-  alt: "VIP bottle service celebration"
+  image: "/images/client-exp-3.jpg",
+  alt: "Amici al The Mood Barcelona"
 },
 {
-  image: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=600&h=400&fit=crop",
-  alt: "Dance floor energy"
+  image: "/images/client-exp-4.jpg",
+  alt: "Selfie di gruppo in Barceloneta"
 },
 {
-  image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=400&fit=crop",
-  alt: "Night out with promoters"
+  image: "/images/client-exp-5.jpg",
+  alt: "Gruppo al Pacha Barcelona"
 },
 {
-  image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop",
-  alt: "Concert and nightlife vibes"
+  image: "/images/client-exp-6.jpg",
+  alt: "Selfie serata fuori dal club"
+},
+{
+  image: "/images/client-exp-7.jpg",
+  alt: "Amici in discoteca"
 }];
 
 
@@ -205,7 +209,7 @@ const ExperiencesSection = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.35 + i * 0.08 }}
-            className="group relative overflow-hidden aspect-[3/2] border border-border hover:border-silver/40 transition-all duration-500">
+            className="group relative overflow-hidden aspect-[3/4] border border-border hover:border-silver/40 transition-all duration-500">
 
               <img
               src={photo.image}
@@ -216,6 +220,32 @@ const ExperiencesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           )}
+
+          {/* Video card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.35 + photoGrid.length * 0.08 }}
+            className="group relative overflow-hidden aspect-[3/4] border border-border hover:border-silver/40 transition-all duration-500 cursor-pointer"
+            onClick={(e) => {
+              const video = e.currentTarget.querySelector("video");
+              if (video) { video.paused ? video.play() : video.pause(); }
+            }}
+          >
+            <video
+              src="/videos/client-exp-video.mp4"
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-background/20 group-hover:bg-background/0 transition-all duration-300 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full border-2 border-silver/60 flex items-center justify-center bg-background/40 backdrop-blur-sm group-hover:border-silver transition-all duration-300">
+                <Play size={24} className="text-silver ml-1" />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>);
