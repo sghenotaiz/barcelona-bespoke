@@ -1120,7 +1120,7 @@ export const translations = {
       review6City: "Barcelone",
       review6Quote: "NightDreams est LA référence pour la vie nocturne ici.",
       cardCta: "Réserver",
-      finalCtaTitle: "ÊTES-VOUS PRÊT À CRÉER LES VÔTRES ?",
+      finalCtaTitle: "ÊTES-VOUS PRÊT À NOUS REJOINDRE ?",
       finalCtaButton: "Contactez-nous",
       videoLabel: "Highlights of our events",
       videoCaption1: "Les clubs de Barcelone à pleine énergie",
