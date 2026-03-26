@@ -494,6 +494,57 @@ const ExperiencesContent = () => {
             ))}
           </div>
 
+          {/* MOBILE: Esempi Saltafila */}
+          <h3
+            className="text-lg tracking-wider uppercase text-center mt-8 mb-4"
+            style={{ fontFamily: "'Aldo the Apache', sans-serif" }}
+          >
+            <span className="text-silver-gradient">{getText("skipLineExamplesTitle")}</span>
+          </h3>
+          <div className="space-y-4">
+            {[
+              { src: "/videos/saltafila-ku.mp4", label: "Ku BCN" },
+              { src: "/videos/saltafila-opium.mp4", label: "Opium" },
+              { src: "/videos/saltafila-bling-bling.mp4", label: "Bling Bling" },
+            ].map((v, i) => (
+              <div
+                key={i}
+                className="relative w-full overflow-hidden border border-border cursor-pointer"
+                style={{ height: "180px" }}
+                onClick={(e) => {
+                  const video = e.currentTarget.querySelector("video");
+                  if (video) { video.paused ? video.play() : video.pause(); }
+                }}
+              >
+                <video
+                  src={v.src}
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-cover"
+                />
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{ background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)" }}
+                />
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-11 h-11 rounded-full border border-silver/50 flex items-center justify-center bg-black/40">
+                    <Play size={18} className="text-silver ml-0.5" />
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-3 z-[2]">
+                  <h4
+                    className="font-display text-sm text-foreground tracking-wide"
+                    style={{ fontFamily: "'Aldo the Apache', sans-serif" }}
+                  >
+                    Saltafila {v.label}
+                  </h4>
+                </div>
+              </div>
+            ))}
+          </div>
+
           {/* MOBILE: Client Reviews - simple vertical stack */}
           <h3
             className="text-lg tracking-wider uppercase text-center mt-10 mb-4"
