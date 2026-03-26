@@ -918,7 +918,7 @@ export const translations = {
         "Notre vraie force ? L'honnêteté avec nos clients : nous ne suggérons que ce que nous choisirions personnellement, en fonction de la musique et des préférences du client, et surtout notre présence à Barcelone 365 jours par an. Cela garantit un soutien constant pour tout problème, et surtout, cela crée des liens durables entre promoteurs et clients, qui deviennent de vrais amis et font partie de notre famille NightDreams.",
       paragraph3:
         "Que dire de plus ? Nous vous attendons dans cette merveilleuse ville ! Contactez-nous maintenant pour un devis personnalisé, ou venez nous rencontrer tous les jours dès 23h30 à la Barceloneta, juste devant les clubs. À bientôt !",
-      stat1Num: "30+",
+      stat1Num: "20+",
       stat1Label: "Partenaires Exclusifs",
       stat2Num: "5+",
       stat2Label: "Ans d'Excellence",
