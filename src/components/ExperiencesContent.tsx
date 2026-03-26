@@ -478,70 +478,8 @@ const ExperiencesContent = () => {
             ))}
           </div>
 
-          {/* MOBILE: Client Reviews - simple vertical stack */}
-          <h3
-            className="text-lg tracking-wider uppercase text-center mt-10 mb-4"
-            style={{ fontFamily: "'Aldo the Apache', sans-serif" }}
-          >
-            <span className="text-silver-gradient">{getText("reviewsColumnTitle")}</span>
-          </h3>
-
-          <div className="space-y-3">
-            {clientReviews.map((item, i) => (
-              <div key={i} className="border border-border bg-white/[0.03] p-4">
-                <div className="flex items-start gap-3">
-                  <img
-                    src={item.image}
-                    alt={getText(item.nameKey)}
-                    className="w-10 h-10 rounded-full object-cover border border-silver/20 flex-shrink-0"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex gap-0.5 mb-1">
-                      {Array.from({ length: 5 }).map((_, si) => (
-                        <Star key={si} size={11} className="fill-silver text-silver" />
-                      ))}
-                    </div>
-                    <p className="font-body text-xs text-foreground/90 italic leading-relaxed mb-1">
-                      "{getText(item.quoteKey)}"
-                    </p>
-                    <div className="flex items-center gap-1.5">
-                      <span className="font-display text-xs text-foreground">{getText(item.nameKey)}</span>
-                      <span className="font-body text-[9px] text-muted-foreground tracking-widest uppercase">
-                        {getText(item.cityKey)}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* User-submitted reviews */}
-            {userReviews.map((item, i) => (
-              <div key={`user-${i}`} className="border border-silver/30 bg-white/[0.03] p-4">
-                <div className="flex items-start gap-3">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-10 h-10 rounded-full object-cover border border-silver/20 flex-shrink-0"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex gap-0.5 mb-1">
-                      {Array.from({ length: item.rating }).map((_, si) => (
-                        <Star key={si} size={11} className="fill-silver text-silver" />
-                      ))}
-                      {Array.from({ length: 5 - item.rating }).map((_, si) => (
-                        <Star key={`e-${si}`} size={11} className="fill-transparent text-muted-foreground" />
-                      ))}
-                    </div>
-                    <p className="font-body text-xs text-foreground/90 italic leading-relaxed mb-1">
-                      "{item.quote}"
-                    </p>
-                    <span className="font-display text-xs text-foreground">{item.name}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* MOBILE: Reviews & Photos Gallery */}
+          <ReviewsPhotosGallery />
 
           {/* MOBILE: Review Form */}
           <div className="mt-8">
