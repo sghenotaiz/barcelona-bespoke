@@ -76,8 +76,15 @@ const CircularGallery = () => {
   const goPrev = () => setActiveIndex((i) => (i - 1 + ITEM_COUNT) % ITEM_COUNT);
 
   const handleItemClick = (path: string) => {
-    navigate(path);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const [basePath, hash] = path.split("#");
+    navigate(basePath);
+    if (hash) {
+      setTimeout(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   const currentItem = galleryItems[activeIndex];
