@@ -22,7 +22,7 @@ const galleryItems: GalleryItem[] = [
 { id: "plan", titleKey: "planExperience", subtitleKey: "planExperienceDesc", image: sagradaFamiliaImg, path: "/plan" },
 { id: "about", titleKey: "aboutUs", subtitleKey: "aboutUsDesc", image: ndStickerImg, path: "/about" },
 { id: "services", titleKey: "ourServices", subtitleKey: "ourServicesDesc", image: homeServicesImg, path: "/services" },
-{ id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about", objectPosition: "60% center" },
+{ id: "team", titleKey: "ourTeam", subtitleKey: "ourTeamDesc", image: nightlifeImg, path: "/about#team", objectPosition: "60% center" },
 { id: "moments", titleKey: "momentsCrafted", subtitleKey: "momentsCraftedDesc", image: diningImg, path: "/moments" }];
 
 
@@ -76,8 +76,15 @@ const CircularGallery = () => {
   const goPrev = () => setActiveIndex((i) => (i - 1 + ITEM_COUNT) % ITEM_COUNT);
 
   const handleItemClick = (path: string) => {
-    navigate(path);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const [basePath, hash] = path.split("#");
+    navigate(basePath);
+    if (hash) {
+      setTimeout(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   const currentItem = galleryItems[activeIndex];
