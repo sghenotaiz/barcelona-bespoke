@@ -66,6 +66,8 @@ export const translations = {
       stat2Label: "Years of Excellence",
       stat3Num: "365",
       stat3Label: "Days a Year",
+      stat4Num: "10.000+",
+      stat4Label: "Clients Every Year",
       followUs: "Follow Us on Social Media!",
     },
     services: {
