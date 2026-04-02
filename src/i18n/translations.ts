@@ -484,9 +484,9 @@ export const translations = {
       titleLine1: "Tu Puerta a lo",
       titleLine2: "Mejor de Barcelona",
       paragraph1:
-        "NightDreams Barcelona: una de las agencias de promoción más consolidadas de la ciudad desde 2019. Servicio MESAS VIP, acceso SALTA-FILA a precio fijo todo el año, descuentos en restaurantes, pool parties, motos de agua y mucho más — todo a precios imbatibles.",
+        "NightDreams Barcelona: una de las agencias de promoción más consolidadas de la ciudad desde 2019. Desde tickets SALTAFILA a POOL PARTIES, o desde MESAS VIP a descuentos en restaurantes, más de 10.000 clientes al año confían en nosotros para sus vacaciones — todo a precios imbatibles.",
       paragraph2:
-        "¿Nuestra fortaleza? Honestidad absoluta y presencia 365 días al año. Solo recomendamos lo que elegiríamos nosotros mismos, creando vínculos reales: nuestros clientes se convierten en amigos y familia NightDreams.",
+        "¿Nuestra fortaleza? Honestidad absoluta y presencia 365 días al año. Solo recomendamos lo que elegiríamos nosotros mismos, basándonos obviamente en las preferencias del cliente, creando vínculos reales: nuestros clientes se convierten en amigos y familia NightDreams.",
       paragraph3:
         "Contáctanos para un presupuesto personalizado. ¿Ya estás en Barcelona? Encuéntranos cada noche desde las 23:45 en la Barceloneta, frente a los clubs. ¡Te esperamos!",
       stat1Num: "20+",
