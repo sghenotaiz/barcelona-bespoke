@@ -57,9 +57,9 @@ export const translations = {
       paragraph1:
         "NightDreams Barcelona: one of the city's most established promotion agencies since 2019. From SKIP-THE-LINE tickets to POOL PARTIES, or from VIP TABLES to restaurant discounts, more than 10,000 clients every year trust us for their holidays — all at unbeatable prices.",
       paragraph2:
-        "Our strength? Absolute honesty and presence 365 days a year. We only recommend what we'd choose ourselves, based obviously on the client's preferences, building real bonds: our clients become friends and NightDreams family.",
+        "Our strength? Absolute honesty and presence 365 days a year. We only recommend the best services, based of course on the client's preferences and needs, building authentic bonds: our clients become friends and NightDreams family.",
       paragraph3:
-        "Contact us for a personalized quote. Already in Barcelona? Find us every night from 11:45 PM in Barceloneta, right outside the clubs. See you soon!",
+        "Contact us for a personalized quote. Already in Barcelona? Find us every night from 11:45 PM in Barceloneta, right outside the clubs, or during the day at the city's hotspots. See you soon!",
       stat1Num: "20+",
       stat1Label: "Exclusive Partners",
       stat2Num: "5+",
@@ -486,9 +486,9 @@ export const translations = {
       paragraph1:
         "NightDreams Barcelona: una de las agencias de promoción más consolidadas de la ciudad desde 2019. Desde tickets SALTAFILA a POOL PARTIES, o desde MESAS VIP a descuentos en restaurantes, más de 10.000 clientes al año confían en nosotros para sus vacaciones — todo a precios imbatibles.",
       paragraph2:
-        "¿Nuestra fortaleza? Honestidad absoluta y presencia 365 días al año. Solo recomendamos lo que elegiríamos nosotros mismos, basándonos obviamente en las preferencias del cliente, creando vínculos reales: nuestros clientes se convierten en amigos y familia NightDreams.",
+        "¿Nuestra fortaleza? Honestidad absoluta y presencia 365 días al año. Solo recomendamos los mejores servicios, basándonos obviamente en las preferencias y necesidades del cliente, creando vínculos auténticos: nuestros clientes se convierten en amigos y familia NightDreams.",
       paragraph3:
-        "Contáctanos para un presupuesto personalizado. ¿Ya estás en Barcelona? Encuéntranos cada noche desde las 23:45 en la Barceloneta, frente a los clubs. ¡Te esperamos!",
+        "Contáctanos para un presupuesto personalizado. ¿Ya estás en Barcelona? Nos encuentras cada noche desde las 23:45 en la Barceloneta, frente a los clubs, o durante el día en los puntos clave de la ciudad. ¡Te esperamos!",
       stat1Num: "20+",
       stat1Label: "Socios Exclusivos",
       stat2Num: "5+",
@@ -915,9 +915,9 @@ export const translations = {
       paragraph1:
         "NightDreams Barcelona : l'une des agences de promotion les plus établies de la ville depuis 2019. Des tickets COUPE-FILE aux POOL PARTIES, ou des TABLES VIP aux réductions restaurants, plus de 10 000 clients par an nous font confiance pour leurs vacances — le tout à des prix imbattables.",
       paragraph2:
-        "Notre force ? Une honnêteté absolue et une présence 365 jours par an. Nous ne recommandons que ce que nous choisirions nous-mêmes, en nous basant bien sûr sur les préférences du client, créant des liens authentiques : nos clients deviennent des amis et font partie de la famille NightDreams.",
+        "Notre force ? Une honnêteté absolue et une présence 365 jours par an. Nous ne recommandons que les meilleurs services, en nous basant bien sûr sur les préférences et les besoins du client, créant des liens authentiques : nos clients deviennent des amis et font partie de la famille NightDreams.",
       paragraph3:
-        "Contactez-nous pour un devis personnalisé. Déjà à Barcelone ? Retrouvez-nous chaque soir dès 23h45 à la Barceloneta, devant les clubs. À bientôt !",
+        "Contactez-nous pour un devis personnalisé. Déjà à Barcelone ? Retrouvez-nous chaque soir dès 23h45 à la Barceloneta, devant les clubs, ou en journée dans les points chauds de la ville. À bientôt !",
       stat1Num: "20+",
       stat1Label: "Partenaires Exclusifs",
       stat2Num: "5+",
