@@ -928,6 +928,8 @@ export const translations = {
       stat2Label: "Ans d'Excellence",
       stat3Num: "365",
       stat3Label: "Jours par An",
+      stat4Num: "10.000+",
+      stat4Label: "Clients Chaque Année",
       followUs: "Suivez-nous sur les réseaux sociaux !",
     },
     services: {
