@@ -1342,11 +1342,11 @@ export const translations = {
       titleLine1: "La Tua Porta verso il",
       titleLine2: "Meglio di Barcellona",
       paragraph1:
-        "Pronto a vivere il meglio di Barcellona sentendoti un VIP ma a prezzi convenienti? Siamo qui per te: NightDreams Barcelona, una delle agenzie di promozione più importanti e consolidate della città. Nata dall'unione di agenzie precedenti nel 2019, nel corso degli anni abbiamo continuato a migliorare e a offrire ai nostri clienti i migliori servizi ai prezzi più competitivi. Dalle discoteche, con un eccellente servizio TAVOLI VIP, con la possibilità di entrare a guardare il locale prima di entrare, o con l'accesso con SALTA-FILA ogni notte e in qualsiasi periodo dell'anno ad un prezzo fisso senza sorprese, a sconti nei ristoranti, pool party, moto d'acqua e tanto altro!",
+        "NightDreams Barcelona: tra le agenzie di promozione più consolidate della città dal 2019. Servizio TAVOLI VIP, accesso SALTA-FILA a prezzo fisso tutto l'anno, sconti ristoranti, pool party, moto d'acqua e molto altro — tutto a prezzi imbattibili.",
       paragraph2:
-        "La nostra vera forza? L'onestà con i nostri clienti: suggeriamo solo ciò che sceglieremmo personalmente, in base alla musica e alle preferenze del cliente, e, soprattutto la nostra presenza a Barcellona 365 giorni all'anno. Questo garantisce un supporto costante per qualsiasi problema, e crea legami duraturi tra promoter e clienti, che diventano veri amici e parte della nostra famiglia NightDreams.",
+        "La nostra forza? Onestà assoluta e presenza 365 giorni l'anno. Consigliamo solo ciò che sceglieremmo noi, creando legami veri: i nostri clienti diventano amici e famiglia NightDreams.",
       paragraph3:
-        "Che altro dire? Ti aspettiamo in questa meravigliosa città! Contattaci ora per un preventivo personalizzato, siamo pronti ad offrirti il massimo per far si che ritornerai a scriverci ancora e ancora. Se già sei a Barcellona, vieni a trovarci ogni giorno dalle 23:45 in Barceloneta, proprio al di fuori delle porte dei club. A presto!",
+        "Contattaci per un preventivo personalizzato. Già a Barcellona? Trovaci ogni sera dalle 23:45 in Barceloneta, davanti ai club. Ti aspettiamo!",
       stat1Num: "20+",
       stat1Label: "Partner Esclusivi",
       stat2Num: "5+",
