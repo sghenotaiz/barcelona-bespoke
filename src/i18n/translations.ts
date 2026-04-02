@@ -1359,6 +1359,8 @@ export const translations = {
       stat2Label: "Anni di Eccellenza",
       stat3Num: "365",
       stat3Label: "Giorni all'Anno",
+      stat4Num: "10.000+",
+      stat4Label: "Clienti Ogni Anno",
       followUs: "Seguici sui social media!",
     },
     services: {
