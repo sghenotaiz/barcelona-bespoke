@@ -104,7 +104,7 @@ const HeroSection = () => {
           <div className="flex justify-center mb-1">
             <NightDreamsLogo size="hero" showIcon={false} />
           </div>
-          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-2 font-mono md:text-lg">
+          <p className="text-sm tracking-[0.3em] uppercase text-silver-light mb-2 font-mono md:text-2xl">
             {t.hero.subtitle}
           </p>
           <p
