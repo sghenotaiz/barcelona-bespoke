@@ -57,9 +57,9 @@ export const translations = {
       paragraph1:
         "NightDreams Barcelona: one of the city's most established promotion agencies since 2019. From SKIP-THE-LINE tickets to POOL PARTIES, or from VIP TABLES to restaurant discounts, more than 10,000 clients every year trust us for their holidays — all at unbeatable prices.",
       paragraph2:
-        "Our strength? Absolute honesty and presence 365 days a year. We only recommend what we'd choose ourselves, based obviously on the client's preferences, building real bonds: our clients become friends and NightDreams family.",
+        "Our strength? Absolute honesty and presence 365 days a year. We only recommend the best services, based of course on the client's preferences and needs, building authentic bonds: our clients become friends and NightDreams family.",
       paragraph3:
-        "Contact us for a personalized quote. Already in Barcelona? Find us every night from 11:45 PM in Barceloneta, right outside the clubs. See you soon!",
+        "Contact us for a personalized quote. Already in Barcelona? Find us every night from 11:45 PM in Barceloneta, right outside the clubs, or during the day at the city's hotspots. See you soon!",
       stat1Num: "20+",
       stat1Label: "Exclusive Partners",
       stat2Num: "5+",
