@@ -913,11 +913,11 @@ export const translations = {
       titleLine1: "Votre Accès au",
       titleLine2: "Meilleur de Barcelone",
       paragraph1:
-        "Prêt à vivre le meilleur de Barcelone en vous sentant VIP mais à des prix avantageux ? Nous sommes là pour vous : NightDreams Barcelona, l'une des agences de promotion les plus importantes et établies de la ville. Née de l'union d'agences précédentes en 2019, au fil des années nous avons continué à nous améliorer et à offrir à nos clients les meilleurs services aux prix les plus compétitifs. Des boîtes de nuit, avec un excellent service de TABLES VIP, avec la possibilité de visiter le lieu avant d'entrer, ou avec un accès COUPE-FILE chaque nuit et à toute période de l'année à un prix fixe sans surprises, aux réductions dans les restaurants, pool parties, jet skis et bien plus encore !",
+        "NightDreams Barcelona : l'une des agences de promotion les plus établies de la ville depuis 2019. Service TABLES VIP, accès COUPE-FILE à prix fixe toute l'année, réductions restaurants, pool parties, jet skis et bien plus — le tout à des prix imbattables.",
       paragraph2:
-        "Notre vraie force ? L'honnêteté avec nos clients : nous ne suggérons que ce que nous choisirions personnellement, en fonction de la musique et des préférences du client, et surtout notre présence à Barcelone 365 jours par an. Cela garantit un soutien constant pour tout problème, et crée des liens durables entre promoteurs et clients, qui deviennent de vrais amis et font partie de notre famille NightDreams.",
+        "Notre force ? Une honnêteté absolue et une présence 365 jours par an. Nous ne recommandons que ce que nous choisirions nous-mêmes, créant des liens authentiques : nos clients deviennent des amis et font partie de la famille NightDreams.",
       paragraph3:
-        "Que dire de plus ? Nous vous attendons dans cette merveilleuse ville ! Contactez-nous maintenant pour un devis personnalisé, nous sommes prêts à vous offrir le meilleur pour que vous reveniez nous écrire encore et encore. Si vous êtes déjà à Barcelone, venez nous trouver tous les jours dès 23h45 à la Barceloneta, juste devant les portes des clubs. À bientôt !",
+        "Contactez-nous pour un devis personnalisé. Déjà à Barcelone ? Retrouvez-nous chaque soir dès 23h45 à la Barceloneta, devant les clubs. À bientôt !",
       stat1Num: "20+",
       stat1Label: "Partenaires Exclusifs",
       stat2Num: "5+",
