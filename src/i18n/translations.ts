@@ -484,11 +484,11 @@ export const translations = {
       titleLine1: "Tu Puerta a lo",
       titleLine2: "Mejor de Barcelona",
       paragraph1:
-        "¿Listo para vivir lo mejor de Barcelona sintiéndote VIP pero a precios convenientes? Estamos aquí para ti: NightDreams Barcelona, una de las agencias de promoción más importantes y consolidadas de la ciudad. Nacida de la unión de agencias anteriores en 2019, a lo largo de los años hemos seguido mejorando y ofreciendo a nuestros clientes los mejores servicios a los precios más competitivos. Desde discotecas, con un excelente servicio de MESAS VIP, con la posibilidad de ver el local antes de entrar, o con acceso SALTA-FILA todas las noches y en cualquier época del año a un precio fijo sin sorpresas, hasta descuentos en restaurantes, pool parties, motos de agua ¡y mucho más!",
+        "NightDreams Barcelona: una de las agencias de promoción más consolidadas de la ciudad desde 2019. Servicio MESAS VIP, acceso SALTA-FILA a precio fijo todo el año, descuentos en restaurantes, pool parties, motos de agua y mucho más — todo a precios imbatibles.",
       paragraph2:
-        "¿Nuestra verdadera fortaleza? La honestidad con nuestros clientes: solo sugerimos lo que nosotros mismos elegiríamos, según la música y las preferencias del cliente, y sobre todo nuestra presencia en Barcelona los 365 días del año. Esto garantiza un apoyo constante ante cualquier problema, y crea vínculos duraderos entre promotores y clientes, que se convierten en verdaderos amigos y parte de nuestra familia NightDreams.",
+        "¿Nuestra fortaleza? Honestidad absoluta y presencia 365 días al año. Solo recomendamos lo que elegiríamos nosotros mismos, creando vínculos reales: nuestros clientes se convierten en amigos y familia NightDreams.",
       paragraph3:
-        "¿Qué más podemos decir? ¡Te esperamos en esta maravillosa ciudad! Contáctanos ahora para un presupuesto personalizado, estamos listos para ofrecerte lo mejor para que vuelvas a escribirnos una y otra vez. Si ya estás en Barcelona, ven a visitarnos todos los días desde las 23:45 en la Barceloneta, justo fuera de las puertas de los clubs. ¡Hasta pronto!",
+        "Contáctanos para un presupuesto personalizado. ¿Ya estás en Barcelona? Encuéntranos cada noche desde las 23:45 en la Barceloneta, frente a los clubs. ¡Te esperamos!",
       stat1Num: "20+",
       stat1Label: "Socios Exclusivos",
       stat2Num: "5+",
