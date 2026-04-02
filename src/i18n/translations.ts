@@ -920,6 +920,10 @@ export const translations = {
       label: "À Propos",
       titleLine1: "Votre Accès au",
       titleLine2: "Meilleur de Barcelone",
+      bullet1: "5+ ans d'expérience",
+      bullet2: "10 000+ clients satisfaits chaque année",
+      bullet3: "Actifs 365 jours par an",
+      bullet4: "Services premium, sans surprises",
       paragraph1:
         "Prêt à vivre le meilleur de Barcelone en vous sentant VIP mais à des prix avantageux ? Nous sommes là pour vous : NightDreams Barcelona, l'une des agences de promotion les plus importantes et établies de la ville. Née de l'union d'agences précédentes en 2019, au fil des années nous avons continué à nous améliorer et à offrir à nos clients les meilleurs services aux prix les plus compétitifs. Des boîtes de nuit, avec un excellent service de TABLES VIP, avec la possibilité de visiter le lieu avant d'entrer, ou avec un accès COUPE-FILE chaque nuit et à toute période de l'année à un prix fixe sans surprises, aux réductions dans les restaurants, pool parties, jet skis et bien plus encore !",
       paragraph2:
