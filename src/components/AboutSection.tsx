@@ -35,6 +35,13 @@ const AboutSection = () => {
   { num: t.about.stat3Num, label: t.about.stat3Label }];
 
 
+  const bullets = [
+    t.about.bullet1,
+    t.about.bullet2,
+    t.about.bullet3,
+    t.about.bullet4,
+  ];
+
   return (
     <section id="about" className="bg-background py-[20px]">
       <div className="container mx-auto px-6" ref={ref}>
@@ -43,7 +50,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto mb-12">
+          className="text-center max-w-3xl mx-auto mb-10">
           
           <h2 className="font-display text-4xl md:text-5xl font-light mb-2 leading-tight animate-neon-pulse">
             <span className="bg-gradient-to-r from-silver via-foreground to-silver bg-clip-text text-transparent">
@@ -55,26 +62,41 @@ const AboutSection = () => {
           </h2>
           <div className="mx-auto silver-line my-8" />
 
-          {/* Paragraphs with smooth fade-up, hover lift */}
+          {/* Bullet points */}
+          <div className="flex flex-col items-center gap-3 mb-8">
+            {bullets.map((bullet, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
+                className="flex items-center gap-3 hover:-translate-y-0.5 transition-transform duration-300"
+              >
+                <span className="text-silver text-sm">✓</span>
+                <span className="font-body text-sm md:text-base text-foreground/90 tracking-wide">
+                  {bullet}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Paragraphs - kept but more compact */}
           <motion.p
-            {...fadeUp(0.2)}
+            {...fadeUp(0.8)}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-            className="font-body text-sm text-muted-foreground leading-relaxed mb-4 hover:-translate-y-1 transition-transform duration-300">
-            
+            className="font-body text-xs text-muted-foreground leading-relaxed mb-3 hover:-translate-y-1 transition-transform duration-300">
             {t.about.paragraph1}
           </motion.p>
           <motion.p
-            {...fadeUp(0.35)}
+            {...fadeUp(0.95)}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-            className="font-body text-sm text-muted-foreground leading-relaxed mb-4 hover:-translate-y-1 transition-transform duration-300">
-            
+            className="font-body text-xs text-muted-foreground leading-relaxed mb-3 hover:-translate-y-1 transition-transform duration-300">
             {t.about.paragraph2}
           </motion.p>
           <motion.p
-            {...fadeUp(0.5)}
+            {...fadeUp(1.1)}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-            className="font-body text-sm text-muted-foreground leading-relaxed mb-8 hover:-translate-y-1 transition-transform duration-300">
-            
+            className="font-body text-xs text-muted-foreground leading-relaxed mb-8 hover:-translate-y-1 transition-transform duration-300">
             {t.about.paragraph3}
           </motion.p>
 
@@ -84,9 +106,8 @@ const AboutSection = () => {
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.6 + i * 0.15 }}
+              transition={{ duration: 0.5, delay: 1.2 + i * 0.15 }}
               className="text-center hover:-translate-y-1 transition-transform duration-300">
-              
                 <span className="font-display text-3xl drop-shadow-[0_0_12px_hsl(0,0%,70%)]">
                   <GlowStat>{stat.num}</GlowStat>
                 </span>

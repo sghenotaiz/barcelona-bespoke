@@ -54,6 +54,10 @@ export const translations = {
       label: "About Us",
       titleLine1: "Your Gateway to",
       titleLine2: "Barcelona's Finest",
+      bullet1: "5+ years of experience",
+      bullet2: "10,000+ satisfied clients every year",
+      bullet3: "Active 365 days a year",
+      bullet4: "Premium services, no surprises",
       paragraph1:
         "Ready to experience the best of Barcelona while feeling like a VIP but at convenient prices? We are here for you: NightDreams Barcelona, one of the most important and established promotion agencies in the city. Born from the union of previous agencies in 2019, over the years we have continued to improve and provide our clients with the best services at the most competitive prices. From nightclubs, with an excellent VIP TABLES service, with the possibility to look inside the venue before entering, or with SKIP-THE-LINE access every night and in any period of the year at a fixed price with no surprises, to restaurant discounts, pool parties, jet skis and much more!",
       paragraph2:
@@ -483,6 +487,10 @@ export const translations = {
       label: "Sobre Nosotros",
       titleLine1: "Tu Puerta a lo",
       titleLine2: "Mejor de Barcelona",
+      bullet1: "5+ años de experiencia",
+      bullet2: "10.000+ clientes satisfechos cada año",
+      bullet3: "Activos 365 días al año",
+      bullet4: "Servicios premium, sin sorpresas",
       paragraph1:
         "¿Listo para vivir lo mejor de Barcelona sintiéndote VIP pero a precios convenientes? Estamos aquí para ti: NightDreams Barcelona, una de las agencias de promoción más importantes y consolidadas de la ciudad. Nacida de la unión de agencias anteriores en 2019, a lo largo de los años hemos seguido mejorando y ofreciendo a nuestros clientes los mejores servicios a los precios más competitivos. Desde discotecas, con un excelente servicio de MESAS VIP, con la posibilidad de ver el local antes de entrar, o con acceso SALTA-FILA todas las noches y en cualquier época del año a un precio fijo sin sorpresas, hasta descuentos en restaurantes, pool parties, motos de agua ¡y mucho más!",
       paragraph2:
@@ -912,6 +920,10 @@ export const translations = {
       label: "À Propos",
       titleLine1: "Votre Accès au",
       titleLine2: "Meilleur de Barcelone",
+      bullet1: "5+ ans d'expérience",
+      bullet2: "10 000+ clients satisfaits chaque année",
+      bullet3: "Actifs 365 jours par an",
+      bullet4: "Services premium, sans surprises",
       paragraph1:
         "Prêt à vivre le meilleur de Barcelone en vous sentant VIP mais à des prix avantageux ? Nous sommes là pour vous : NightDreams Barcelona, l'une des agences de promotion les plus importantes et établies de la ville. Née de l'union d'agences précédentes en 2019, au fil des années nous avons continué à nous améliorer et à offrir à nos clients les meilleurs services aux prix les plus compétitifs. Des boîtes de nuit, avec un excellent service de TABLES VIP, avec la possibilité de visiter le lieu avant d'entrer, ou avec un accès COUPE-FILE chaque nuit et à toute période de l'année à un prix fixe sans surprises, aux réductions dans les restaurants, pool parties, jet skis et bien plus encore !",
       paragraph2:
@@ -1341,6 +1353,10 @@ export const translations = {
       label: "Chi Siamo",
       titleLine1: "La Tua Porta verso il",
       titleLine2: "Meglio di Barcellona",
+      bullet1: "5+ anni di esperienza",
+      bullet2: "10.000+ clienti soddisfatti ogni anno",
+      bullet3: "Operativi 365 giorni l'anno",
+      bullet4: "Servizi premium senza sorprese",
       paragraph1:
         "Pronto a vivere il meglio di Barcellona sentendoti un VIP ma a prezzi convenienti? Siamo qui per te: NightDreams Barcelona, una delle agenzie di promozione più importanti e consolidate della città. Nata dall'unione di agenzie precedenti nel 2019, nel corso degli anni abbiamo continuato a migliorare e a offrire ai nostri clienti i migliori servizi ai prezzi più competitivi. Dalle discoteche, con un eccellente servizio TAVOLI VIP, con la possibilità di entrare a guardare il locale prima di entrare, o con l'accesso con SALTA-FILA ogni notte e in qualsiasi periodo dell'anno ad un prezzo fisso senza sorprese, a sconti nei ristoranti, pool party, moto d'acqua e tanto altro!",
       paragraph2:
