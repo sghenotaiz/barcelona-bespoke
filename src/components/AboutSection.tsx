@@ -32,7 +32,8 @@ const AboutSection = () => {
   const stats = [
   { num: t.about.stat1Num, label: t.about.stat1Label },
   { num: t.about.stat2Num, label: t.about.stat2Label },
-  { num: t.about.stat3Num, label: t.about.stat3Label }];
+  { num: t.about.stat3Num, label: t.about.stat3Label },
+  { num: t.about.stat4Num, label: t.about.stat4Label }];
 
 
   return (
@@ -78,7 +79,7 @@ const AboutSection = () => {
             {t.about.paragraph3}
           </motion.p>
 
-          <div className="grid grid-cols-3 gap-6 max-w-md mx-auto">
+          <div className="grid grid-cols-4 gap-6 max-w-lg mx-auto">
             {stats.map((stat, i) =>
             <motion.div
               key={stat.label}

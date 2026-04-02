@@ -66,6 +66,8 @@ export const translations = {
       stat2Label: "Years of Excellence",
       stat3Num: "365",
       stat3Label: "Days a Year",
+      stat4Num: "10.000+",
+      stat4Label: "Clients Every Year",
       followUs: "Follow Us on Social Media!",
     },
     services: {
@@ -495,6 +497,8 @@ export const translations = {
       stat2Label: "Años de Excelencia",
       stat3Num: "365",
       stat3Label: "Días al Año",
+      stat4Num: "10.000+",
+      stat4Label: "Clientes Cada Año",
       followUs: "¡Síguenos en las redes sociales!",
     },
     services: {
@@ -924,6 +928,8 @@ export const translations = {
       stat2Label: "Ans d'Excellence",
       stat3Num: "365",
       stat3Label: "Jours par An",
+      stat4Num: "10.000+",
+      stat4Label: "Clients Chaque Année",
       followUs: "Suivez-nous sur les réseaux sociaux !",
     },
     services: {
@@ -1353,6 +1359,8 @@ export const translations = {
       stat2Label: "Anni di Eccellenza",
       stat3Num: "365",
       stat3Label: "Giorni all'Anno",
+      stat4Num: "10.000+",
+      stat4Label: "Clienti Ogni Anno",
       followUs: "Seguici sui social media!",
     },
     services: {
