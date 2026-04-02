@@ -915,9 +915,9 @@ export const translations = {
       paragraph1:
         "NightDreams Barcelona : l'une des agences de promotion les plus établies de la ville depuis 2019. Des tickets COUPE-FILE aux POOL PARTIES, ou des TABLES VIP aux réductions restaurants, plus de 10 000 clients par an nous font confiance pour leurs vacances — le tout à des prix imbattables.",
       paragraph2:
-        "Notre force ? Une honnêteté absolue et une présence 365 jours par an. Nous ne recommandons que ce que nous choisirions nous-mêmes, en nous basant bien sûr sur les préférences du client, créant des liens authentiques : nos clients deviennent des amis et font partie de la famille NightDreams.",
+        "Notre force ? Une honnêteté absolue et une présence 365 jours par an. Nous ne recommandons que les meilleurs services, en nous basant bien sûr sur les préférences et les besoins du client, créant des liens authentiques : nos clients deviennent des amis et font partie de la famille NightDreams.",
       paragraph3:
-        "Contactez-nous pour un devis personnalisé. Déjà à Barcelone ? Retrouvez-nous chaque soir dès 23h45 à la Barceloneta, devant les clubs. À bientôt !",
+        "Contactez-nous pour un devis personnalisé. Déjà à Barcelone ? Retrouvez-nous chaque soir dès 23h45 à la Barceloneta, devant les clubs, ou en journée dans les points chauds de la ville. À bientôt !",
       stat1Num: "20+",
       stat1Label: "Partenaires Exclusifs",
       stat2Num: "5+",
