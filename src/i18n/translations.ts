@@ -55,9 +55,9 @@ export const translations = {
       titleLine1: "Your Gateway to",
       titleLine2: "Barcelona's Finest",
       paragraph1:
-        "NightDreams Barcelona: one of the city's most established promotion agencies since 2019. VIP TABLES service, SKIP-THE-LINE access at a fixed price year-round, restaurant discounts, pool parties, jet skis and much more — all at unbeatable prices.",
+        "NightDreams Barcelona: one of the city's most established promotion agencies since 2019. From SKIP-THE-LINE tickets to POOL PARTIES, or from VIP TABLES to restaurant discounts, more than 10,000 clients every year trust us for their holidays — all at unbeatable prices.",
       paragraph2:
-        "Our strength? Absolute honesty and presence 365 days a year. We only recommend what we'd choose ourselves, building real bonds: our clients become friends and NightDreams family.",
+        "Our strength? Absolute honesty and presence 365 days a year. We only recommend what we'd choose ourselves, based obviously on the client's preferences, building real bonds: our clients become friends and NightDreams family.",
       paragraph3:
         "Contact us for a personalized quote. Already in Barcelona? Find us every night from 11:45 PM in Barceloneta, right outside the clubs. See you soon!",
       stat1Num: "20+",
