@@ -1353,6 +1353,10 @@ export const translations = {
       label: "Chi Siamo",
       titleLine1: "La Tua Porta verso il",
       titleLine2: "Meglio di Barcellona",
+      bullet1: "5+ anni di esperienza",
+      bullet2: "10.000+ clienti soddisfatti ogni anno",
+      bullet3: "Operativi 365 giorni l'anno",
+      bullet4: "Servizi premium senza sorprese",
       paragraph1:
         "Pronto a vivere il meglio di Barcellona sentendoti un VIP ma a prezzi convenienti? Siamo qui per te: NightDreams Barcelona, una delle agenzie di promozione più importanti e consolidate della città. Nata dall'unione di agenzie precedenti nel 2019, nel corso degli anni abbiamo continuato a migliorare e a offrire ai nostri clienti i migliori servizi ai prezzi più competitivi. Dalle discoteche, con un eccellente servizio TAVOLI VIP, con la possibilità di entrare a guardare il locale prima di entrare, o con l'accesso con SALTA-FILA ogni notte e in qualsiasi periodo dell'anno ad un prezzo fisso senza sorprese, a sconti nei ristoranti, pool party, moto d'acqua e tanto altro!",
       paragraph2:
