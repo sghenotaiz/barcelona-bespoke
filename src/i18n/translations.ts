@@ -55,9 +55,9 @@ export const translations = {
       titleLine1: "Your Gateway to",
       titleLine2: "Barcelona's Finest",
       paragraph1:
-        "NightDreams Barcelona: one of the city's most established promotion agencies since 2019. VIP TABLES service, SKIP-THE-LINE access at a fixed price year-round, restaurant discounts, pool parties, jet skis and much more — all at unbeatable prices.",
+        "NightDreams Barcelona: one of the city's most established promotion agencies since 2019. From SKIP-THE-LINE tickets to POOL PARTIES, or from VIP TABLES to restaurant discounts, more than 10,000 clients every year trust us for their holidays — all at unbeatable prices.",
       paragraph2:
-        "Our strength? Absolute honesty and presence 365 days a year. We only recommend what we'd choose ourselves, building real bonds: our clients become friends and NightDreams family.",
+        "Our strength? Absolute honesty and presence 365 days a year. We only recommend what we'd choose ourselves, based obviously on the client's preferences, building real bonds: our clients become friends and NightDreams family.",
       paragraph3:
         "Contact us for a personalized quote. Already in Barcelona? Find us every night from 11:45 PM in Barceloneta, right outside the clubs. See you soon!",
       stat1Num: "20+",
@@ -484,9 +484,9 @@ export const translations = {
       titleLine1: "Tu Puerta a lo",
       titleLine2: "Mejor de Barcelona",
       paragraph1:
-        "NightDreams Barcelona: una de las agencias de promoción más consolidadas de la ciudad desde 2019. Servicio MESAS VIP, acceso SALTA-FILA a precio fijo todo el año, descuentos en restaurantes, pool parties, motos de agua y mucho más — todo a precios imbatibles.",
+        "NightDreams Barcelona: una de las agencias de promoción más consolidadas de la ciudad desde 2019. Desde tickets SALTAFILA a POOL PARTIES, o desde MESAS VIP a descuentos en restaurantes, más de 10.000 clientes al año confían en nosotros para sus vacaciones — todo a precios imbatibles.",
       paragraph2:
-        "¿Nuestra fortaleza? Honestidad absoluta y presencia 365 días al año. Solo recomendamos lo que elegiríamos nosotros mismos, creando vínculos reales: nuestros clientes se convierten en amigos y familia NightDreams.",
+        "¿Nuestra fortaleza? Honestidad absoluta y presencia 365 días al año. Solo recomendamos lo que elegiríamos nosotros mismos, basándonos obviamente en las preferencias del cliente, creando vínculos reales: nuestros clientes se convierten en amigos y familia NightDreams.",
       paragraph3:
         "Contáctanos para un presupuesto personalizado. ¿Ya estás en Barcelona? Encuéntranos cada noche desde las 23:45 en la Barceloneta, frente a los clubs. ¡Te esperamos!",
       stat1Num: "20+",
@@ -913,9 +913,9 @@ export const translations = {
       titleLine1: "Votre Accès au",
       titleLine2: "Meilleur de Barcelone",
       paragraph1:
-        "NightDreams Barcelona : l'une des agences de promotion les plus établies de la ville depuis 2019. Service TABLES VIP, accès COUPE-FILE à prix fixe toute l'année, réductions restaurants, pool parties, jet skis et bien plus — le tout à des prix imbattables.",
+        "NightDreams Barcelona : l'une des agences de promotion les plus établies de la ville depuis 2019. Des tickets COUPE-FILE aux POOL PARTIES, ou des TABLES VIP aux réductions restaurants, plus de 10 000 clients par an nous font confiance pour leurs vacances — le tout à des prix imbattables.",
       paragraph2:
-        "Notre force ? Une honnêteté absolue et une présence 365 jours par an. Nous ne recommandons que ce que nous choisirions nous-mêmes, créant des liens authentiques : nos clients deviennent des amis et font partie de la famille NightDreams.",
+        "Notre force ? Une honnêteté absolue et une présence 365 jours par an. Nous ne recommandons que ce que nous choisirions nous-mêmes, en nous basant bien sûr sur les préférences du client, créant des liens authentiques : nos clients deviennent des amis et font partie de la famille NightDreams.",
       paragraph3:
         "Contactez-nous pour un devis personnalisé. Déjà à Barcelone ? Retrouvez-nous chaque soir dès 23h45 à la Barceloneta, devant les clubs. À bientôt !",
       stat1Num: "20+",
@@ -1342,9 +1342,9 @@ export const translations = {
       titleLine1: "La Tua Porta verso il",
       titleLine2: "Meglio di Barcellona",
       paragraph1:
-        "NightDreams Barcelona: tra le agenzie di promozione più consolidate della città dal 2019. Servizio TAVOLI VIP, accesso SALTA-FILA a prezzo fisso tutto l'anno, sconti ristoranti, pool party, moto d'acqua e molto altro — tutto a prezzi imbattibili.",
+        "NightDreams Barcelona: tra le agenzie di promozione più consolidate della città dal 2019. Dai ticket SALTAFILA, ai POOL PARTY, o dai TAVOLI VIP a sconti per i ristoranti, piu' di 10.000 clienti ogni anno si affidano a noi per le loro vacanze — tutto a prezzi imbattibili.",
       paragraph2:
-        "La nostra forza? Onestà assoluta e presenza 365 giorni l'anno. Consigliamo solo ciò che sceglieremmo noi, creando legami veri: i nostri clienti diventano amici e famiglia NightDreams.",
+        "La nostra forza? Onestà assoluta e presenza 365 giorni l'anno. Consigliamo solo ciò che sceglieremmo noi, in base ovviamente alle preferenze del cliente, creando legami veri: i nostri clienti diventano amici e famiglia NightDreams.",
       paragraph3:
         "Contattaci per un preventivo personalizzato. Già a Barcellona? Trovaci ogni sera dalle 23:45 in Barceloneta, davanti ai club. Ti aspettiamo!",
       stat1Num: "20+",
