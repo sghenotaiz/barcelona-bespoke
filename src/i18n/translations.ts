@@ -54,6 +54,10 @@ export const translations = {
       label: "About Us",
       titleLine1: "Your Gateway to",
       titleLine2: "Barcelona's Finest",
+      bullet1: "5+ years of experience",
+      bullet2: "10,000+ satisfied clients every year",
+      bullet3: "Active 365 days a year",
+      bullet4: "Premium services, no surprises",
       paragraph1:
         "Ready to experience the best of Barcelona while feeling like a VIP but at convenient prices? We are here for you: NightDreams Barcelona, one of the most important and established promotion agencies in the city. Born from the union of previous agencies in 2019, over the years we have continued to improve and provide our clients with the best services at the most competitive prices. From nightclubs, with an excellent VIP TABLES service, with the possibility to look inside the venue before entering, or with SKIP-THE-LINE access every night and in any period of the year at a fixed price with no surprises, to restaurant discounts, pool parties, jet skis and much more!",
       paragraph2:
