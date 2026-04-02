@@ -55,11 +55,11 @@ export const translations = {
       titleLine1: "Your Gateway to",
       titleLine2: "Barcelona's Finest",
       paragraph1:
-        "Ready to experience the best of Barcelona while feeling like a VIP but at convenient prices? We are here for you: NightDreams Barcelona, one of the most important and established promotion agencies in the city. Born from the union of previous agencies in 2019, over the years we have continued to improve and provide our clients with the best services at the most competitive prices. From nightclubs, with an excellent VIP TABLES service, with the possibility to look inside the venue before entering, or with SKIP-THE-LINE access every night and in any period of the year at a fixed price with no surprises, to restaurant discounts, pool parties, jet skis and much more!",
+        "NightDreams Barcelona: one of the city's most established promotion agencies since 2019. VIP TABLES service, SKIP-THE-LINE access at a fixed price year-round, restaurant discounts, pool parties, jet skis and much more — all at unbeatable prices.",
       paragraph2:
-        "Our real strength? Honesty with our clients: we only suggest what we would personally choose, based on the music and the client's preferences, and above all our presence in Barcelona 365 days a year. This guarantees constant support for any problem, and creates lasting bonds between promoters and clients, who become real friends and part of our NightDreams family.",
+        "Our strength? Absolute honesty and presence 365 days a year. We only recommend what we'd choose ourselves, building real bonds: our clients become friends and NightDreams family.",
       paragraph3:
-        "What else can we say? We are waiting for you in this wonderful city! Contact us now for a personalized quote, we are ready to offer you the best so that you'll come back to us again and again. If you're already in Barcelona, come find us every day from 11:45 PM in Barceloneta, right outside the club doors. See you soon!",
+        "Contact us for a personalized quote. Already in Barcelona? Find us every night from 11:45 PM in Barceloneta, right outside the clubs. See you soon!",
       stat1Num: "20+",
       stat1Label: "Exclusive Partners",
       stat2Num: "5+",
