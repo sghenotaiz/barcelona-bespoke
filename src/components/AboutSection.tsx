@@ -32,7 +32,8 @@ const AboutSection = () => {
   const stats = [
   { num: t.about.stat1Num, label: t.about.stat1Label },
   { num: t.about.stat2Num, label: t.about.stat2Label },
-  { num: t.about.stat3Num, label: t.about.stat3Label }];
+  { num: t.about.stat3Num, label: t.about.stat3Label },
+  { num: t.about.stat4Num, label: t.about.stat4Label }];
 
 
   return (
