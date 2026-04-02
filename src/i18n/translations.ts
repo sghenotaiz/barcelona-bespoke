@@ -487,6 +487,10 @@ export const translations = {
       label: "Sobre Nosotros",
       titleLine1: "Tu Puerta a lo",
       titleLine2: "Mejor de Barcelona",
+      bullet1: "5+ años de experiencia",
+      bullet2: "10.000+ clientes satisfechos cada año",
+      bullet3: "Activos 365 días al año",
+      bullet4: "Servicios premium, sin sorpresas",
       paragraph1:
         "¿Listo para vivir lo mejor de Barcelona sintiéndote VIP pero a precios convenientes? Estamos aquí para ti: NightDreams Barcelona, una de las agencias de promoción más importantes y consolidadas de la ciudad. Nacida de la unión de agencias anteriores en 2019, a lo largo de los años hemos seguido mejorando y ofreciendo a nuestros clientes los mejores servicios a los precios más competitivos. Desde discotecas, con un excelente servicio de MESAS VIP, con la posibilidad de ver el local antes de entrar, o con acceso SALTA-FILA todas las noches y en cualquier época del año a un precio fijo sin sorpresas, hasta descuentos en restaurantes, pool parties, motos de agua ¡y mucho más!",
       paragraph2:
