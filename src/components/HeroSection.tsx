@@ -104,8 +104,16 @@ const HeroSection = () => {
           <div className="flex justify-center mb-1">
             <NightDreamsLogo size="hero" showIcon={false} />
           </div>
-          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-6 font-mono md:text-lg">
+          <p className="text-xs tracking-[0.3em] uppercase text-silver-light mb-2 font-mono md:text-lg">
             {t.hero.subtitle}
+          </p>
+          <p
+            className="text-xs md:text-sm tracking-[0.25em] uppercase text-silver/70 mb-6 font-body italic"
+            style={{
+              textShadow: "0 0 12px hsla(0, 0%, 80%, 0.3)",
+            }}
+          >
+            Stress less, enjoy more
           </p>
 
           {/* Animated counter */}
