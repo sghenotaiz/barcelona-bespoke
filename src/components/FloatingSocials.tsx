@@ -24,7 +24,7 @@ const FloatingSocials = () => {
       className="fixed bottom-24 right-6 z-40 flex sm:flex-row flex-col items-center gap-2 px-3 py-2.5 rounded-full bg-black/80 backdrop-blur-md border border-white/10 shadow-lg shadow-black/40"
     >
       <motion.a
-        href={INSTAGRAM_URL}
+        href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.15 }}
