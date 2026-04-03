@@ -13,6 +13,9 @@ const INSTAGRAM_URL_DEFAULT = "https://www.instagram.com/nightdreamsofficial_?ut
 const TIKTOK_URL = "https://www.tiktok.com/@nightdreams_bcn?_r=1&_t=ZN-94a07YEAkcQ";
 
 const FloatingSocials = () => {
+  const { language } = useLanguage();
+  const instagramUrl = language === "it" ? INSTAGRAM_URL_IT : INSTAGRAM_URL_DEFAULT;
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
