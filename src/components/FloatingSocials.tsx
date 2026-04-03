@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const TikTokIcon = ({ size = 18, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -7,10 +8,14 @@ const TikTokIcon = ({ size = 18, className = "" }: { size?: number; className?: 
   </svg>
 );
 
-const INSTAGRAM_URL = "https://www.instagram.com/nightdreamsofficial_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+const INSTAGRAM_URL_IT = "https://www.instagram.com/nightdreamsbcn_ita?igsh=ZzNjdmZ0dWlubDF5";
+const INSTAGRAM_URL_DEFAULT = "https://www.instagram.com/nightdreamsofficial_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 const TIKTOK_URL = "https://www.tiktok.com/@nightdreams_bcn?_r=1&_t=ZN-94a07YEAkcQ";
 
 const FloatingSocials = () => {
+  const { language } = useLanguage();
+  const instagramUrl = language === "it" ? INSTAGRAM_URL_IT : INSTAGRAM_URL_DEFAULT;
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -19,7 +24,7 @@ const FloatingSocials = () => {
       className="fixed bottom-24 right-6 z-40 flex sm:flex-row flex-col items-center gap-2 px-3 py-2.5 rounded-full bg-black/80 backdrop-blur-md border border-white/10 shadow-lg shadow-black/40"
     >
       <motion.a
-        href={INSTAGRAM_URL}
+        href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.15 }}

@@ -27,7 +27,7 @@ const fadeUp = (delay: number) => ({
 const AboutSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const stats = [
   { num: t.about.stat1Num, label: t.about.stat1Label },
@@ -116,7 +116,7 @@ const AboutSection = () => {
           </span>
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/nightdreamsofficial_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              href={language === "it" ? "https://www.instagram.com/nightdreamsbcn_ita?igsh=ZzNjdmZ0dWlubDF5" : "https://www.instagram.com/nightdreamsofficial_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-silver hover:drop-shadow-[0_0_12px_hsl(0,0%,75%)] transition-all duration-300">
