@@ -27,7 +27,7 @@ const fadeUp = (delay: number) => ({
 const AboutSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const stats = [
   { num: t.about.stat1Num, label: t.about.stat1Label },
