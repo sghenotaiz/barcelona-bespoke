@@ -104,11 +104,11 @@ const SocialCard = ({ card }: {card: SocialCard;}) => {
         className="block w-full h-full relative">
         
           {/* Profile strip */}
-          <div className="absolute top-0 inset-x-0 z-10 flex items-center gap-2 px-3 py-2 bg-white">
+          <div className="absolute top-0 inset-x-0 z-10 flex items-center justify-end gap-2 px-3 py-2 bg-white">
+            <span className="text-black text-xs font-semibold tracking-wide">nightdreams_bcn</span>
             <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center">
               <TikTokIcon size={12} />
             </div>
-            <span className="text-black text-xs font-semibold tracking-wide">nightdreams_bcn</span>
           </div>
 
           <img
