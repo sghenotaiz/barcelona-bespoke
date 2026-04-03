@@ -22,22 +22,23 @@ const cards: SocialCard[] = [
 {
   id: 1,
   type: "instagram",
-  embedUrl: "https://www.instagram.com/reel/CUdBDCwI8Cn/embed"
+  embedUrl: "https://www.instagram.com/p/DWrJ2qXDIk3/embed"
 },
 {
   id: 2,
+  type: "instagram",
+  embedUrl: "https://www.instagram.com/reel/CUdBDCwI8Cn/embed"
+},
+{
+  id: 3,
   type: "tiktok",
   thumbnailUrl: tiktokThumb1,
   linkUrl: "https://www.tiktok.com/@nightdreams_bcn/video/7624554280141278486"
 },
 {
-  id: 3,
+  id: 4,
   type: "instagram",
   embedUrl: "https://www.instagram.com/p/DMSgCwjozdz/embed"
-},
-{
-  id: 4,
-  type: "tiktok"
 },
 {
   id: 5,
@@ -45,6 +46,10 @@ const cards: SocialCard[] = [
 },
 {
   id: 6,
+  type: "tiktok"
+},
+{
+  id: 7,
   type: "tiktok"
 }];
 
