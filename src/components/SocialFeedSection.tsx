@@ -2,6 +2,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { motion, useInView } from "framer-motion";
 import { ChevronLeft, ChevronRight, Instagram, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import tiktokThumb1 from "@/assets/tiktok-nightdreams-1.jpg";
 
 type SocialCard = {
   id: number;
@@ -25,8 +26,9 @@ const cards: SocialCard[] = [
 },
 {
   id: 2,
-  type: "tiktok"
-  // No link provided — placeholder
+  type: "tiktok",
+  thumbnailUrl: tiktokThumb1,
+  linkUrl: "https://www.tiktok.com/@nightdreams_bcn/video/7624554280141278486"
 },
 {
   id: 3,
