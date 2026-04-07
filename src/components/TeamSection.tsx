@@ -17,7 +17,7 @@ import blingBlingLogo from "@/assets/partners/bling-bling.jpg";
 import mirandoalmarLogo from "@/assets/partners/mirandoalmar.jpg";
 
 
-const partners = [
+const staticPartners = [
 { name: "Ku Barcelona", category: "Nightclub", logo: kuBarcelonaLogo },
 { name: "Opium Barcelona", category: "Nightclub", logo: opiumBarcelonaLogo },
 { name: "Bling Bling", category: "Nightclub", logo: blingBlingLogo },
