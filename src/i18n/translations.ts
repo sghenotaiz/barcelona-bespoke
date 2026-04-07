@@ -350,6 +350,7 @@ export const translations = {
       partnersAccent: "Partners",
       partnersNote: "We collaborate with the best venues in Barcelona — exclusive clubs, luxury hotels, gourmet restaurants and much more.",
       partnersNoteHighlight: "Always present, always available.",
+      andManyMore: "& Many More",
     },
     testimonials: {
       label: "Client Feedback",
@@ -783,6 +784,7 @@ export const translations = {
       partnersAccent: "Socios",
       partnersNote: "Colaboramos con los mejores locales de Barcelona — clubs exclusivos, hoteles de lujo, restaurantes gourmet y mucho más.",
       partnersNoteHighlight: "Siempre presentes, siempre disponibles.",
+      andManyMore: "& Muchos Más",
     },
     testimonials: {
       label: "Opiniones",
@@ -1216,6 +1218,7 @@ export const translations = {
       partnersAccent: "Partenaires",
       partnersNote: "Nous collaborons avec les meilleurs établissements de Barcelone — clubs exclusifs, hôtels de luxe, restaurants gastronomiques et bien plus.",
       partnersNoteHighlight: "Toujours présents, toujours disponibles.",
+      andManyMore: "& Bien d'Autres",
     },
     testimonials: {
       label: "Avis Clients",
@@ -1649,6 +1652,7 @@ export const translations = {
       partnersAccent: "Partner",
       partnersNote: "Collaboriamo con questi e tanti altri partner, non ti basta che chiedere! Siamo pronti a trovare la soluzione per qualsiasi esigenza, il tutto su misura per TE. ",
       partnersNoteHighlight: "Scrivici ora!",
+      andManyMore: "& Tanti Altri",
     },
     testimonials: {
       label: "Cosa Dicono di Noi",

@@ -17,7 +17,7 @@ import blingBlingLogo from "@/assets/partners/bling-bling.jpg";
 import mirandoalmarLogo from "@/assets/partners/mirandoalmar.jpg";
 
 
-const partners = [
+const staticPartners = [
 { name: "Ku Barcelona", category: "Nightclub", logo: kuBarcelonaLogo },
 { name: "Opium Barcelona", category: "Nightclub", logo: opiumBarcelonaLogo },
 { name: "Bling Bling", category: "Nightclub", logo: blingBlingLogo },
@@ -31,6 +31,8 @@ const TeamSection = () => {
   const [partnerIndex, setPartnerIndex] = useState(0);
   const partnerScrollRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
+
+  const partners = [...staticPartners, { name: t.team.andManyMore, category: "", logo: undefined as string | undefined }];
 
   const teamMembers = [
     {
