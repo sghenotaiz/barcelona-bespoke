@@ -14,6 +14,7 @@ import bastianBeachLogo from "@/assets/partners/bastianbeach.png";
 import kuBarcelonaLogo from "@/assets/partners/ku-barcelona.jpg";
 import opiumBarcelonaLogo from "@/assets/partners/opium-barcelona.png";
 import blingBlingLogo from "@/assets/partners/bling-bling.jpg";
+import mirandoalmarLogo from "@/assets/partners/mirandoalmar.jpg";
 
 
 const partners = [
@@ -21,7 +22,7 @@ const partners = [
 { name: "Opium Barcelona", category: "Nightclub", logo: opiumBarcelonaLogo },
 { name: "Bling Bling", category: "Nightclub", logo: blingBlingLogo },
 { name: "Bastian Beach", category: "Beach Club", logo: bastianBeachLogo },
-{ name: "Mirandoalmar", category: "Ristorante", logo: null }];
+{ name: "Mirandoalmar", category: "Ristorante", logo: mirandoalmarLogo }];
 
 
 const TeamSection = () => {
