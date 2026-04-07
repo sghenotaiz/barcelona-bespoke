@@ -106,7 +106,7 @@ const VideoModal = ({ item, getText, onClose }: { item: typeof eventHighlights[0
         <p className="font-body text-xs text-silver tracking-widest uppercase mt-1">{getText(item.dateKey)}</p>
       </div>
       {item.videoUrl ? (
-        <video src={item.videoUrl} controls autoPlay className="w-full h-full object-cover" />
+        <video src={item.videoUrl} controls autoPlay className="w-full h-full object-contain" />
       ) : (
         <div className="w-full h-full flex flex-col items-center justify-center">
           <img src={item.image} alt={getText(item.titleKey)} className="w-full h-full object-cover opacity-40" />
@@ -663,7 +663,7 @@ const ExperiencesContent = () => {
                   Saltafila {activeSaltafila.label}
                 </h4>
               </div>
-              <video src={activeSaltafila.src} controls autoPlay className="w-full h-full object-cover" />
+              <video src={activeSaltafila.src} controls autoPlay className="w-full h-full object-contain" />
             </motion.div>
           </motion.div>
         )}
