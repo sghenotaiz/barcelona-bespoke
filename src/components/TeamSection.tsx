@@ -56,7 +56,7 @@ const TeamSection = () => {
       src: martinaImg,
       instagram: "https://www.instagram.com/smarty717",
       languages: ["italian" as const, "spanish" as const, "english" as const],
-      imagePosition: "center 5%",
+      imagePosition: "center 40%",
     },
     {
       name: "Samuel",
