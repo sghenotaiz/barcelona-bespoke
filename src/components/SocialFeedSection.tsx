@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Instagram, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import tiktokThumb1 from "@/assets/tiktok-nightdreams-1.jpg";
 import tiktokThumb2 from "@/assets/tiktok-nightdreams-2.jpg";
+import tiktokThumb3 from "@/assets/tiktok-nightdreams-3.jpg";
 
 type SocialCard = {
   id: number;
