@@ -32,6 +32,8 @@ const TeamSection = () => {
   const partnerScrollRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
 
+  const partners = [...staticPartners, { name: t.team.andManyMore, category: "", logo: undefined as string | undefined }];
+
   const teamMembers = [
     {
       name: "Simone",
