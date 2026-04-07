@@ -26,6 +26,7 @@ type Testimonial = {
   src: string;
   instagram?: string;
   languages?: SpokenLanguage[];
+  imagePosition?: string;
 };
 
 export const AnimatedTestimonials = ({
@@ -112,7 +113,8 @@ export const AnimatedTestimonials = ({
                         src={testimonial.src}
                         alt={testimonial.name}
                         draggable={false}
-                        className="h-full w-full rounded-3xl object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                        className="h-full w-full rounded-3xl object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                        style={{ objectPosition: testimonial.imagePosition || "top" }}
                       />
                       <div className="absolute inset-0 rounded-3xl bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-center justify-center">
                         <Instagram
@@ -126,7 +128,8 @@ export const AnimatedTestimonials = ({
                       src={testimonial.src}
                       alt={testimonial.name}
                       draggable={false}
-                      className="h-full w-full rounded-3xl object-cover object-center"
+                      className="h-full w-full rounded-3xl object-cover"
+                      style={{ objectPosition: testimonial.imagePosition || "center" }}
                     />
                   )}
                 </motion.div>
