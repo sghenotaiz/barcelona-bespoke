@@ -5,7 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import simoneImg from "@/assets/team/simone.jpeg";
 import thomasImg from "@/assets/team/thomas.jpeg";
-import martinaImg from "@/assets/team/martina.jpeg";
+import martinaImg from "@/assets/team/martina.jpg";
 import samuelImg from "@/assets/team/samuel.jpeg";
 import gialloImg from "@/assets/team/giallo.jpeg";
 import alessiaImg from "@/assets/team/alessia.jpeg";
