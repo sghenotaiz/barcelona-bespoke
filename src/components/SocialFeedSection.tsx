@@ -21,6 +21,11 @@ const TikTokIcon = ({ size = 16 }: {size?: number;}) =>
 
 const cards: SocialCard[] = [
 {
+  id: 11,
+  type: "instagram",
+  embedUrl: "https://www.instagram.com/p/DWwqEE-jhrL/embed"
+},
+{
   id: 10,
   type: "tiktok",
   thumbnailUrl: tiktokThumb2,
