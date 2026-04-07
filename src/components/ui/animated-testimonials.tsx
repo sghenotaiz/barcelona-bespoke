@@ -26,6 +26,7 @@ type Testimonial = {
   src: string;
   instagram?: string;
   languages?: SpokenLanguage[];
+  imagePosition?: string;
 };
 
 export const AnimatedTestimonials = ({
