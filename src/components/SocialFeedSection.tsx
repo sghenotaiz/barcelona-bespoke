@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { ChevronLeft, ChevronRight, Instagram, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import tiktokThumb1 from "@/assets/tiktok-nightdreams-1.jpg";
+import tiktokThumb2 from "@/assets/tiktok-nightdreams-2.jpg";
 
 type SocialCard = {
   id: number;
@@ -19,6 +20,12 @@ const TikTokIcon = ({ size = 16 }: {size?: number;}) =>
 
 
 const cards: SocialCard[] = [
+{
+  id: 10,
+  type: "tiktok",
+  thumbnailUrl: tiktokThumb2,
+  linkUrl: "https://vm.tiktok.com/ZNRXnSVw4/"
+},
 {
   id: 1,
   type: "instagram",
