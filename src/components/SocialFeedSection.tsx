@@ -5,6 +5,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import tiktokThumb1 from "@/assets/tiktok-nightdreams-1.jpg";
 import tiktokThumb2 from "@/assets/tiktok-nightdreams-2.jpg";
 import tiktokThumb3 from "@/assets/tiktok-nightdreams-3.jpg";
+import tiktokThumb4 from "@/assets/tiktok-nightdreams-4.jpg";
 
 type SocialCard = {
   id: number;
@@ -21,6 +22,12 @@ const TikTokIcon = ({ size = 16 }: {size?: number;}) =>
 
 
 const cards: SocialCard[] = [
+{
+  id: 13,
+  type: "tiktok",
+  thumbnailUrl: tiktokThumb4,
+  linkUrl: "https://www.tiktok.com/@nightdreams_bcn/video/7626418475094822147"
+},
 {
   id: 12,
   type: "tiktok",
