@@ -66,18 +66,7 @@ const cards: SocialCard[] = [
   type: "instagram",
   embedUrl: "https://www.instagram.com/p/DMSgCwjozdz/embed"
 },
-{
-  id: 5,
-  type: "tiktok"
-},
-{
-  id: 6,
-  type: "tiktok"
-},
-{
-  id: 7,
-  type: "tiktok"
-}];
+];
 
 
 const PlaceholderCard = () =>
