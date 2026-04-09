@@ -66,18 +66,7 @@ const cards: SocialCard[] = [
   type: "instagram",
   embedUrl: "https://www.instagram.com/p/DMSgCwjozdz/embed"
 },
-{
-  id: 5,
-  type: "tiktok"
-},
-{
-  id: 6,
-  type: "tiktok"
-},
-{
-  id: 7,
-  type: "tiktok"
-}];
+];
 
 
 const PlaceholderCard = () =>
@@ -181,12 +170,12 @@ const SocialFeedSection = () => {
   const scrollToIndex = useCallback(
     (index: number) => {
       if (!scrollRef.current) return;
-      const clamped = Math.max(0, Math.min(index, totalCards - 1));
+      const wrapped = ((index % totalCards) + totalCards) % totalCards;
       scrollRef.current.scrollTo({
-        left: clamped * (cardWidth + gap),
+        left: wrapped * (cardWidth + gap),
         behavior: "smooth"
       });
-      setActiveIndex(clamped);
+      setActiveIndex(wrapped);
     },
     [cardWidth, gap, totalCards]
   );
