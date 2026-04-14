@@ -7,6 +7,7 @@ import tiktokThumb2 from "@/assets/tiktok-nightdreams-2.jpg";
 import tiktokThumb3 from "@/assets/tiktok-nightdreams-3.jpg";
 import tiktokThumb4 from "@/assets/tiktok-nightdreams-4.jpg";
 import tiktokThumb5 from "@/assets/tiktok-nightdreams-5.jpg";
+import tiktokThumb6 from "@/assets/tiktok-nightdreams-6.jpg";
 
 type SocialCard = {
   id: number;
