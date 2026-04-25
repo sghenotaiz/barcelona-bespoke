@@ -10,6 +10,7 @@ import tiktokThumb5 from "@/assets/tiktok-nightdreams-5.jpg";
 import tiktokThumb6 from "@/assets/tiktok-nightdreams-6.jpg";
 import tiktokThumb7 from "@/assets/tiktok-nightdreams-7.jpg";
 import tiktokThumb8 from "@/assets/tiktok-nightdreams-8.jpg";
+import tiktokThumb9 from "@/assets/tiktok-nightdreams-9.jpg";
 
 type SocialCard = {
   id: number;
@@ -26,6 +27,12 @@ const TikTokIcon = ({ size = 16 }: {size?: number;}) =>
 
 
 const cards: SocialCard[] = [
+  {
+    id: 22,
+    type: "tiktok",
+    thumbnailUrl: tiktokThumb9,
+    linkUrl: "https://www.tiktok.com/@nightdreams_bcn/video/7632375765123845398"
+  },
   {
     id: 21,
     type: "instagram",
